@@ -1,0 +1,20 @@
+Aplicaciones para replicar notificaciones en un dispositivo:
+APNS Push
+
+Academias:
+LINDA
+Bootcamp
+Udemy
+
+Aplicación ticketing:
+Asana
+
+Herramienta para hacer mamockup:
+Marvel MockUp
+Zeplin
+
+Servidor para Parse:
+Back 4 Up
+
+Soluciones Git:
+Bitbucket

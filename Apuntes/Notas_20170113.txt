@@ -1,0 +1,6 @@
+En esta clase vamos a comenzar con:
+- Las vistas de tablas
+- Las vistas de colecciones
+
+- Tabla dinámica: todo por código
+- Tabla estática: no requiere protocolos. Scroll infinito

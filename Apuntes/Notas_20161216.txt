@@ -1,0 +1,57 @@
+Nosedice2016
+ciceapps@gmail.com
+
+Subir a Apple Store: Ellos se llevan el 33% de cada venta. Hay que indicar que no queremos subir en USA, porque cobran más tasas.
+
+100 dispositivos por cuenta de desarrollador. Cada año permite resetearlos.
+
+Test Fly: Tester para 25 dispositivos. Duran 60 días, después expira la App.
+Tester externo: Pasas por la revisión de apple.
+
+No dan beneficios hasta conseguir 150€
+
+
+Certificados, identifiers and profiles>>
+	Certificados: 
+		Apple te genera un .p12 con el que firmar el código de nuestra aplicación.
+		Por norma general, sólo se establece un certificado para PRODUCCIÓN.
+
+	Identifiers:
+		App IDs:
+			Aquí queda registrado el Bundle Identifier.
+			Si pulsamos en el + nos permite registrar el App ID de nuestra aplicación. Donde
+				- App ID Prefix: Es el identificador del equipo con el que se va a firmar.
+				- Wildcard App ID: Si quiero firmar por defecto todo lo que empiece por: com.blabla.*
+				- Explicit App ID: Para firmar eligiendo el ID Completo
+				- App Services: Indica los permisos que queremos darle al certificado. Estos permisos debe tenerlos el proyecto de nuestra aplicación también.
+				Dentro del proyecto está en la vista general del proyecto >> Capabilities
+	Devices:
+		All:	
+			Aquí se muestran todos los dispositivos.
+			Donde el identifier es el Indentificador Único de nuestro dispositivo.
+	
+	Provisional profile: 
+		Development: 
+			- Ad Hoc: Cuesta mucho dinero la licencia. Permite 
+			- iOS App Development: Es lo que utilizamos
+				Seleccionamos nuestro Bundle. Con esto estamos seleccionando el Driver Instalador.
+				Elegimos el nombre.
+				Se nos genera el fichero de aprovisionamiento ".mobileprovision"
+
+			Para integrarlo a Xcode:
+				Proyecto >> General >> Signing >> Añadir Account >> Añadir nuestra cuenta
+				Quitamos el check de "Automatically manage signing"
+				Después en "Provisioning Profile" Seleccionamis el driver ".mobileprovision" que hemos descargado.
+
+
+iTunes connect >>
+	Una vez tenemos el proyecto firmado: podemos encontrar:
+		- Mis aplicaciones
+			SKU: ID que creamos nosotros.
+		- Usuarios y roles para test.
+		- Tasas
+
+
+
+-- Enlaces útiles:
+https://thenounproject.com/ -> Iconos para el proyecto

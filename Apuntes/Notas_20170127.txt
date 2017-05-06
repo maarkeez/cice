@@ -1,0 +1,11 @@
+---------------------------------------
+-- Niveles de persistencia
+---------------------------------------
+Cocoa por defecto entrega las siguientes carpetas:
+- Cloud (4º nivel). Persistir en la nube mediante el uso del framwork PARSE (Detro de PARSE encontramos: Azure, de Microsoft; Amazon Webservice; Heroku, de venta de servicios; Back2app trabaja directamente con PARSE)
+- Core data (3er nivel). SQLite.
+- Documents (2º nivel). Se puede modificar. Guardar datos que traigo del servidor a local.
+- Libraries.
+	* Preferencias (1er nivel). Se puede modificar
+	* Temporales
+- Caché
