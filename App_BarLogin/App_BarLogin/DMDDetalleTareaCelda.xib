@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="330" id="KGk-i7-Jjw" customClass="DMDDetalleTareaCelda" customModule="App_BarLogin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="330"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="329"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Taylor_Swift2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="yO6-Kc-axY"/>
+                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondodegradado.png" translatesAutoresizingMaskIntoConstraints="NO" id="58U-TK-sG8">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="165" id="nMy-eO-F8q"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzg-3y-Uyo">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="93" id="Ofw-6X-izf"/>
+                        </constraints>
+                        <string key="text">Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift Taylor Swift </string>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.9445604681968689" green="0.77024775743484497" blue="0.057881034910678864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJC-xj-ypL">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="Uft-D8-2nR"/>
+                            <constraint firstAttribute="height" constant="60" id="dN8-cz-M1f"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="yO6-Kc-axY" secondAttribute="trailing" constant="-8" id="9Wg-UZ-gIC"/>
+                    <constraint firstAttribute="bottom" secondItem="Dzg-3y-Uyo" secondAttribute="bottom" id="Adg-Dr-ESX"/>
+                    <constraint firstAttribute="trailing" secondItem="SJC-xj-ypL" secondAttribute="trailing" id="ET6-dO-3pq"/>
+                    <constraint firstItem="Dzg-3y-Uyo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Hla-fU-CCa"/>
+                    <constraint firstItem="yO6-Kc-axY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="J0w-4b-gpv"/>
+                    <constraint firstAttribute="trailing" secondItem="58U-TK-sG8" secondAttribute="trailing" id="JGc-TA-ndt"/>
+                    <constraint firstItem="SJC-xj-ypL" firstAttribute="leading" secondItem="Dzg-3y-Uyo" secondAttribute="trailing" constant="8" id="Pfe-OD-JhF"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="yO6-Kc-axY" secondAttribute="bottom" constant="-8" id="Q1C-mI-nXj"/>
+                    <constraint firstItem="58U-TK-sG8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Vxc-3e-Kma"/>
+                    <constraint firstAttribute="bottom" secondItem="SJC-xj-ypL" secondAttribute="bottom" id="cow-tg-oNg"/>
+                    <constraint firstItem="yO6-Kc-axY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="pRO-z3-E86"/>
+                    <constraint firstAttribute="bottom" secondItem="58U-TK-sG8" secondAttribute="bottom" id="tgw-GY-SuX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="myIconoTarea" destination="SJC-xj-ypL" id="Zc7-I5-5Z8"/>
+                <outlet property="myImagenTarea" destination="yO6-Kc-axY" id="pyA-NO-01O"/>
+                <outlet property="myTexto" destination="Dzg-3y-Uyo" id="16K-Xq-v5w"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="195"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Taylor_Swift2.jpg" width="1940" height="720"/>
+        <image name="fondodegradado.png" width="726" height="443"/>
+    </resources>
+</document>

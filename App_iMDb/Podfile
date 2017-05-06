@@ -1,0 +1,12 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+use_frameworks!
+
+target 'App_iMDb' do
+
+  # Pods for App_iMDb
+	pod 'Alamofire'
+	pod 'Kingfisher'
+	pod 'SwiftyJSON'
+
+end

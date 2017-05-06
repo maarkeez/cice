@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="w8b-Ij-1jb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="sx5-GZ-XYy">
+            <objects>
+                <viewController id="w8b-Ij-1jb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fyg-KV-8SH"/>
+                        <viewControllerLayoutGuide type="bottom" id="kae-X9-p6i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="x1F-Zv-WKh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo_splash" translatesAutoresizingMaskIntoConstraints="NO" id="9nw-SF-Ccf"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MARCA REGISTRADA DC COMICS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAS-Rp-OTt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="WUv-Es-JOT"/>
+                                    <constraint firstAttribute="width" constant="207" id="hW5-4M-yES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94509803920000002" green="0.76862745099999996" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9nw-SF-Ccf" firstAttribute="centerY" secondItem="x1F-Zv-WKh" secondAttribute="centerY" id="Hoa-2b-53b"/>
+                            <constraint firstItem="kae-X9-p6i" firstAttribute="top" secondItem="LAS-Rp-OTt" secondAttribute="bottom" constant="25" id="Ycj-35-Kce"/>
+                            <constraint firstItem="9nw-SF-Ccf" firstAttribute="centerX" secondItem="x1F-Zv-WKh" secondAttribute="centerX" id="Zcd-H9-13y"/>
+                            <constraint firstItem="LAS-Rp-OTt" firstAttribute="centerX" secondItem="x1F-Zv-WKh" secondAttribute="centerX" id="mbE-3Q-jMK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyj-al-7FV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290.625" y="-135.21126760563379"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_logo_splash" width="194" height="86"/>
+    </resources>
+</document>

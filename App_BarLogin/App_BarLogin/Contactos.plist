@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>firstName</key>
+		<string>Taylor</string>
+		<key>lastName</key>
+		<string>Swift</string>
+		<key>usernameTwitter</key>
+		<string>@swift_102315</string>
+		<key>createdPost</key>
+		<string>2 semanas</string>
+		<key>experienciaCV</key>
+		<string>Cantante-compositora</string>
+		<key>numeroSeguidores</key>
+		<string>500K</string>
+		<key>abstractoVC</key>
+		<string>Taylor Alison Swift (Reading, 13 de diciembre de 1989) conocida como Taylor Swift, es una compositora y cantante estadounidense. Criada en Wyomissing (Pensilvania), Swift se mudó a Nashville (Tennessee) a la edad de 14 años para seguir una carrera de música country.</string>
+		<key>description</key>
+		<string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</string>
+		<key>imageProfile</key>
+		<string>Taylor_Swift2.jpg</string>
+		<key>imagePost</key>
+		<string>brad-pitt.jpg</string>
+		<key>telefonoMovil</key>
+		<string>65 34 40 572</string>
+		<key>telefonoTrabajo</key>
+		<string>915 12 12 12 </string>
+		<key>email</key>
+		<string>mail@mail.com / email@email.es</string>
+		<key>cuentaLinkedin</key>
+		<string>phdafoe@gmail.linkedin.com</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Brad</string>
+		<key>lastName</key>
+		<string>Pitt</string>
+		<key>usernameTwitter</key>
+		<string>@pitt_102315</string>
+		<key>createdPost</key>
+		<string>2 semanas</string>
+		<key>experienciaCV</key>
+		<string>Junior iOS Developer App RatonPerez / App iCoSpartan</string>
+		<key>numeroSeguidores</key>
+		<string>550M</string>
+		<key>abstractoVC</key>
+		<string>Comment</string>
+		<key>description</key>
+		<string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</string>
+		<key>imageProfile</key>
+		<string>brad-pitt.jpg</string>
+		<key>imagePost</key>
+		<string>steve_jobs.jpg</string>
+		<key>telefonoMovil</key>
+		<string>65 34 40 577</string>
+		<key>telefonoTrabajo</key>
+		<string>915 12 12 12 2</string>
+		<key>email</key>
+		<string>mail@mail.com / email@email.es</string>
+		<key>cuentaLinkedin</key>
+		<string>phdafoe@gmail.linkedin.com</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>johnny</string>
+		<key>lastName</key>
+		<string>Depp</string>
+		<key>usernameTwitter</key>
+		<string>@depp_102315</string>
+		<key>createdPost</key>
+		<string>2 semanas</string>
+		<key>experienciaCV</key>
+		<string>Junior iOS Developer App RatonPerez / App iCoSpartan</string>
+		<key>numeroSeguidores</key>
+		<string>100M</string>
+		<key>abstractoVC</key>
+		<string>Comment</string>
+		<key>description</key>
+		<string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</string>
+		<key>imageProfile</key>
+		<string>depp.jpg</string>
+		<key>imagePost</key>
+		<string>steve_jobs.jpg</string>
+		<key>telefonoMovil</key>
+		<string>65 34 40 577</string>
+		<key>telefonoTrabajo</key>
+		<string>915 12 12 12 2</string>
+		<key>email</key>
+		<string>mail@mail.com / email@email.es</string>
+		<key>cuentaLinkedin</key>
+		<string>phdafoe@gmail.linkedin.com</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Thor</string>
+		<key>lastName</key>
+		<string>De los Valles </string>
+		<key>usernameTwitter</key>
+		<string>@thor_102315</string>
+		<key>createdPost</key>
+		<string>6 semanas</string>
+		<key>experienciaCV</key>
+		<string>Junior iOS Developer App RatonPerez / App iCoSpartan</string>
+		<key>numeroSeguidores</key>
+		<string>200K</string>
+		<key>abstractoVC</key>
+		<string>Comment</string>
+		<key>description</key>
+		<string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</string>
+		<key>imageProfile</key>
+		<string>thor.jpg</string>
+		<key>imagePost</key>
+		<string>kunis.jpg</string>
+		<key>telefonoMovil</key>
+		<string>65 34 40 577</string>
+		<key>telefonoTrabajo</key>
+		<string>915 12 12 12 2</string>
+		<key>email</key>
+		<string>mail@mail.com / email@email.es</string>
+		<key>cuentaLinkedin</key>
+		<string>phdafoe@gmail.linkedin.com</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Miranda</string>
+		<key>lastName</key>
+		<string>Lambert</string>
+		<key>usernameTwitter</key>
+		<string>@miranda_102315</string>
+		<key>createdPost</key>
+		<string>1 semanas</string>
+		<key>experienciaCV</key>
+		<string>Cantante y Actriz</string>
+		<key>numeroSeguidores</key>
+		<string>907K</string>
+		<key>abstractoVC</key>
+		<string>Comment</string>
+		<key>description</key>
+		<string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</string>
+		<key>imageProfile</key>
+		<string>Miranda_Lambert.jpg</string>
+		<key>imagePost</key>
+		<string>thor.jpg</string>
+		<key>telefonoMovil</key>
+		<string>65 34 40 577</string>
+		<key>telefonoTrabajo</key>
+		<string>915 12 12 12 2</string>
+		<key>email</key>
+		<string>mail@mail.com / email@email.es</string>
+		<key>cuentaLinkedin</key>
+		<string>phdafoe@gmail.linkedin.com</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Steve</string>
+		<key>lastName</key>
+		<string>Jobs</string>
+		<key>usernameTwitter</key>
+		<string>@miranda_102315</string>
+		<key>createdPost</key>
+		<string>1 semanas</string>
+		<key>experienciaCV</key>
+		<string>Cantante y Actriz</string>
+		<key>numeroSeguidores</key>
+		<string>876M</string>
+		<key>abstractoVC</key>
+		<string>Comment</string>
+		<key>description</key>
+		<string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</string>
+		<key>imageProfile</key>
+		<string>steve_jobs.jpg</string>
+		<key>imagePost</key>
+		<string>Taylor_Swift2.jpg</string>
+		<key>telefonoMovil</key>
+		<string>65 34 40 577</string>
+		<key>telefonoTrabajo</key>
+		<string>915 12 12 12 2</string>
+		<key>email</key>
+		<string>mail@mail.com / email@email.es</string>
+		<key>cuentaLinkedin</key>
+		<string>phdafoe@gmail.linkedin.com</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Sara</string>
+		<key>lastName</key>
+		<string>Evans</string>
+		<key>usernameTwitter</key>
+		<string>@miranda_102315</string>
+		<key>createdPost</key>
+		<string>1 semanas</string>
+		<key>experienciaCV</key>
+		<string>Cantante y Actriz</string>
+		<key>numeroSeguidores</key>
+		<string>234M</string>
+		<key>abstractoVC</key>
+		<string>Comment</string>
+		<key>description</key>
+		<string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</string>
+		<key>imageProfile</key>
+		<string>Sara_Evans.jpg</string>
+		<key>imagePost</key>
+		<string>Taylor_Swift2.jpg</string>
+		<key>telefonoMovil</key>
+		<string>65 34 40 577</string>
+		<key>telefonoTrabajo</key>
+		<string>915 12 12 12 2</string>
+		<key>email</key>
+		<string>mail@mail.com / email@email.es</string>
+		<key>cuentaLinkedin</key>
+		<string>phdafoe@gmail.linkedin.com</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Kunis</string>
+		<key>lastName</key>
+		<string>Evans</string>
+		<key>usernameTwitter</key>
+		<string>@miranda_102315</string>
+		<key>createdPost</key>
+		<string>1 semanas</string>
+		<key>experienciaCV</key>
+		<string>Cantante y Actriz</string>
+		<key>numeroSeguidores</key>
+		<string>100M</string>
+		<key>abstractoVC</key>
+		<string>Comment</string>
+		<key>description</key>
+		<string>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</string>
+		<key>imageProfile</key>
+		<string>kunis.jpg</string>
+		<key>imagePost</key>
+		<string>Taylor_Swift2.jpg</string>
+		<key>telefonoMovil</key>
+		<string>65 34 40 577</string>
+		<key>telefonoTrabajo</key>
+		<string>915 12 12 12 2</string>
+		<key>email</key>
+		<string>mail@mail.com / email@email.es</string>
+		<key>cuentaLinkedin</key>
+		<string>phdafoe@gmail.linkedin.com</string>
+	</dict>
+</array>
+</plist>

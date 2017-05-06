@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>Taylor</string>
+		<key>apellido</key>
+		<string>Swift</string>
+		<key>biografia</key>
+		<string>¿Qué es Lorem Ipsum?
+            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando e</string>
+		<key>email</key>
+		<string>taylor@email.com</string>
+		<key>telefono</key>
+		<string>+34 91 688 988 977</string>
+		<key>direccion</key>
+		<string>c/Paseo del prado</string>
+		<key>ciudad</key>
+		<string>Madrid</string>
+		<key>estado</key>
+		<string>Soltera</string>
+		<key>imagenContacto</key>
+		<string>TS.jpg</string>
+	</dict>
+	<dict>
+		<key>nombre</key>
+		<string>Barak</string>
+		<key>apellido</key>
+		<string>Obama</string>
+		<key>biografia</key>
+		<string>¿Qué es Lorem Ipsum?
+            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando e</string>
+		<key>email</key>
+		<string>barak.obama@email.com</string>
+		<key>telefono</key>
+		<string>+36 91 688 988 977</string>
+		<key>direccion</key>
+		<string>Casa Blanca</string>
+		<key>ciudad</key>
+		<string>Washintong DC</string>
+		<key>estado</key>
+		<string>Casado</string>
+		<key>imagenContacto</key>
+		<string>Obama.jpg</string>
+	</dict>
+</array>
+</plist>

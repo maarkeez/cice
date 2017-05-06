@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "David Márquez Delgado"; ObjectID = "5uM-Ua-qX6"; */
+"5uM-Ua-qX6.text" = "David Márquez Delgado";
+
+/* Class = "UILabel"; text = "#"; ObjectID = "5yp-0b-M47"; */
+"5yp-0b-M47.text" = "#";
+
+/* Class = "UIButton"; normalTitle = ":)"; ObjectID = "65h-SW-MZK"; */
+"65h-SW-MZK.normalTitle" = ":)";
+
+/* Class = "UILabel"; text = "Madrid - España"; ObjectID = "Ds2-kY-hkl"; */
+"Ds2-kY-hkl.text" = "Madrid - España";
+
+/* Class = "UILabel"; text = "Number:"; ObjectID = "KCk-DK-lrS"; */
+"KCk-DK-lrS.text" = "Número:";
+
+/* Class = "UILabel"; text = "Image"; ObjectID = "S2W-xi-DBv"; */
+"S2W-xi-DBv.text" = "Imagen";
+
+/* Class = "UILabel"; text = "ha publicado hace"; ObjectID = "UB4-eh-mVc"; */
+"UB4-eh-mVc.text" = "ha publicado hace";
+
+/* Class = "UILabel"; text = "31/03/2017"; ObjectID = "VUJ-c2-l1z"; */
+"VUJ-c2-l1z.text" = "31/03/2017";
+
+/* Class = "UILabel"; text = "1 h."; ObjectID = "X9o-qf-LGE"; */
+"X9o-qf-LGE.text" = "1 h.";
+
+/* Class = "UITabBarItem"; title = "Internac."; ObjectID = "XH5-AT-w9u"; */
+"XH5-AT-w9u.title" = "Internac.";
+
+/* Class = "UILabel"; text = "Last Name:"; ObjectID = "YzX-ST-AWp"; */
+"YzX-ST-AWp.text" = "Apellidos:";
+
+/* Class = "UILabel"; text = "#"; ObjectID = "aNi-YE-vhg"; */
+"aNi-YE-vhg.text" = "#";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "cEV-7j-WxE"; */
+"cEV-7j-WxE.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "#"; ObjectID = "lRu-uO-vIH"; */
+"lRu-uO-vIH.text" = "#";
+
+/* Class = "UITabBarItem"; title = "Post"; ObjectID = "ld5-z5-N8l"; */
+"ld5-z5-N8l.title" = "Post";
+
+/* Class = "UILabel"; text = "#"; ObjectID = "m3s-mT-xND"; */
+"m3s-mT-xND.text" = "#";
+
+/* Class = "UITabBarItem"; title = "TouchID"; ObjectID = "m5F-GP-Cx5"; */
+"m5F-GP-Cx5.title" = "TouchID";
+
+/* Class = "UILabel"; text = "Name:"; ObjectID = "odH-HK-Jk4"; */
+"odH-HK-Jk4.text" = "Nombre:";
+
+/* Class = "UILabel"; text = "#"; ObjectID = "tC0-L8-naW"; */
+"tC0-L8-naW.text" = "#";
+
+/* Class = "UILabel"; text = "Date:"; ObjectID = "tkO-rE-mic"; */
+"tkO-rE-mic.text" = "Fecha:";
+
+/* Class = "UILabel"; text = "Currency:"; ObjectID = "w9W-vX-4jl"; */
+"w9W-vX-4jl.text" = "Moneda:";
+
+/* Class = "UITabBarItem"; title = "Music"; ObjectID = "wSP-pF-qN6"; */
+"wSP-pF-qN6.title" = "Music";

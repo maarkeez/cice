@@ -1,0 +1,10 @@
+Subimos aplicación con los siguientes cambios:
+- Se ha creado el Storyboard con dos Views
+- Cada View tiene un ViewController
+- La primera ventana muestra el juego de acercar el Slider lo más posible al valor indicado.
+- Se calcula la puntuación en cuanto a la cercanía.
+- Se aumenta la ronda a cada tirada.
+- Tiene un botón de reset.
+- La segunda ventana envía un mail y muestra el contenido de un HTML dentro de la vista.
+- Añadidos iconos del profesor
+- Añadido certificado para el App Store

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  App_SocialNetwork
+
+  Created by cice on 31/3/17.
+  Copyright © 2017 dmd. All rights reserved.
+*/
+GOOD_MORNING = "Buenos días";
+TITLE_DATA = "Esto es un AlertVC";
+MESSAGE_DATA = "Esto es un mensaje de un AlertVC";

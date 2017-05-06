@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0911839A1E3260C40039A956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183991E3260C40039A956 /* AppDelegate.swift */; };
+		0911839F1E3260C40039A956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0911839D1E3260C40039A956 /* Main.storyboard */; };
+		091183A11E3260C40039A956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091183A01E3260C40039A956 /* Assets.xcassets */; };
+		091183A41E3260C40039A956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091183A21E3260C40039A956 /* LaunchScreen.storyboard */; };
+		091183AF1E3260C40039A956 /* solosViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183AE1E3260C40039A956 /* solosViewTests.swift */; };
+		091183BA1E3260C40039A956 /* solosViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183B91E3260C40039A956 /* solosViewUITests.swift */; };
+		091183C81E3261A00039A956 /* DMDListadoContactosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183C71E3261A00039A956 /* DMDListadoContactosTVC.swift */; };
+		091183CA1E3261C30039A956 /* DMDDetalleContactoTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183C91E3261C30039A956 /* DMDDetalleContactoTVCell.swift */; };
+		091183D01E32621C0039A956 /* listadoContactos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 091183CF1E32621C0039A956 /* listadoContactos.plist */; };
+		091183D21E32653B0039A956 /* cook.png in Resources */ = {isa = PBXBuildFile; fileRef = 091183D11E32653B0039A956 /* cook.png */; };
+		091183D71E326AA80039A956 /* DMDDetalleContactoCompelto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183D61E326AA80039A956 /* DMDDetalleContactoCompelto.swift */; };
+		091183D91E326F180039A956 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183D81E326F180039A956 /* utils.swift */; };
+		091183DB1E32715A0039A956 /* DMDPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183DA1E32715A0039A956 /* DMDPerfilViewController.swift */; };
+		091183DD1E3272CC0039A956 /* button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 091183DC1E3272CC0039A956 /* button.jpg */; };
+		091183DF1E3278CE0039A956 /* HomeNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091183DE1E3278CE0039A956 /* HomeNavigationViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		091183AB1E3260C40039A956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0911838E1E3260C40039A956 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 091183951E3260C40039A956;
+			remoteInfo = solosView;
+		};
+		091183B61E3260C40039A956 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0911838E1E3260C40039A956 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 091183951E3260C40039A956;
+			remoteInfo = solosView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		091183961E3260C40039A956 /* solosView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solosView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		091183991E3260C40039A956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0911839E1E3260C40039A956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		091183A01E3260C40039A956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		091183A31E3260C40039A956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		091183A51E3260C40039A956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		091183AA1E3260C40039A956 /* solosViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = solosViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		091183AE1E3260C40039A956 /* solosViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solosViewTests.swift; sourceTree = "<group>"; };
+		091183B01E3260C40039A956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		091183B51E3260C40039A956 /* solosViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = solosViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		091183B91E3260C40039A956 /* solosViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solosViewUITests.swift; sourceTree = "<group>"; };
+		091183BB1E3260C40039A956 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		091183C71E3261A00039A956 /* DMDListadoContactosTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListadoContactosTVC.swift; sourceTree = "<group>"; };
+		091183C91E3261C30039A956 /* DMDDetalleContactoTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleContactoTVCell.swift; sourceTree = "<group>"; };
+		091183CF1E32621C0039A956 /* listadoContactos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = listadoContactos.plist; sourceTree = "<group>"; };
+		091183D11E32653B0039A956 /* cook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cook.png; sourceTree = "<group>"; };
+		091183D61E326AA80039A956 /* DMDDetalleContactoCompelto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleContactoCompelto.swift; sourceTree = "<group>"; };
+		091183D81E326F180039A956 /* utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		091183DA1E32715A0039A956 /* DMDPerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDPerfilViewController.swift; sourceTree = "<group>"; };
+		091183DC1E3272CC0039A956 /* button.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = button.jpg; sourceTree = "<group>"; };
+		091183DE1E3278CE0039A956 /* HomeNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		091183931E3260C40039A956 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091183A71E3260C40039A956 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091183B21E3260C40039A956 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0911838D1E3260C40039A956 = {
+			isa = PBXGroup;
+			children = (
+				091183981E3260C40039A956 /* solosView */,
+				091183AD1E3260C40039A956 /* solosViewTests */,
+				091183B81E3260C40039A956 /* solosViewUITests */,
+				091183971E3260C40039A956 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		091183971E3260C40039A956 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				091183961E3260C40039A956 /* solosView.app */,
+				091183AA1E3260C40039A956 /* solosViewTests.xctest */,
+				091183B51E3260C40039A956 /* solosViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		091183981E3260C40039A956 /* solosView */ = {
+			isa = PBXGroup;
+			children = (
+				091183991E3260C40039A956 /* AppDelegate.swift */,
+				091183D81E326F180039A956 /* utils.swift */,
+				091183D31E3265410039A956 /* SRC */,
+				091183CB1E3261C90039A956 /* VIEW_CONTROLLERS */,
+				0911839D1E3260C40039A956 /* Main.storyboard */,
+				091183A01E3260C40039A956 /* Assets.xcassets */,
+				091183A21E3260C40039A956 /* LaunchScreen.storyboard */,
+				091183A51E3260C40039A956 /* Info.plist */,
+				091183CF1E32621C0039A956 /* listadoContactos.plist */,
+			);
+			path = solosView;
+			sourceTree = "<group>";
+		};
+		091183AD1E3260C40039A956 /* solosViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				091183AE1E3260C40039A956 /* solosViewTests.swift */,
+				091183B01E3260C40039A956 /* Info.plist */,
+			);
+			path = solosViewTests;
+			sourceTree = "<group>";
+		};
+		091183B81E3260C40039A956 /* solosViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				091183B91E3260C40039A956 /* solosViewUITests.swift */,
+				091183BB1E3260C40039A956 /* Info.plist */,
+			);
+			path = solosViewUITests;
+			sourceTree = "<group>";
+		};
+		091183CB1E3261C90039A956 /* VIEW_CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				091183CC1E3261D70039A956 /* CELL_CONTROLLERS */,
+				091183C71E3261A00039A956 /* DMDListadoContactosTVC.swift */,
+				091183D61E326AA80039A956 /* DMDDetalleContactoCompelto.swift */,
+				091183DA1E32715A0039A956 /* DMDPerfilViewController.swift */,
+				091183DE1E3278CE0039A956 /* HomeNavigationViewController.swift */,
+			);
+			name = VIEW_CONTROLLERS;
+			sourceTree = "<group>";
+		};
+		091183CC1E3261D70039A956 /* CELL_CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				091183C91E3261C30039A956 /* DMDDetalleContactoTVCell.swift */,
+			);
+			name = CELL_CONTROLLERS;
+			sourceTree = "<group>";
+		};
+		091183D31E3265410039A956 /* SRC */ = {
+			isa = PBXGroup;
+			children = (
+				091183D51E3265580039A956 /* IMAGES */,
+			);
+			name = SRC;
+			sourceTree = "<group>";
+		};
+		091183D51E3265580039A956 /* IMAGES */ = {
+			isa = PBXGroup;
+			children = (
+				091183DC1E3272CC0039A956 /* button.jpg */,
+				091183D11E32653B0039A956 /* cook.png */,
+			);
+			name = IMAGES;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		091183951E3260C40039A956 /* solosView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091183BE1E3260C40039A956 /* Build configuration list for PBXNativeTarget "solosView" */;
+			buildPhases = (
+				091183921E3260C40039A956 /* Sources */,
+				091183931E3260C40039A956 /* Frameworks */,
+				091183941E3260C40039A956 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = solosView;
+			productName = solosView;
+			productReference = 091183961E3260C40039A956 /* solosView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		091183A91E3260C40039A956 /* solosViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091183C11E3260C40039A956 /* Build configuration list for PBXNativeTarget "solosViewTests" */;
+			buildPhases = (
+				091183A61E3260C40039A956 /* Sources */,
+				091183A71E3260C40039A956 /* Frameworks */,
+				091183A81E3260C40039A956 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				091183AC1E3260C40039A956 /* PBXTargetDependency */,
+			);
+			name = solosViewTests;
+			productName = solosViewTests;
+			productReference = 091183AA1E3260C40039A956 /* solosViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		091183B41E3260C40039A956 /* solosViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 091183C41E3260C40039A956 /* Build configuration list for PBXNativeTarget "solosViewUITests" */;
+			buildPhases = (
+				091183B11E3260C40039A956 /* Sources */,
+				091183B21E3260C40039A956 /* Frameworks */,
+				091183B31E3260C40039A956 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				091183B71E3260C40039A956 /* PBXTargetDependency */,
+			);
+			name = solosViewUITests;
+			productName = solosViewUITests;
+			productReference = 091183B51E3260C40039A956 /* solosViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0911838E1E3260C40039A956 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = dmd;
+				TargetAttributes = {
+					091183951E3260C40039A956 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					091183A91E3260C40039A956 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 091183951E3260C40039A956;
+					};
+					091183B41E3260C40039A956 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 091183951E3260C40039A956;
+					};
+				};
+			};
+			buildConfigurationList = 091183911E3260C40039A956 /* Build configuration list for PBXProject "solosView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0911838D1E3260C40039A956;
+			productRefGroup = 091183971E3260C40039A956 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				091183951E3260C40039A956 /* solosView */,
+				091183A91E3260C40039A956 /* solosViewTests */,
+				091183B41E3260C40039A956 /* solosViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		091183941E3260C40039A956 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091183A41E3260C40039A956 /* LaunchScreen.storyboard in Resources */,
+				091183D21E32653B0039A956 /* cook.png in Resources */,
+				091183A11E3260C40039A956 /* Assets.xcassets in Resources */,
+				091183DD1E3272CC0039A956 /* button.jpg in Resources */,
+				091183D01E32621C0039A956 /* listadoContactos.plist in Resources */,
+				0911839F1E3260C40039A956 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091183A81E3260C40039A956 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091183B31E3260C40039A956 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		091183921E3260C40039A956 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091183D91E326F180039A956 /* utils.swift in Sources */,
+				0911839A1E3260C40039A956 /* AppDelegate.swift in Sources */,
+				091183DB1E32715A0039A956 /* DMDPerfilViewController.swift in Sources */,
+				091183CA1E3261C30039A956 /* DMDDetalleContactoTVCell.swift in Sources */,
+				091183D71E326AA80039A956 /* DMDDetalleContactoCompelto.swift in Sources */,
+				091183DF1E3278CE0039A956 /* HomeNavigationViewController.swift in Sources */,
+				091183C81E3261A00039A956 /* DMDListadoContactosTVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091183A61E3260C40039A956 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091183AF1E3260C40039A956 /* solosViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		091183B11E3260C40039A956 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				091183BA1E3260C40039A956 /* solosViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		091183AC1E3260C40039A956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 091183951E3260C40039A956 /* solosView */;
+			targetProxy = 091183AB1E3260C40039A956 /* PBXContainerItemProxy */;
+		};
+		091183B71E3260C40039A956 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 091183951E3260C40039A956 /* solosView */;
+			targetProxy = 091183B61E3260C40039A956 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0911839D1E3260C40039A956 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0911839E1E3260C40039A956 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		091183A21E3260C40039A956 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				091183A31E3260C40039A956 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		091183BC1E3260C40039A956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		091183BD1E3260C40039A956 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		091183BF1E3260C40039A956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = solosView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dmd.cice.solosView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		091183C01E3260C40039A956 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = solosView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dmd.cice.solosView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		091183C21E3260C40039A956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = solosViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dmd.cice.solosViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/solosView.app/solosView";
+			};
+			name = Debug;
+		};
+		091183C31E3260C40039A956 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = solosViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dmd.cice.solosViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/solosView.app/solosView";
+			};
+			name = Release;
+		};
+		091183C51E3260C40039A956 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = solosViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dmd.cice.solosViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = solosView;
+			};
+			name = Debug;
+		};
+		091183C61E3260C40039A956 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = solosViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dmd.cice.solosViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = solosView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		091183911E3260C40039A956 /* Build configuration list for PBXProject "solosView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091183BC1E3260C40039A956 /* Debug */,
+				091183BD1E3260C40039A956 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		091183BE1E3260C40039A956 /* Build configuration list for PBXNativeTarget "solosView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091183BF1E3260C40039A956 /* Debug */,
+				091183C01E3260C40039A956 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		091183C11E3260C40039A956 /* Build configuration list for PBXNativeTarget "solosViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091183C21E3260C40039A956 /* Debug */,
+				091183C31E3260C40039A956 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		091183C41E3260C40039A956 /* Build configuration list for PBXNativeTarget "solosViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				091183C51E3260C40039A956 /* Debug */,
+				091183C61E3260C40039A956 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0911838E1E3260C40039A956 /* Project object */;
+}

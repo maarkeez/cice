@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nombre</key>
+		<string>David</string>
+		<key>apellidos</key>
+		<string>Márquez Delgado</string>
+		<key>telefono</key>
+		<string>652966851</string>
+		<key>calle</key>
+		<string>c/Greco</string>
+		<key>localidad</key>
+		<string>Getafe</string>
+		<key>provincia</key>
+		<string>Madrid</string>
+		<key>fechaAlta</key>
+		<date>2017-01-20T15:43:07Z</date>
+		<key>imagen</key>
+		<string>cook.png</string>
+	</dict>
+</array>
+</plist>

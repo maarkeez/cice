@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		096289FF1E3BC97B0085C122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096289FE1E3BC97B0085C122 /* AppDelegate.swift */; };
+		09628A041E3BC97B0085C122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09628A021E3BC97B0085C122 /* Main.storyboard */; };
+		09628A091E3BC97B0085C122 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09628A071E3BC97B0085C122 /* LaunchScreen.storyboard */; };
+		09628A131E3BD2360085C122 /* DMDSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09628A121E3BD2360085C122 /* DMDSplashViewController.swift */; };
+		09628A151E3BD23F0085C122 /* DMDLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09628A141E3BD23F0085C122 /* DMDLoginViewController.swift */; };
+		09628A171E3BD26C0085C122 /* DMDRootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09628A161E3BD26C0085C122 /* DMDRootTabBarViewController.swift */; };
+		09AC92251E44D900000674EC /* DMDListadoContactos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC92241E44D900000674EC /* DMDListadoContactos.swift */; };
+		09AC92271E44D947000674EC /* DMDDetalleContacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC92261E44D947000674EC /* DMDDetalleContacto.swift */; };
+		09AC92291E44D956000674EC /* DMDMiPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC92281E44D956000674EC /* DMDMiPerfil.swift */; };
+		09AC922B1E44D96D000674EC /* DMDWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC922A1E44D96D000674EC /* DMDWeb.swift */; };
+		09AC92311E44DA0F000674EC /* DMDVistaMiContactoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC922F1E44DA0F000674EC /* DMDVistaMiContactoCelda.swift */; };
+		09AC92321E44DA0F000674EC /* DMDVistaMiContactoCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AC92301E44DA0F000674EC /* DMDVistaMiContactoCelda.xib */; };
+		09AC923F1E44DACB000674EC /* backPerfil.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AC92341E44DACB000674EC /* backPerfil.png */; };
+		09AC92401E44DACB000674EC /* brad-pitt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09AC92351E44DACB000674EC /* brad-pitt.jpg */; };
+		09AC92411E44DACB000674EC /* Contactos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09AC92361E44DACB000674EC /* Contactos.plist */; };
+		09AC92421E44DACB000674EC /* depp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09AC92371E44DACB000674EC /* depp.jpg */; };
+		09AC92431E44DACB000674EC /* fondodegradado.png in Resources */ = {isa = PBXBuildFile; fileRef = 09AC92381E44DACB000674EC /* fondodegradado.png */; };
+		09AC92441E44DACB000674EC /* kunis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09AC92391E44DACB000674EC /* kunis.jpg */; };
+		09AC92451E44DACB000674EC /* Miranda_Lambert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09AC923A1E44DACB000674EC /* Miranda_Lambert.jpg */; };
+		09AC92461E44DACB000674EC /* Sara_Evans.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09AC923B1E44DACB000674EC /* Sara_Evans.jpg */; };
+		09AC92471E44DACB000674EC /* steve_jobs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09AC923C1E44DACB000674EC /* steve_jobs.jpg */; };
+		09AC92481E44DACB000674EC /* Taylor_Swift2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09AC923D1E44DACB000674EC /* Taylor_Swift2.jpg */; };
+		09AC92491E44DACB000674EC /* thor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09AC923E1E44DACB000674EC /* thor.jpg */; };
+		09AC924E1E44E0E8000674EC /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC924D1E44E0E8000674EC /* Utils.swift */; };
+		09AC92501E450717000674EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09AC924F1E450717000674EC /* Assets.xcassets */; };
+		09F6164E1E4E5BAA002449DD /* DMDGuitarra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6164D1E4E5BAA002449DD /* DMDGuitarra.swift */; };
+		09F616501E4E5BB8002449DD /* DMDPiano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F6164F1E4E5BB8002449DD /* DMDPiano.swift */; };
+		09FD71751E4E167D006EC525 /* DMDListaTareas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD71741E4E167D006EC525 /* DMDListaTareas.swift */; };
+		09FD71781E4E16AA006EC525 /* DMDDetalleTareaCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD71761E4E16AA006EC525 /* DMDDetalleTareaCelda.swift */; };
+		09FD71791E4E16AA006EC525 /* DMDDetalleTareaCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FD71771E4E16AA006EC525 /* DMDDetalleTareaCelda.xib */; };
+		09FD717B1E4E16DA006EC525 /* DMDListaIconos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD717A1E4E16DA006EC525 /* DMDListaIconos.swift */; };
+		09FD717E1E4E1798006EC525 /* DMDIconoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD717D1E4E1798006EC525 /* DMDIconoCelda.swift */; };
+		09FD71811E4E17D1006EC525 /* DMDCabeceraDescripcion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD71801E4E17D1006EC525 /* DMDCabeceraDescripcion.swift */; };
+		09FD71831E4E17FA006EC525 /* DMDNuevaTarea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD71821E4E17FA006EC525 /* DMDNuevaTarea.swift */; };
+		09FD71871E4E3803006EC525 /* APITareasManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FD71861E4E3803006EC525 /* APITareasManager.swift */; };
+		E5FE87D71E623C4B00E37845 /* DMDAjustesVentanaPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FE87D61E623C4B00E37845 /* DMDAjustesVentanaPrincipal.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		096289FB1E3BC97B0085C122 /* App_BarLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App_BarLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		096289FE1E3BC97B0085C122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09628A031E3BC97B0085C122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09628A081E3BC97B0085C122 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		09628A0A1E3BC97B0085C122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09628A121E3BD2360085C122 /* DMDSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDSplashViewController.swift; sourceTree = "<group>"; };
+		09628A141E3BD23F0085C122 /* DMDLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDLoginViewController.swift; sourceTree = "<group>"; };
+		09628A161E3BD26C0085C122 /* DMDRootTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDRootTabBarViewController.swift; sourceTree = "<group>"; };
+		09AC92241E44D900000674EC /* DMDListadoContactos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListadoContactos.swift; sourceTree = "<group>"; };
+		09AC92261E44D947000674EC /* DMDDetalleContacto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleContacto.swift; sourceTree = "<group>"; };
+		09AC92281E44D956000674EC /* DMDMiPerfil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDMiPerfil.swift; sourceTree = "<group>"; };
+		09AC922A1E44D96D000674EC /* DMDWeb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDWeb.swift; sourceTree = "<group>"; };
+		09AC922F1E44DA0F000674EC /* DMDVistaMiContactoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDVistaMiContactoCelda.swift; sourceTree = "<group>"; };
+		09AC92301E44DA0F000674EC /* DMDVistaMiContactoCelda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMDVistaMiContactoCelda.xib; sourceTree = "<group>"; };
+		09AC92341E44DACB000674EC /* backPerfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backPerfil.png; sourceTree = "<group>"; };
+		09AC92351E44DACB000674EC /* brad-pitt.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "brad-pitt.jpg"; sourceTree = "<group>"; };
+		09AC92361E44DACB000674EC /* Contactos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Contactos.plist; sourceTree = "<group>"; };
+		09AC92371E44DACB000674EC /* depp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = depp.jpg; sourceTree = "<group>"; };
+		09AC92381E44DACB000674EC /* fondodegradado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondodegradado.png; sourceTree = "<group>"; };
+		09AC92391E44DACB000674EC /* kunis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kunis.jpg; sourceTree = "<group>"; };
+		09AC923A1E44DACB000674EC /* Miranda_Lambert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Miranda_Lambert.jpg; sourceTree = "<group>"; };
+		09AC923B1E44DACB000674EC /* Sara_Evans.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sara_Evans.jpg; sourceTree = "<group>"; };
+		09AC923C1E44DACB000674EC /* steve_jobs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = steve_jobs.jpg; sourceTree = "<group>"; };
+		09AC923D1E44DACB000674EC /* Taylor_Swift2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Taylor_Swift2.jpg; sourceTree = "<group>"; };
+		09AC923E1E44DACB000674EC /* thor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thor.jpg; sourceTree = "<group>"; };
+		09AC924D1E44E0E8000674EC /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		09AC924F1E450717000674EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09F6164D1E4E5BAA002449DD /* DMDGuitarra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDGuitarra.swift; sourceTree = "<group>"; };
+		09F6164F1E4E5BB8002449DD /* DMDPiano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDPiano.swift; sourceTree = "<group>"; };
+		09FD71741E4E167D006EC525 /* DMDListaTareas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaTareas.swift; sourceTree = "<group>"; };
+		09FD71761E4E16AA006EC525 /* DMDDetalleTareaCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleTareaCelda.swift; sourceTree = "<group>"; };
+		09FD71771E4E16AA006EC525 /* DMDDetalleTareaCelda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMDDetalleTareaCelda.xib; sourceTree = "<group>"; };
+		09FD717A1E4E16DA006EC525 /* DMDListaIconos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaIconos.swift; sourceTree = "<group>"; };
+		09FD717D1E4E1798006EC525 /* DMDIconoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDIconoCelda.swift; sourceTree = "<group>"; };
+		09FD71801E4E17D1006EC525 /* DMDCabeceraDescripcion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCabeceraDescripcion.swift; sourceTree = "<group>"; };
+		09FD71821E4E17FA006EC525 /* DMDNuevaTarea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDNuevaTarea.swift; sourceTree = "<group>"; };
+		09FD71861E4E3803006EC525 /* APITareasManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITareasManager.swift; sourceTree = "<group>"; };
+		E5FE87D61E623C4B00E37845 /* DMDAjustesVentanaPrincipal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDAjustesVentanaPrincipal.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		096289F81E3BC97B0085C122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		096289F21E3BC97B0085C122 = {
+			isa = PBXGroup;
+			children = (
+				096289FD1E3BC97B0085C122 /* App_BarLogin */,
+				096289FC1E3BC97B0085C122 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		096289FC1E3BC97B0085C122 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				096289FB1E3BC97B0085C122 /* App_BarLogin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		096289FD1E3BC97B0085C122 /* App_BarLogin */ = {
+			isa = PBXGroup;
+			children = (
+				096289FE1E3BC97B0085C122 /* AppDelegate.swift */,
+				E5FE87D51E623C1E00E37845 /* UTILS */,
+				09628A181E3BD2720085C122 /* VIEW_CONTROLLERS */,
+				09AC924A1E44DC29000674EC /* SRC */,
+				09628A021E3BC97B0085C122 /* Main.storyboard */,
+				09AC924F1E450717000674EC /* Assets.xcassets */,
+				09628A071E3BC97B0085C122 /* LaunchScreen.storyboard */,
+				09628A0A1E3BC97B0085C122 /* Info.plist */,
+			);
+			path = App_BarLogin;
+			sourceTree = "<group>";
+		};
+		09628A181E3BD2720085C122 /* VIEW_CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				E5FE87D81E623C4F00E37845 /* AJUSTES */,
+				09F616511E4E5BBD002449DD /* ACORDES */,
+				09FD717F1E4E179E006EC525 /* ICONOS */,
+				09FD717C1E4E16E5006EC525 /* TAREAS */,
+				09AC922C1E44D985000674EC /* CONTACTOS */,
+				09628A191E3BD2840085C122 /* LOGIN */,
+			);
+			name = VIEW_CONTROLLERS;
+			sourceTree = "<group>";
+		};
+		09628A191E3BD2840085C122 /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				09628A121E3BD2360085C122 /* DMDSplashViewController.swift */,
+				09628A141E3BD23F0085C122 /* DMDLoginViewController.swift */,
+				09628A161E3BD26C0085C122 /* DMDRootTabBarViewController.swift */,
+			);
+			name = LOGIN;
+			sourceTree = "<group>";
+		};
+		09AC922C1E44D985000674EC /* CONTACTOS */ = {
+			isa = PBXGroup;
+			children = (
+				09AC92241E44D900000674EC /* DMDListadoContactos.swift */,
+				09AC92331E44DA12000674EC /* XIB_VISTA_MI_CONTACTO */,
+				09AC92261E44D947000674EC /* DMDDetalleContacto.swift */,
+				09AC92281E44D956000674EC /* DMDMiPerfil.swift */,
+				09AC922A1E44D96D000674EC /* DMDWeb.swift */,
+			);
+			name = CONTACTOS;
+			sourceTree = "<group>";
+		};
+		09AC92331E44DA12000674EC /* XIB_VISTA_MI_CONTACTO */ = {
+			isa = PBXGroup;
+			children = (
+				09AC922F1E44DA0F000674EC /* DMDVistaMiContactoCelda.swift */,
+				09AC92301E44DA0F000674EC /* DMDVistaMiContactoCelda.xib */,
+			);
+			name = XIB_VISTA_MI_CONTACTO;
+			sourceTree = "<group>";
+		};
+		09AC924A1E44DC29000674EC /* SRC */ = {
+			isa = PBXGroup;
+			children = (
+				09AC924C1E44DC3C000674EC /* DICTIONARY */,
+				09AC924B1E44DC33000674EC /* IMAGES */,
+			);
+			name = SRC;
+			sourceTree = "<group>";
+		};
+		09AC924B1E44DC33000674EC /* IMAGES */ = {
+			isa = PBXGroup;
+			children = (
+				09AC92341E44DACB000674EC /* backPerfil.png */,
+				09AC92351E44DACB000674EC /* brad-pitt.jpg */,
+				09AC92371E44DACB000674EC /* depp.jpg */,
+				09AC92381E44DACB000674EC /* fondodegradado.png */,
+				09AC92391E44DACB000674EC /* kunis.jpg */,
+				09AC923A1E44DACB000674EC /* Miranda_Lambert.jpg */,
+				09AC923B1E44DACB000674EC /* Sara_Evans.jpg */,
+				09AC923C1E44DACB000674EC /* steve_jobs.jpg */,
+				09AC923D1E44DACB000674EC /* Taylor_Swift2.jpg */,
+				09AC923E1E44DACB000674EC /* thor.jpg */,
+			);
+			name = IMAGES;
+			sourceTree = "<group>";
+		};
+		09AC924C1E44DC3C000674EC /* DICTIONARY */ = {
+			isa = PBXGroup;
+			children = (
+				09AC92361E44DACB000674EC /* Contactos.plist */,
+			);
+			name = DICTIONARY;
+			sourceTree = "<group>";
+		};
+		09F616511E4E5BBD002449DD /* ACORDES */ = {
+			isa = PBXGroup;
+			children = (
+				09F6164D1E4E5BAA002449DD /* DMDGuitarra.swift */,
+				09F6164F1E4E5BB8002449DD /* DMDPiano.swift */,
+			);
+			name = ACORDES;
+			sourceTree = "<group>";
+		};
+		09FD717C1E4E16E5006EC525 /* TAREAS */ = {
+			isa = PBXGroup;
+			children = (
+				09FD71741E4E167D006EC525 /* DMDListaTareas.swift */,
+				09FD71821E4E17FA006EC525 /* DMDNuevaTarea.swift */,
+				09FD71761E4E16AA006EC525 /* DMDDetalleTareaCelda.swift */,
+				09FD71771E4E16AA006EC525 /* DMDDetalleTareaCelda.xib */,
+			);
+			name = TAREAS;
+			sourceTree = "<group>";
+		};
+		09FD717F1E4E179E006EC525 /* ICONOS */ = {
+			isa = PBXGroup;
+			children = (
+				09FD71801E4E17D1006EC525 /* DMDCabeceraDescripcion.swift */,
+				09FD717A1E4E16DA006EC525 /* DMDListaIconos.swift */,
+				09FD717D1E4E1798006EC525 /* DMDIconoCelda.swift */,
+			);
+			name = ICONOS;
+			sourceTree = "<group>";
+		};
+		E5FE87D51E623C1E00E37845 /* UTILS */ = {
+			isa = PBXGroup;
+			children = (
+				09AC924D1E44E0E8000674EC /* Utils.swift */,
+				09FD71861E4E3803006EC525 /* APITareasManager.swift */,
+			);
+			name = UTILS;
+			sourceTree = "<group>";
+		};
+		E5FE87D81E623C4F00E37845 /* AJUSTES */ = {
+			isa = PBXGroup;
+			children = (
+				E5FE87D61E623C4B00E37845 /* DMDAjustesVentanaPrincipal.swift */,
+			);
+			name = AJUSTES;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		096289FA1E3BC97B0085C122 /* App_BarLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09628A0D1E3BC97B0085C122 /* Build configuration list for PBXNativeTarget "App_BarLogin" */;
+			buildPhases = (
+				096289F71E3BC97B0085C122 /* Sources */,
+				096289F81E3BC97B0085C122 /* Frameworks */,
+				096289F91E3BC97B0085C122 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = App_BarLogin;
+			productName = App_BarLogin;
+			productReference = 096289FB1E3BC97B0085C122 /* App_BarLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		096289F31E3BC97B0085C122 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = dmd;
+				TargetAttributes = {
+					096289FA1E3BC97B0085C122 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 59SH2VU4Z2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 096289F61E3BC97B0085C122 /* Build configuration list for PBXProject "App_BarLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 096289F21E3BC97B0085C122;
+			productRefGroup = 096289FC1E3BC97B0085C122 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				096289FA1E3BC97B0085C122 /* App_BarLogin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		096289F91E3BC97B0085C122 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09AC92471E44DACB000674EC /* steve_jobs.jpg in Resources */,
+				09AC92491E44DACB000674EC /* thor.jpg in Resources */,
+				09AC92421E44DACB000674EC /* depp.jpg in Resources */,
+				09628A091E3BC97B0085C122 /* LaunchScreen.storyboard in Resources */,
+				09AC92501E450717000674EC /* Assets.xcassets in Resources */,
+				09AC923F1E44DACB000674EC /* backPerfil.png in Resources */,
+				09AC92411E44DACB000674EC /* Contactos.plist in Resources */,
+				09AC92481E44DACB000674EC /* Taylor_Swift2.jpg in Resources */,
+				09AC92461E44DACB000674EC /* Sara_Evans.jpg in Resources */,
+				09AC92441E44DACB000674EC /* kunis.jpg in Resources */,
+				09AC92321E44DA0F000674EC /* DMDVistaMiContactoCelda.xib in Resources */,
+				09AC92451E44DACB000674EC /* Miranda_Lambert.jpg in Resources */,
+				09628A041E3BC97B0085C122 /* Main.storyboard in Resources */,
+				09AC92431E44DACB000674EC /* fondodegradado.png in Resources */,
+				09AC92401E44DACB000674EC /* brad-pitt.jpg in Resources */,
+				09FD71791E4E16AA006EC525 /* DMDDetalleTareaCelda.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		096289F71E3BC97B0085C122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09AC92271E44D947000674EC /* DMDDetalleContacto.swift in Sources */,
+				09628A171E3BD26C0085C122 /* DMDRootTabBarViewController.swift in Sources */,
+				09F6164E1E4E5BAA002449DD /* DMDGuitarra.swift in Sources */,
+				09FD717E1E4E1798006EC525 /* DMDIconoCelda.swift in Sources */,
+				09FD71751E4E167D006EC525 /* DMDListaTareas.swift in Sources */,
+				09FD717B1E4E16DA006EC525 /* DMDListaIconos.swift in Sources */,
+				09AC922B1E44D96D000674EC /* DMDWeb.swift in Sources */,
+				09FD71871E4E3803006EC525 /* APITareasManager.swift in Sources */,
+				096289FF1E3BC97B0085C122 /* AppDelegate.swift in Sources */,
+				09AC92311E44DA0F000674EC /* DMDVistaMiContactoCelda.swift in Sources */,
+				09AC924E1E44E0E8000674EC /* Utils.swift in Sources */,
+				09FD71781E4E16AA006EC525 /* DMDDetalleTareaCelda.swift in Sources */,
+				09F616501E4E5BB8002449DD /* DMDPiano.swift in Sources */,
+				09AC92251E44D900000674EC /* DMDListadoContactos.swift in Sources */,
+				09628A131E3BD2360085C122 /* DMDSplashViewController.swift in Sources */,
+				09AC92291E44D956000674EC /* DMDMiPerfil.swift in Sources */,
+				E5FE87D71E623C4B00E37845 /* DMDAjustesVentanaPrincipal.swift in Sources */,
+				09628A151E3BD23F0085C122 /* DMDLoginViewController.swift in Sources */,
+				09FD71811E4E17D1006EC525 /* DMDCabeceraDescripcion.swift in Sources */,
+				09FD71831E4E17FA006EC525 /* DMDNuevaTarea.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		09628A021E3BC97B0085C122 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09628A031E3BC97B0085C122 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		09628A071E3BC97B0085C122 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09628A081E3BC97B0085C122 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09628A0B1E3BC97B0085C122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09628A0C1E3BC97B0085C122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09628A0E1E3BC97B0085C122 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59SH2VU4Z2;
+				INFOPLIST_FILE = App_BarLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dmd.App-BarLogin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		09628A0F1E3BC97B0085C122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 59SH2VU4Z2;
+				INFOPLIST_FILE = App_BarLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "dmd.App-BarLogin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		096289F61E3BC97B0085C122 /* Build configuration list for PBXProject "App_BarLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09628A0B1E3BC97B0085C122 /* Debug */,
+				09628A0C1E3BC97B0085C122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09628A0D1E3BC97B0085C122 /* Build configuration list for PBXNativeTarget "App_BarLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09628A0E1E3BC97B0085C122 /* Debug */,
+				09628A0F1E3BC97B0085C122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 096289F31E3BC97B0085C122 /* Project object */;
+}
