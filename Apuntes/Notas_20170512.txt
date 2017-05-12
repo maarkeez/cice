@@ -51,4 +51,10 @@ Creado en https://dashboard.back4app.com/apps/ aplicación
 user: maarkeez19@gmail.com
 passw: 1...
 
+-- Analíticas: PLUGIN
+https://firebase.google.com/
 
+BACK4UP
+
+
+https://firebase.google.com/
