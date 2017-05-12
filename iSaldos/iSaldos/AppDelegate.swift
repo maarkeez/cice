@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // Initialize Parse.
+        // TODO: Cambiar certificado de autenticación
+        // TODO: Cambiar certificado de cliente
         let configuration = ParseClientConfiguration {
             $0.applicationId = "VKMdpH0OweBcfhcPJ0q12U2APc9vx8gcS8wMocCv"
             $0.clientKey = "mIJ12lUNZ2NllWXswJZjdmfhVbtYrF09XWvwTMrE"

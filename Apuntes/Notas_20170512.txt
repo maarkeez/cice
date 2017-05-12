@@ -42,3 +42,7 @@ Parse
  - GeoPoints - Geoposición
  - CLOUD CODE
  - Permite escribir nuestras API escritas en JS y Backbone
+
+
+APLICACION
+- Charles: Revisar paquetes de un servicio.
