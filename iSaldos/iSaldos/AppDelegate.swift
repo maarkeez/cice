@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO: Cambiar certificado de autenticación
         // TODO: Cambiar certificado de cliente
         let configuration = ParseClientConfiguration {
-            $0.applicationId = "VKMdpH0OweBcfhcPJ0q12U2APc9vx8gcS8wMocCv"
-            $0.clientKey = "mIJ12lUNZ2NllWXswJZjdmfhVbtYrF09XWvwTMrE"
+            $0.applicationId = "2qJFYSiwnjomufKHoiwbyPq4Udn2cnUbLROOxc6d"
+            $0.clientKey = "yW1eLDOUckPRUGaHz8UXwKTsDV79wzjrDNjGIJo0"
             $0.server = "https://parseapi.back4app.com/"
         }
         Parse.initialize(with: configuration)

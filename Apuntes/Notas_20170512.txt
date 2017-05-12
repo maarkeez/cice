@@ -46,3 +46,9 @@ Parse
 
 APLICACION
 - Charles: Revisar paquetes de un servicio.
+
+Creado en https://dashboard.back4app.com/apps/ aplicación
+user: maarkeez19@gmail.com
+passw: 1...
+
+
