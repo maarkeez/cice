@@ -11,11 +11,9 @@ import UIKit
 import Kingfisher
 
 class IMListMovies: UIViewController {
-
-    //MARK: - Variables locales
-
-    var movies = [MovieModel]()
     
+    //MARK: - Variables locales
+    var movies = [MovieModel]()
     var collectionPadding : CGFloat = 0
     let customRefresh = UIRefreshControl()
     let dataProvider = LocalCoreDataService()
@@ -28,7 +26,7 @@ class IMListMovies: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         //Añadir refresco automático
         customRefresh.addTarget(self, action: #selector(loadData), for: .valueChanged  )
         
@@ -48,7 +46,7 @@ class IMListMovies: UIViewController {
         myCollectionView.dataSource = self
         mySearchBar.delegate = self
     }
-
+    
     func loadData(){
         dataProvider.topMovie({ (localResult) in
             //RECARGAR DATOS
@@ -71,8 +69,26 @@ class IMListMovies: UIViewController {
         }
     }
     
+    //Oculta el teclado y remueve el gesto de reconocimiento
     func hideKeyBoard(){
+        mySearchBar.resignFirstResponder()
+        self.view.removeGestureRecognizer(tapGR)
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            //recuperar el indice de la movie seleccionada
+            if let indexPathSelected = myCollectionView.indexPathsForSelectedItems?.last{
+                //Recupero la película
+                let selectedMovie = movies[indexPathSelected.row]
+                
+                
+                //Crear vista detalle
+                let detalleVC = segue.destination as! IMDetailMovie
+                detalleVC.movie = selectedMovie
+            }
+        }
     }
     
 }
@@ -88,9 +104,9 @@ extension IMListMovies : UICollectionViewDelegate, UICollectionViewDataSource, U
         let totalSeparaciones : CGFloat = 4
         
         collectionPadding = (anchoPantalla - (numeroCeldasPorFila * anchoCelda)) / totalSeparaciones
-
+        
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: collectionPadding,
@@ -132,6 +148,109 @@ extension IMListMovies : UICollectionViewDelegate, UICollectionViewDataSource, U
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //Recupero la película
+        let selectedMovie = movies[indexPath.row]
+        
+        
+        //Crear vista detalle
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let detalleVC = storyboard.instantiateViewController(withIdentifier: "DetailMovie") as! IMDetailMovie
+        detalleVC.movie = selectedMovie
+        navigationController?.pushViewController(detalleVC, animated: true)
+        
+        
+    }
+    
+    // ---------------------------------
+    // SEARCHBAR DELEGATE
+    // ---------------------------------
     
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.view.addGestureRecognizer(tapGR)
+    }
+    
+    //Si el texto es vacío buscamos todas las películas
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == ""{
+            loadData()
+        }
+    }
+    
+    //Si pulsamos buscar el texto buscado
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //Recuperamos el término de búsqueda
+        if let term = searchBar.text{
+            
+            //Realizamos la búsqueda
+            dataProvider.searchMovie(term, remoteHandler: { (resultMovie) in
+                if let movies = resultMovie {
+                    self.movies = movies
+                    DispatchQueue.main.async {
+                        //Repintamos y ocultamos el teclado
+                        self.myCollectionView.reloadData()
+                        searchBar.resignFirstResponder()
+                    }
+                }else{
+                    
+                }
+            })
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

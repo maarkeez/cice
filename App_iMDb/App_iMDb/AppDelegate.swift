@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        //Suscribir a notificaciones
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBadge(_:)), name: NSNotification.Name("updateFaBadNot"), object: nil)
+        
+        let dataProvider = LocalCoreDataService()
+        dataProvider.updateFavoriteBadge()
+        
         editUI()
         
         
@@ -60,5 +66,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
 
+    ///Recupera el total de datos y lo printa en un circulo dentro del item del primer root view controller 
+    ///para los favoritos
+    ///OJO!!! Si no es el primer view, puede que no exista y causar errores.
+    func updateBadge(_ notificacion: Notification){
+        
+        //Recuperar el rootview controller
+        let tabBarVC = self.window?.rootViewController as! UITabBarController
+        //Recuperar el último item
+        let favNavVC = tabBarVC.viewControllers?.last   as! UINavigationController
+        
+        if let total = notificacion.object as? Int{
+            if total != 0{
+                favNavVC.tabBarItem.badgeValue = "\(total)"
+            }else{
+                favNavVC.tabBarItem.badgeValue = nil
+            }
+        }
+        
+        
+        
+        
+    }
 }
 

@@ -121,7 +121,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="36d-7G-E5J">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sYj-aF-ejs">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="sYj-aF-ejs">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -164,6 +164,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vxB-W6-blw"/>
                     <connections>
+                        <outlet property="myCollectionView" destination="36d-7G-E5J" id="Pac-BL-yXT"/>
                         <segue destination="xQE-oW-Vse" kind="show" identifier="detailSegue" id="s8T-1F-kpL"/>
                     </connections>
                 </viewController>
@@ -196,6 +197,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Z3Z-ib-9AE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="AvS-15-wWE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -280,6 +282,9 @@
                                         <state key="normal" title="No me interesa" backgroundImage="btn-off">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="myAddFavoritosACTION:" destination="xQE-oW-Vse" eventType="touchUpInside" id="frj-VS-XN7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.23137254901960785" green="0.23137254901960785" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
@@ -327,6 +332,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="h3K-lF-WB6"/>
+                    <connections>
+                        <outlet property="myAddFavoritosBTN" destination="Py5-Sb-Acf" id="M7f-fr-Gm4"/>
+                        <outlet property="myCategoria" destination="i9R-I6-LBe" id="s47-0o-lgE"/>
+                        <outlet property="myDescripción" destination="hI7-LQ-y96" id="5KX-cZ-QKv"/>
+                        <outlet property="myDirector" destination="MQh-6f-4Cw" id="Sdk-n4-X5j"/>
+                        <outlet property="myImagen" destination="OfS-6R-uw0" id="Vqd-Q3-Ab8"/>
+                        <outlet property="myTitulo" destination="5Da-o2-dW8" id="ZhJ-1P-V9J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfN-bK-ltB" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,6 +353,6 @@
         <image name="ver-icon" width="25" height="10"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Zj-2a-X8a"/>
+        <segue reference="s8T-1F-kpL"/>
     </inferredMetricsTieBreakers>
 </document>

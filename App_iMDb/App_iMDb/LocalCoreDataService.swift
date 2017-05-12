@@ -32,7 +32,7 @@ class LocalCoreDataService {
                 for movie in movieData{
                     
                     //Creo un objeto MovieModel
-                    let obj = MovieModel(id: movie["id"]!, title: movie["movie"]!, order: nil, summary: movie["summary"]!, image: movie["image"]!, category: movie["category"]!, director: movie["director"]!)
+                    let obj = MovieModel(id: movie["id"]!, title: movie["title"]!, order: nil, summary: movie["summary"]!, image: movie["image"]!, category: movie["category"]!, director: movie["director"]!)
                     
                     //Añado la película
                     modelMovie.append(obj)
@@ -78,6 +78,8 @@ class LocalCoreDataService {
                     
                     order += 1
                 }
+                //Borrar los que no sean favoritos y no estén actualizados
+                self.removeAllNotFavorite()
                 
                 //Recupero las películas de CoreData
                 remoteHandler(self.queryTopMovies())
@@ -211,4 +213,148 @@ class LocalCoreDataService {
         movie.id = movieDiccionario["id"]
         updateMovie(movieDiccionario, movie: movie, order: order)
     }
+    
+    ///Devuelve TRUE si la película está guardada como favorita
+    ///FALSE en caso contrario
+    func isMovieFavourite(_ movie: MovieModel) -> Bool {
+        var toReturn = false
+        
+        if let _ = getMovieByIdAndFavorito(movie.id!, favorito: true){
+            toReturn = true
+        }
+        
+        return toReturn
+    }
+    
+    ///Borra la película de CoreData si existe
+    ///La inserta en caso de que no la encuentre
+    ///La actualiza si existe pero no es favorita
+    func markUnMarkFavorite(_ movie: MovieModel){
+        let context = stack.persistentContainer.viewContext
+        
+        if let movieData = getMovieByIdAndFavorito(movie.id!, favorito: true){
+            //Borrar de CoreData si existe
+           context.delete(movieData)
+        }else if let movieData = getMovieByIdAndFavorito(movie.id!, favorito: false){
+            movieData.title = movie.title
+            movieData.summary = movie.summary
+            movieData.category = movie.category
+            movieData.director = movie.director
+            movieData.image = movie.image
+            movieData.favorito = true
+            
+            do{
+                try context.save()
+            }catch{
+                print("Error mientras marcamos como favorito. Para una película que ya existe")
+            }
+        }else{
+        
+        //Crear el objeto a guardar en CoreData
+            let movieData = MovieManager(context: context)
+            movieData.id = movie.id
+            movieData.title = movie.title
+            movieData.summary = movie.summary
+            movieData.category = movie.category
+            movieData.director = movie.director
+            movieData.image = movie.image
+            movieData.favorito = true
+            
+            do{
+                try context.save()
+            }catch{
+                print("Error mientras marcamos como favorito. Para una película que no existe")
+            }
+            
+            
+        }
+    }
+    
+    func getFavoriteMovies() -> [MovieModel]? {
+        //Recupero el contexto
+        let ctx = stack.persistentContainer.viewContext
+        
+        //SELECT a CoreData
+        let request : NSFetchRequest<MovieManager> = MovieManager.fetchRequest()
+        
+        //ORDER BY
+        let sortDescription = NSSortDescriptor(key: "order", ascending: true)
+        
+        //WHERE
+        let customPredicate = NSPredicate(format: "favorito = true")
+        
+        //Añadir condiciones a la llamada
+        request.sortDescriptors = [sortDescription]
+        request.predicate = customPredicate
+        
+        //COREDATA execute
+        do{
+            //Consultar a CoreData
+            let fecthMovies = try ctx.fetch(request)
+            
+            //Variable a devolver
+            var movies = [MovieModel]()
+            
+            //Recorremos las películas del CoreData recuperadas
+            for movie in fecthMovies{
+                //Las añadimos al array
+                movies.append(movie.mappedObj())
+            }
+            //Devolvemos el array con las películas.
+            return movies
+            
+        }catch{
+            
+            print("getFavoriteMovies: Error en la consulta a CoreData")
+            return nil
+            
+        }
+    }
+    
+    /// Manda la notificación "updateFaBadNot" al NotificationCenter
+    /// El delegado deberá suscribirse previamente a esta notificación.
+    func updateFavoriteBadge(){
+        if let totalFavoritos = getFavoriteMovies()?.count{
+            let customNotification = Notification(name: Notification.Name("updateFaBadNot"), object: totalFavoritos, userInfo: nil)
+            NotificationCenter.default.post(customNotification)
+        }
+    }
+    
+    func updateFavoriteBadge(_ totalFavoritos : Int){
+        
+            let customNotification = Notification(name: Notification.Name("updateFaBadNot"), object: totalFavoritos, userInfo: nil)
+            NotificationCenter.default.post(customNotification)
+        
+    }
+    
+    
+    func removeAllNotFavorite(){
+        
+        let context = stack.persistentContainer.viewContext
+        let request : NSFetchRequest<MovieManager> = MovieManager.fetchRequest()
+        let customPredicate = NSPredicate(format: "favorito = false")
+        
+        request.predicate = customPredicate
+        
+        do{
+            let fetchMovies = try context.fetch(request)
+            for c_movie in fetchMovies{
+                if !c_movie.sync{
+                    context.delete(c_movie)
+                }
+            }
+        }catch{
+            
+        }
+        
+        
+    }
 }
+
+
+
+
+
+
+
+
