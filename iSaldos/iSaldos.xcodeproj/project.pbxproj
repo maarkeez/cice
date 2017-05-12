@@ -10,6 +10,10 @@
 		096E4E111EC63BDF0095C59A /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E101EC63BDF0095C59A /* APIUTILS.swift */; };
 		096E4E131EC63DE10095C59A /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E121EC63DE10095C59A /* RateApp.swift */; };
 		096E4E151EC63E100095C59A /* APIPHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E141EC63E100095C59A /* APIPHELPERS.swift */; };
+		096E4E171EC643570095C59A /* SASplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E161EC643570095C59A /* SASplashViewController.swift */; };
+		096E4E191EC643A40095C59A /* SAGaleriaImagenesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E181EC643A40095C59A /* SAGaleriaImagenesViewController.swift */; };
+		096E4E1B1EC644D80095C59A /* SALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E1A1EC644D80095C59A /* SALoginViewController.swift */; };
+		096E4E1D1EC644EB0095C59A /* SARegistroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E1C1EC644EB0095C59A /* SARegistroTableViewController.swift */; };
 		412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741B41E9F93B20074CDD7 /* AppDelegate.swift */; };
 		412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741B81E9F93B20074CDD7 /* Main.storyboard */; };
 		412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412741BB1E9F93B20074CDD7 /* Assets.xcassets */; };
@@ -54,6 +58,10 @@
 		096E4E101EC63BDF0095C59A /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		096E4E121EC63DE10095C59A /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		096E4E141EC63E100095C59A /* APIPHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIPHELPERS.swift; sourceTree = "<group>"; };
+		096E4E161EC643570095C59A /* SASplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SASplashViewController.swift; sourceTree = "<group>"; };
+		096E4E181EC643A40095C59A /* SAGaleriaImagenesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAGaleriaImagenesViewController.swift; sourceTree = "<group>"; };
+		096E4E1A1EC644D80095C59A /* SALoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SALoginViewController.swift; sourceTree = "<group>"; };
+		096E4E1C1EC644EB0095C59A /* SARegistroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SARegistroTableViewController.swift; sourceTree = "<group>"; };
 		1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.release.xcconfig"; sourceTree = "<group>"; };
 		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
 		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +237,10 @@
 		412741F21E9FC0FE0074CDD7 /* LOGIN/REGISTRO/GALERIA */ = {
 			isa = PBXGroup;
 			children = (
+				096E4E161EC643570095C59A /* SASplashViewController.swift */,
+				096E4E181EC643A40095C59A /* SAGaleriaImagenesViewController.swift */,
+				096E4E1A1EC644D80095C59A /* SALoginViewController.swift */,
+				096E4E1C1EC644EB0095C59A /* SARegistroTableViewController.swift */,
 			);
 			name = LOGIN/REGISTRO/GALERIA;
 			sourceTree = "<group>";
@@ -483,18 +495,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
+				096E4E191EC643A40095C59A /* SAGaleriaImagenesViewController.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
+				096E4E171EC643570095C59A /* SASplashViewController.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
 				41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */,
 				096E4E111EC63BDF0095C59A /* APIUTILS.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,
 				412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */,
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
+				096E4E1B1EC644D80095C59A /* SALoginViewController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				096E4E151EC63E100095C59A /* APIPHELPERS.swift in Sources */,
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
 				096E4E131EC63DE10095C59A /* RateApp.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
+				096E4E1D1EC644EB0095C59A /* SARegistroTableViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
