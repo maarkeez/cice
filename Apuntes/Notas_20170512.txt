@@ -1,0 +1,44 @@
+Conceptos:
+ - Que es Cloud: paradigma que permite ofrecer servicios a través de internet.
+
+Distintas capas
+ - PaaS: Plataform as a Service. (iOS, Android, Web)
+ - Saas: Software as a Service. (Aplicaciones: Imagen Windows Server)
+ - IaaS: Infraestructura as a Service. (Amazon: CPDs)
+ - BaaS MBaaS: Movile Backend as a Service. (PARSE)
+
+MBaaS - Conceptos
+ - Nuevo middleware.
+ - http://blogs.forrester.com/michael_facemire/12-04-25-mobile_backend_as_a_service_the_new_lightweight_middleware
+
+ - SDK Multiplataformas.
+ - Servicios de gestión de usuarios (Oauth, propios)
+ - Integración con redes sociales.
+ - Notificaciones Push remota.
+ - Almacenamiento en el Cloud.
+ - APIs REST.
+
+MBaaS - Grandes
+ - PARSE. Gratuita. Para comenzar.
+ - AZURE. De Microsoft. Para empresas pequeñas.
+ - AmazonWS. Para startup consolidadas.
+
+En españa
+ - http://asociacionstartups.es
+ - Job and Talent
+ - Tuenti
+ - Fever
+ - Immfly - Intranet para aviones
+ - Paymet - Pagos bancarios
+
+Parse
+ - Ofrece integración con redes sociales.
+ - Gestión de usuarios y roles.
+ - UI (Imagenes)
+ - In-App Purchase (ApplePay, PayPal, Redsys)
+ - Gestión de ficheros.
+ - Notificaciones Push.
+ - Persistencia no relacional.
+ - GeoPoints - Geoposición
+ - CLOUD CODE
+ - Permite escribir nuestras API escritas en JS y Backbone

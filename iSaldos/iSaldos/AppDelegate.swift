@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-//COMENTARIO DE PRUEBA
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
