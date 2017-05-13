@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlmacenCeldaCollection" id="gTV-IL-0wX" customClass="DMDAlmacenCeldaCollection" customModule="sell_it_easy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="219" height="364"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="219" height="364"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqN-ia-MAd">
+                        <rect key="frame" x="0.0" y="0.0" width="219" height="364"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H93-IK-mJ4">
+                                <rect key="frame" x="4" y="8" width="211" height="348"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TnH-6o-5jZ">
+                                        <rect key="frame" x="8" y="8" width="195" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="KLS-ld-cqr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekf-Aw-b8v">
+                                        <rect key="frame" x="8" y="316" width="139" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="zhf-qq-79e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999,99 €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNV-RM-KHT">
+                                        <rect key="frame" x="151" y="316" width="52" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="Xj8-Hj-faA"/>
+                                            <constraint firstAttribute="width" constant="52" id="Y5t-ZK-VM2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ekf-Aw-b8v" firstAttribute="top" secondItem="TnH-6o-5jZ" secondAttribute="bottom" constant="8" id="JVg-ud-wdC"/>
+                                    <constraint firstItem="cNV-RM-KHT" firstAttribute="top" secondItem="TnH-6o-5jZ" secondAttribute="bottom" constant="8" id="Smq-p4-kLC"/>
+                                    <constraint firstItem="cNV-RM-KHT" firstAttribute="leading" secondItem="ekf-Aw-b8v" secondAttribute="trailing" constant="4" id="Td0-AY-WtA"/>
+                                    <constraint firstItem="TnH-6o-5jZ" firstAttribute="leading" secondItem="H93-IK-mJ4" secondAttribute="leading" constant="8" id="YrZ-mT-T3G"/>
+                                    <constraint firstItem="ekf-Aw-b8v" firstAttribute="leading" secondItem="H93-IK-mJ4" secondAttribute="leading" constant="8" id="gGX-7T-hfF"/>
+                                    <constraint firstAttribute="trailing" secondItem="cNV-RM-KHT" secondAttribute="trailing" constant="8" id="i5n-JA-Cyc"/>
+                                    <constraint firstItem="TnH-6o-5jZ" firstAttribute="top" secondItem="H93-IK-mJ4" secondAttribute="top" constant="8" id="qsK-M1-0vF"/>
+                                    <constraint firstAttribute="trailing" secondItem="TnH-6o-5jZ" secondAttribute="trailing" constant="8" id="xU9-1n-NOw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94869965314865112" green="0.94935256242752075" blue="0.96584922075271606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H93-IK-mJ4" firstAttribute="top" secondItem="fqN-ia-MAd" secondAttribute="top" constant="8" id="3pN-Nl-Q9q"/>
+                            <constraint firstAttribute="trailing" secondItem="H93-IK-mJ4" secondAttribute="trailing" constant="4" id="JKY-Mi-JRj"/>
+                            <constraint firstItem="H93-IK-mJ4" firstAttribute="leading" secondItem="fqN-ia-MAd" secondAttribute="leading" constant="4" id="RHL-7h-IQ7"/>
+                            <constraint firstAttribute="bottom" secondItem="H93-IK-mJ4" secondAttribute="bottom" constant="8" id="gj5-qK-hB4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fqN-ia-MAd" secondAttribute="trailing" id="Htd-PC-k0u"/>
+                <constraint firstAttribute="bottom" secondItem="fqN-ia-MAd" secondAttribute="bottom" id="TQv-WU-V7T"/>
+                <constraint firstItem="fqN-ia-MAd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="c9k-jk-LFH"/>
+                <constraint firstItem="fqN-ia-MAd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kMX-N2-nmG"/>
+            </constraints>
+            <size key="customSize" width="219" height="364"/>
+            <connections>
+                <outlet property="myImagen" destination="TnH-6o-5jZ" id="pS0-Ug-SFj"/>
+                <outlet property="myNombre" destination="ekf-Aw-b8v" id="7IR-eo-gDf"/>
+                <outlet property="myPrecio" destination="cNV-RM-KHT" id="wdO-eF-JUQ"/>
+            </connections>
+            <point key="canvasLocation" x="-77.5" y="174"/>
+        </collectionViewCell>
+    </objects>
+</document>
