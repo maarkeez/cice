@@ -8,12 +8,15 @@
 
 import UIKit
 
+protocol DMDDetalleProductoDelegate{
+    func guardar()
+}
+
 class DMDDetalleProducto: UITableViewController {
 
     
     //MARK: - Variables locales
-    
-    
+    var delegate : DMDDetalleProductoDelegate?
     
     //MARK: - IBOutlets
     @IBOutlet weak var myCodigoEmpresa: UITextField!
@@ -28,9 +31,10 @@ class DMDDetalleProducto: UITableViewController {
 
     
     //MARK: - IBActions
-    @IBAction func guardarACTION(_ sender: Any) {
+    @IBAction func guardarACTION(_ sender: AnyObject) {
         guardar()
-        dismiss(animated: true, completion: nil)
+        delegate?.guardar()
+        self.navigationController?.popViewController(animated: true)
     }
 
     
@@ -42,11 +46,38 @@ class DMDDetalleProducto: UITableViewController {
         myTalla.delegate = self
         myTalla.dataSource = self
         
+        let pulsarImagen = UITapGestureRecognizer(target: self, action: #selector(pickerPhoto))
+        myImagen.isUserInteractionEnabled = true
+        myImagen.addGestureRecognizer(pulsarImagen)
 
     }
 
     //MARK: - Utils
     func guardar(){
+        let producto = ProductoRepository.shared.new()
+        
+        producto.codigoBarras = myCodigoBarras.text ?? ""
+        producto.codigoEmpresa = myCodigoEmpresa.text ?? ""
+        producto.talla = CONSTANTES.TALLA.LISTADO[myTalla.selectedRow(inComponent: 0)]
+        
+       
+        producto.precioCoste = Float(myCoste.text!) ?? 0.0
+        producto.pvp = Float(myPVP.text!) ?? 0.0
+        producto.descuento = Float(myDescuento.text!) ?? 0.0
+        
+        if let imagen = myImagen.image {
+            let imageData = UIImageJPEGRepresentation(imagen, 0.3)
+            producto.imagen = imageData as NSData?
+            
+        }
+        
+        producto.nombre = myNombre.text
+        producto.descripcion = myDescripcion.text
+        
+        
+        
+        
+        ProductoRepository.shared.save(producto)
         
     }
 }

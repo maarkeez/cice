@@ -30,6 +30,10 @@
 		E53E20C91EC8568900130DEB /* DMDDetalleProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */; };
 		E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */; };
 		E53E20CF1EC85E6F00130DEB /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20CE1EC85E6F00130DEB /* Constantes.swift */; };
+		E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D11EC8641400130DEB /* CoreDataStack.swift */; };
+		E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D31EC865F600130DEB /* ProductoRepository.swift */; };
+		E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */; };
+		E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,12 +60,16 @@
 		E51ABA821EC8359E008C2E6C /* ReachabilitySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReachabilitySwift.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphonesimulator/ReachabilitySwift/ReachabilitySwift.framework"; sourceTree = "<group>"; };
 		E51ABA831EC8359E008C2E6C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		E51ABA8E1EC83DB1008C2E6C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		E53E20C01EC846C000130DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E53E20C01EC846C000130DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCajaRegistradoraTableViewController.swift; sourceTree = "<group>"; };
 		E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaProductos.swift; sourceTree = "<group>"; };
 		E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleProducto.swift; sourceTree = "<group>"; };
 		E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExts.swift; sourceTree = "<group>"; };
 		E53E20CE1EC85E6F00130DEB /* Constantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
+		E53E20D11EC8641400130DEB /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E53E20D31EC865F600130DEB /* ProductoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductoRepository.swift; sourceTree = "<group>"; };
+		E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listadoProductoCelda.swift; sourceTree = "<group>"; };
+		E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = listadoProductoCelda.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +124,6 @@
 		E51ABA4F1EC7C34C008C2E6C = {
 			isa = PBXGroup;
 			children = (
-				E53E20C01EC846C000130DEB /* Assets.xcassets */,
 				E51ABA5A1EC7C34C008C2E6C /* sell.it.easy */,
 				E51ABA591EC7C34C008C2E6C /* Products */,
 				D64F01B3018821907FCE059D /* Pods */,
@@ -136,13 +143,14 @@
 			isa = PBXGroup;
 			children = (
 				E51ABA5B1EC7C34C008C2E6C /* AppDelegate.swift */,
+				E53E20D01EC863ED00130DEB /* PERSISTENCE */,
 				E53E20CA1EC85BF100130DEB /* UTILS */,
 				E51ABA791EC7D032008C2E6C /* VIEW_CONTROLLERS */,
 				E51ABA751EC7C6D1008C2E6C /* OBJ-C */,
 				E51ABA5F1EC7C34C008C2E6C /* Main.storyboard */,
+				E53E20C01EC846C000130DEB /* Assets.xcassets */,
 				E51ABA671EC7C34C008C2E6C /* LaunchScreen.storyboard */,
 				E51ABA6A1EC7C34C008C2E6C /* Info.plist */,
-				E51ABA621EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld */,
 			);
 			path = sell.it.easy;
 			sourceTree = "<group>";
@@ -187,6 +195,7 @@
 			children = (
 				E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */,
 				E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */,
+				E53E20D91EC8768300130DEB /* CELDAS */,
 			);
 			name = PRODUCTO;
 			sourceTree = "<group>";
@@ -207,6 +216,25 @@
 				E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */,
 			);
 			name = EXTENSIONS;
+			sourceTree = "<group>";
+		};
+		E53E20D01EC863ED00130DEB /* PERSISTENCE */ = {
+			isa = PBXGroup;
+			children = (
+				E51ABA621EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld */,
+				E53E20D11EC8641400130DEB /* CoreDataStack.swift */,
+				E53E20D31EC865F600130DEB /* ProductoRepository.swift */,
+			);
+			name = PERSISTENCE;
+			sourceTree = "<group>";
+		};
+		E53E20D91EC8768300130DEB /* CELDAS */ = {
+			isa = PBXGroup;
+			children = (
+				E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */,
+				E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */,
+			);
+			name = CELDAS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +303,7 @@
 			files = (
 				E51ABA691EC7C34C008C2E6C /* LaunchScreen.storyboard in Resources */,
 				E53E20C11EC846C000130DEB /* Assets.xcassets in Resources */,
+				E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */,
 				E51ABA611EC7C34C008C2E6C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,10 +364,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */,
+				E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */,
+				E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */,
 				E51ABA8F1EC83DB1008C2E6C /* Utils.swift in Sources */,
 				E51ABA641EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld in Sources */,
 				E51ABA5C1EC7C34C008C2E6C /* AppDelegate.swift in Sources */,
 				E51ABA741EC7C6C4008C2E6C /* SWRevealViewController.m in Sources */,
+				E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */,
 				E53E20CF1EC85E6F00130DEB /* Constantes.swift in Sources */,
 				E53E20C91EC8568900130DEB /* DMDDetalleProducto.swift in Sources */,
 				E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */,

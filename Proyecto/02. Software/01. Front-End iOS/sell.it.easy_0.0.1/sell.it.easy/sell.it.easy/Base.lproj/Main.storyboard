@@ -386,7 +386,7 @@
         <!--Productos-->
         <scene sceneID="fDH-XP-0as">
             <objects>
-                <viewController storyboardIdentifier="DMDListaProductos" id="sgv-y6-N8I" customClass="DMDListaProductos" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMDListaProductos" automaticallyAdjustsScrollViewInsets="NO" id="sgv-y6-N8I" customClass="DMDListaProductos" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZQ0-Zx-yEa"/>
                         <viewControllerLayoutGuide type="bottom" id="QWk-2l-QEf"/>
@@ -395,39 +395,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-t3-36N">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-t3-36N">
                                 <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VJU-KA-MqR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="XFv-pl-bz8"/>
+                                    <constraint firstAttribute="height" constant="44" id="eVh-RB-Plt"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="PH7-t3-36N" secondAttribute="trailing" id="1dj-A9-Fdg"/>
-                            <constraint firstAttribute="trailing" secondItem="VJU-KA-MqR" secondAttribute="trailing" id="5d4-qc-hoV"/>
-                            <constraint firstItem="VJU-KA-MqR" firstAttribute="leading" secondItem="DIh-Ru-bun" secondAttribute="leading" id="5ec-bt-5TF"/>
-                            <constraint firstItem="VJU-KA-MqR" firstAttribute="top" secondItem="ZQ0-Zx-yEa" secondAttribute="bottom" id="aMP-CM-7is"/>
-                            <constraint firstItem="PH7-t3-36N" firstAttribute="leading" secondItem="DIh-Ru-bun" secondAttribute="leading" id="cpl-O3-dVH"/>
-                            <constraint firstItem="QWk-2l-QEf" firstAttribute="top" secondItem="PH7-t3-36N" secondAttribute="bottom" id="d37-CL-Jg1"/>
-                            <constraint firstItem="PH7-t3-36N" firstAttribute="top" secondItem="VJU-KA-MqR" secondAttribute="bottom" id="sAq-q1-KCR"/>
+                            <constraint firstAttribute="trailing" secondItem="PH7-t3-36N" secondAttribute="trailing" id="Jw3-X8-Hcj"/>
+                            <constraint firstItem="PH7-t3-36N" firstAttribute="leading" secondItem="DIh-Ru-bun" secondAttribute="leading" id="aaB-Kn-flS"/>
+                            <constraint firstItem="VJU-KA-MqR" firstAttribute="top" secondItem="ZQ0-Zx-yEa" secondAttribute="bottom" id="gQs-Lt-Ip0"/>
+                            <constraint firstItem="QWk-2l-QEf" firstAttribute="top" secondItem="PH7-t3-36N" secondAttribute="bottom" id="gkd-ZC-DbN"/>
+                            <constraint firstItem="PH7-t3-36N" firstAttribute="top" secondItem="VJU-KA-MqR" secondAttribute="bottom" id="kLk-mc-feM"/>
+                            <constraint firstItem="VJU-KA-MqR" firstAttribute="leading" secondItem="DIh-Ru-bun" secondAttribute="leading" id="mIy-ea-doY"/>
+                            <constraint firstAttribute="trailing" secondItem="VJU-KA-MqR" secondAttribute="trailing" id="oXR-jq-wdx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Productos" id="fh0-cQ-ON1">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="hVT-Tx-cx4"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="iaZ-Pl-8Nq">
                             <connections>
-                                <segue destination="9vI-s5-7la" kind="push" id="6UY-eS-zyQ"/>
+                                <segue destination="9vI-s5-7la" kind="push" identifier="detalleProductoSegue" id="6UY-eS-zyQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="myMenuBTN" destination="hVT-Tx-cx4" id="i1X-Z1-gDQ"/>
+                        <outlet property="myTable" destination="PH7-t3-36N" id="IsA-gg-Nt3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aem-iz-Erj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -454,6 +455,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PVH-rD-6Cq">
                                                     <rect key="frame" x="8" y="8" width="359" height="233.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
