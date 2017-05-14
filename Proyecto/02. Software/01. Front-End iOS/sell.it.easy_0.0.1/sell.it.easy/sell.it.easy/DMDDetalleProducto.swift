@@ -17,8 +17,17 @@ class DMDDetalleProducto: UITableViewController {
     
     //MARK: - IBOutlets
     
+    @IBOutlet weak var myCodigoEmpresa: UITextField!
+    @IBOutlet weak var myCodigoBarras: UITextField!
+    @IBOutlet weak var myCoste: UITextField!
+    @IBOutlet weak var myDescuento: UITextField!
+    @IBOutlet weak var myPVP: UITextField!
+    @IBOutlet weak var myImagen: UIImageView!
     
+    @IBOutlet weak var myNombre: UITextField!
     
+    @IBOutlet weak var myTalla: UITextField!
+    @IBOutlet weak var myDescripcion: UITextView!
     //MARK: - IBActions
     
     

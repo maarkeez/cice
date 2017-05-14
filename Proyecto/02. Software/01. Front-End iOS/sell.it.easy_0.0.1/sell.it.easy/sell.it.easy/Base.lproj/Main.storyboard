@@ -434,10 +434,10 @@
             </objects>
             <point key="canvasLocation" x="1116" y="2256.521739130435"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Detalle Producto-->
         <scene sceneID="1Jm-l4-nVK">
             <objects>
-                <tableViewController id="9vI-s5-7la" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DMDDetalleProducto" id="9vI-s5-7la" customClass="DMDDetalleProducto" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eWG-5j-5Xn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -449,7 +449,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5EN-er-Cfk" id="Uni-re-rmw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PVH-rD-6Cq">
@@ -468,7 +468,7 @@
                                         <rect key="frame" x="0.0" y="250" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tic-w7-8N9" id="VCj-jT-Va4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TTV-Nt-Fwx">
@@ -502,7 +502,7 @@
                                         <rect key="frame" x="0.0" y="294" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kd8-Pg-yf9" id="poR-rw-RHP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSu-AX-6j5">
@@ -578,7 +578,7 @@
                                                     <rect key="frame" x="63" y="8" width="304" height="27.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PVP €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88m-Tr-R8f">
                                                     <rect key="frame" x="8" y="8" width="47" height="27.5"/>
@@ -612,7 +612,7 @@
                                                     <rect key="frame" x="116" y="8" width="251" height="28"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuento %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY7-rP-cIc">
                                                     <rect key="frame" x="8" y="8" width="100" height="27.5"/>
@@ -646,7 +646,7 @@
                                                     <rect key="frame" x="78" y="8" width="289" height="27.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coste €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-ZY-rtr">
                                                     <rect key="frame" x="8" y="8" width="62" height="27.5"/>
@@ -673,7 +673,7 @@
                                         <rect key="frame" x="0.0" y="670" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HCh-aD-Mf5" id="0MG-uc-5aw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código de barras" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnB-Mk-2BI">
@@ -749,6 +749,17 @@
                     <navigationItem key="navigationItem" id="iV9-Va-tml">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="gI6-Ff-whj"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myCodigoBarras" destination="SRF-YY-HEI" id="DHj-dK-Ime"/>
+                        <outlet property="myCodigoEmpresa" destination="Xi7-34-BYe" id="RXf-Ta-tUI"/>
+                        <outlet property="myCoste" destination="86s-BP-NbK" id="TYW-tL-XFu"/>
+                        <outlet property="myDescripcion" destination="Yas-dS-XIe" id="ipb-jz-9bW"/>
+                        <outlet property="myDescuento" destination="HwD-9y-Ijo" id="Mjh-1o-f5c"/>
+                        <outlet property="myImagen" destination="PVH-rD-6Cq" id="KXF-hU-PLi"/>
+                        <outlet property="myNombre" destination="TTV-Nt-Fwx" id="L1U-9e-Psy"/>
+                        <outlet property="myPVP" destination="gHA-Vx-hYA" id="H0J-Jw-5oc"/>
+                        <outlet property="myTalla" destination="khz-I0-IeP" id="c8Z-X4-hc5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dC-Ra-YjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
