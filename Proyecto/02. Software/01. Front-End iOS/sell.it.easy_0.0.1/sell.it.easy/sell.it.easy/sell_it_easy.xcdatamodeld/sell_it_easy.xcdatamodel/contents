@@ -24,6 +24,11 @@
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Stock" representedClassName="Stock" syncable="YES" codeGenerationType="class">
+        <attribute name="cantidad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="stock2producto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Producto" syncable="YES"/>
+        <relationship name="stock2tienda" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tienda" syncable="YES"/>
+    </entity>
     <entity name="Tienda" representedClassName="Tienda" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -41,10 +46,11 @@
         <relationship name="usuario2rol" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rol" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Organizacion" positionX="-36" positionY="63" width="128" height="135"/>
-        <element name="Rol" positionX="-54" positionY="36" width="128" height="75"/>
-        <element name="Tienda" positionX="-18" positionY="99" width="128" height="30"/>
-        <element name="Usuario" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="Producto" positionX="-36" positionY="90" width="128" height="195"/>
+        <element name="Organizacion" positionX="-207" positionY="36" width="128" height="133"/>
+        <element name="Producto" positionX="9" positionY="228" width="128" height="195"/>
+        <element name="Rol" positionX="151" positionY="-27" width="128" height="75"/>
+        <element name="Tienda" positionX="0" positionY="63" width="128" height="58"/>
+        <element name="Usuario" positionX="-74" positionY="-150" width="128" height="150"/>
+        <element name="Stock" positionX="160" positionY="99" width="128" height="90"/>
     </elements>
 </model>

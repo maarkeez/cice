@@ -1,5 +1,5 @@
 //
-//  DMDDetalleProducto.swift
+//  DMDDetalleTienda.swift
 //  sell.it.easy
 //
 //  Created by David Márquez Delgado on 14/5/17.
@@ -8,98 +8,67 @@
 
 import UIKit
 
-protocol DMDDetalleProductoDelegate{
+protocol DMDDetalleTiendaDelegate{
     func guardar()
 }
 
-class DMDDetalleProducto: UITableViewController {
+class DMDDetalleTienda: UITableViewController {
 
+    
     
     //MARK: - Variables locales
-    var delegate : DMDDetalleProductoDelegate?
+    var delegate : DMDDetalleTiendaDelegate?
     
     //MARK: - IBOutlets
-    @IBOutlet weak var myCodigoEmpresa: UITextField!
-    @IBOutlet weak var myCodigoBarras: UITextField!
-    @IBOutlet weak var myTalla: UIPickerView!
-    @IBOutlet weak var myCoste: UITextField!
-    @IBOutlet weak var myDescuento: UITextField!
-    @IBOutlet weak var myPVP: UITextField!
     @IBOutlet weak var myImagen: UIImageView!
     @IBOutlet weak var myNombre: UITextField!
-    @IBOutlet weak var myDescripcion: UITextView!
-
+    @IBOutlet weak var myTelefono: UITextField!
     
     //MARK: - IBActions
-    @IBAction func guardarACTION(_ sender: AnyObject) {
-        guardar()
+    
+    @IBAction func guardarACTION(_ sender: Any) {
+        let tienda = TiendaRepository.shared.new()
+        
+        
+        
+        if let imagen = myImagen.image {
+            let imageData = UIImageJPEGRepresentation(imagen, 0.3)
+            tienda.imagen = imageData as NSData?
+            
+        }
+        
+        tienda.nombre = myNombre.text
+        tienda.telefono = myTelefono.text
+        
+        
+        
+        
+        TiendaRepository.shared.save(tienda)
+        
         delegate?.guardar()
         self.navigationController?.popViewController(animated: true)
+        
     }
-
+    
     
     //MARK: - LIFE VC
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
-    
-        myTalla.delegate = self
-        myTalla.dataSource = self
-        
+
         let pulsarImagen = UITapGestureRecognizer(target: self, action: #selector(pickerPhoto))
         myImagen.isUserInteractionEnabled = true
         myImagen.addGestureRecognizer(pulsarImagen)
-
+    
     }
 
     //MARK: - Utils
-    func guardar(){
-        let producto = ProductoRepository.shared.new()
-        
-        producto.codigoBarras = myCodigoBarras.text ?? ""
-        producto.codigoEmpresa = myCodigoEmpresa.text ?? ""
-        producto.talla = CONSTANTES.TALLA.LISTADO[myTalla.selectedRow(inComponent: 0)]
-        
-       
-        producto.precioCoste = Float(myCoste.text!) ?? 0.0
-        producto.pvp = Float(myPVP.text!) ?? 0.0
-        producto.descuento = Float(myDescuento.text!) ?? 0.0
-        
-        if let imagen = myImagen.image {
-            let imageData = UIImageJPEGRepresentation(imagen, 0.3)
-            producto.imagen = imageData as NSData?
-            
-        }
-        
-        producto.nombre = myNombre.text
-        producto.descripcion = myDescripcion.text
-        
-        
-        
-        
-        ProductoRepository.shared.save(producto)
-        
-    }
+
 }
 
-
-//MARK: - PickerView Tallas
-extension DMDDetalleProducto : UIPickerViewDelegate, UIPickerViewDataSource{
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return CONSTANTES.TALLA.LISTADO.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return CONSTANTES.TALLA.LISTADO[row]
-    }
-}
 
 //MARK: - Escoger imagen
 //Extendemos imagePickerControllerDelegate, para poder ir a la galería
-extension DMDDetalleProducto : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+extension DMDDetalleTienda : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     
     
@@ -168,5 +137,3 @@ extension DMDDetalleProducto : UIImagePickerControllerDelegate,UINavigationContr
         dismiss(animated: true, completion: nil)
     }
 }
-
-
