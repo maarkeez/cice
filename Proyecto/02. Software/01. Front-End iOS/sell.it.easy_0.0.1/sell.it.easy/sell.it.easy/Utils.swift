@@ -10,11 +10,4 @@ import Foundation
 import UIKit
 
 
-func mostrarMenu(_ viewController: UIViewController, boton: UIBarButtonItem){
-    if viewController.revealViewController() != nil {
-        boton.target = viewController.revealViewController()
-        boton.action = #selector(SWRevealViewController.revealToggle(_:))
-        viewController.revealViewController().rightViewRevealWidth = 150
-        viewController.view.addGestureRecognizer(viewController.revealViewController().panGestureRecognizer())
-    }
-}
+

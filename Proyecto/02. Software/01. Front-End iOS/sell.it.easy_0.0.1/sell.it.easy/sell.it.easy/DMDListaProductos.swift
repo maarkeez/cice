@@ -15,7 +15,7 @@ class DMDListaProductos: UIViewController {
         super.viewDidLoad()
 
         
-        mostrarMenu(self, boton: myMenuBTN)
+        mostrarMenu(myMenuBTN)
     }
 
     override func didReceiveMemoryWarning() {

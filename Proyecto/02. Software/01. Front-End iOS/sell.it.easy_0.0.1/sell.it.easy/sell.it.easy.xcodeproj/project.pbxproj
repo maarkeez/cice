@@ -28,6 +28,8 @@
 		E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */; };
 		E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */; };
 		E53E20C91EC8568900130DEB /* DMDDetalleProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */; };
+		E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */; };
+		E53E20CF1EC85E6F00130DEB /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20CE1EC85E6F00130DEB /* Constantes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCajaRegistradoraTableViewController.swift; sourceTree = "<group>"; };
 		E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaProductos.swift; sourceTree = "<group>"; };
 		E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleProducto.swift; sourceTree = "<group>"; };
+		E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExts.swift; sourceTree = "<group>"; };
+		E53E20CE1EC85E6F00130DEB /* Constantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				E51ABA5B1EC7C34C008C2E6C /* AppDelegate.swift */,
-				E51ABA8E1EC83DB1008C2E6C /* Utils.swift */,
+				E53E20CA1EC85BF100130DEB /* UTILS */,
 				E51ABA791EC7D032008C2E6C /* VIEW_CONTROLLERS */,
 				E51ABA751EC7C6D1008C2E6C /* OBJ-C */,
 				E51ABA5F1EC7C34C008C2E6C /* Main.storyboard */,
@@ -185,6 +189,24 @@
 				E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */,
 			);
 			name = PRODUCTO;
+			sourceTree = "<group>";
+		};
+		E53E20CA1EC85BF100130DEB /* UTILS */ = {
+			isa = PBXGroup;
+			children = (
+				E53E20CB1EC85BFE00130DEB /* EXTENSIONS */,
+				E51ABA8E1EC83DB1008C2E6C /* Utils.swift */,
+				E53E20CE1EC85E6F00130DEB /* Constantes.swift */,
+			);
+			name = UTILS;
+			sourceTree = "<group>";
+		};
+		E53E20CB1EC85BFE00130DEB /* EXTENSIONS */ = {
+			isa = PBXGroup;
+			children = (
+				E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */,
+			);
+			name = EXTENSIONS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +339,9 @@
 				E51ABA641EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld in Sources */,
 				E51ABA5C1EC7C34C008C2E6C /* AppDelegate.swift in Sources */,
 				E51ABA741EC7C6C4008C2E6C /* SWRevealViewController.m in Sources */,
+				E53E20CF1EC85E6F00130DEB /* Constantes.swift in Sources */,
 				E53E20C91EC8568900130DEB /* DMDDetalleProducto.swift in Sources */,
+				E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */,
 				E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
