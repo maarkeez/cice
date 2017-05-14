@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1007,11 +1008,166 @@
             </objects>
             <point key="canvasLocation" x="382" y="2257"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="pJW-P3-X1h">
+            <objects>
+                <tableViewController storyboardIdentifier="DMDListadoEscaner" id="6Hk-sn-dpU" customClass="DMDListadoEscaner" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="28" sectionFooterHeight="28" id="a29-f8-qtf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DMDEscanerCelda" rowHeight="44" id="GJP-3u-rZN" customClass="DMDEscanerCelda" customModule="sell_it_easy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GJP-3u-rZN" id="1Ur-MG-Whw">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000999999333" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTr-f0-UDX">
+                                            <rect key="frame" x="3" y="18.5" width="282" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="282" id="gU6-Ol-xSQ"/>
+                                                <constraint firstAttribute="height" constant="22" id="kVt-Eg-NwH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcY-Cy-OVa">
+                                            <rect key="frame" x="303" y="19.5" width="69" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Dvf-4g-ca2"/>
+                                                <constraint firstAttribute="width" constant="69" id="b9n-wJ-ry7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4af-yO-T4Y">
+                                            <rect key="frame" x="3" y="3" width="91" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="DeB-7V-hqb"/>
+                                                <constraint firstAttribute="width" constant="91" id="Wp9-HJ-nlF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cantidad" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK9-S4-uBa">
+                                            <rect key="frame" x="303" y="3" width="69" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="RKw-0Y-3hK"/>
+                                                <constraint firstAttribute="width" constant="69" id="dat-aI-9UH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rTr-f0-UDX" firstAttribute="leading" secondItem="1Ur-MG-Whw" secondAttribute="leading" constant="3" id="P4N-JA-aPh"/>
+                                        <constraint firstItem="GK9-S4-uBa" firstAttribute="top" secondItem="1Ur-MG-Whw" secondAttribute="top" constant="3" id="WM9-YN-gBf"/>
+                                        <constraint firstItem="4af-yO-T4Y" firstAttribute="top" secondItem="1Ur-MG-Whw" secondAttribute="top" constant="3" id="aCG-Sc-fVh"/>
+                                        <constraint firstAttribute="trailing" secondItem="GK9-S4-uBa" secondAttribute="trailing" constant="3" id="bpJ-TS-UPB"/>
+                                        <constraint firstAttribute="bottom" secondItem="zcY-Cy-OVa" secondAttribute="bottom" constant="3" id="des-fN-SbH"/>
+                                        <constraint firstAttribute="bottom" secondItem="rTr-f0-UDX" secondAttribute="bottom" constant="3" id="f86-8m-3Bk"/>
+                                        <constraint firstItem="4af-yO-T4Y" firstAttribute="leading" secondItem="1Ur-MG-Whw" secondAttribute="leading" constant="3" id="kAD-yN-cF2"/>
+                                        <constraint firstAttribute="trailing" secondItem="zcY-Cy-OVa" secondAttribute="trailing" constant="3" id="sOh-7I-VSH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="myCantidad" destination="zcY-Cy-OVa" id="jix-Zm-1TK"/>
+                                    <outlet property="myCodigoBarras" destination="rTr-f0-UDX" id="Uf8-7q-DQs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6Hk-sn-dpU" id="mVN-Be-YkZ"/>
+                            <outlet property="delegate" destination="6Hk-sn-dpU" id="gFr-zg-FEs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="Lwq-jN-zDS">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="9UU-xP-cht">
+                                <connections>
+                                    <segue destination="Kf0-kv-Tcn" kind="push" identifier="escanerSegue" id="5bn-Lo-aTx"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="save" id="p3m-c4-0iZ">
+                                <connections>
+                                    <action selector="guardarInventario:" destination="6Hk-sn-dpU" id="vdE-S2-hqc"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8fP-Gq-v0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5231.1999999999998" y="2191.7541229385311"/>
+        </scene>
+        <!--Inventario activo-->
+        <scene sceneID="5Oj-ff-q46">
+            <objects>
+                <viewController storyboardIdentifier="EscanerQR" id="Kf0-kv-Tcn" customClass="DMDEscanerQR" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I5F-ea-Sjy"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Xg-qB-GGj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Si8-Qw-kP8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escanee un producto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-65-1hx">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Wt-Ch-U8O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Xg-qB-GGj" firstAttribute="top" secondItem="YmI-65-1hx" secondAttribute="bottom" id="3Z5-Jg-NCq"/>
+                            <constraint firstItem="YmI-65-1hx" firstAttribute="leading" secondItem="Si8-Qw-kP8" secondAttribute="leading" id="AW1-P5-PMh"/>
+                            <constraint firstAttribute="trailing" secondItem="YmI-65-1hx" secondAttribute="trailing" id="eyC-Dd-fzN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inventario activo" id="1un-f5-q6z"/>
+                    <connections>
+                        <outlet property="myTextoEscaner" destination="YmI-65-1hx" id="0VN-zy-ozW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqg-q5-plL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6180" y="2189.9550224887557"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6e7-YV-m8W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L3L-Ft-qvM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2F-lD-Omb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Hk-sn-dpU" kind="relationship" relationship="rootViewController" id="McK-y8-hAs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1M-9X-gR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4292" y="2191.7541229385311"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CajaRegistradora" width="302" height="298"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R1s-iG-Wx9"/>
+        <segue reference="FDX-yX-d19"/>
     </inferredMetricsTieBreakers>
 </document>
