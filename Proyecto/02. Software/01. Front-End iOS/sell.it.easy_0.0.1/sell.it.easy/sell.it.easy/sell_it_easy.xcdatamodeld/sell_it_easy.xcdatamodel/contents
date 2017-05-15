@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ListaProductos" representedClassName="ListaProductos" syncable="YES" codeGenerationType="class">
         <attribute name="cantidad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="comentario" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fechaConfirmado" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="fechaGuardado" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -61,6 +62,6 @@
         <element name="Stock" positionX="160" positionY="99" width="128" height="90"/>
         <element name="Tienda" positionX="0" positionY="63" width="128" height="135"/>
         <element name="Usuario" positionX="-74" positionY="-150" width="128" height="150"/>
-        <element name="ListaProductos" positionX="288" positionY="198" width="128" height="133"/>
+        <element name="ListaProductos" positionX="288" positionY="198" width="128" height="148"/>
     </elements>
 </model>
