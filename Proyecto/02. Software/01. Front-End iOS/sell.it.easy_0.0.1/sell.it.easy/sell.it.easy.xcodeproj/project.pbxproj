@@ -37,6 +37,8 @@
 		E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */; };
 		E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */; };
 		E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */; };
+		E5C8E8251ECA10C200355E0D /* DMDHistoricos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8241ECA10C200355E0D /* DMDHistoricos.swift */; };
+		E5C8E8271ECA203900355E0D /* DMDHistoricoRecepciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8261ECA203800355E0D /* DMDHistoricoRecepciones.swift */; };
 		E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */; };
 		E5EAB5891EC8E7160016D86C /* DMDDetalleTienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */; };
 		E5EAB58B1EC8EAD20016D86C /* TiendaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */; };
@@ -85,6 +87,8 @@
 		E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedido.swift; sourceTree = "<group>"; };
 		E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedidoCelda.swift; sourceTree = "<group>"; };
 		E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProductosRepository.swift; sourceTree = "<group>"; };
+		E5C8E8241ECA10C200355E0D /* DMDHistoricos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDHistoricos.swift; sourceTree = "<group>"; };
+		E5C8E8261ECA203800355E0D /* DMDHistoricoRecepciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDHistoricoRecepciones.swift; sourceTree = "<group>"; };
 		E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListadoTiendas.swift; sourceTree = "<group>"; };
 		E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleTienda.swift; sourceTree = "<group>"; };
 		E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiendaRepository.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			children = (
 				E53E20C41EC84BBB00130DEB /* CAJA */,
 				E5EAB59D1EC915F60016D86C /* ESCANER */,
+				E5C8E8231ECA108500355E0D /* HISTORICOS */,
 				E5EAB5851EC8E30B0016D86C /* TIENDA */,
 				E5C8E81C1EC9BCBA00355E0D /* PEDIDO */,
 				E53E20C51EC84BC100130DEB /* PRODUCTO */,
@@ -274,6 +279,15 @@
 				E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */,
 			);
 			name = PEDIDO;
+			sourceTree = "<group>";
+		};
+		E5C8E8231ECA108500355E0D /* HISTORICOS */ = {
+			isa = PBXGroup;
+			children = (
+				E5C8E8241ECA10C200355E0D /* DMDHistoricos.swift */,
+				E5C8E8261ECA203800355E0D /* DMDHistoricoRecepciones.swift */,
+			);
+			name = HISTORICOS;
 			sourceTree = "<group>";
 		};
 		E5EAB5851EC8E30B0016D86C /* TIENDA */ = {
@@ -466,11 +480,13 @@
 				E5EAB5A11EC916110016D86C /* DMDEscanerQR.swift in Sources */,
 				E5EAB58E1EC8EE390016D86C /* DMDListadoTiendaCelda.swift in Sources */,
 				E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */,
+				E5C8E8271ECA203900355E0D /* DMDHistoricoRecepciones.swift in Sources */,
 				E53E20CF1EC85E6F00130DEB /* Constantes.swift in Sources */,
 				E5EAB58B1EC8EAD20016D86C /* TiendaRepository.swift in Sources */,
 				E53E20C91EC8568900130DEB /* DMDDetalleProducto.swift in Sources */,
 				E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */,
 				E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */,
+				E5C8E8251ECA10C200355E0D /* DMDHistoricos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

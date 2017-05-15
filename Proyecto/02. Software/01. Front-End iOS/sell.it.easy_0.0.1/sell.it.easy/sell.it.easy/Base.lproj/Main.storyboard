@@ -160,7 +160,7 @@
         <!--Item 2-->
         <scene sceneID="hk5-oe-z1k">
             <objects>
-                <viewController id="Q2U-Hv-KsL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMDHistoricoRecepciones" id="Q2U-Hv-KsL" customClass="DMDHistoricoRecepciones" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1g7-V4-7Ak"/>
                         <viewControllerLayoutGuide type="bottom" id="1qF-Py-bBr"/>
@@ -174,12 +174,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCe-5s-btm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1903" y="779"/>
+            <point key="canvasLocation" x="2574" y="-2060"/>
         </scene>
         <!--Históricos-->
         <scene sceneID="RrJ-hj-2V7">
             <objects>
-                <viewController id="Mn4-F8-BbE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMDHistoricos" id="Mn4-F8-BbE" customClass="DMDHistoricos" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XkR-pu-PMh"/>
                         <viewControllerLayoutGuide type="bottom" id="zYN-BS-Pdb"/>

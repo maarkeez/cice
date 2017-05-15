@@ -11,4 +11,5 @@ target 'sell.it.easy' do
     pod 'Kingfisher'
     pod 'PromiseKit/Alamofire'
     pod 'Parse'
+    pod 'CarbonKit'
 end
