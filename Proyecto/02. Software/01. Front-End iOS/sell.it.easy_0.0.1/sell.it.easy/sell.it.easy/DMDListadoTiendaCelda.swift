@@ -14,6 +14,7 @@ class DMDListadoTiendaCelda: UITableViewCell {
     @IBOutlet weak var myImagen: UIImageView!
     @IBOutlet weak var myNombre: UILabel!
     @IBOutlet weak var myTelefono: UILabel!
+    @IBOutlet weak var myImagenCheck: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

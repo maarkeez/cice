@@ -34,6 +34,7 @@
         <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tiendaActual" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="tienda2organizacion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organizacion" syncable="YES"/>
     </entity>
     <entity name="Usuario" representedClassName="Usuario" syncable="YES" codeGenerationType="class">
@@ -49,8 +50,8 @@
         <element name="Organizacion" positionX="-207" positionY="36" width="128" height="133"/>
         <element name="Producto" positionX="9" positionY="228" width="128" height="195"/>
         <element name="Rol" positionX="151" positionY="-27" width="128" height="75"/>
-        <element name="Tienda" positionX="0" positionY="63" width="128" height="58"/>
-        <element name="Usuario" positionX="-74" positionY="-150" width="128" height="150"/>
         <element name="Stock" positionX="160" positionY="99" width="128" height="90"/>
+        <element name="Tienda" positionX="0" positionY="63" width="128" height="135"/>
+        <element name="Usuario" positionX="-74" positionY="-150" width="128" height="150"/>
     </elements>
 </model>

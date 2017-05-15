@@ -109,6 +109,61 @@ class TiendaRepository {
         
     }
     
+    func deleteById(_ id: Int32){
+        let ctx = stack.persistentContainer.viewContext
+        let tienda = findById(id)
+        
+        if let objeto = tienda {
+            ctx.delete(objeto)
+        }
+        
+    }
+    
+    func findByTiendaActual(_ actual: Bool) -> Tienda? {
+        let ctx = stack.persistentContainer.viewContext
+        let request : NSFetchRequest<Tienda> = Tienda.fetchRequest()
+        let condicion = NSPredicate(format: "tiendaActual = \(actual)")
+        request.predicate = condicion
+        
+        do{
+            let tiendas = try ctx.fetch(request)
+            
+            if tiendas.count > 0 {
+                return tiendas.first
+            }
+            
+            
+        }catch let error{
+            print("TiendaRepository.findById: Error consultando CoreData \(error.localizedDescription)")
+            
+        }
+        
+        return nil
+    }
+    
+    func setTiendaActualById(_ id: Int32){
+        let ctx = stack.persistentContainer.viewContext
+        
+        //Tienda a desmarcar
+        let tiendaDesmarcar = findByTiendaActual(true)
+        tiendaDesmarcar?.tiendaActual = false
+        
+        //Tienda a marcar
+        let tienda = findById(id)
+        tienda?.tiendaActual = true
+        
+        
+        
+        
+        do{
+            try ctx.save()
+            
+        }catch let error{
+            print("TiendaRepository.setTiendaActualById: Error guardando CoreData \(error.localizedDescription)")
+            
+        }
+    }
+    
     func new() -> Tienda{
         let tienda = Tienda(context: stack.persistentContainer.viewContext)
         tienda.id = Int32(UUID().hashValue)

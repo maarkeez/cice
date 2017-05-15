@@ -79,6 +79,24 @@ extension DMDListaProductos: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 115
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let borrarCelda = UITableViewRowAction(style: .destructive, title: "Borrar") { (action, indexPath) in
+            
+            let tienda = self.listadoProductos[indexPath.row]
+            ProductoRepository.shared.deleteById(tienda.id)
+            self.listadoProductos = ProductoRepository.shared.findAllOrderByNombre()
+            tableView.reloadData()
+            
+        }
+        borrarCelda.backgroundColor = CONSTANTES.COLOR.ROJO_GENERAL
+        
+        return [borrarCelda]
+        
+        
+    }
+    
 }
 
 //MARK: - Extesión para ser delegado de detalle producto

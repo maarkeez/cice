@@ -36,6 +36,14 @@ class DMDDetalleProducto: UITableViewController {
         delegate?.guardar()
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func escanearCodigo(_ sender: Any) {
+        let escanerVC =  storyboard?.instantiateViewController(withIdentifier: "EscanerQR") as! DMDEscanerQR
+        escanerVC.delegate = self
+        navigationController?.pushViewController(escanerVC, animated: true)
+        
+    }
+    
 
     
     //MARK: - LIFE VC
@@ -80,6 +88,9 @@ class DMDDetalleProducto: UITableViewController {
         ProductoRepository.shared.save(producto)
         
     }
+    
+   
+    
 }
 
 
@@ -169,4 +180,16 @@ extension DMDDetalleProducto : UIImagePickerControllerDelegate,UINavigationContr
     }
 }
 
+//MARK: - Escaner QR
+extension DMDDetalleProducto : DMDEscanerQRDelegate {
+    func soloUno() -> Bool {
+        return true
+    }
+    func getCodigosEscaneados(_ escanerQR: DMDEscanerQR, codigos : [String]){
+        if codigos.count > 0 {
+            myCodigoBarras.text = codigos[0]
+            
+        }
+    }
+}
 

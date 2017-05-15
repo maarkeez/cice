@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="224.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wNJ-zU-Hog">
@@ -41,11 +41,20 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="Iad-Wr-8Xl">
+                        <rect key="frame" x="279" y="24" width="33" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="ELe-h8-mQ7"/>
+                            <constraint firstAttribute="width" constant="33" id="Y59-fK-zcU"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="wNJ-zU-Hog" secondAttribute="bottom" constant="8" id="6En-Kc-53T"/>
                     <constraint firstAttribute="trailing" secondItem="3KV-R6-joT" secondAttribute="trailing" constant="8" id="6qL-Yt-2mf"/>
                     <constraint firstAttribute="bottom" secondItem="9J8-xp-Fbr" secondAttribute="bottom" constant="8" id="73v-iy-ufY"/>
+                    <constraint firstAttribute="trailing" secondItem="Iad-Wr-8Xl" secondAttribute="trailing" constant="8" id="OPW-Dx-5uZ"/>
+                    <constraint firstItem="Iad-Wr-8Xl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="OhX-e2-5Dg"/>
                     <constraint firstAttribute="trailing" secondItem="wNJ-zU-Hog" secondAttribute="trailing" id="VH3-cx-yOf"/>
                     <constraint firstItem="wNJ-zU-Hog" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="VRQ-Ak-sjM"/>
                     <constraint firstItem="9J8-xp-Fbr" firstAttribute="top" secondItem="3KV-R6-joT" secondAttribute="bottom" constant="3" id="bs5-Dm-ADN"/>
@@ -55,10 +64,14 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="myImagen" destination="wNJ-zU-Hog" id="ula-Vn-bs2"/>
+                <outlet property="myImagenCheck" destination="Iad-Wr-8Xl" id="5hC-HG-Y1I"/>
                 <outlet property="myNombre" destination="3KV-R6-joT" id="kxK-nd-oOY"/>
                 <outlet property="myTelefono" destination="9J8-xp-Fbr" id="qoI-3E-QNZ"/>
             </connections>
             <point key="canvasLocation" x="34" y="144.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="check" width="35" height="35"/>
+    </resources>
 </document>

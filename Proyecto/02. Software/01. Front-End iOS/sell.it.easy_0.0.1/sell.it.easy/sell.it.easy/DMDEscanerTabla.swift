@@ -72,6 +72,10 @@ class DMDListadoEscaner: UITableViewController {
 //MARK: - Delegado para escaner
 extension DMDListadoEscaner : DMDEscanerQRDelegate{
     
+    func soloUno() -> Bool {
+        return false
+    }
+    
     ///Recupera los datos escaneados en la vista del escaner
     func getCodigosEscaneados(_ escanerQR: DMDEscanerQR, codigos: [String]) {
         

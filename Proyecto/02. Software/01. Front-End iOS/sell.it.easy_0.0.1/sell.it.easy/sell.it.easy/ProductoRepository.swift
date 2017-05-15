@@ -63,6 +63,28 @@ class ProductoRepository {
         }
     }
     
+    ///Recupera un producto a partir de su ID
+    ///Si hay varios, recupera la primera entrada
+    func findByCodigoBarras(_ codigoBarras: String) -> Producto?{
+        let ctx = stack.persistentContainer.viewContext
+        let request : NSFetchRequest<Producto> = Producto.fetchRequest()
+        let condicion = NSPredicate(format: "codigoBarras = '\(codigoBarras)'")
+        request.predicate = condicion
+        
+        do{
+            let productos = try ctx.fetch(request)
+            
+            if productos.count > 0 {
+                return productos.first
+            }
+            return nil
+            
+        }catch let error{
+            print("ProductoRepository.getById: Error consultando CoreData \(error.localizedDescription)")
+            return nil
+        }
+    }
+    
     ///Recupera todos los productos
     func findAll() -> [Producto]{
         let ctx = stack.persistentContainer.viewContext
@@ -111,6 +133,16 @@ class ProductoRepository {
         
         return to
         
+        
+    }
+    
+    func deleteById(_ id: Int32){
+        let ctx = stack.persistentContainer.viewContext
+        let producto = findById(id)
+        
+        if let objeto = producto {
+            ctx.delete(objeto)
+        }
         
     }
     

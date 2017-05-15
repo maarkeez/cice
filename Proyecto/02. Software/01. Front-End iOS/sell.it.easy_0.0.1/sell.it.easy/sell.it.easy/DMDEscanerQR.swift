@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 protocol DMDEscanerQRDelegate {
+    func soloUno() -> Bool
     func getCodigosEscaneados(_ escanerQR: DMDEscanerQR, codigos : [String])
 }
 
@@ -170,6 +171,11 @@ class DMDEscanerQR: UIViewController , AVCaptureMetadataOutputObjectsDelegate{
         let alertVC = UIAlertController(title: "Código escaneado", message: codigo, preferredStyle: .alert)
         let aceptarAction = UIAlertAction(title: "Aceptar", style: .default) { Void in
             self.habilitarEscaner = true
+            
+            //Si sólo queremos escanear un código, cerramos la vista
+            if (self.delegate?.soloUno())! {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
         let cancelarAction = UIAlertAction(title: "Cancelar", style: .cancel) { Void in
             let ultimoIndex = self.codigosBarrasEscaneados.count - 1

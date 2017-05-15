@@ -60,7 +60,7 @@ extension DMDListadoTiendas: UITableViewDelegate, UITableViewDataSource{
             
         }
         
-        
+        celda.myImagenCheck.isHidden = !tienda.tiendaActual
         
         celda.myTelefono.text = tienda.telefono ?? ""
         
@@ -76,7 +76,36 @@ extension DMDListadoTiendas: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 115
+        return 225
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let borrarCelda = UITableViewRowAction(style: .destructive, title: "Borrar") { (action, indexPath) in
+            
+            let tienda = self.listadoTiendas[indexPath.row]
+            TiendaRepository.shared.deleteById(tienda.id)
+            self.listadoTiendas = TiendaRepository.shared.findAllOrderByNombre()
+            tableView.reloadData()
+            
+        }
+        borrarCelda.backgroundColor = CONSTANTES.COLOR.ROJO_GENERAL
+        
+        
+        let marcarCelda = UITableViewRowAction(style: .destructive, title: "Mi tienda") { (action, indexPath) in
+            
+            let tienda = self.listadoTiendas[indexPath.row]
+            TiendaRepository.shared.setTiendaActualById(tienda.id)
+            self.listadoTiendas = TiendaRepository.shared.findAllOrderByNombre()
+            tableView.reloadData()
+            
+        }
+        marcarCelda.backgroundColor = CONSTANTES.COLOR.VERDE
+
+        
+        return [marcarCelda, borrarCelda]
+        
+        
     }
 }
 
