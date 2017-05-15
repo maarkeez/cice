@@ -13,6 +13,8 @@ class DMDListaRecibirPedido: UIViewController {
     //MARK: - Variables locales
     var listadoProductos = [Producto]()
     var cantidades = [String:Int]()
+    var isToolbarHidden : Bool?
+    
     
     
     //MARK: - IBOutlets
@@ -40,10 +42,20 @@ class DMDListaRecibirPedido: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        //Guardamos el estado actual de la barra de navegación
+        isToolbarHidden = (navigationController?.isToolbarHidden)!
+        //Mostramos la barra inferior para poder acceder a los botones de las acciones
+        navigationController?.isToolbarHidden = false
         
+        //Delegadosd
         myTable.dataSource = self
         myTable.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //Se deja el estado de la barra inferior como estuviera antes de mostrar la vista
+        navigationController?.isToolbarHidden = isToolbarHidden!
     }
 
     override func didReceiveMemoryWarning() {

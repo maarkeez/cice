@@ -36,6 +36,7 @@
 		E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */; };
 		E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */; };
 		E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */; };
+		E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */; };
 		E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */; };
 		E5EAB5891EC8E7160016D86C /* DMDDetalleTienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */; };
 		E5EAB58B1EC8EAD20016D86C /* TiendaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */; };
@@ -83,6 +84,7 @@
 		E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = listadoProductoCelda.xib; sourceTree = "<group>"; };
 		E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedido.swift; sourceTree = "<group>"; };
 		E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedidoCelda.swift; sourceTree = "<group>"; };
+		E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProductosRepository.swift; sourceTree = "<group>"; };
 		E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListadoTiendas.swift; sourceTree = "<group>"; };
 		E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleTienda.swift; sourceTree = "<group>"; };
 		E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiendaRepository.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				E53E20D11EC8641400130DEB /* CoreDataStack.swift */,
 				E53E20D31EC865F600130DEB /* ProductoRepository.swift */,
 				E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */,
+				E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */,
 			);
 			name = PERSISTENCE;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				E5EAB5891EC8E7160016D86C /* DMDDetalleTienda.swift in Sources */,
 				E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */,
 				E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */,
+				E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */,
 				E5EAB5A31EC916180016D86C /* DMDInventarioCelda.swift in Sources */,
 				E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */,
 				E51ABA8F1EC83DB1008C2E6C /* Utils.swift in Sources */,
