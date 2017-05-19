@@ -552,6 +552,9 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                         <state key="normal" title="Acceder">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="myAccederACTION:" destination="CBe-ME-8gT" eventType="touchUpInside" id="sX9-Vb-drm"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash_iSaldos" translatesAutoresizingMaskIntoConstraints="NO" id="RrL-Y0-wdN">
                                         <rect key="frame" x="40" y="300" width="240" height="178"/>
@@ -592,9 +595,9 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     <connections>
                         <outlet property="myAccederBTN" destination="fbI-2p-qgW" id="XMi-Jf-5F2"/>
                         <outlet property="myPassword" destination="wMW-65-tAP" id="90F-gI-B3i"/>
-                        <outlet property="myRegistrarseBTB" destination="Ol5-5t-qBu" id="kVC-nV-4Us"/>
+                        <outlet property="myRegistrarseBTN" destination="Ol5-5t-qBu" id="sQJ-DU-7qZ"/>
                         <outlet property="myUserName" destination="rab-xY-mUe" id="diC-Bb-Q3S"/>
-                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContollerFromLogin" id="Odd-gc-QFi"/>
+                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpForLogin" id="Odd-gc-QFi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi6-3b-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
