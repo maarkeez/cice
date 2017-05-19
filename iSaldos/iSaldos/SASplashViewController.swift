@@ -34,7 +34,7 @@ class SASplashViewController: UIViewController {
             self.timerDesbloqueo = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(self.manejadorAutomatico), userInfo: nil, repeats: false)
         })
     
-    
+        viewAnimator.startAnimation()
     
     }
     
