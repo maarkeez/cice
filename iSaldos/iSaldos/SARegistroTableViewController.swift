@@ -7,89 +7,202 @@
 //
 
 import UIKit
+import Parse
+
 
 class SARegistroTableViewController: UITableViewController {
 
+    //MARK: - Varibles locales
+    var fotoSeleccionada = false
+    
+    
+    
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var myImagen: UIImageView!
+    @IBOutlet weak var myUsername: UITextField!
+    @IBOutlet weak var myPassword: UITextField!
+    @IBOutlet weak var myNombre: UITextField!
+    @IBOutlet weak var myApellido: UITextField!
+    @IBOutlet weak var myEmail: UITextField!
+    @IBOutlet weak var myMovil: UITextField!
+    @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
+    
+    
+    
+    //MARK: - IBActions
+    ///Permite ocultar la página de registro
+    @IBAction func hideACTION(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    ///Registrarse en la aplicación con los datos introducidos
+    @IBAction func registroEnParseACTION(_ sender: Any) {
+        
+        
+        if esVacia(myUsername.text) ||  esVacia(myPassword.text) || esVacia(myNombre.text) || esVacia(myApellido.text) ||  esVacia(myEmail.text) || !isValidEmail( myEmail.text!) || myImagen.image == nil {
+            
+            present(muestraAlertVC("Atención", messageData: "Estimado usuario por favor relle los campos y revise el email."), animated: true, completion: nil)
+            
+        }else{
+            //Inicializar usuario
+            let newUser = PFUser()
+            newUser.username = myUsername.text
+            newUser.password = myPassword.text
+            newUser.email = myEmail.text
+            newUser["nombre"] = myNombre.text
+            newUser["apellido"] = myApellido.text
+            newUser["movil"] = myMovil.text
+            
+            //Mostrar activity
+            myActivityIndicator.isHidden = false
+            myActivityIndicator.startAnimating()
+            
+            //Ignorar pulsaciones del usuario, para no duplicar registros
+            UIApplication.shared.beginIgnoringInteractionEvents()
+            
+            //Registrarnos en segund plano
+            newUser.signUpInBackground(block: { (exitoso, errorDeRegistro) in
+                
+                
+                //Callback después de intentar regitrar
+                
+                //Ocultar activity
+                self.myActivityIndicator.isHidden = true
+                self.myActivityIndicator.stopAnimating()
+                
+                //Ignorar pulsaciones del usuario, para no duplicar registros
+                UIApplication.shared.endIgnoringInteractionEvents()
+                
+                //Comprobar si existen errores
+                if let error = errorDeRegistro {
+                    self.present(muestraAlertVC("Atención", messageData: "Error en el registro"), animated: true, completion: nil)
+                    print("Error registro: \(error.localizedDescription)")
+                }else{
+                    //Registrar foto si todo ha ido correctamente y acceder a la aplicación
+                    self.signUpWithPhoto()
+                    self.performSegue(withIdentifier: "jumpForRegisterVC", sender: self)
+                    
+                }
+            })
+        }
+    }
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Ocultar activity
+        myActivityIndicator.isHidden = true
+        
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        //Permitir quitar el teclado
+        hideKeyboardWhenTappedAround()
+        
+        //Asignar gesto a la imagen
+        let pulsarImagen = UITapGestureRecognizer(target: self, action: #selector(pickerPhoto))
+        myImagen.isUserInteractionEnabled = true
+        myImagen.addGestureRecognizer(pulsarImagen)
+        
+        //Redondear la imagen
+        
+        
+    }
+    
+    //MARK: Utils
+    func esVacia(_ text: String?) -> Bool {
+        return text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func signUpWithPhoto() {
+        
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    ///Permite validar un email
+    func isValidEmail(_ testStr:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
     }
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+
+
+
+//MARK: - Escoger imagen
+//Extendemos imagePickerControllerDelegate, para poder ir a la galería
+extension SARegistroTableViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+    
+    
+    func pickerPhoto(){
+        //Comprobamos si tenemos cámara en el dispositivo
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            muestraMenu()
+        }else{
+            muestraLibreriaFotos()
+            
+        }
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    func muestraMenu(){
+        let actionVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        actionVC.addAction(UIAlertAction(title: "Usar la cámara", style: .default, handler: {Void in
+            self.camaraFotos()
+        }))
+        
+        actionVC.addAction(UIAlertAction(title: "Galería de fotos", style: .default, handler: {
+            Void in
+            self.muestraLibreriaFotos()}
+            
+            
+        ))
+        present(actionVC, animated: true, completion: nil)
+        
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func muestraLibreriaFotos(){
+        //Creamos la variable que podrá elegir imágenes de la galería
+        let selectorDeImagenes = UIImagePickerController()
+        //Le damos el tipo de Galería
+        selectorDeImagenes.sourceType = .photoLibrary
+        //Le dejamos hacer zoom
+        selectorDeImagenes.allowsEditing = true
+        //Añadimos como delegado al mismo selector
+        selectorDeImagenes.delegate = self
+        //lo presentamos
+        present(selectorDeImagenes,animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func camaraFotos(){
+        //Creamos la variable que podrá elegir imágenes de la cámara
+        let selectorDeImagenes = UIImagePickerController()
+        //Le damos el tipo de cámara
+        selectorDeImagenes.sourceType = .camera
+        //Le dejamos hacer zoom
+        selectorDeImagenes.allowsEditing = true
+        //Añadimos como delegado al mismo selector
+        selectorDeImagenes.delegate = self
+        //lo presentamos
+        present(selectorDeImagenes,animated: true, completion: nil)
+        
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    ///Método que permite realizar comprobaciones, para diferenciar entre imagen o vídeo
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        //Comprobamos el tipo de los datos recuperamos, confirmamos que sea una imagen
+        if let imagenEscogida = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            //Asignamos el valor al view
+            myImagen.image = imagenEscogida
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

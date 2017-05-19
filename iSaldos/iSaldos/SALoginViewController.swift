@@ -56,6 +56,7 @@ class SALoginViewController: UIViewController {
         myAccederBTN.layer.cornerRadius = 5
         myRegistrarseBTN.layer.cornerRadius = 5
         
+        hideKeyboardWhenTappedAround()
     }
     
     //MARK: - Utils
