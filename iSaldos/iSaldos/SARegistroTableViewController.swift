@@ -81,6 +81,8 @@ class SARegistroTableViewController: UITableViewController {
                 }else{
                     //Registrar foto si todo ha ido correctamente y acceder a la aplicación
                     self.signUpWithPhoto()
+                    
+                    //Ir a la ventana HOME
                     self.performSegue(withIdentifier: "jumpForRegisterVC", sender: self)
                     
                 }
@@ -118,7 +120,35 @@ class SARegistroTableViewController: UITableViewController {
         return text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
     }
 
+    
+    ///Permite registrar el usuario creando una entidad imagen.
+    ///PRECONDICION: Todos los datos del formulario deben estar correctos.
     func signUpWithPhoto() {
+        
+        if fotoSeleccionada {
+            //Crear entidad "ImageProfile"
+            let imageProfile = PFObject(className: "ImageProfile")
+            
+            //Recuperar Bytes de la imagen con una compresion x0.3
+            let imageDataProfile = UIImageJPEGRepresentation(myImagen.image!, 0.3)
+            
+            //Crear fichero con la imagen
+            let imageProfileFile = PFFile(name: "userImageProfile.jpg", data: imageDataProfile!)
+            
+            
+            //Asignar la imagen
+            imageProfile["imageProfile"] = imageProfileFile
+            
+            //Asignar nombre de usuario a la imagen
+            imageProfile["username"] = PFUser.current()?.username
+            
+            //Guardar datos asíncronamente
+            imageProfile.saveInBackground()
+            
+            
+        }else{
+            self.present(muestraAlertVC("Atención", messageData: "Foto no seleccionada"), animated: true, completion: nil)
+        }
         
     }
     
@@ -201,6 +231,7 @@ extension SARegistroTableViewController : UIImagePickerControllerDelegate,UINavi
         if let imagenEscogida = info[UIImagePickerControllerOriginalImage] as? UIImage{
             //Asignamos el valor al view
             myImagen.image = imagenEscogida
+            self.fotoSeleccionada = true
         }
         
         dismiss(animated: true, completion: nil)

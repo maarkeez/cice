@@ -1000,7 +1000,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="POy-H5-OEA" id="Lwu-Cp-lZA"/>
                         <segue destination="qU4-L3-6qi" kind="show" identifier="showOfertaSegue" id="8wM-TU-pCW"/>
                     </connections>
                 </tableViewController>
@@ -1384,7 +1383,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="hlV-Wd-xm1" id="7cr-FD-tJ0"/>
                         <segue destination="qzt-0p-lkA" kind="show" identifier="showCuponSegue" id="TDe-s4-e1w"/>
                     </connections>
                 </tableViewController>
@@ -1421,7 +1419,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="BTV-KY-bur" id="4fh-qG-jRj"/>
                         <segue destination="C2e-aM-EfB" kind="show" identifier="showConcursoSegue" id="1cJ-Ly-N92"/>
                     </connections>
                 </tableViewController>
