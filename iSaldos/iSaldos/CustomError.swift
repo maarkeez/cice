@@ -18,8 +18,8 @@ enum CustomError : Error {
     
 }
 
-extension CustomError : CustomStringConvertible {
-    var description : String {
+extension CustomError : LocalizedError {
+    public var errorDescription : String? {
         
         switch self {
         case .campoVacio:
