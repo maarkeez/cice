@@ -21,7 +21,7 @@ class DMDListadoTiendas: UIViewController {
         super.viewDidLoad()
         
         
-        mostrarMenu(myMenuBTN)
+         mostrarMenu(myMenuBTN,delegado:  self)
         
         listadoTiendas = TiendaRepository.shared.findAllOrderByNombre()
         

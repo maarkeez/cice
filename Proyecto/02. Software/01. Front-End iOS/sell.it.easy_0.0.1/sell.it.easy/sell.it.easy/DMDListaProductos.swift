@@ -20,7 +20,7 @@ class DMDListaProductos: UIViewController {
         super.viewDidLoad()
 
         
-        mostrarMenu(myMenuBTN)
+        mostrarMenu(myMenuBTN,delegado:  self)
         
         listadoProductos = ProductoRepository.shared.findAllOrderByNombre()
         
