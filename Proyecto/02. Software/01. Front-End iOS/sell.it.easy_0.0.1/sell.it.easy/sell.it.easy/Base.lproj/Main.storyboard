@@ -192,6 +192,9 @@
                     <navigationItem key="navigationItem" title="Históricos" id="crR-70-dHe">
                         <barButtonItem key="leftBarButtonItem" title="Menú" id="l4I-OI-NTw"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myMenuBTN" destination="l4I-OI-NTw" id="hHS-Px-1fe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faK-zS-GOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

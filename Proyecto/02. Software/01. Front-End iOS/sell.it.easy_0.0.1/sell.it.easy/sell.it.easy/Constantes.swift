@@ -30,4 +30,6 @@ struct Colores{
     let ROJO_GENERAL = #colorLiteral(red: 0.9058823529, green: 0.2980392157, blue: 0.2352941176, alpha: 1)
     let VERDE = #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
     let GRIS = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
+    let AZUL_OSCURO = #colorLiteral(red: 0, green: 0.1960784314, blue: 1, alpha: 1)
+    let AZUL_CLARO = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
 }

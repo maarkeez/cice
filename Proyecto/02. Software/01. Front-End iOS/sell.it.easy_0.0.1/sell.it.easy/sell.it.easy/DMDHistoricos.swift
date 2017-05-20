@@ -12,12 +12,24 @@ import CarbonKit
 
 class DMDHistoricos: UIViewController, CarbonTabSwipeNavigationDelegate {
 
+    
+    @IBOutlet weak var myMenuBTN: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let items = ["Ventas", "Recepciones", "Inventarios","Cesiones gratuitas", "Taras"]
+        
+        //Cabecera paginada
+        let items = [#imageLiteral(resourceName: "sell")  , #imageLiteral(resourceName: "orders") , #imageLiteral(resourceName: "inventory"),#imageLiteral(resourceName: "uniform"), #imageLiteral(resourceName: "broken")]
         let carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items, delegate: self)
         carbonTabSwipeNavigation.insert(intoRootViewController: self)
-        // Do any additional setup after loading the view.
+        carbonTabSwipeNavigation.setNormalColor(CONSTANTES.COLOR.AZUL_CLARO)
+        carbonTabSwipeNavigation.setIndicatorColor(CONSTANTES.COLOR.AZUL_OSCURO)
+        carbonTabSwipeNavigation.setSelectedColor(CONSTANTES.COLOR.AZUL_OSCURO)
+        carbonTabSwipeNavigation.toolbar.backgroundColor =  CONSTANTES.COLOR.GRIS
+        carbonTabSwipeNavigation.toolbar.alpha = 1.0
+        
+        //Permitir mostrar menú con el botón
+        mostrarMenu(myMenuBTN)
     }
 
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
