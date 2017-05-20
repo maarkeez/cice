@@ -34,6 +34,9 @@
 		E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D31EC865F600130DEB /* ProductoRepository.swift */; };
 		E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */; };
 		E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */; };
+		E57B0BE91ED059380007A96C /* CarbonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B0BE71ED059380007A96C /* CarbonKit.framework */; };
+		E57B0BEA1ED059380007A96C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B0BE81ED059380007A96C /* Charts.framework */; };
+		E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */; };
 		E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */; };
 		E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */; };
 		E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */; };
@@ -84,6 +87,9 @@
 		E53E20D31EC865F600130DEB /* ProductoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductoRepository.swift; sourceTree = "<group>"; };
 		E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listadoProductoCelda.swift; sourceTree = "<group>"; };
 		E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = listadoProductoCelda.xib; sourceTree = "<group>"; };
+		E57B0BE71ED059380007A96C /* CarbonKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarbonKit.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphoneos/CarbonKit/CarbonKit.framework"; sourceTree = "<group>"; };
+		E57B0BE81ED059380007A96C /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
+		E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDEstadisticas.swift; sourceTree = "<group>"; };
 		E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedido.swift; sourceTree = "<group>"; };
 		E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedidoCelda.swift; sourceTree = "<group>"; };
 		E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProductosRepository.swift; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57B0BE91ED059380007A96C /* CarbonKit.framework in Frameworks */,
+				E57B0BEA1ED059380007A96C /* Charts.framework in Frameworks */,
 				E51ABA841EC8359E008C2E6C /* Alamofire.framework in Frameworks */,
 				E51ABA851EC8359E008C2E6C /* Bolts.framework in Frameworks */,
 				E51ABA861EC8359E008C2E6C /* CryptoSwift.framework in Frameworks */,
@@ -125,6 +133,8 @@
 		8548DEBE50ADAAD67751BC4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E57B0BE71ED059380007A96C /* CarbonKit.framework */,
+				E57B0BE81ED059380007A96C /* Charts.framework */,
 				E51ABA7A1EC8359E008C2E6C /* Alamofire.framework */,
 				E51ABA7B1EC8359E008C2E6C /* Bolts.framework */,
 				E51ABA7C1EC8359E008C2E6C /* CryptoSwift.framework */,
@@ -206,6 +216,7 @@
 			children = (
 				E53E20C41EC84BBB00130DEB /* CAJA */,
 				E5EAB59D1EC915F60016D86C /* ESCANER */,
+				E57B0BEB1ED059A50007A96C /* ESTADISTICAS */,
 				E5C8E8231ECA108500355E0D /* HISTORICOS */,
 				E5EAB5851EC8E30B0016D86C /* TIENDA */,
 				E5C8E81C1EC9BCBA00355E0D /* PEDIDO */,
@@ -270,6 +281,14 @@
 				E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */,
 			);
 			name = CELDAS;
+			sourceTree = "<group>";
+		};
+		E57B0BEB1ED059A50007A96C /* ESTADISTICAS */ = {
+			isa = PBXGroup;
+			children = (
+				E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */,
+			);
+			name = ESTADISTICAS;
 			sourceTree = "<group>";
 		};
 		E5C8E81C1EC9BCBA00355E0D /* PEDIDO */ = {
@@ -464,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */,
+				E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */,
 				E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */,
 				E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */,
 				E5EAB59F1EC9160B0016D86C /* DMDEscanerTabla.swift in Sources */,
@@ -612,6 +632,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 59SH2VU4Z2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
+				);
 				INFOPLIST_FILE = sell.it.easy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dmd.sell-it-easy";
@@ -629,6 +653,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 59SH2VU4Z2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
+				);
 				INFOPLIST_FILE = sell.it.easy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dmd.sell-it-easy";

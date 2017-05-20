@@ -2,6 +2,9 @@ PODS:
   - Alamofire (4.4.0)
   - Bolts/Tasks (1.8.4)
   - CarbonKit (2.1.9)
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - CryptoSwift (0.6.9)
   - ExpandingMenu (0.3.1)
   - Kingfisher (3.5.1)
@@ -27,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - CarbonKit
+  - Charts
   - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `master`)
   - ExpandingMenu
   - Kingfisher
@@ -56,6 +60,7 @@ SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   CarbonKit: af16a9c0d2b6c908a5985fe4633424d38c9bfc0a
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   CryptoSwift: b3e56d2cc816dced7aa832cc9d2824dbbb16b7b3
   ExpandingMenu: 107548f3cb8c04b28a8b6b436983f506849484cc
   Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
@@ -65,6 +70,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 9f3ffb8b772b84c066f57b6ebf364b6f91e142f4
+PODFILE CHECKSUM: 25cf20dfc2bb8e9b1b35ea56640d65073d9c82bf
 
 COCOAPODS: 1.2.0

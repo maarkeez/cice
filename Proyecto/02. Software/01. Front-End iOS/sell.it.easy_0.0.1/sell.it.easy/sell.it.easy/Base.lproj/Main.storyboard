@@ -627,10 +627,10 @@
             </objects>
             <point key="canvasLocation" x="1921" y="829"/>
         </scene>
-        <!--View Controller-->
+        <!--Estadisticas-->
         <scene sceneID="lxP-4E-yEd">
             <objects>
-                <viewController id="P2y-S7-LXW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DMDEstadisticas" id="P2y-S7-LXW" customClass="DMDEstadisticas" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FsR-yq-w4A"/>
                         <viewControllerLayoutGuide type="bottom" id="Ylc-37-Qf2"/>

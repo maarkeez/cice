@@ -12,4 +12,5 @@ target 'sell.it.easy' do
     pod 'PromiseKit/Alamofire'
     pod 'Parse'
     pod 'CarbonKit'
+    pod ‘Charts’
 end
