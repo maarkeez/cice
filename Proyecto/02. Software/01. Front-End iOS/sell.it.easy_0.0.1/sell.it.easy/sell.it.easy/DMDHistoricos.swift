@@ -38,7 +38,7 @@ class DMDHistoricos: UIViewController, CarbonTabSwipeNavigationDelegate {
        
         
         //Permitir mostrar menú con el botón
-        mostrarMenu(myMenuBTN,delegado:  self)
+        mostrarMenu(myMenuBTN)
     }
 
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {

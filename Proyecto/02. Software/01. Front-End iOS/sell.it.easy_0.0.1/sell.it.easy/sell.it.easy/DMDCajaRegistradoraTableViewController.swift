@@ -16,7 +16,7 @@ class DMDCajaRegistradoraTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mostrarMenu(myMenuBTN,delegado:  self)
+        mostrarMenu(myMenuBTN)
 
     }
 
