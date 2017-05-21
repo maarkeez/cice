@@ -13,4 +13,5 @@ target 'sell.it.easy' do
     pod 'Parse'
     pod 'CarbonKit'
     pod ‘Charts’
+    pod 'FSCalendar’
 end

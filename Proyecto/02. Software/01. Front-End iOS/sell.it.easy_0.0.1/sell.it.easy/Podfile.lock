@@ -7,6 +7,7 @@ PODS:
   - Charts/Core (3.0.1)
   - CryptoSwift (0.6.9)
   - ExpandingMenu (0.3.1)
+  - FSCalendar (2.7.3)
   - Kingfisher (3.5.1)
   - Parse (1.14.2):
     - Bolts/Tasks (~> 1.8)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Charts
   - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `master`)
   - ExpandingMenu
+  - FSCalendar
   - Kingfisher
   - Parse
   - PKHUD (from `https://github.com/toyship/PKHUD.git`)
@@ -63,6 +65,7 @@ SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   CryptoSwift: b3e56d2cc816dced7aa832cc9d2824dbbb16b7b3
   ExpandingMenu: 107548f3cb8c04b28a8b6b436983f506849484cc
+  FSCalendar: 574388d70778c22719eed9341653e1743b345573
   Kingfisher: 12eeffeef42ea45b68c5e5acfe8ba9005b713ab4
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
@@ -70,6 +73,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 25cf20dfc2bb8e9b1b35ea56640d65073d9c82bf
+PODFILE CHECKSUM: 5e039502248e9cb62b154446e5ce100546269340
 
 COCOAPODS: 1.2.0
