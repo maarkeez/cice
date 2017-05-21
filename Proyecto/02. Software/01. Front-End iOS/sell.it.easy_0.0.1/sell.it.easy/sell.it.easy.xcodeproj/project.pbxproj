@@ -39,6 +39,9 @@
 		E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */; };
 		E57B0BFC1ED1856C0007A96C /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B0BFB1ED1856C0007A96C /* FSCalendar.framework */; };
 		E57B0BFF1ED185F90007A96C /* DMDCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0BFE1ED185F90007A96C /* DMDCalendario.swift */; };
+		E57B0C021ED1C1110007A96C /* DMDLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0C011ED1C1110007A96C /* DMDLauncher.swift */; };
+		E57B0C051ED1C5D20007A96C /* DMDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0C041ED1C5D20007A96C /* DMDLogin.swift */; };
+		E57B0C091ED1C9100007A96C /* Money30s.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E57B0C081ED1C9100007A96C /* Money30s.mp4 */; };
 		E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */; };
 		E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */; };
 		E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */; };
@@ -94,6 +97,9 @@
 		E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDEstadisticas.swift; sourceTree = "<group>"; };
 		E57B0BFB1ED1856C0007A96C /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = "Pods/../build/Debug-iphoneos/FSCalendar/FSCalendar.framework"; sourceTree = "<group>"; };
 		E57B0BFE1ED185F90007A96C /* DMDCalendario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCalendario.swift; sourceTree = "<group>"; };
+		E57B0C011ED1C1110007A96C /* DMDLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDLauncher.swift; sourceTree = "<group>"; };
+		E57B0C041ED1C5D20007A96C /* DMDLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDLogin.swift; sourceTree = "<group>"; };
+		E57B0C081ED1C9100007A96C /* Money30s.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Money30s.mp4; sourceTree = "<group>"; };
 		E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedido.swift; sourceTree = "<group>"; };
 		E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedidoCelda.swift; sourceTree = "<group>"; };
 		E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProductosRepository.swift; sourceTree = "<group>"; };
@@ -225,6 +231,8 @@
 				E5EAB59D1EC915F60016D86C /* ESCANER */,
 				E57B0BEB1ED059A50007A96C /* ESTADISTICAS */,
 				E5C8E8231ECA108500355E0D /* HISTORICOS */,
+				E57B0C001ED1C0EF0007A96C /* LAUNCHER */,
+				E57B0C031ED1C4F80007A96C /* LOGIN */,
 				E5EAB5851EC8E30B0016D86C /* TIENDA */,
 				E5C8E81C1EC9BCBA00355E0D /* PEDIDO */,
 				E53E20C51EC84BC100130DEB /* PRODUCTO */,
@@ -253,6 +261,7 @@
 		E53E20CA1EC85BF100130DEB /* UTILS */ = {
 			isa = PBXGroup;
 			children = (
+				E57B0C061ED1C8570007A96C /* VIDEOS */,
 				E5EAB5A51EC917460016D86C /* SONIDOS */,
 				E53E20CB1EC85BFE00130DEB /* EXTENSIONS */,
 				E51ABA8E1EC83DB1008C2E6C /* Utils.swift */,
@@ -304,6 +313,30 @@
 				E57B0BFE1ED185F90007A96C /* DMDCalendario.swift */,
 			);
 			name = CALENDARIO;
+			sourceTree = "<group>";
+		};
+		E57B0C001ED1C0EF0007A96C /* LAUNCHER */ = {
+			isa = PBXGroup;
+			children = (
+				E57B0C011ED1C1110007A96C /* DMDLauncher.swift */,
+			);
+			name = LAUNCHER;
+			sourceTree = "<group>";
+		};
+		E57B0C031ED1C4F80007A96C /* LOGIN */ = {
+			isa = PBXGroup;
+			children = (
+				E57B0C041ED1C5D20007A96C /* DMDLogin.swift */,
+			);
+			name = LOGIN;
+			sourceTree = "<group>";
+		};
+		E57B0C061ED1C8570007A96C /* VIDEOS */ = {
+			isa = PBXGroup;
+			children = (
+				E57B0C081ED1C9100007A96C /* Money30s.mp4 */,
+			);
+			name = VIDEOS;
 			sourceTree = "<group>";
 		};
 		E5C8E81C1EC9BCBA00355E0D /* PEDIDO */ = {
@@ -436,6 +469,7 @@
 				E51ABA691EC7C34C008C2E6C /* LaunchScreen.storyboard in Resources */,
 				E53E20C11EC846C000130DEB /* Assets.xcassets in Resources */,
 				E5EAB5A71EC917550016D86C /* beep.mp3 in Resources */,
+				E57B0C091ED1C9100007A96C /* Money30s.mp4 in Resources */,
 				E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */,
 				E5EAB58F1EC8EE390016D86C /* DMDListadoTiendaCelda.xib in Resources */,
 				E51ABA611EC7C34C008C2E6C /* Main.storyboard in Resources */,
@@ -499,6 +533,8 @@
 			files = (
 				E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */,
 				E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */,
+				E57B0C021ED1C1110007A96C /* DMDLauncher.swift in Sources */,
+				E57B0C051ED1C5D20007A96C /* DMDLogin.swift in Sources */,
 				E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */,
 				E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */,
 				E5EAB59F1EC9160B0016D86C /* DMDEscanerTabla.swift in Sources */,
