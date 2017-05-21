@@ -145,6 +145,6 @@ class DMDEstadisticas: UIViewController {
 //MARK: - extensión delegado grafico
 extension DMDEstadisticas: ChartViewDelegate{
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-        <#code#>
+        
     }
 }
