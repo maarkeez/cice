@@ -664,11 +664,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="jN6-4M-ir3">
                         <barButtonItem key="leftBarButtonItem" title="Menú" id="fh9-kh-UGA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="D5F-Wd-h0L">
-                            <connections>
-                                <action selector="myGuardarACTION:" destination="P2y-S7-LXW" id="gdI-hv-clW"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="D5F-Wd-h0L">
+                                <connections>
+                                    <action selector="myGuardarACTION:" destination="P2y-S7-LXW" id="gdI-hv-clW"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Calendar" id="x4I-zC-caV">
+                                <connections>
+                                    <segue destination="R4e-Mx-VFn" kind="push" id="OqY-Ii-dvj"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="myBarChartView" destination="6z8-zU-2uP" id="9cb-i5-9dM"/>
@@ -679,6 +686,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDG-UA-abU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1116" y="1562"/>
+        </scene>
+        <!--Calendario-->
+        <scene sceneID="fa1-kb-r6q">
+            <objects>
+                <viewController storyboardIdentifier="DMDCalendario" id="R4e-Mx-VFn" customClass="DMDCalendario" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dFD-yz-Jxs"/>
+                        <viewControllerLayoutGuide type="bottom" id="6un-M2-RdW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cd9-9E-RJW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnA-ER-s2p" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="fakeSubtitles" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XnA-ER-s2p" secondAttribute="trailing" id="35w-ii-6oy"/>
+                            <constraint firstItem="XnA-ER-s2p" firstAttribute="top" secondItem="dFD-yz-Jxs" secondAttribute="bottom" id="4Qk-gf-3Ky"/>
+                            <constraint firstItem="6un-M2-RdW" firstAttribute="top" secondItem="XnA-ER-s2p" secondAttribute="bottom" id="E9d-aW-0fD"/>
+                            <constraint firstItem="XnA-ER-s2p" firstAttribute="leading" secondItem="cd9-9E-RJW" secondAttribute="leading" id="sEn-jY-Eqo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z9Y-KP-f9H"/>
+                    <connections>
+                        <outlet property="myCalendar" destination="XnA-ER-s2p" id="jrB-N0-oj5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Szc-8I-7JM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921" y="1561"/>
         </scene>
         <!--Productos-->
         <scene sceneID="fDH-XP-0as">

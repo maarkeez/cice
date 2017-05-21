@@ -38,6 +38,7 @@
 		E57B0BEA1ED059380007A96C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B0BE81ED059380007A96C /* Charts.framework */; };
 		E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */; };
 		E57B0BFC1ED1856C0007A96C /* FSCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B0BFB1ED1856C0007A96C /* FSCalendar.framework */; };
+		E57B0BFF1ED185F90007A96C /* DMDCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0BFE1ED185F90007A96C /* DMDCalendario.swift */; };
 		E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */; };
 		E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */; };
 		E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */; };
@@ -92,6 +93,7 @@
 		E57B0BE81ED059380007A96C /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDEstadisticas.swift; sourceTree = "<group>"; };
 		E57B0BFB1ED1856C0007A96C /* FSCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FSCalendar.framework; path = "Pods/../build/Debug-iphoneos/FSCalendar/FSCalendar.framework"; sourceTree = "<group>"; };
+		E57B0BFE1ED185F90007A96C /* DMDCalendario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCalendario.swift; sourceTree = "<group>"; };
 		E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedido.swift; sourceTree = "<group>"; };
 		E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedidoCelda.swift; sourceTree = "<group>"; };
 		E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProductosRepository.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 		E51ABA791EC7D032008C2E6C /* VIEW_CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
+				E57B0BFD1ED185E40007A96C /* CALENDARIO */,
 				E53E20C41EC84BBB00130DEB /* CAJA */,
 				E5EAB59D1EC915F60016D86C /* ESCANER */,
 				E57B0BEB1ED059A50007A96C /* ESTADISTICAS */,
@@ -293,6 +296,14 @@
 				E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */,
 			);
 			name = ESTADISTICAS;
+			sourceTree = "<group>";
+		};
+		E57B0BFD1ED185E40007A96C /* CALENDARIO */ = {
+			isa = PBXGroup;
+			children = (
+				E57B0BFE1ED185F90007A96C /* DMDCalendario.swift */,
+			);
+			name = CALENDARIO;
 			sourceTree = "<group>";
 		};
 		E5C8E81C1EC9BCBA00355E0D /* PEDIDO */ = {
@@ -493,6 +504,7 @@
 				E5EAB59F1EC9160B0016D86C /* DMDEscanerTabla.swift in Sources */,
 				E5EAB5891EC8E7160016D86C /* DMDDetalleTienda.swift in Sources */,
 				E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */,
+				E57B0BFF1ED185F90007A96C /* DMDCalendario.swift in Sources */,
 				E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */,
 				E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */,
 				E5EAB5A31EC916180016D86C /* DMDInventarioCelda.swift in Sources */,
