@@ -14,10 +14,27 @@ class DMDLogin: UIViewController {
     
     //MARK: - Variables locales
     var reproductor: AVPlayer!
+    let REPRODUCTOR_TAG = 1000
     
-
+    //MARK: - IBoutlets
     @IBOutlet weak var myIniciarSesionBTN: UIButton!
     
+    
+    //MARK: - IBActions
+    
+    @IBAction func myIniciarSesionACTION(_ sender: Any) {
+        
+        
+        
+        //Borrar las notificaciones
+        NotificationCenter.default.removeObserver(self)
+        //Parar el video, se añade la tolerancia para que no tarde en pararse en segundo plano
+         reproductor.seek(to: (reproductor.currentItem?.duration)!, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimePositiveInfinity)
+        //Recuperar Menu VC
+        let menuVC = storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+        present(menuVC, animated: true, completion: nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +62,7 @@ class DMDLogin: UIViewController {
         //Asignar el video
         reproductor = AVPlayer(url: URL(fileURLWithPath: rutaVideo!))
         
+        
         //No hacer nada al acabar el vídeo
         reproductor.actionAtItemEnd = .none
         
@@ -57,8 +75,11 @@ class DMDLogin: UIViewController {
         //Hago zoom sin distorsionar
         capaDelReproductor.videoGravity = AVLayerVideoGravityResizeAspectFill
         
+
+        
         //zPosition para capas, lo añado a la primera posición del array de capas
         view.layer.insertSublayer(capaDelReproductor, at: 0)
+        
         
         //Observador sobre el reproductor
         NotificationCenter.default.addObserver(self,
@@ -74,6 +95,7 @@ class DMDLogin: UIViewController {
         
         
         
+        
     }
     
     ///Funcion a ejecutar sobre el reproductor cuando cambie su estado
@@ -81,5 +103,11 @@ class DMDLogin: UIViewController {
     func playerItem(){
         reproductor.seek(to: kCMTimeZero)
     }
+    
+    
+    
+    
+    
+    
 
 }

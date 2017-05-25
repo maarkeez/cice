@@ -29,13 +29,26 @@ class DMDListaRecibirPedido: UIViewController {
         
     }
     
+    
+    ///Guardar la lista de productos como inventario a fecha actual
     @IBAction func confirmarACTION(_ sender: Any) {
+        
+        let listaProductos = ListaProductosRepository.shared.new()
+        listaProductos.tipo = ListaProductosRepository.shared.TIPO_RECEPCION_PEDIDO
+        listaProductos.listaproductos2producto = NSSet(array: listadoProductos)
+        
+        
+        
     }
     
     @IBAction func paraMasTardeACTION(_ sender: Any) {
+        
+        
     }
     
     @IBAction func cancelarACTION(_ sender: Any) {
+    
+    
     }
     
     

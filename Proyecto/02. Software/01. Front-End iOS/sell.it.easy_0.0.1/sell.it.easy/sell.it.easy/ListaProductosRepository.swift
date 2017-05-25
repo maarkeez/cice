@@ -14,6 +14,14 @@ class ListaProductosRepository {
     //MARK: - Variables locales
     ///Acceso a CordeData local
     let stack = CoreDataStack.shared
+    
+    //Tipos
+    let TIPO_INVENTARIO : Int32 = 0
+    let TIPO_PEDIDO : Int32  = 1
+    let TIPO_RECEPCION_PEDIDO : Int32  = 2
+    let TIPO_COMPRA_FISICA : Int32  = 3
+    let TIPO_COMPRA_ONLINE : Int32  = 4
+    
     ///Singleton
     static let shared = ListaProductosRepository()
     

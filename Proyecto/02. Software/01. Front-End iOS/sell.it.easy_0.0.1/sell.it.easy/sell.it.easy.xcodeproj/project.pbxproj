@@ -226,8 +226,8 @@
 		E51ABA791EC7D032008C2E6C /* VIEW_CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
-				E57B0BFD1ED185E40007A96C /* CALENDARIO */,
 				E53E20C41EC84BBB00130DEB /* CAJA */,
+				E57B0BFD1ED185E40007A96C /* CALENDARIO */,
 				E5EAB59D1EC915F60016D86C /* ESCANER */,
 				E57B0BEB1ED059A50007A96C /* ESTADISTICAS */,
 				E5C8E8231ECA108500355E0D /* HISTORICOS */,
@@ -283,9 +283,9 @@
 			children = (
 				E51ABA621EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld */,
 				E53E20D11EC8641400130DEB /* CoreDataStack.swift */,
-				E53E20D31EC865F600130DEB /* ProductoRepository.swift */,
-				E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */,
 				E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */,
+				E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */,
+				E53E20D31EC865F600130DEB /* ProductoRepository.swift */,
 			);
 			name = PERSISTENCE;
 			sourceTree = "<group>";
