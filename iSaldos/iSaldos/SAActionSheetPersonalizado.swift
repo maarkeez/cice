@@ -15,6 +15,10 @@ class SAActionSheetPersonalizado: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.clear
+        self.view.isOpaque = false
+        
     }
 
 }
