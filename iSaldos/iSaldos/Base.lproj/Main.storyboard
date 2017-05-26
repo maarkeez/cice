@@ -1358,6 +1358,58 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
             </objects>
             <point key="canvasLocation" x="2731.875" y="132.04225352112675"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="pdY-nf-Xvx">
+            <objects>
+                <viewController storyboardIdentifier="SAWebViewController" id="KhS-RC-2Tn" customClass="SAWebViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eQC-r3-S1Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="qez-DN-sWO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lfT-Wj-kL7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1U-M1-pXI">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsr-KE-cWu">
+                                <rect key="frame" x="283" y="28" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="21" id="400-kD-h9P"/>
+                                    <constraint firstAttribute="height" constant="21" id="T8z-Pu-328"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="cerrasX"/>
+                                <connections>
+                                    <action selector="hideACTION:" destination="1yV-fq-TJr" eventType="touchUpInside" id="bCf-a1-orR"/>
+                                    <action selector="myCerrarVentanaACTION:" destination="KhS-RC-2Tn" eventType="touchUpInside" id="bFb-Hd-UG1"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UJ5-1X-yzd">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qez-DN-sWO" firstAttribute="top" secondItem="h1U-M1-pXI" secondAttribute="bottom" id="BBn-yo-SLE"/>
+                            <constraint firstItem="h1U-M1-pXI" firstAttribute="top" secondItem="eQC-r3-S1Q" secondAttribute="bottom" id="CR1-Dk-9jq"/>
+                            <constraint firstItem="h1U-M1-pXI" firstAttribute="leading" secondItem="lfT-Wj-kL7" secondAttribute="leading" id="UU3-Ro-1rQ"/>
+                            <constraint firstItem="nsr-KE-cWu" firstAttribute="top" secondItem="eQC-r3-S1Q" secondAttribute="bottom" constant="8" id="ZE3-5w-vcZ"/>
+                            <constraint firstAttribute="trailing" secondItem="h1U-M1-pXI" secondAttribute="trailing" id="fBA-ZA-BKG"/>
+                            <constraint firstAttribute="trailing" secondItem="nsr-KE-cWu" secondAttribute="trailing" constant="16" id="sqG-No-ioX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="UJ5-1X-yzd" id="2M6-It-Asf"/>
+                        <outlet property="myWebView" destination="h1U-M1-pXI" id="HHQ-eW-5jI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xj5-qs-xeA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3452" y="137"/>
+        </scene>
         <!--Cupones-->
         <scene sceneID="j44-4E-QAB">
             <objects>
@@ -2664,7 +2716,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <image name="rateApp" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bnR-hu-Ngu"/>
+        <segue reference="PMB-TT-YxY"/>
         <segue reference="H3W-9g-Zj5"/>
     </inferredMetricsTieBreakers>
 </document>
