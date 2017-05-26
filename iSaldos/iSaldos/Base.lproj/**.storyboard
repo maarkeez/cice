@@ -1333,6 +1333,10 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="xVO-3u-3eJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myImagen" destination="KDO-ik-LAj" id="qgN-sX-FFM"/>
+                        <outlet property="myMapa" destination="eH9-Y6-PVc" id="mae-IH-l9o"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iy-xa-ET2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

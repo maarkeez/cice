@@ -15,6 +15,9 @@ class SAOfertas: UITableViewController {
     
     //MARK: - Variables locales
     var ofertas = [SAPromocionesModel]()
+    var imagenSeleccionada : UIImage?
+    //Diccionario para almacenar localmente las imágenes
+    var diccionarioImagenes  = [String: UIImage?]()
     
     //MARK: - IBOutlets
     @IBOutlet weak var myMenu: UIBarButtonItem!
@@ -62,20 +65,39 @@ class SAOfertas: UITableViewController {
             
             let pathComplete = getImagePath(CONSTANTES.LLAMADAS.OFERTA, id: oferta.id!, name: oferta.imagen!)
             print("PATH_COMPLETO= \(pathComplete)")
+            celdaOferta.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: pathComplete)!), placeholder: #imageLiteral(resourceName: "placeholder"), options: [.transition(ImageTransition.fade(1))], progressBlock: nil, completionHandler: { (image, error, cacheType, imageUrl) in
+                //guardamos las imágenes en un diccionario
+                self.diccionarioImagenes[oferta.id!] = image!
+            })
             
-            celdaOferta.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: pathComplete)!),
-                                                   placeholder: #imageLiteral(resourceName: "placeholder"),
-                                                   options: [.transition(ImageTransition.fade(1))],
-                                                   progressBlock: nil,
-                                                   completionHandler: nil)
         }
-        
         
         return celdaOferta
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 310
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let celdaOferta = tableView.dequeueReusableCell(withIdentifier: "ISOfertaCustomCell", for: indexPath) as! ISOfertaCustomCell
+        imagenSeleccionada = celdaOferta.myImagenOferta.image
+        
+        performSegue(withIdentifier: "showOfertaSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Comprobar que coincide con el segue para el detalle
+        if segue.identifier == "showOfertaSegue" {
+            let detalleOfertaVC = segue.destination as! SAOfertaDetalle
+            let indice = tableView.indexPathForSelectedRow?.row
+            let oferta = ofertas[indice!]
+            //Asignar la oferta seleccionada
+            detalleOfertaVC.oferta = oferta
+            
+            //Recuperar la imagen de la lista local
+            detalleOfertaVC.detalleImagen = diccionarioImagenes[oferta.id!]!
+        }
     }
     
     //MARK: - Utils
