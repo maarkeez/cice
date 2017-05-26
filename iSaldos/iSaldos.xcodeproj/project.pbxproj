@@ -60,6 +60,8 @@
 		E52D09051ED7A5210033077F /* SATabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D09041ED7A5210033077F /* SATabBar.swift */; };
 		E56E2D001ED7AF1B005B12DD /* SAOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E2CFF1ED7AF1B005B12DD /* SAOfertas.swift */; };
 		E56E2D021ED7AF2A005B12DD /* SAOfertaDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E2D011ED7AF2A005B12DD /* SAOfertaDetalle.swift */; };
+		E56E2D041ED7B6B2005B12DD /* SAPromocionesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E2D031ED7B6B2005B12DD /* SAPromocionesModel.swift */; };
+		E56E2D061ED7B7BD005B12DD /* SAAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E2D051ED7B7BD005B12DD /* SAAsociadoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +128,8 @@
 		E52D09041ED7A5210033077F /* SATabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATabBar.swift; sourceTree = "<group>"; };
 		E56E2CFF1ED7AF1B005B12DD /* SAOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAOfertas.swift; sourceTree = "<group>"; };
 		E56E2D011ED7AF2A005B12DD /* SAOfertaDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAOfertaDetalle.swift; sourceTree = "<group>"; };
+		E56E2D031ED7B6B2005B12DD /* SAPromocionesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAPromocionesModel.swift; sourceTree = "<group>"; };
+		E56E2D051ED7B7BD005B12DD /* SAAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAAsociadoModel.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -314,6 +318,8 @@
 			children = (
 				09C3C41D1ECF411B009478C0 /* CustomError.swift */,
 				09C3C41F1ECF4259009478C0 /* APISignIn.swift */,
+				E56E2D031ED7B6B2005B12DD /* SAPromocionesModel.swift */,
+				E56E2D051ED7B7BD005B12DD /* SAAsociadoModel.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -527,7 +533,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56E2D061ED7B7BD005B12DD /* SAAsociadoModel.swift in Sources */,
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
+				E56E2D041ED7B6B2005B12DD /* SAPromocionesModel.swift in Sources */,
 				E52D09051ED7A5210033077F /* SATabBar.swift in Sources */,
 				096E4E191EC643A40095C59A /* SAGaleriaImagenesViewController.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
