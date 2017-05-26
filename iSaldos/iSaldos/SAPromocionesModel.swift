@@ -12,7 +12,28 @@ class SAPromocionesModel: NSObject {
 
     //MARK: - Variables locales
     let URL_PROMOCIONES = "http://app.clubsinergias.es/api_comercios.php?idlocalidad=11&tipo=oferta&p=promociones"
+ 
     
-    {"id":"35","tipoPromocion":"oferta","nombre":"GRATIS fluoacion","importe":"0.00","imagen":"cem_app_julio.jpg","fechaFin":"2016-12-31","masInformacion":"\u00a1Gratis radiograf\u00eda panor\u00e1mica de la boca!, con la primera visita Premium","asociado":}
+    var id : String?
+    var tipoPromocion : String?
+    var nombre : String?
+    var importe : String?
+    var imagen : String?
+    var fechaFin : String?
+    var masInformacion: String?
+    var asociado : SAAsociadoModel?
+    
+    
+    init( id : String?, tipoPromocion : String?, nombre : String?, importe : String?, imagen : String?, fechaFin : String?, masInformacion: String?, asociado : SAAsociadoModel? ){
+        self.id = id
+        self.tipoPromocion = tipoPromocion
+        self.nombre = nombre
+        self.importe = importe
+        self.imagen = imagen
+        self.fechaFin = fechaFin
+        self.masInformacio = masInformacio
+        self.asociado = asociado
+        
+    }
     
 }

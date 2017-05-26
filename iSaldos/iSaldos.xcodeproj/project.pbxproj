@@ -159,10 +159,10 @@
 			isa = PBXGroup;
 			children = (
 				412741C61E9F93D40074CDD7 /* Podfile */,
-				412741B31E9F93B20074CDD7 /* iSaldos */,
-				412741B21E9F93B20074CDD7 /* Products */,
-				D54070C79A5867705BA6C568 /* Pods */,
 				AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */,
+				412741B31E9F93B20074CDD7 /* iSaldos */,
+				D54070C79A5867705BA6C568 /* Pods */,
+				412741B21E9F93B20074CDD7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
