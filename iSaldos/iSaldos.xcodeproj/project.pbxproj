@@ -55,6 +55,9 @@
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
 		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
+		E52D09001ED7A4C60033077F /* SAMenuLateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D08FF1ED7A4C60033077F /* SAMenuLateral.swift */; };
+		E52D09031ED7A4ED0033077F /* SATerminosYCondiciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D09021ED7A4ED0033077F /* SATerminosYCondiciones.swift */; };
+		E52D09051ED7A5210033077F /* SATabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D09041ED7A5210033077F /* SATabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +119,9 @@
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
 		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
+		E52D08FF1ED7A4C60033077F /* SAMenuLateral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuLateral.swift; sourceTree = "<group>"; };
+		E52D09021ED7A4ED0033077F /* SATerminosYCondiciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATerminosYCondiciones.swift; sourceTree = "<group>"; };
+		E52D09041ED7A5210033077F /* SATabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATabBar.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,9 +169,9 @@
 		412741B31E9F93B20074CDD7 /* iSaldos */ = {
 			isa = PBXGroup;
 			children = (
+				412741B41E9F93B20074CDD7 /* AppDelegate.swift */,
 				412741D51E9F98230074CDD7 /* OBJC */,
 				412741D41E9F953E0074CDD7 /* TUTORIAL_INTRO */,
-				412741B41E9F93B20074CDD7 /* AppDelegate.swift */,
 				412742311E9FC6810074CDD7 /* PARSERS */,
 				412742301E9FC67B0074CDD7 /* MODELS */,
 				4127422F1E9FC6750074CDD7 /* API */,
@@ -236,6 +242,7 @@
 				412741FF1E9FC1680074CDD7 /* OFERTAS */,
 				412742061E9FC19D0074CDD7 /* CUPONES */,
 				4127420D1E9FC1C60074CDD7 /* CONCURSOS */,
+				E52D09011ED7A4CB0033077F /* MENU */,
 			);
 			name = VIEWS_CONTROLLERS;
 			sourceTree = "<group>";
@@ -366,6 +373,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E52D09011ED7A4CB0033077F /* MENU */ = {
+			isa = PBXGroup;
+			children = (
+				E52D08FF1ED7A4C60033077F /* SAMenuLateral.swift */,
+				E52D09021ED7A4ED0033077F /* SATerminosYCondiciones.swift */,
+				E52D09041ED7A5210033077F /* SATabBar.swift */,
+			);
+			name = MENU;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -401,6 +418,7 @@
 				TargetAttributes = {
 					412741B01E9F93B20074CDD7 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 59SH2VU4Z2;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -504,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
+				E52D09051ED7A5210033077F /* SATabBar.swift in Sources */,
 				096E4E191EC643A40095C59A /* SAGaleriaImagenesViewController.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
 				096E4E171EC643570095C59A /* SASplashViewController.swift in Sources */,
@@ -521,7 +540,9 @@
 				096E4E151EC63E100095C59A /* APIPHELPERS.swift in Sources */,
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
 				096E4E131EC63DE10095C59A /* RateApp.swift in Sources */,
+				E52D09001ED7A4C60033077F /* SAMenuLateral.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
+				E52D09031ED7A4ED0033077F /* SATerminosYCondiciones.swift in Sources */,
 				096E4E1D1EC644EB0095C59A /* SARegistroTableViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 			);
@@ -649,12 +670,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 59SH2VU4Z2;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iSaldos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -668,12 +690,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 59SH2VU4Z2;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iSaldos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
