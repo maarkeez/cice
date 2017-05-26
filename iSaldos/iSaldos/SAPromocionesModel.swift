@@ -11,7 +11,7 @@ import UIKit
 class SAPromocionesModel: NSObject {
 
     //MARK: - Variables locales
-    let URL_PROMOCIONES = "http://app.clubsinergias.es/api_comercios.php?idlocalidad=11&tipo=oferta&p=promociones"
+    
  
     
     var id : String?
@@ -31,7 +31,7 @@ class SAPromocionesModel: NSObject {
         self.importe = importe
         self.imagen = imagen
         self.fechaFin = fechaFin
-        self.masInformacio = masInformacio
+        self.masInformacion = masInformacion
         self.asociado = asociado
         
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0941EBA51ED8785500813153 /* SAParserPromociones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941EBA41ED8785500813153 /* SAParserPromociones.swift */; };
 		096E4E111EC63BDF0095C59A /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E101EC63BDF0095C59A /* APIUTILS.swift */; };
 		096E4E131EC63DE10095C59A /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E121EC63DE10095C59A /* RateApp.swift */; };
 		096E4E151EC63E100095C59A /* APIPHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E141EC63E100095C59A /* APIPHELPERS.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0941EBA41ED8785500813153 /* SAParserPromociones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAParserPromociones.swift; sourceTree = "<group>"; };
 		096E4E101EC63BDF0095C59A /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		096E4E121EC63DE10095C59A /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		096E4E141EC63E100095C59A /* APIPHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIPHELPERS.swift; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 		412742311E9FC6810074CDD7 /* PARSERS */ = {
 			isa = PBXGroup;
 			children = (
+				0941EBA41ED8785500813153 /* SAParserPromociones.swift */,
 			);
 			name = PARSERS;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56E2D061ED7B7BD005B12DD /* SAAsociadoModel.swift in Sources */,
+				0941EBA51ED8785500813153 /* SAParserPromociones.swift in Sources */,
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
 				E56E2D041ED7B6B2005B12DD /* SAPromocionesModel.swift in Sources */,
 				E52D09051ED7A5210033077F /* SATabBar.swift in Sources */,

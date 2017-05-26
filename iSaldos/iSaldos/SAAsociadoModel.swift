@@ -41,6 +41,6 @@ class SAAsociadoModel: NSObject {
         self.telefonoMovil = telefonoMovil
         self.mail = mail
         self.web = web
-        
+        super.init()
     }
 }
