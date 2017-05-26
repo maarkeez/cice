@@ -13,7 +13,7 @@ class SATabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        selectedIndex = 3
+        //selectedIndex = 1
         
     }
 

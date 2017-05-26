@@ -24,8 +24,8 @@ class SAParserPromociones: NSObject {
     func getDatosPromociones(_ idLocalidad : String, idTipo: String, idParametro: String) -> Promise<JSON>{
         
         //Construir la url a la que vamos a realizar la consulta
-        let urlConsulta = CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASE_URL_LOCALIDAD + idLocalidad + "&tipo=" + idTipo + "&p=" + idParametro
-        
+        let urlConsulta = CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASE_URL_LOCALIDAD + "=" + idLocalidad + "&tipo=" + idTipo + "&p=" + idParametro
+        print("URLCONSULTA="+urlConsulta)
         //Crear la petición a la URL
         let peticion = URLRequest(url: URL(string:  urlConsulta)!)
         
