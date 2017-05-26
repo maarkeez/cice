@@ -31,11 +31,20 @@ class SAMenuLateral: UITableViewController {
         //Recuperar información del usuario
         dameInformacionParse()
         
+        
+        //Editar forma de la imagen
+        myImagen.layer.cornerRadius = myImagen.frame.width / 2
+        myImagen.layer.borderColor = CONSTANTES.COLORES.GRIS_NAV_TAB.cgColor
+        myImagen.layer.borderWidth = 1
+        myImagen.clipsToBounds = true
+        
     }
     
     //MARK: - Utils
     
     ///Recuperar la información sobre el usuario
+    ///Recupera la imagen si se puede recuperar el usuario
+    ///De la imagen, recupera los bytes de la misma usando parse en todo el proceso
     func dameInformacionParse(){
         
         // ------------------------------------------

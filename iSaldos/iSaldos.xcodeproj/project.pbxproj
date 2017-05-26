@@ -58,6 +58,8 @@
 		E52D09001ED7A4C60033077F /* SAMenuLateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D08FF1ED7A4C60033077F /* SAMenuLateral.swift */; };
 		E52D09031ED7A4ED0033077F /* SATerminosYCondiciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D09021ED7A4ED0033077F /* SATerminosYCondiciones.swift */; };
 		E52D09051ED7A5210033077F /* SATabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52D09041ED7A5210033077F /* SATabBar.swift */; };
+		E56E2D001ED7AF1B005B12DD /* SAOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E2CFF1ED7AF1B005B12DD /* SAOfertas.swift */; };
+		E56E2D021ED7AF2A005B12DD /* SAOfertaDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56E2D011ED7AF2A005B12DD /* SAOfertaDetalle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +124,8 @@
 		E52D08FF1ED7A4C60033077F /* SAMenuLateral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAMenuLateral.swift; sourceTree = "<group>"; };
 		E52D09021ED7A4ED0033077F /* SATerminosYCondiciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATerminosYCondiciones.swift; sourceTree = "<group>"; };
 		E52D09041ED7A5210033077F /* SATabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATabBar.swift; sourceTree = "<group>"; };
+		E56E2CFF1ED7AF1B005B12DD /* SAOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAOfertas.swift; sourceTree = "<group>"; };
+		E56E2D011ED7AF2A005B12DD /* SAOfertaDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAOfertaDetalle.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -263,6 +267,8 @@
 			children = (
 				412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */,
 				412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */,
+				E56E2CFF1ED7AF1B005B12DD /* SAOfertas.swift */,
+				E56E2D011ED7AF2A005B12DD /* SAOfertaDetalle.swift */,
 			);
 			name = OFERTAS;
 			sourceTree = "<group>";
@@ -541,9 +547,11 @@
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
 				096E4E131EC63DE10095C59A /* RateApp.swift in Sources */,
 				E52D09001ED7A4C60033077F /* SAMenuLateral.swift in Sources */,
+				E56E2D001ED7AF1B005B12DD /* SAOfertas.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				E52D09031ED7A4ED0033077F /* SATerminosYCondiciones.swift in Sources */,
 				096E4E1D1EC644EB0095C59A /* SARegistroTableViewController.swift in Sources */,
+				E56E2D021ED7AF2A005B12DD /* SAOfertaDetalle.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,7 +682,7 @@
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iSaldos;
+				PRODUCT_BUNDLE_IDENTIFIER = dmd.icologic.iSaldos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
@@ -694,7 +702,7 @@
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iSaldos;
+				PRODUCT_BUNDLE_IDENTIFIER = dmd.icologic.iSaldos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";

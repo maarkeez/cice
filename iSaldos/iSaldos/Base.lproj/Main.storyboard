@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="97.5" y="1164.0845070422536"/>
         </scene>
-        <!--Reveal View Controller-->
+        <!--Tab Bar-->
         <scene sceneID="CBS-S7-voC">
             <objects>
-                <viewController storyboardIdentifier="SWRevealViewController" id="xyh-0i-CvB" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SATabBar" id="xyh-0i-CvB" customClass="SATabBar" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hvW-PA-z45"/>
                         <viewControllerLayoutGuide type="bottom" id="5o4-eA-IPa"/>
@@ -974,7 +974,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Ofertas-->
         <scene sceneID="GFO-i6-Q0Y">
             <objects>
-                <tableViewController storyboardIdentifier="OfertasTableViewController" id="8Mf-b3-Q4P" customClass="ISOfertasTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SAOfertas" id="8Mf-b3-Q4P" customClass="SAOfertas" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="47" sectionHeaderHeight="22" sectionFooterHeight="22" id="OKc-Dm-5qp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1007,10 +1007,10 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
             </objects>
             <point key="canvasLocation" x="1905" y="132.04225352112675"/>
         </scene>
-        <!--Detalle Oferta View Controller-->
+        <!--Oferta Detalle-->
         <scene sceneID="jTg-DO-bI4">
             <objects>
-                <tableViewController storyboardIdentifier="DetalleOfertaViewController" id="qU4-L3-6qi" customClass="ISDetalleOfertaViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SAOfertaDetalle" id="qU4-L3-6qi" customClass="SAOfertaDetalle" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9in-Pn-7dl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1335,20 +1335,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="xVO-3u-3eJ"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="myDescripcionAsociado" destination="je4-EQ-k65" id="ian-6O-6WY"/>
-                        <outlet property="myDireccionAsociado" destination="eN1-1M-n48" id="725-Dz-NHZ"/>
-                        <outlet property="myEmailAsociado" destination="1DV-sc-Yi2" id="EUP-VA-aTk"/>
-                        <outlet property="myFechaOferta" destination="OvE-sh-hlw" id="yUw-iW-uBG"/>
-                        <outlet property="myFijoAsociado" destination="uvB-jQ-hyg" id="w5Z-J5-ro6"/>
-                        <outlet property="myImagenOferta" destination="KDO-ik-LAj" id="Vpc-4P-iv1"/>
-                        <outlet property="myInformacionOferta" destination="Ycb-Ij-vlM" id="zEd-59-qbZ"/>
-                        <outlet property="myMapView" destination="eH9-Y6-PVc" id="uMm-LJ-Ken"/>
-                        <outlet property="myMovilAsociado" destination="ybb-Xj-f5D" id="Q1i-1x-wSf"/>
-                        <outlet property="myNombreAsociado" destination="BFU-zO-rXb" id="60q-zc-zRw"/>
-                        <outlet property="myNombreOferta" destination="abm-5H-wQn" id="laF-Hs-RI6"/>
-                        <outlet property="myWebAsociado" destination="Y9c-Sl-ArD" id="Tjd-1g-gNq"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iy-xa-ET2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1446,7 +1432,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sPO-a8-6K3" id="Sw0-2E-L6A">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2552,7 +2538,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ps-eb-Nmp" id="6eC-fk-dUu">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
