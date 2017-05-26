@@ -39,10 +39,32 @@ class SACuponDetalle: UITableViewController {
     @IBAction func muestraBarCodeACTION(_ sender: UIButton) {
         
         
+        
+        let customBackground = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 2))
+        
+        customBackground.backgroundColor = CONSTANTES.COLORES.GRIS_NAV_TAB
+        customBackground.alpha = 0.0
+        customBackground.tag = imageGroupTag
+        
+        let customBackANIMATION = UIViewPropertyAnimator(duration: 0.3, curve: .easeInOut) { 
+            customBackground.alpha = 0.5
+            self.view.addSubview(customBackground)
+        }
+        
+        customBackANIMATION.startAnimation()
+        customBackANIMATION.addCompletion { _ in
+            self.muestraImagenBarCode()
+        }
+        
     }
     
     @IBAction func muestraActionSheetPersonalizado(_ sender: UIBarButtonItem) {
         
+        let storyBoardData = UIStoryboard(name: "ActionSheetHistoryBoard", bundle: nil)
+        let actionSheetVC = storyBoardData.instantiateInitialViewController()
+        actionSheetVC?.modalPresentationStyle = .overCurrentContext
+        
+        show(actionSheetVC as! UINavigationController, sender: self)
         
     }
     
@@ -69,7 +91,8 @@ class SACuponDetalle: UITableViewController {
             
             myWebURL.text = cupon.asociado?.web
             myTelefonoFijo.text = cupon.asociado?.telefonoFijo
-            myIdActividadAsociado.text = cupon.id
+            myIdActividadAsociado.text = cupon.asociado?.idActividad
+            qrData = cupon.asociado?.idActividad
         }
         
 
@@ -85,5 +108,32 @@ class SACuponDetalle: UITableViewController {
     }
     
 
+    //MARK: - Utils
+    func muestraImagenBarCode(){
+        if myIdActividadAsociado.text == qrData {
+            let anchoImagen = self.view.frame.width / 1.5
+            let altoImagen = self.view.frame.height / 3.0
+            let x = self.view.frame.width / 2 - anchoImagen / 2
+            let y = self.view.frame.height / 2 - altoImagen / 2
+            
+            let imageView = UIImageView(frame: CGRect(x: x, y: y, width: anchoImagen, height: altoImagen))
+            
+            
+            imageView.contentMode = .scaleAspectFit
+            imageView.tag = imageGroupTag
+            imageView.image = getQRImage(from: myIdActividadAsociado.text!)
+            self.view.addSubview(imageView)
+        }else{
+            print("Error mostrando el código de barras")
+        }
+    }
+    
+    func getQRImage(from: String) -> UIImage{
+        let data = from.data(using: .ascii)
+        let filter = CIFilter(name: "CICode128BarcodeGenerator") //Filtro propio de Apple
+        filter?.setValue(data, forKey: "inputMessage")
+        return UIImage(ciImage: filter!.outputImage!)
+        
+    }
    
 }
