@@ -1868,7 +1868,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" backgroundImage="qr"/>
                                                     <connections>
-                                                        <action selector="qrACTION:" destination="qzt-0p-lkA" eventType="touchUpInside" id="EEv-Ff-ido"/>
+                                                        <action selector="muestraBarCodeACTION:" destination="qzt-0p-lkA" eventType="touchUpInside" id="bQ7-0v-umN"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Numero de Socio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw5-Rf-YYi">
@@ -1899,9 +1899,26 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pms-Vz-fbo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="T2m-BX-ZTm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="T2m-BX-ZTm">
+                            <connections>
+                                <action selector="muestraActionSheetPersonalizado:" destination="qzt-0p-lkA" id="cT6-oG-KOX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="myDescripcionAsociado" destination="4u9-L9-ZOD" id="nOa-dg-wog"/>
+                        <outlet property="myDireccionAsociado" destination="bRG-LF-x24" id="93K-26-5xq"/>
+                        <outlet property="myEmail" destination="a9d-rI-NvC" id="oAS-dx-9jn"/>
+                        <outlet property="myFecha" destination="fjH-Dv-ole" id="vCd-ze-17a"/>
+                        <outlet property="myIdActividadAsociado" destination="6hx-zq-8xt" id="2yB-Sh-mhP"/>
+                        <outlet property="myImagen" destination="Tff-ej-Lmj" id="pqn-3s-OAU"/>
+                        <outlet property="myMasInformacion" destination="26I-zK-I3B" id="OTz-VL-Qhj"/>
+                        <outlet property="myNombre" destination="tfE-OP-kqW" id="Pn2-be-1Kk"/>
+                        <outlet property="myTelefonoFijo" destination="07d-kf-XSS" id="gSo-ka-gd9"/>
+                        <outlet property="myTelefonoMovil" destination="ebM-eD-Hwd" id="byu-UX-PAy"/>
+                        <outlet property="myWebURL" destination="i1O-UD-J3P" id="ilv-JG-flv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFl-aC-do9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

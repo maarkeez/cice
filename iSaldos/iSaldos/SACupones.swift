@@ -45,7 +45,7 @@ class SACupones: UITableViewController {
         
         let datosOferta = SAParserPromociones()
         let idLocalidad = "11"
-        let tipoOferta = CONSTANTES.LLAMADAS.OFERTA
+        let tipoOferta = CONSTANTES.LLAMADAS.CUPON
         let tipoParametro = CONSTANTES.LLAMADAS.PROMOCIONES_SERVICE
         
         HUD.show(.progress)
@@ -96,7 +96,7 @@ class SACupones: UITableViewController {
             
             pathImagen = CONSTANTES.LLAMADAS.BASE_URL_FOTO + pathImagen
             
-            let pathComplete = getImagePath(CONSTANTES.LLAMADAS.OFERTA, id: cupon.id!, name: cupon.imagen!)
+            let pathComplete = getImagePath(CONSTANTES.LLAMADAS.CUPON, id: cupon.id!, name: cupon.imagen!)
             print("PATH_COMPLETO= \(pathComplete)")
             celdaCupon.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: pathComplete)!), placeholder: #imageLiteral(resourceName: "placeholder"), options: [.transition(ImageTransition.fade(1))], progressBlock: nil, completionHandler: { (image, error, cacheType, imageUrl) in
                 //guardamos las imágenes en un diccionario
