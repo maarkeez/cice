@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0941EBA51ED8785500813153 /* SAParserPromociones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941EBA41ED8785500813153 /* SAParserPromociones.swift */; };
+		0941EBA71ED8A45A00813153 /* SAWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0941EBA61ED8A45A00813153 /* SAWebViewController.swift */; };
 		096E4E111EC63BDF0095C59A /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E101EC63BDF0095C59A /* APIUTILS.swift */; };
 		096E4E131EC63DE10095C59A /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E121EC63DE10095C59A /* RateApp.swift */; };
 		096E4E151EC63E100095C59A /* APIPHELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096E4E141EC63E100095C59A /* APIPHELPERS.swift */; };
@@ -19,7 +20,7 @@
 		09C3C4201ECF4259009478C0 /* APISignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C3C41F1ECF4259009478C0 /* APISignIn.swift */; };
 		09C3C4221ECF5660009478C0 /* UIViewControllerExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C3C4211ECF5660009478C0 /* UIViewControllerExts.swift */; };
 		412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741B41E9F93B20074CDD7 /* AppDelegate.swift */; };
-		412741BA1E9F93B20074CDD7 /* **.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741B81E9F93B20074CDD7 /* **.storyboard */; };
+		412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741B81E9F93B20074CDD7 /* Main.storyboard */; };
 		412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412741BB1E9F93B20074CDD7 /* Assets.xcassets */; };
 		412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741BD1E9F93B20074CDD7 /* LaunchScreen.storyboard */; };
 		412741C71E9F93D40074CDD7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 412741C61E9F93D40074CDD7 /* Podfile */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		0941EBA41ED8785500813153 /* SAParserPromociones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAParserPromociones.swift; sourceTree = "<group>"; };
+		0941EBA61ED8A45A00813153 /* SAWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAWebViewController.swift; sourceTree = "<group>"; };
 		096E4E101EC63BDF0095C59A /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
 		096E4E121EC63DE10095C59A /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		096E4E141EC63E100095C59A /* APIPHELPERS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIPHELPERS.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
 		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		412741B41E9F93B20074CDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		412741B91E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/**.storyboard"; sourceTree = "<group>"; };
+		412741B91E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		412741BB1E9F93B20074CDD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		412741BE1E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		412741C01E9F93B20074CDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -186,7 +188,7 @@
 				412742301E9FC67B0074CDD7 /* MODELS */,
 				4127422F1E9FC6750074CDD7 /* API */,
 				412741EF1E9FC0710074CDD7 /* VIEWS_CONTROLLERS */,
-				412741B81E9F93B20074CDD7 /* **.storyboard */,
+				412741B81E9F93B20074CDD7 /* Main.storyboard */,
 				412741BB1E9F93B20074CDD7 /* Assets.xcassets */,
 				412741BD1E9F93B20074CDD7 /* LaunchScreen.storyboard */,
 				412741C01E9F93B20074CDD7 /* Info.plist */,
@@ -275,6 +277,7 @@
 				412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */,
 				E56E2CFF1ED7AF1B005B12DD /* SAOfertas.swift */,
 				E56E2D011ED7AF2A005B12DD /* SAOfertaDetalle.swift */,
+				0941EBA61ED8A45A00813153 /* SAWebViewController.swift */,
 			);
 			name = OFERTAS;
 			sourceTree = "<group>";
@@ -476,7 +479,7 @@
 				412741C71E9F93D40074CDD7 /* Podfile in Resources */,
 				4127423E1E9FD9640074CDD7 /* FOTO_3.jpg in Resources */,
 				4127423C1E9FD9640074CDD7 /* FOTO_1.jpg in Resources */,
-				412741BA1E9F93B20074CDD7 /* **.storyboard in Resources */,
+				412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56E2D061ED7B7BD005B12DD /* SAAsociadoModel.swift in Sources */,
+				0941EBA71ED8A45A00813153 /* SAWebViewController.swift in Sources */,
 				0941EBA51ED8785500813153 /* SAParserPromociones.swift in Sources */,
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
 				E56E2D041ED7B6B2005B12DD /* SAPromocionesModel.swift in Sources */,
@@ -570,12 +574,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		412741B81E9F93B20074CDD7 /* **.storyboard */ = {
+		412741B81E9F93B20074CDD7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				412741B91E9F93B20074CDD7 /* Base */,
 			);
-			name = "**.storyboard";
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		412741BD1E9F93B20074CDD7 /* LaunchScreen.storyboard */ = {
