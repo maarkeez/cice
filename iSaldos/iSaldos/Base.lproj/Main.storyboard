@@ -1386,17 +1386,18 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <action selector="myCerrarVentanaACTION:" destination="KhS-RC-2Tn" eventType="touchUpInside" id="bFb-Hd-UG1"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UJ5-1X-yzd">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UJ5-1X-yzd">
                                 <rect key="frame" x="150" y="274" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qez-DN-sWO" firstAttribute="top" secondItem="h1U-M1-pXI" secondAttribute="bottom" id="BBn-yo-SLE"/>
                             <constraint firstItem="h1U-M1-pXI" firstAttribute="top" secondItem="eQC-r3-S1Q" secondAttribute="bottom" id="CR1-Dk-9jq"/>
+                            <constraint firstItem="UJ5-1X-yzd" firstAttribute="centerX" secondItem="lfT-Wj-kL7" secondAttribute="centerX" id="FQo-gV-adP"/>
                             <constraint firstItem="h1U-M1-pXI" firstAttribute="leading" secondItem="lfT-Wj-kL7" secondAttribute="leading" id="UU3-Ro-1rQ"/>
                             <constraint firstItem="nsr-KE-cWu" firstAttribute="top" secondItem="eQC-r3-S1Q" secondAttribute="bottom" constant="8" id="ZE3-5w-vcZ"/>
+                            <constraint firstItem="UJ5-1X-yzd" firstAttribute="centerY" secondItem="lfT-Wj-kL7" secondAttribute="centerY" id="f3M-la-e4x"/>
                             <constraint firstAttribute="trailing" secondItem="h1U-M1-pXI" secondAttribute="trailing" id="fBA-ZA-BKG"/>
                             <constraint firstAttribute="trailing" secondItem="nsr-KE-cWu" secondAttribute="trailing" constant="16" id="sqG-No-ioX"/>
                         </constraints>
