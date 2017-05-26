@@ -1374,8 +1374,8 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsr-KE-cWu">
-                                <rect key="frame" x="283" y="28" width="21" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsr-KE-cWu">
+                                <rect key="frame" x="10" y="30" width="21" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="21" id="400-kD-h9P"/>
                                     <constraint firstAttribute="height" constant="21" id="T8z-Pu-328"/>
@@ -1383,21 +1383,19 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                 <state key="normal" backgroundImage="cerrasX"/>
                                 <connections>
                                     <action selector="hideACTION:" destination="1yV-fq-TJr" eventType="touchUpInside" id="bCf-a1-orR"/>
-                                    <action selector="myCerrarVentanaACTION:" destination="KhS-RC-2Tn" eventType="touchUpInside" id="bFb-Hd-UG1"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UJ5-1X-yzd">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UJ5-1X-yzd">
                                 <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qez-DN-sWO" firstAttribute="top" secondItem="h1U-M1-pXI" secondAttribute="bottom" id="BBn-yo-SLE"/>
                             <constraint firstItem="h1U-M1-pXI" firstAttribute="top" secondItem="eQC-r3-S1Q" secondAttribute="bottom" id="CR1-Dk-9jq"/>
-                            <constraint firstItem="UJ5-1X-yzd" firstAttribute="centerX" secondItem="lfT-Wj-kL7" secondAttribute="centerX" id="FQo-gV-adP"/>
                             <constraint firstItem="h1U-M1-pXI" firstAttribute="leading" secondItem="lfT-Wj-kL7" secondAttribute="leading" id="UU3-Ro-1rQ"/>
                             <constraint firstItem="nsr-KE-cWu" firstAttribute="top" secondItem="eQC-r3-S1Q" secondAttribute="bottom" constant="8" id="ZE3-5w-vcZ"/>
-                            <constraint firstItem="UJ5-1X-yzd" firstAttribute="centerY" secondItem="lfT-Wj-kL7" secondAttribute="centerY" id="f3M-la-e4x"/>
                             <constraint firstAttribute="trailing" secondItem="h1U-M1-pXI" secondAttribute="trailing" id="fBA-ZA-BKG"/>
                             <constraint firstAttribute="trailing" secondItem="nsr-KE-cWu" secondAttribute="trailing" constant="16" id="sqG-No-ioX"/>
                         </constraints>
@@ -1414,7 +1412,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Cupones-->
         <scene sceneID="j44-4E-QAB">
             <objects>
-                <tableViewController storyboardIdentifier="CuponesTableViewController" id="D8E-Hi-jWN" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SACupones" id="D8E-Hi-jWN" customClass="SACupones" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="22" sectionFooterHeight="22" id="5xf-5q-Dxn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1440,6 +1438,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="myMenu" destination="hlV-Wd-xm1" id="3AW-aO-0De"/>
                         <segue destination="qzt-0p-lkA" kind="show" identifier="showCuponSegue" id="TDe-s4-e1w"/>
                     </connections>
                 </tableViewController>
@@ -1560,10 +1559,10 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
             </objects>
             <point key="canvasLocation" x="-4125" y="-717"/>
         </scene>
-        <!--Detalle Cupones View Controller-->
+        <!--Cupon Detalle-->
         <scene sceneID="Naz-Jt-IsG">
             <objects>
-                <tableViewController storyboardIdentifier="ISDetalleCuponesViewController" id="qzt-0p-lkA" customClass="ISDetalleCuponesViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SACuponDetalle" id="qzt-0p-lkA" customClass="SACuponDetalle" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lf5-Z3-jsR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1900,27 +1899,9 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pms-Vz-fbo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="T2m-BX-ZTm">
-                            <connections>
-                                <action selector="shareSocialNetworkACTION:" destination="qzt-0p-lkA" id="pLo-yV-E34"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="T2m-BX-ZTm"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="myDescripcionAsociado" destination="4u9-L9-ZOD" id="exg-Mc-F7V"/>
-                        <outlet property="myDireccionAsociado" destination="bRG-LF-x24" id="ZqG-RJ-bSt"/>
-                        <outlet property="myEmailAsociado" destination="a9d-rI-NvC" id="GMv-wQ-A7Z"/>
-                        <outlet property="myFechaOferta" destination="fjH-Dv-ole" id="OpD-W0-T6H"/>
-                        <outlet property="myFijoAsociado" destination="07d-kf-XSS" id="XLg-t1-PJ6"/>
-                        <outlet property="myIdActividad" destination="6hx-zq-8xt" id="BSG-YT-uAw"/>
-                        <outlet property="myImagenOferta" destination="Tff-ej-Lmj" id="zHq-bY-wJA"/>
-                        <outlet property="myInformacionOferta" destination="26I-zK-I3B" id="TCs-8e-QSV"/>
-                        <outlet property="myMovilAsociado" destination="ebM-eD-Hwd" id="EG7-1H-hVF"/>
-                        <outlet property="myNombreAsociado" destination="tfE-OP-kqW" id="6Cs-me-QbG"/>
-                        <outlet property="myNombreOferta" destination="7re-eL-W1e" id="rdt-BY-tN4"/>
-                        <outlet property="myWebAsociado" destination="i1O-UD-J3P" id="FIq-Mi-74p"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFl-aC-do9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
