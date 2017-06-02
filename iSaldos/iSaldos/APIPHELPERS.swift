@@ -42,3 +42,17 @@ func getImagePath(_ type: String, id: String, name: String) -> String {
     return CONSTANTES.LLAMADAS.BASE_URL_FOTO + id + "/" + name
     
 }
+
+func formatDate(_ fecha: String? ) -> String{
+    if let fecha = fecha {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMddhhmmss"
+        dateFormatter.locale = Locale.init(identifier: "es_ES")
+        
+        let dateObj = dateFormatter.date(from: fecha)
+        
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        return dateFormatter.string(from: dateObj!)
+    }
+    return ""
+}
