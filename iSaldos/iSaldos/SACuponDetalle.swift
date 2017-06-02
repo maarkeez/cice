@@ -56,7 +56,14 @@ class SACuponDetalle: UITableViewController {
             self.muestraImagenBarCode()
         }
         
+        
+        
+        //Crear acción para borrar ocultar el BarCode
+        var gestoOcultar = UITapGestureRecognizer(target: self, action: #selector(ocultarBarCode))
+        view.addGestureRecognizer(gestoOcultar)
     }
+    
+    
     
     @IBAction func muestraActionSheetPersonalizado(_ sender: UIBarButtonItem) {
         
@@ -134,6 +141,14 @@ class SACuponDetalle: UITableViewController {
         filter?.setValue(data, forKey: "inputMessage")
         return UIImage(ciImage: filter!.outputImage!)
         
+    }
+    
+    func ocultarBarCode(){
+        for subvista in view.subviews {
+            if subvista.tag == self.imageGroupTag{
+                subvista.removeFromSuperview()
+            }
+        }
     }
    
 }
