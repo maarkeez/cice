@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B9524F47EF6DD6F2FBDE55F4 /* Pods_sell_it_easy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE94BD2C86AC778C605C1288 /* Pods_sell_it_easy.framework */; };
+		E50E89FF1F1A055400C81338 /* celdaFecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E89FD1F1A055400C81338 /* celdaFecha.swift */; };
+		E50E8A001F1A055400C81338 /* celdaFecha.xib in Resources */ = {isa = PBXBuildFile; fileRef = E50E89FE1F1A055400C81338 /* celdaFecha.xib */; };
+		E50E8A031F1A08D900C81338 /* DMDCeldaFecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E8A021F1A08D900C81338 /* DMDCeldaFecha.swift */; };
 		E51ABA5C1EC7C34C008C2E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ABA5B1EC7C34C008C2E6C /* AppDelegate.swift */; };
 		E51ABA611EC7C34C008C2E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51ABA5F1EC7C34C008C2E6C /* Main.storyboard */; };
 		E51ABA641EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E51ABA621EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld */; };
@@ -68,6 +71,9 @@
 		6559D8BC86A905B002DC984C /* Pods-sell.it.easy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sell.it.easy.release.xcconfig"; path = "Pods/Target Support Files/Pods-sell.it.easy/Pods-sell.it.easy.release.xcconfig"; sourceTree = "<group>"; };
 		C0EDF73154F751C88D6D4907 /* Pods-sell.it.easy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sell.it.easy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sell.it.easy/Pods-sell.it.easy.debug.xcconfig"; sourceTree = "<group>"; };
 		DE94BD2C86AC778C605C1288 /* Pods_sell_it_easy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sell_it_easy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E50E89FD1F1A055400C81338 /* celdaFecha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = celdaFecha.swift; sourceTree = "<group>"; };
+		E50E89FE1F1A055400C81338 /* celdaFecha.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = celdaFecha.xib; sourceTree = "<group>"; };
+		E50E8A021F1A08D900C81338 /* DMDCeldaFecha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCeldaFecha.swift; sourceTree = "<group>"; };
 		E51ABA581EC7C34C008C2E6C /* sell.it.easy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sell.it.easy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51ABA5B1EC7C34C008C2E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E51ABA601EC7C34C008C2E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,6 +187,16 @@
 				6559D8BC86A905B002DC984C /* Pods-sell.it.easy.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E50E8A011F1A08C200C81338 /* CELDA_FECHA */ = {
+			isa = PBXGroup;
+			children = (
+				E50E89FD1F1A055400C81338 /* celdaFecha.swift */,
+				E50E8A021F1A08D900C81338 /* DMDCeldaFecha.swift */,
+				E50E89FE1F1A055400C81338 /* celdaFecha.xib */,
+			);
+			name = CELDA_FECHA;
 			sourceTree = "<group>";
 		};
 		E51ABA4F1EC7C34C008C2E6C = {
@@ -384,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				E5DE8E091F19A7C500DE80F3 /* CELDA_TEXTO */,
+				E50E8A011F1A08C200C81338 /* CELDA_FECHA */,
 			);
 			name = CELDAS;
 			sourceTree = "<group>";
@@ -522,6 +539,7 @@
 				E57B0C091ED1C9100007A96C /* Money30s.mp4 in Resources */,
 				E5DE8E061F199C6F00DE80F3 /* celdaTexto.xib in Resources */,
 				E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */,
+				E50E8A001F1A055400C81338 /* celdaFecha.xib in Resources */,
 				E5EAB58F1EC8EE390016D86C /* DMDListadoTiendaCelda.xib in Resources */,
 				E51ABA611EC7C34C008C2E6C /* Main.storyboard in Resources */,
 			);
@@ -583,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */,
+				E50E89FF1F1A055400C81338 /* celdaFecha.swift in Sources */,
 				E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */,
 				E57B0C021ED1C1110007A96C /* DMDLauncher.swift in Sources */,
 				E57B0C051ED1C5D20007A96C /* DMDLogin.swift in Sources */,
@@ -614,6 +633,7 @@
 				E53E20C91EC8568900130DEB /* DMDDetalleProducto.swift in Sources */,
 				E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */,
 				E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */,
+				E50E8A031F1A08D900C81338 /* DMDCeldaFecha.swift in Sources */,
 				E5C8E8251ECA10C200355E0D /* DMDHistoricos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
