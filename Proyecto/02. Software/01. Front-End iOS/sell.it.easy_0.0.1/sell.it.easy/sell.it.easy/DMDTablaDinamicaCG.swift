@@ -11,7 +11,7 @@ import UIKit
 class DMDTablaDinamicaCG: UIViewController {
 
     //MARK: - Variables locales
-    var data = DummyTablaDataCG.shared
+    var data : DMDTablaDataCG!
     
     //MARK: - IBOutlets
     @IBOutlet weak var myMenuBTN: UIBarButtonItem!
@@ -26,9 +26,14 @@ class DMDTablaDinamicaCG: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         mostrarMenu(myMenuBTN)
+        data = DummyTablaDataCG.shared.getDummyData()
+        
         myTable.dataSource = self
         myTable.delegate = self
+        
+        myTable.register(UINib(nibName: "celdaTexto", bundle: nil), forCellReuseIdentifier: "celdaTexto")
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +49,7 @@ class DMDTablaDinamicaCG: UIViewController {
 extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return data.getCelda(indexPath.row)
+        return data.getCelda(indexPath.row, tabla: myTable)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

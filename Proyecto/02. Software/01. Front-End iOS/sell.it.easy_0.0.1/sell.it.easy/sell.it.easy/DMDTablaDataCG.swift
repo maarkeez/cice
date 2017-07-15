@@ -9,9 +9,15 @@
 import UIKit
 
 protocol DMDTablaDataCGDelegate{
-    func getCelda(_ indice: Int) -> DMDCeldaCGDelegate
     func deleteCelda(_ indice: Int)
     func updateCelda(_ indice: Int)
+}
+
+protocol DMDCeldaCGDelegate {
+    func getAltura() -> CGFloat
+    func getCelda(_ tabla: UITableView) -> UITableViewCell
+    func getAcciones() -> [UITableViewRowAction]?
+    
 }
 
 class DMDTablaDataCG {
@@ -24,7 +30,7 @@ class DMDTablaDataCG {
     //MARK: - Utils
     
     func getItem(_ indice: Int) -> DMDCeldaCGDelegate {
-        return delegate.getCelda(indice)
+        return listaItems[indice]
     }
     
     func getNumberOfSections() -> Int {
@@ -39,8 +45,8 @@ class DMDTablaDataCG {
         return getItem(indice).getAltura()
     }
     
-    func getCelda(_ indice: Int) -> UITableViewCell{
-        return getItem(indice).getCelda()
+    func getCelda(_ indice: Int, tabla: UITableView) -> UITableViewCell{
+        return getItem(indice).getCelda(tabla)
     }
     
     func getAcciones(_ indice: Int) ->[UITableViewRowAction]?{
@@ -54,12 +60,4 @@ class DMDTablaDataCG {
     func updateCelda(_ indice: Int){
         delegate.updateCelda(indice)
     }
-}
-
-
-protocol DMDCeldaCGDelegate {
-    func getAltura() -> CGFloat
-    func getCelda() -> UITableViewCell
-    func getAcciones() -> [UITableViewRowAction]?
-    
 }
