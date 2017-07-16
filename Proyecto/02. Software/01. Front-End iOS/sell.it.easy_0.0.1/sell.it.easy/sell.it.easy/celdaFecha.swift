@@ -13,6 +13,9 @@ class celdaFecha: UITableViewCell {
     @IBOutlet weak var myFecha: UILabel!
     @IBOutlet weak var myTexto: UILabel!
     
+    @IBOutlet weak var myHora: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -27,6 +30,8 @@ class celdaFecha: UITableViewCell {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         myFecha.text = dateFormatter.string(from: fecha)
+        dateFormatter.dateFormat = "HH:mm"
+        myHora.text = dateFormatter.string(from: fecha)
     }
     
 }

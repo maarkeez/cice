@@ -28,14 +28,12 @@ class DMDTablaDinamicaCG: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
-        
         mostrarMenu(myMenuBTN)
         data = DummyTablaDataCG().getDummyData()
         
         myTable.dataSource = self
         myTable.delegate = self
-        myTable.separatorColor = UIColor.clear
+        myTable.separatorStyle = .none
         
         myTable.register(UINib(nibName: "celdaTexto", bundle: nil), forCellReuseIdentifier: "celdaTexto")
         myTable.register(UINib(nibName: "celdaFecha", bundle: nil), forCellReuseIdentifier: "celdaFecha")
@@ -124,6 +122,7 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
+//MARK: - Extensión para mostrar el calendario
 extension  DMDTablaDinamicaCG: DMDCalendarioDelegate {
     
     func showCalendar(){

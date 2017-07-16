@@ -9,11 +9,11 @@
 import UIKit
 
 protocol DMDSelectorFechaDelegate {
-    func didSelectHour(_ hour: Date?)
+    func didSelectHour(_ date: Date?)
 }
 
 class DMDSelectorFecha: UIViewController {
-
+    
     @IBOutlet weak var myCancelarBTN: UIButton!
     @IBOutlet weak var myAceptarBTN: UIButton!
     @IBOutlet weak var myCustomView: UIView!
@@ -38,13 +38,14 @@ class DMDSelectorFecha: UIViewController {
     
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Limpiar el color de fondo para que sea transparente
         self.view.backgroundColor = UIColor.clear
         self.view.isOpaque = false
-
+        
         //Editar estilo botones
         myCancelarBTN.layer.cornerRadius = 5
         myAceptarBTN.layer.cornerRadius = 5
@@ -57,23 +58,27 @@ class DMDSelectorFecha: UIViewController {
         myCustomView.layer.shadowRadius = 20.0
         myCustomView.layer.shadowOpacity = 1.0
         
-
+        
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         delegate?.didSelectHour(nil)
         dismiss(animated: true, completion: nil)
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//MARK: - Utils
+func showDMDSelectorFecha(_ delegado: DMDSelectorFechaDelegate){
+    if let viewControler = delegado as? UIViewController {
+        let navController = UINavigationController()
+        navController.modalPresentationStyle = .overCurrentContext
+        navController.isNavigationBarHidden = true
+        
+        let selectorFechaVC = viewControler.storyboard?.instantiateViewController(withIdentifier :"DMDSelectorFecha") as! DMDSelectorFecha
+        selectorFechaVC.delegate = viewControler as? DMDSelectorFechaDelegate
+        
+        navController.viewControllers = [selectorFechaVC]
+        
+        viewControler.show(navController , sender: selectorFechaVC)
     }
-    */
-
 }

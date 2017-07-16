@@ -27,7 +27,6 @@
 		E51ABA8C1EC8359E008C2E6C /* ReachabilitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51ABA821EC8359E008C2E6C /* ReachabilitySwift.framework */; };
 		E51ABA8D1EC8359E008C2E6C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51ABA831EC8359E008C2E6C /* SwiftyJSON.framework */; };
 		E51ABA8F1EC83DB1008C2E6C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ABA8E1EC83DB1008C2E6C /* Utils.swift */; };
-		E52F23941F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52F23931F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard */; };
 		E52F23961F1B835500FF24D1 /* DMDSelectorFecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */; };
 		E53E20C11EC846C000130DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53E20C01EC846C000130DEB /* Assets.xcassets */; };
 		E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */; };
@@ -56,6 +55,8 @@
 		E5DE8E051F199C6F00DE80F3 /* celdaTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DE8E031F199C6F00DE80F3 /* celdaTexto.swift */; };
 		E5DE8E061F199C6F00DE80F3 /* celdaTexto.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DE8E041F199C6F00DE80F3 /* celdaTexto.xib */; };
 		E5DE8E081F19A7A100DE80F3 /* DMDCeldaTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DE8E071F19A7A100DE80F3 /* DMDCeldaTexto.swift */; };
+		E5E6D58B1F1C0ED500EF77A3 /* CeldaPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E6D5891F1C0ED500EF77A3 /* CeldaPerfil.swift */; };
+		E5E6D58C1F1C0ED500EF77A3 /* CeldaPerfil.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E6D58A1F1C0ED500EF77A3 /* CeldaPerfil.xib */; };
 		E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */; };
 		E5EAB5891EC8E7160016D86C /* DMDDetalleTienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */; };
 		E5EAB58B1EC8EAD20016D86C /* TiendaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */; };
@@ -97,7 +98,6 @@
 		E51ABA821EC8359E008C2E6C /* ReachabilitySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReachabilitySwift.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphonesimulator/ReachabilitySwift/ReachabilitySwift.framework"; sourceTree = "<group>"; };
 		E51ABA831EC8359E008C2E6C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		E51ABA8E1EC83DB1008C2E6C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		E52F23931F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionSheetStoryboard.storyboard; sourceTree = "<group>"; };
 		E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDSelectorFecha.swift; sourceTree = "<group>"; };
 		E53E20C01EC846C000130DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCajaRegistradoraTableViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +126,8 @@
 		E5DE8E031F199C6F00DE80F3 /* celdaTexto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = celdaTexto.swift; sourceTree = "<group>"; };
 		E5DE8E041F199C6F00DE80F3 /* celdaTexto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = celdaTexto.xib; sourceTree = "<group>"; };
 		E5DE8E071F19A7A100DE80F3 /* DMDCeldaTexto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCeldaTexto.swift; sourceTree = "<group>"; };
+		E5E6D5891F1C0ED500EF77A3 /* CeldaPerfil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaPerfil.swift; sourceTree = "<group>"; };
+		E5E6D58A1F1C0ED500EF77A3 /* CeldaPerfil.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaPerfil.xib; sourceTree = "<group>"; };
 		E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListadoTiendas.swift; sourceTree = "<group>"; };
 		E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleTienda.swift; sourceTree = "<group>"; };
 		E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiendaRepository.swift; sourceTree = "<group>"; };
@@ -198,8 +200,8 @@
 		E50E8A011F1A08C200C81338 /* CELDA_FECHA */ = {
 			isa = PBXGroup;
 			children = (
-				E50E89FD1F1A055400C81338 /* celdaFecha.swift */,
 				E50E8A021F1A08D900C81338 /* DMDCeldaFecha.swift */,
+				E50E89FD1F1A055400C81338 /* celdaFecha.swift */,
 				E50E89FE1F1A055400C81338 /* celdaFecha.xib */,
 			);
 			name = CELDA_FECHA;
@@ -232,7 +234,6 @@
 				E51ABA791EC7D032008C2E6C /* VIEW_CONTROLLERS */,
 				E51ABA751EC7C6D1008C2E6C /* OBJ-C */,
 				E51ABA5F1EC7C34C008C2E6C /* Main.storyboard */,
-				E52F23931F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard */,
 				E53E20C01EC846C000130DEB /* Assets.xcassets */,
 				E51ABA671EC7C34C008C2E6C /* LaunchScreen.storyboard */,
 				E51ABA6A1EC7C34C008C2E6C /* Info.plist */,
@@ -410,6 +411,7 @@
 				E5DE8E091F19A7C500DE80F3 /* CELDA_TEXTO */,
 				E50E8A011F1A08C200C81338 /* CELDA_FECHA */,
 				E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */,
+				E5E6D58D1F1C0ED900EF77A3 /* CELDA_PERFIL */,
 			);
 			name = CELDAS;
 			sourceTree = "<group>";
@@ -420,6 +422,15 @@
 				E5F0918A1F19957B0051FFBD /* DummyTablaDataCG.swift */,
 			);
 			name = UTILS;
+			sourceTree = "<group>";
+		};
+		E5E6D58D1F1C0ED900EF77A3 /* CELDA_PERFIL */ = {
+			isa = PBXGroup;
+			children = (
+				E5E6D5891F1C0ED500EF77A3 /* CeldaPerfil.swift */,
+				E5E6D58A1F1C0ED500EF77A3 /* CeldaPerfil.xib */,
+			);
+			name = CELDA_PERFIL;
 			sourceTree = "<group>";
 		};
 		E5EAB5851EC8E30B0016D86C /* TIENDA */ = {
@@ -548,10 +559,10 @@
 				E57B0C091ED1C9100007A96C /* Money30s.mp4 in Resources */,
 				E5DE8E061F199C6F00DE80F3 /* celdaTexto.xib in Resources */,
 				E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */,
-				E52F23941F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard in Resources */,
 				E50E8A001F1A055400C81338 /* celdaFecha.xib in Resources */,
 				E5EAB58F1EC8EE390016D86C /* DMDListadoTiendaCelda.xib in Resources */,
 				E51ABA611EC7C34C008C2E6C /* Main.storyboard in Resources */,
+				E5E6D58C1F1C0ED500EF77A3 /* CeldaPerfil.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +642,7 @@
 				E5F091891F198D670051FFBD /* DMDTablaDataCG.swift in Sources */,
 				E51ABA641EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld in Sources */,
 				E5BF8CEA1F1A96E70018A519 /* CeldaTipos.swift in Sources */,
+				E5E6D58B1F1C0ED500EF77A3 /* CeldaPerfil.swift in Sources */,
 				E51ABA5C1EC7C34C008C2E6C /* AppDelegate.swift in Sources */,
 				E51ABA741EC7C6C4008C2E6C /* SWRevealViewController.m in Sources */,
 				E5EAB5A11EC916110016D86C /* DMDEscanerQR.swift in Sources */,

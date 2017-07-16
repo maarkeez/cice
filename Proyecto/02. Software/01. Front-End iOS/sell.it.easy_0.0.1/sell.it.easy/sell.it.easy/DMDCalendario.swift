@@ -44,7 +44,7 @@ class DMDCalendario: UIViewController {
     }
     
     //MARK: - Utils
-    func showHoursSelector() {
+    func showHoursSelector2() {
         //let storyBoardData = UIStoryboard(name: "ActionSheetStoryboard", bundle: nil)
         //let actionSheetVC = storyBoardData.instantiateViewController(withIdentifier: "DMDSelectorFecha") as! DMDSelectorFecha
        // actionSheetVC.modalPresentationStyle = .overCurrentContext
@@ -57,6 +57,20 @@ class DMDCalendario: UIViewController {
         
     }
     
+    func showHoursSelector(){
+        let navController = UINavigationController()
+        navController.modalPresentationStyle = .overCurrentContext
+        navController.isNavigationBarHidden = true
+        
+        let selectorFechaVC = self.storyboard?.instantiateViewController(withIdentifier :"DMDSelectorFecha") as! DMDSelectorFecha
+        selectorFechaVC.delegate = self
+        
+        navController.viewControllers = [selectorFechaVC]
+       
+        self.show(navController , sender: self)
+        
+    }
+    
     
     
 }
@@ -66,19 +80,20 @@ extension DMDCalendario : FSCalendarDelegate, FSCalendarDataSource{
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         dateSelected = date
         if(delegate.isHoursNeeded()){
-            showHoursSelector()
+            showDMDSelectorFecha(self)
         }
     }
 }
 
 extension DMDCalendario : DMDSelectorFechaDelegate {
-    func didSelectHour(_ hour: Date?){
-        if(hour != nil){
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
-            let strDate = dateFormatter.string(from: hour!)
+    func didSelectHour(_ date: Date?){
+        if let fecha = date {
+            let calendar = Calendar.current
+            let hour = calendar.component(.hour, from: fecha)
+            let minutes = calendar.component(.minute, from: fecha)
             
-            print("\(strDate) Hora seleccionada")
+            //PRE: Se ha seleccionado una fecha
+            dateSelected = calendar.date(bySettingHour: hour, minute: minutes, second: 0, of: dateSelected!)
         }
     }
 }
