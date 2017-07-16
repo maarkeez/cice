@@ -19,7 +19,7 @@ class DMDCeldaFecha: DMDCeldaCGDelegate{
     }
     
     func getAltura() -> CGFloat{
-        return 4
+        return 44
         
     }
     
@@ -31,6 +31,10 @@ class DMDCeldaFecha: DMDCeldaCGDelegate{
     
     func getAcciones() -> [UITableViewRowAction]?{
         return nil
+    }
+    
+    func getTipo() -> Int {
+        return CELDA_TIPOS.FECHA
     }
     
 }

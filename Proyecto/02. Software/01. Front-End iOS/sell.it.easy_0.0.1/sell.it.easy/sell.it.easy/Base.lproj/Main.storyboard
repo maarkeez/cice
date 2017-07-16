@@ -785,7 +785,7 @@
                             </barButtonItem>
                             <barButtonItem title="Calendar" id="x4I-zC-caV">
                                 <connections>
-                                    <segue destination="R4e-Mx-VFn" kind="push" id="OqY-Ii-dvj"/>
+                                    <segue destination="Yzd-Lg-JGE" kind="push" id="OqY-Ii-dvj"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -819,7 +819,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
                                         <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
                                         <color key="value" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="0.65000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
@@ -847,14 +847,20 @@
                             <constraint firstItem="XnA-ER-s2p" firstAttribute="leading" secondItem="cd9-9E-RJW" secondAttribute="leading" id="sEn-jY-Eqo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="z9Y-KP-f9H"/>
+                    <navigationItem key="navigationItem" id="z9Y-KP-f9H">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="kWy-0l-JCA">
+                            <connections>
+                                <action selector="myConfirmarACTION:" destination="R4e-Mx-VFn" id="B3T-s4-beM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myCalendar" destination="XnA-ER-s2p" id="jrB-N0-oj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szc-8I-7JM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1921" y="1561"/>
+            <point key="canvasLocation" x="2860" y="1560.2698650674663"/>
         </scene>
         <!--Productos-->
         <scene sceneID="fDH-XP-0as">
@@ -920,27 +926,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Oqj-y8-HRP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="PkW-pQ-gAC"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z0A-Kx-uRD">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-Ff-AWI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Oqj-y8-HRP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="155-Cj-y59"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z0A-Kx-uRD">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="559"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <constraints>
+                                    <constraint firstItem="Oqj-y8-HRP" firstAttribute="top" secondItem="UGw-Ff-AWI" secondAttribute="top" id="76I-lK-8GJ"/>
+                                    <constraint firstItem="Oqj-y8-HRP" firstAttribute="leading" secondItem="UGw-Ff-AWI" secondAttribute="leading" id="AMP-qq-Wnz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oqj-y8-HRP" secondAttribute="trailing" id="GZf-iE-sdW"/>
+                                    <constraint firstItem="Z0A-Kx-uRD" firstAttribute="leading" secondItem="UGw-Ff-AWI" secondAttribute="leading" id="Omy-J0-DXv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z0A-Kx-uRD" secondAttribute="bottom" id="Qdx-9S-jVg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z0A-Kx-uRD" secondAttribute="trailing" id="fM1-wf-VPV"/>
+                                    <constraint firstItem="Z0A-Kx-uRD" firstAttribute="top" secondItem="Oqj-y8-HRP" secondAttribute="bottom" id="pBb-Ty-2fj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Oqj-y8-HRP" secondAttribute="trailing" id="76h-Ub-AAm"/>
-                            <constraint firstItem="Oqj-y8-HRP" firstAttribute="top" secondItem="Ifn-Ox-4Oy" secondAttribute="bottom" id="GQ6-6i-hUP"/>
-                            <constraint firstItem="TY6-K2-Aht" firstAttribute="top" secondItem="Z0A-Kx-uRD" secondAttribute="bottom" id="HLC-9X-MpG"/>
-                            <constraint firstItem="Z0A-Kx-uRD" firstAttribute="leading" secondItem="qBn-0Q-AzN" secondAttribute="leading" id="Kec-GP-SGt"/>
-                            <constraint firstItem="Z0A-Kx-uRD" firstAttribute="top" secondItem="Oqj-y8-HRP" secondAttribute="bottom" id="SRG-dM-9WE"/>
-                            <constraint firstAttribute="trailing" secondItem="Z0A-Kx-uRD" secondAttribute="trailing" id="iQA-HW-ei5"/>
-                            <constraint firstItem="Oqj-y8-HRP" firstAttribute="leading" secondItem="qBn-0Q-AzN" secondAttribute="leading" id="ilX-WF-lsr"/>
+                            <constraint firstItem="UGw-Ff-AWI" firstAttribute="leading" secondItem="qBn-0Q-AzN" secondAttribute="leading" id="MbF-OJ-PsD"/>
+                            <constraint firstItem="TY6-K2-Aht" firstAttribute="top" secondItem="UGw-Ff-AWI" secondAttribute="bottom" id="dfD-42-7Q1"/>
+                            <constraint firstItem="UGw-Ff-AWI" firstAttribute="top" secondItem="Ifn-Ox-4Oy" secondAttribute="bottom" id="fyG-YT-4yg"/>
+                            <constraint firstAttribute="trailing" secondItem="UGw-Ff-AWI" secondAttribute="trailing" id="neC-fs-h8U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MMc-Mk-CjW">
@@ -952,6 +970,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="myContainer" destination="UGw-Ff-AWI" id="wXf-Co-cOV"/>
                         <outlet property="myMenuBTN" destination="Pgd-mG-qRr" id="rL0-dI-Ijc"/>
                         <outlet property="mySearch" destination="Oqj-y8-HRP" id="Keb-1g-1bb"/>
                         <outlet property="myTable" destination="Z0A-Kx-uRD" id="WHH-Jq-57D"/>
@@ -1494,7 +1513,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fP-Gq-v0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5231.1999999999998" y="2191.7541229385311"/>
+            <point key="canvasLocation" x="6170.3999999999996" y="2191.7541229385311"/>
         </scene>
         <!--EscanerQR-->
         <scene sceneID="5Oj-ff-q46">
@@ -1533,7 +1552,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oqg-q5-plL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6180" y="2189.9550224887557"/>
+            <point key="canvasLocation" x="7119.1999999999998" y="2189.9550224887557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6e7-YV-m8W">
@@ -1551,7 +1570,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1M-9X-gR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4292" y="2191.7541229385311"/>
+            <point key="canvasLocation" x="5231.1999999999998" y="2191.7541229385311"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zSF-eL-6Mb">
@@ -1570,6 +1589,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0EY-LI-Vn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1116" y="3003.1484257871066"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JSf-N4-yIg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yzd-Lg-JGE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="WhY-Ef-H1L"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kbI-NJ-FgI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R4e-Mx-VFn" kind="relationship" relationship="rootViewController" id="uuU-uJ-0ov"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dd4-Rs-9TG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1920.8" y="1560.2698650674663"/>
         </scene>
     </scenes>
     <resources>

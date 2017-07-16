@@ -33,4 +33,8 @@ class DMDCeldaTexto: DMDCeldaCGDelegate{
         return nil
     }
     
+    func getTipo() -> Int {
+        return CELDA_TIPOS.TEXTO_CORTO
+    }
+    
 }

@@ -19,7 +19,7 @@ class DummyTablaDataCG {
         for i in  1...10 {
             data.listaItems.append(DMDCeldaTexto(nombre: "Texto de prueba \(i)", texto: "Valor de prueba"))
         }
-        
+        data.listaItems.append(DMDCeldaFecha(texto: "Fecha alta", fecha: Date()))
         
         
         return data

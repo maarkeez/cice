@@ -17,6 +17,7 @@ protocol DMDCeldaCGDelegate {
     func getAltura() -> CGFloat
     func getCelda(_ tabla: UITableView) -> UITableViewCell
     func getAcciones() -> [UITableViewRowAction]?
+    func getTipo() -> Int
     
 }
 

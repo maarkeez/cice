@@ -27,6 +27,8 @@
 		E51ABA8C1EC8359E008C2E6C /* ReachabilitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51ABA821EC8359E008C2E6C /* ReachabilitySwift.framework */; };
 		E51ABA8D1EC8359E008C2E6C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51ABA831EC8359E008C2E6C /* SwiftyJSON.framework */; };
 		E51ABA8F1EC83DB1008C2E6C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ABA8E1EC83DB1008C2E6C /* Utils.swift */; };
+		E52F23941F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52F23931F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard */; };
+		E52F23961F1B835500FF24D1 /* DMDSelectorFecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */; };
 		E53E20C11EC846C000130DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53E20C01EC846C000130DEB /* Assets.xcassets */; };
 		E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */; };
 		E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */; };
@@ -45,6 +47,7 @@
 		E57B0C021ED1C1110007A96C /* DMDLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0C011ED1C1110007A96C /* DMDLauncher.swift */; };
 		E57B0C051ED1C5D20007A96C /* DMDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0C041ED1C5D20007A96C /* DMDLogin.swift */; };
 		E57B0C091ED1C9100007A96C /* Money30s.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E57B0C081ED1C9100007A96C /* Money30s.mp4 */; };
+		E5BF8CEA1F1A96E70018A519 /* CeldaTipos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */; };
 		E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */; };
 		E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */; };
 		E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */; };
@@ -94,6 +97,8 @@
 		E51ABA821EC8359E008C2E6C /* ReachabilitySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReachabilitySwift.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphonesimulator/ReachabilitySwift/ReachabilitySwift.framework"; sourceTree = "<group>"; };
 		E51ABA831EC8359E008C2E6C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		E51ABA8E1EC83DB1008C2E6C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E52F23931F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionSheetStoryboard.storyboard; sourceTree = "<group>"; };
+		E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDSelectorFecha.swift; sourceTree = "<group>"; };
 		E53E20C01EC846C000130DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCajaRegistradoraTableViewController.swift; sourceTree = "<group>"; };
 		E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaProductos.swift; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		E57B0C011ED1C1110007A96C /* DMDLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDLauncher.swift; sourceTree = "<group>"; };
 		E57B0C041ED1C5D20007A96C /* DMDLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDLogin.swift; sourceTree = "<group>"; };
 		E57B0C081ED1C9100007A96C /* Money30s.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Money30s.mp4; sourceTree = "<group>"; };
+		E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaTipos.swift; sourceTree = "<group>"; };
 		E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedido.swift; sourceTree = "<group>"; };
 		E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedidoCelda.swift; sourceTree = "<group>"; };
 		E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProductosRepository.swift; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 				E51ABA791EC7D032008C2E6C /* VIEW_CONTROLLERS */,
 				E51ABA751EC7C6D1008C2E6C /* OBJ-C */,
 				E51ABA5F1EC7C34C008C2E6C /* Main.storyboard */,
+				E52F23931F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard */,
 				E53E20C01EC846C000130DEB /* Assets.xcassets */,
 				E51ABA671EC7C34C008C2E6C /* LaunchScreen.storyboard */,
 				E51ABA6A1EC7C34C008C2E6C /* Info.plist */,
@@ -340,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				E57B0BFE1ED185F90007A96C /* DMDCalendario.swift */,
+				E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */,
 			);
 			name = CALENDARIO;
 			sourceTree = "<group>";
@@ -401,6 +409,7 @@
 			children = (
 				E5DE8E091F19A7C500DE80F3 /* CELDA_TEXTO */,
 				E50E8A011F1A08C200C81338 /* CELDA_FECHA */,
+				E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */,
 			);
 			name = CELDAS;
 			sourceTree = "<group>";
@@ -539,6 +548,7 @@
 				E57B0C091ED1C9100007A96C /* Money30s.mp4 in Resources */,
 				E5DE8E061F199C6F00DE80F3 /* celdaTexto.xib in Resources */,
 				E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */,
+				E52F23941F1B829A00FF24D1 /* ActionSheetStoryboard.storyboard in Resources */,
 				E50E8A001F1A055400C81338 /* celdaFecha.xib in Resources */,
 				E5EAB58F1EC8EE390016D86C /* DMDListadoTiendaCelda.xib in Resources */,
 				E51ABA611EC7C34C008C2E6C /* Main.storyboard in Resources */,
@@ -615,10 +625,12 @@
 				E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */,
 				E5F091871F198BB20051FFBD /* DMDTablaDinamicaCG.swift in Sources */,
 				E5EAB5A31EC916180016D86C /* DMDInventarioCelda.swift in Sources */,
+				E52F23961F1B835500FF24D1 /* DMDSelectorFecha.swift in Sources */,
 				E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */,
 				E51ABA8F1EC83DB1008C2E6C /* Utils.swift in Sources */,
 				E5F091891F198D670051FFBD /* DMDTablaDataCG.swift in Sources */,
 				E51ABA641EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld in Sources */,
+				E5BF8CEA1F1A96E70018A519 /* CeldaTipos.swift in Sources */,
 				E51ABA5C1EC7C34C008C2E6C /* AppDelegate.swift in Sources */,
 				E51ABA741EC7C6C4008C2E6C /* SWRevealViewController.m in Sources */,
 				E5EAB5A11EC916110016D86C /* DMDEscanerQR.swift in Sources */,
