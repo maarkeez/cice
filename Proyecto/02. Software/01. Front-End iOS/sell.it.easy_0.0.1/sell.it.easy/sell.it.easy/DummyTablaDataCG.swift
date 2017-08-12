@@ -29,6 +29,9 @@ class DummyTablaDataCG {
         //Celdas de fecha
         data.listaItems.append(DMDCeldaFecha(texto: "Fecha alta", fecha: Date()))
         
+        //Celdas barcode
+        data.listaItems.append(DMDCeldaCodigoBarras(codigoBarras: "999999"))
+        
         
         //Celdas de texto
         for i in  1...10 {

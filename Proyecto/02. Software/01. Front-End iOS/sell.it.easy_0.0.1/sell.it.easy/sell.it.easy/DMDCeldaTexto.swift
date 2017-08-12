@@ -23,10 +23,17 @@ class DMDCeldaTexto: DMDCeldaCGDelegate{
         
     }
     
+    func setIBOutlets(_ celda: UITableViewCell) {
+        let myNombre = celda.viewWithTag(1) as! UILabel
+        let myValor = celda.viewWithTag(2) as! UITextField
+        myNombre.text = nombre
+        myValor.text = texto
+    }
+    
     func getCelda(_ tabla: UITableView) -> UITableViewCell{
-        let celda = tabla.dequeueReusableCell(withIdentifier: "celdaTexto") as! celdaTexto
-        celda.setIBOutlets(nombre: nombre, valor: texto)
-        return celda
+        let celda = tabla.dequeueReusableCell(withIdentifier: "CeldaTexto")
+        setIBOutlets(celda!)
+        return celda!
     }
     
     func getAcciones() -> [UITableViewRowAction]?{

@@ -18,6 +18,7 @@ protocol DMDCeldaCGDelegate {
     func getCelda(_ tabla: UITableView) -> UITableViewCell
     func getAcciones() -> [UITableViewRowAction]?
     func getTipo() -> Int
+    func setIBOutlets(_ celda: UITableViewCell)
     
 }
 

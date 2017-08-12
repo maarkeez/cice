@@ -9,10 +9,13 @@
 import UIKit
 
 class DMDTablaDinamicaCG: UIViewController {
-
+    
     //MARK: - Variables locales
     var data : DMDTablaDataCG!
     var indexItemSelected : Int?
+    
+    //Textfield activo para hacer scroll
+    var activeField: UITextField?
     
     //MARK: - IBOutlets
     @IBOutlet weak var myContainer: UIView!
@@ -28,18 +31,23 @@ class DMDTablaDinamicaCG: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        registerForKeyboardNotifications()
+        hideKeyboardWhenTappedAround()
         mostrarMenu(myMenuBTN)
+        
+        //TODO: Borrar
         data = DummyTablaDataCG().getDummyData()
         
         myTable.dataSource = self
         myTable.delegate = self
         myTable.separatorStyle = .none
         
-        myTable.register(UINib(nibName: "celdaTexto", bundle: nil), forCellReuseIdentifier: "celdaTexto")
-        myTable.register(UINib(nibName: "celdaFecha", bundle: nil), forCellReuseIdentifier: "celdaFecha")
+        myTable.register(UINib(nibName: "CeldaTexto", bundle: nil), forCellReuseIdentifier: "CeldaTexto")
+        myTable.register(UINib(nibName: "CeldaFecha", bundle: nil), forCellReuseIdentifier: "CeldaFecha")
         myTable.register(UINib(nibName: "CeldaPerfil", bundle: nil), forCellReuseIdentifier: "CeldaPerfil")
+        myTable.register(UINib(nibName: "CeldaCodigoBarras", bundle: nil), forCellReuseIdentifier: "CeldaCodigoBarras")
     }
-
+    
     
     //MARK: - Utils
     func hideSearchBarAnimated(){
@@ -66,7 +74,7 @@ class DMDTablaDinamicaCG: UIViewController {
     
     func getSelectedItem() -> DMDCeldaCGDelegate?{
         if let index = indexItemSelected{
-             return data.listaItems[index]
+            return data.listaItems[index]
         }
         return nil
     }
@@ -77,14 +85,22 @@ class DMDTablaDinamicaCG: UIViewController {
             myTable.reloadData()
         }
     }
+    
+    
+    
+    
+    
 }
 
 //MARK: - Extensión para mostrar el listado de productos
 extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return data.getCelda(indexPath.row, tabla: myTable)
+        let celda =  data.getCelda(indexPath.row, tabla: myTable)
+        celda.selectionStyle = .none
+        return celda
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return data.getNumberOfSections()
@@ -99,7 +115,7 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-
+        
         return data.getAcciones(indexPath.row)
     }
     
@@ -121,6 +137,8 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
             showCalendar()
         }
     }
+    
+    
 }
 
 //MARK: - Extensión para mostrar el calendario
@@ -146,4 +164,51 @@ extension  DMDTablaDinamicaCG: DMDCalendarioDelegate {
     func isHoursNeeded() -> Bool {
         return true
     }
+}
+
+//MARK: - Extensión para tratar con los campos de texto
+extension DMDTablaDinamicaCG: UITextFieldDelegate{
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.activeField = textField
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.activeField = nil
+    }
+    
+    //MARK: - Utils teclado
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func keyboardWasShown(note: NSNotification) {
+        if let keyboardSize = (note.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            var frame = myTable.frame
+            UIView.beginAnimations(nil, context: nil)
+            UIView.setAnimationBeginsFromCurrentState(true)
+            UIView.setAnimationDuration(0.3)
+            frame.size.height -= keyboardSize.height
+            myTable.frame = frame
+            if activeField != nil {
+                let rect = myTable.convert((activeField?.bounds)!, from: activeField)
+                myTable.scrollRectToVisible(rect, animated: false)
+            }
+            UIView.commitAnimations()
+        }
+    }
+    
+    func keyboardWillBeHidden(note: NSNotification) {
+        if let keyboardSize = (note.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            var frame = myTable.frame
+            UIView.beginAnimations(nil, context: nil)
+            UIView.setAnimationBeginsFromCurrentState(true)
+            UIView.setAnimationDuration(0.3)
+            frame.size.height += keyboardSize.height
+            myTable.frame = frame
+            UIView.commitAnimations()
+        }
+    }
+
 }
