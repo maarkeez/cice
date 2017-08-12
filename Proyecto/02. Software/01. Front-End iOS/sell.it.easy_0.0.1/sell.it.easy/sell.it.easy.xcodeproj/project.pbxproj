@@ -52,6 +52,7 @@
 		E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */; };
 		E5C8E8251ECA10C200355E0D /* DMDHistoricos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8241ECA10C200355E0D /* DMDHistoricos.swift */; };
 		E5C8E8271ECA203900355E0D /* DMDHistoricoRecepciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E8261ECA203800355E0D /* DMDHistoricoRecepciones.swift */; };
+		E5CB12FC1F3F1E1D005D15A8 /* DMDCeldaPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB12FB1F3F1E1D005D15A8 /* DMDCeldaPerfil.swift */; };
 		E5DE8E051F199C6F00DE80F3 /* celdaTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DE8E031F199C6F00DE80F3 /* celdaTexto.swift */; };
 		E5DE8E061F199C6F00DE80F3 /* celdaTexto.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5DE8E041F199C6F00DE80F3 /* celdaTexto.xib */; };
 		E5DE8E081F19A7A100DE80F3 /* DMDCeldaTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DE8E071F19A7A100DE80F3 /* DMDCeldaTexto.swift */; };
@@ -123,6 +124,7 @@
 		E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProductosRepository.swift; sourceTree = "<group>"; };
 		E5C8E8241ECA10C200355E0D /* DMDHistoricos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDHistoricos.swift; sourceTree = "<group>"; };
 		E5C8E8261ECA203800355E0D /* DMDHistoricoRecepciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDHistoricoRecepciones.swift; sourceTree = "<group>"; };
+		E5CB12FB1F3F1E1D005D15A8 /* DMDCeldaPerfil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCeldaPerfil.swift; sourceTree = "<group>"; };
 		E5DE8E031F199C6F00DE80F3 /* celdaTexto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = celdaTexto.swift; sourceTree = "<group>"; };
 		E5DE8E041F199C6F00DE80F3 /* celdaTexto.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = celdaTexto.xib; sourceTree = "<group>"; };
 		E5DE8E071F19A7A100DE80F3 /* DMDCeldaTexto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCeldaTexto.swift; sourceTree = "<group>"; };
@@ -408,9 +410,9 @@
 		E5DE8E0A1F19A7D500DE80F3 /* CELDAS */ = {
 			isa = PBXGroup;
 			children = (
+				E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */,
 				E5DE8E091F19A7C500DE80F3 /* CELDA_TEXTO */,
 				E50E8A011F1A08C200C81338 /* CELDA_FECHA */,
-				E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */,
 				E5E6D58D1F1C0ED900EF77A3 /* CELDA_PERFIL */,
 			);
 			name = CELDAS;
@@ -427,6 +429,7 @@
 		E5E6D58D1F1C0ED900EF77A3 /* CELDA_PERFIL */ = {
 			isa = PBXGroup;
 			children = (
+				E5CB12FB1F3F1E1D005D15A8 /* DMDCeldaPerfil.swift */,
 				E5E6D5891F1C0ED500EF77A3 /* CeldaPerfil.swift */,
 				E5E6D58A1F1C0ED500EF77A3 /* CeldaPerfil.xib */,
 			);
@@ -633,6 +636,7 @@
 				E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */,
 				E57B0BFF1ED185F90007A96C /* DMDCalendario.swift in Sources */,
 				E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */,
+				E5CB12FC1F3F1E1D005D15A8 /* DMDCeldaPerfil.swift in Sources */,
 				E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */,
 				E5F091871F198BB20051FFBD /* DMDTablaDinamicaCG.swift in Sources */,
 				E5EAB5A31EC916180016D86C /* DMDInventarioCelda.swift in Sources */,

@@ -16,11 +16,24 @@ class DummyTablaDataCG {
         
         let data = DMDTablaDataCG()
         
+        //Celda de perfil
+        
+        let blue_background = #imageLiteral(resourceName: "blue-background")
+        
+       
+        let perfil = #imageLiteral(resourceName: "no-profile")
+        
+        data.listaItems.append(DMDCeldaPerfil(imagen: perfil, nombre: "David Márquez Delgado", fondo: blue_background))
+        
+        
+        //Celdas de fecha
+        data.listaItems.append(DMDCeldaFecha(texto: "Fecha alta", fecha: Date()))
+        
+        
+        //Celdas de texto
         for i in  1...10 {
             data.listaItems.append(DMDCeldaTexto(nombre: "Texto de prueba \(i)", texto: "Valor de prueba"))
         }
-        data.listaItems.append(DMDCeldaFecha(texto: "Fecha alta", fecha: Date()))
-        
         
         return data
     }

@@ -37,6 +37,7 @@ class DMDTablaDinamicaCG: UIViewController {
         
         myTable.register(UINib(nibName: "celdaTexto", bundle: nil), forCellReuseIdentifier: "celdaTexto")
         myTable.register(UINib(nibName: "celdaFecha", bundle: nil), forCellReuseIdentifier: "celdaFecha")
+        myTable.register(UINib(nibName: "CeldaPerfil", bundle: nil), forCellReuseIdentifier: "CeldaPerfil")
     }
 
     
