@@ -13,9 +13,10 @@ class DMDTablaDinamicaCG: UIViewController {
     //MARK: - Variables locales
     var data : DMDTablaDataCG!
     var indexItemSelected : Int?
-    
     //Textfield activo para hacer scroll
     var activeField: UITextField?
+
+    
     
     //MARK: - IBOutlets
     @IBOutlet weak var myContainer: UIView!
@@ -31,35 +32,46 @@ class DMDTablaDinamicaCG: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Acciones por defecto para el View Controller
         registerForKeyboardNotifications()
         hideKeyboardWhenTappedAround()
         mostrarMenu(myMenuBTN)
         
-        //TODO: Borrar
+        //TODO: Borrar. Datos de prueba
         data = DummyTablaDataCG().getDummyData()
         
+        //Opciones para la tabla
         myTable.dataSource = self
         myTable.delegate = self
         myTable.separatorStyle = .none
         
+        //Registrar las celdas para reutilizarlas
         myTable.register(UINib(nibName: "CeldaTexto", bundle: nil), forCellReuseIdentifier: "CeldaTexto")
         myTable.register(UINib(nibName: "CeldaFecha", bundle: nil), forCellReuseIdentifier: "CeldaFecha")
         myTable.register(UINib(nibName: "CeldaPerfil", bundle: nil), forCellReuseIdentifier: "CeldaPerfil")
         myTable.register(UINib(nibName: "CeldaCodigoBarras", bundle: nil), forCellReuseIdentifier: "CeldaCodigoBarras")
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     //MARK: - Utils
+    
+    ///Oculta la barra de búsqueda de manera animada.
     func hideSearchBarAnimated(){
         UIView.animate(withDuration: 0.2, animations: {
             self.hideSearchBar()
         })
     }
+    
+    ///Oculta la barra de búsqueda, recoloca la tabla ocupando toda la vista
     func hideSearchBar() {
         mySearch.isHidden = true
         myTable.frame = CGRect(x: 0, y: 0, width: myContainer.frame.width, height: myContainer.frame.height)
     }
     
+    ///Muestra la barra de búsqueda y desplaza la tabla hacia abajo
     func showSearchBarAnimated(){
         UIView.animate(withDuration: 0.2, animations: {
             self.mySearch.isHidden = false
@@ -68,10 +80,13 @@ class DMDTablaDinamicaCG: UIViewController {
         })
     }
     
+    ///Guarda el índice del elemento que hemos seleccionado para futuras operaciones
+    /// en los delegados
     func didSelectItem(_ index: Int){
         indexItemSelected = index
     }
     
+    /// Obtiene el delegado para la celda en función del indice previamente guardado.
     func getSelectedItem() -> DMDCeldaCGDelegate?{
         if let index = indexItemSelected{
             return data.listaItems[index]
@@ -79,46 +94,50 @@ class DMDTablaDinamicaCG: UIViewController {
         return nil
     }
     
+    /// Actualiza el elemento seleccionado dentro del array de información interno
+    /// y repinta la tabla
     func updateSeledtedItem(_ item: DMDCeldaCGDelegate){
         if let index = indexItemSelected{
             data.listaItems[index] = item
             myTable.reloadData()
         }
     }
-    
-    
-    
-    
-    
 }
 
 //MARK: - Extensión para mostrar el listado de productos
 extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
     
+    ///Obtiene una celda a partir del elemento que se corresponde dentro del array de datos.
+    ///Las celdas no se marcan al ser seleccionadas.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda =  data.getCelda(indexPath.row, tabla: myTable)
         celda.selectionStyle = .none
         return celda
     }
     
-    
+    ///Recuperar el numero de secciones de los datos de configuración
     func numberOfSections(in tableView: UITableView) -> Int {
         return data.getNumberOfSections()
     }
     
+    ///Recuperar el número de secciones de los datos de configuración
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.numberOfRowsInSection()
     }
     
+    ///Recupera la altura de la celda para el dato correspondiente en el array de datos
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return data.getHeightForRowAt(indexPath.row)
     }
     
+    ///Recupera las acciones de la celda para el dato correspondiente en el array de datos.
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        
         return data.getAcciones(indexPath.row)
     }
     
+    ///Controlar las acciones al hacer scroll.
+    /// Si se hace el scroll máximo por arriba se muestra la barra de búsqueda.
+    /// en caso contrario se oculta dicha barra si está siendo mostrada.
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if(scrollView.contentOffset.y <= 0 ){
             if(mySearch.isHidden){
@@ -131,19 +150,87 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
+    ///Acciones al seleccionar una celda. Cada acción depende del tipo de dato que fue seleccionado.
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didSelectItem(indexPath.row)
+        
         if getSelectedItem() is DMDCeldaFecha {
             showCalendar()
         }
+        
+        if getSelectedItem() is DMDCeldaCodigoBarras {
+            showLectorCodigoBarras()
+        }
+        
+        if getSelectedItem() is DMDCeldaPerfil {
+            showMenuCeldaPerfil()
+        }
+    }
+}
+
+//MARK: - Extensión para tratar la celda perfil
+extension DMDTablaDinamicaCG {
+    
+    ///Muestra las acciones posibles a realizar sobre un listado de alertas.
+    func showMenuCeldaPerfil(){
+        //Controlador
+        let actionVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        //Cancelar
+        actionVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        //Editar imagen de perfil
+        actionVC.addAction(UIAlertAction(title: "Imagen perfil", style: .default, handler: {Void in
+            self.pickerPhoto()
+        }))
+        
+        // Editar nombre
+        actionVC.addAction(UIAlertAction(title: "Nombre", style: .default, handler: {
+            Void in
+            self.editNombrePerfil()
+        }))
+        
+        //Mostrar controlador
+        present(actionVC, animated: true, completion: nil)
+        
     }
     
-    
+    ///Permite editar  el nombre de perfil.
+    /// Se muestra una alert con un campo de texto para modificarlo
+    func editNombrePerfil(){
+        
+        //Campo de texto para el nombre
+        var inputTextField: UITextField?
+        
+        // Controlador
+        let alert = UIAlertController(title: "Nombre", message: "Modifique su nombre de usuario", preferredStyle: UIAlertControllerStyle.alert)
+        
+        //Acciones
+        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel,handler: nil))
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+            //Si he seleccionado celda de perfil, cambio el nombre.
+            if let item = self.getSelectedItem() as? DMDCeldaPerfil {
+                item.nombre = inputTextField?.text
+                self.updateSeledtedItem(item)
+            }
+        }))
+        
+        //Configuracion del controlador
+        alert.addTextField(configurationHandler: {(textField: UITextField!) in
+            textField.placeholder = "Nombre..."
+            inputTextField = textField
+        })
+        
+        //Presentar controlador
+        self.present(alert, animated: true, completion: nil)
+    }
 }
+
 
 //MARK: - Extensión para mostrar el calendario
 extension  DMDTablaDinamicaCG: DMDCalendarioDelegate {
     
+    ///Muestra un nuevo view controller que permite seleccionar fecha y hora.
     func showCalendar(){
         let calendarVC = self.storyboard?.instantiateViewController(withIdentifier: "DMDCalendario") as! DMDCalendario
         calendarVC.delegate = self
@@ -151,16 +238,16 @@ extension  DMDTablaDinamicaCG: DMDCalendarioDelegate {
         self.navigationController?.pushViewController(calendarVC, animated: true)
     }
     
+    ///Fecha seleccionada
     func didSelectDate(_ date: Date){
-        let itemSelected = getSelectedItem()
-        
-        if let item = itemSelected as? DMDCeldaFecha {
+        if let item = getSelectedItem() as? DMDCeldaFecha {
             item.fecha = date
             updateSeledtedItem(item)
         }
-        
     }
     
+    ///Permite indicar si se quiere o no elegir la hora
+    ///TODO: Hacer parametrizable
     func isHoursNeeded() -> Bool {
         return true
     }
@@ -169,46 +256,162 @@ extension  DMDTablaDinamicaCG: DMDCalendarioDelegate {
 //MARK: - Extensión para tratar con los campos de texto
 extension DMDTablaDinamicaCG: UITextFieldDelegate{
     
+    
+    ///Función del delegado, al seleccionar un campo de texto se guarda
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.activeField = textField
     }
     
+    ///Función del delegado, al dejar de edigar un campo de texto se vacía.
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeField = nil
     }
     
-    //MARK: - Utils teclado
+    ///Función que permite registrar como observador al view controller y activar el scroll automático sobre la tabla.
     func registerForKeyboardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown), name: NSNotification.Name.UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
+    /// Muestra el teclado, es llamada desde el centro de notificaciones.
     func keyboardWasShown(note: NSNotification) {
+        
+        //Obtener el tamaño del teclado
         if let keyboardSize = (note.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            
+            //Tamaño de la tabla
             var frame = myTable.frame
-            UIView.beginAnimations(nil, context: nil)
-            UIView.setAnimationBeginsFromCurrentState(true)
-            UIView.setAnimationDuration(0.3)
+            
+            //Recalcular el tamaño de la tabla restando el tamaño del teclado
             frame.size.height -= keyboardSize.height
+            
+            //Reasignar el tamaño a la tabla
             myTable.frame = frame
+            
+            //Si he seleccionado algún campo de texto previamente
             if activeField != nil {
+                // Hacer scroll hasta el campo activo
                 let rect = myTable.convert((activeField?.bounds)!, from: activeField)
                 myTable.scrollRectToVisible(rect, animated: false)
             }
-            UIView.commitAnimations()
         }
     }
     
+    /// Oculta el teclado, es llamado desde el centro de notificaciones.
     func keyboardWillBeHidden(note: NSNotification) {
+        
+        //Obtener el tamaño del teclado
         if let keyboardSize = (note.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            //Ampliar de nuevo el tamaño de la tabla sumando el tamaño del teclado
             var frame = myTable.frame
-            UIView.beginAnimations(nil, context: nil)
-            UIView.setAnimationBeginsFromCurrentState(true)
-            UIView.setAnimationDuration(0.3)
             frame.size.height += keyboardSize.height
             myTable.frame = frame
-            UIView.commitAnimations()
         }
     }
 
+}
+
+//MARK: - Delegado para escaner
+extension DMDTablaDinamicaCG : DMDEscanerQRDelegate{
+    
+    func showLectorCodigoBarras(){
+        let escanerQR = self.storyboard?.instantiateViewController(withIdentifier: "EscanerQR") as! DMDEscanerQR
+        escanerQR.delegate = self
+        escanerQR.modalTransitionStyle = .crossDissolve
+        self.navigationController?.pushViewController(escanerQR, animated: true)
+    }
+    
+    func soloUno() -> Bool {
+        return true
+    }
+    
+    ///Recupera los datos escaneados en la vista del escaner
+    func getCodigosEscaneados(_ escanerQR: DMDEscanerQR, codigos: [String]) {
+        
+        let itemSelected = getSelectedItem()
+        
+        if let item = itemSelected as? DMDCeldaCodigoBarras {
+            if codigos.count > 0 {
+                item.codigoBarras = codigos[0]
+                updateSeledtedItem(item)
+            }
+        }
+    }
+}
+
+
+//MARK: - Escoger imagen
+//Extendemos imagePickerControllerDelegate, para poder ir a la galería
+extension DMDTablaDinamicaCG : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+    
+    
+    func pickerPhoto(){
+        //Comprobamos si tenemos cámara en el dispositivo
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            muestraMenu()
+        }else{
+            muestraLibreriaFotos()
+            
+        }
+    }
+    
+    func muestraMenu(){
+        let actionVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        actionVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        actionVC.addAction(UIAlertAction(title: "Usar la cámara", style: .default, handler: {Void in
+            self.camaraFotos()
+        }))
+        
+        actionVC.addAction(UIAlertAction(title: "Galería de fotos", style: .default, handler: {
+            Void in
+            self.muestraLibreriaFotos()}
+        ))
+        present(actionVC, animated: true, completion: nil)
+        
+    }
+    
+    func muestraLibreriaFotos(){
+        //Creamos la variable que podrá elegir imágenes de la galería
+        let selectorDeImagenes = UIImagePickerController()
+        //Le damos el tipo de Galería
+        selectorDeImagenes.sourceType = .photoLibrary
+        //Le dejamos hacer zoom
+        selectorDeImagenes.allowsEditing = true
+        //Añadimos como delegado al mismo selector
+        selectorDeImagenes.delegate = self
+        //lo presentamos
+        present(selectorDeImagenes,animated: true, completion: nil)
+    }
+    
+    func camaraFotos(){
+        //Creamos la variable que podrá elegir imágenes de la cámara
+        let selectorDeImagenes = UIImagePickerController()
+        //Le damos el tipo de cámara
+        selectorDeImagenes.sourceType = .camera
+        //Le dejamos hacer zoom
+        selectorDeImagenes.allowsEditing = true
+        //Añadimos como delegado al mismo selector
+        selectorDeImagenes.delegate = self
+        //lo presentamos
+        present(selectorDeImagenes,animated: true, completion: nil)
+        
+    }
+    
+    ///Método que permite realizar comprobaciones, para diferenciar entre imagen o vídeo
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        //Comprobamos el tipo de los datos recuperamos, confirmamos que sea una imagen
+        if let imagenEscogida = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            //Asignamos el valor al view
+            
+            
+            if let item = getSelectedItem() as? DMDCeldaPerfil {
+                item.imagen = imagenEscogida
+                updateSeledtedItem(item)
+            }
+
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 }

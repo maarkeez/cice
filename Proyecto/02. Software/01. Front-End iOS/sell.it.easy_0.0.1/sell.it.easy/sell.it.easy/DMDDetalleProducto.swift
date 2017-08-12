@@ -193,3 +193,5 @@ extension DMDDetalleProducto : DMDEscanerQRDelegate {
     }
 }
 
+
+
