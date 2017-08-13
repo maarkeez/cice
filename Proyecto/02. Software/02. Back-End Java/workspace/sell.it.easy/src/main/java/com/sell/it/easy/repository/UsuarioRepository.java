@@ -12,4 +12,5 @@ public interface UsuarioRepository extends CrudRepository<Usuario, Long>{
 
 	public List<Usuario> findAll();
 	public Usuario findById(Integer id);
+	public Usuario findByCorreo(String nombre);
 }

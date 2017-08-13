@@ -15,6 +15,7 @@ struct Constantes {
     let COLOR = Colores()
     let COLOR_VIOLETA = ColoresVioletas()
     let COLOR_AZUL = ColoresAzules()
+    let URL_BASE = UrlBase()
 }
 
 struct Talla{
@@ -51,6 +52,11 @@ struct ColoresAzules {
     let OSCURO = #colorLiteral(red: 0.8431372549, green: 0.862745098, blue: 0.8784313725, alpha: 1)
     //let SOMBRAS = #colorLiteral(red: 0, green: 0.1803921569, blue: 0.262745098, alpha: 1)
     let SOMBRAS = #colorLiteral(red: 0.01960784314, green: 0.1725490196, blue: 0.4470588235, alpha: 1)
+}
+
+struct UrlBase{
+    let URL_BASE = "http://192.168.1.105"
+    let PUERTO = ":8081/"
 }
 
 

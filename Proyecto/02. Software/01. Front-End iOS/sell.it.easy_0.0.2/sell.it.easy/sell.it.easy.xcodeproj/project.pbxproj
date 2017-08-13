@@ -12,7 +12,6 @@
 		E50E8A031F1A08D900C81338 /* DMDCeldaFecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E8A021F1A08D900C81338 /* DMDCeldaFecha.swift */; };
 		E51ABA5C1EC7C34C008C2E6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ABA5B1EC7C34C008C2E6C /* AppDelegate.swift */; };
 		E51ABA611EC7C34C008C2E6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51ABA5F1EC7C34C008C2E6C /* Main.storyboard */; };
-		E51ABA641EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E51ABA621EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld */; };
 		E51ABA691EC7C34C008C2E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51ABA671EC7C34C008C2E6C /* LaunchScreen.storyboard */; };
 		E51ABA741EC7C6C4008C2E6C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E51ABA721EC7C6C4008C2E6C /* SWRevealViewController.m */; };
 		E51ABA841EC8359E008C2E6C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51ABA7A1EC8359E008C2E6C /* Alamofire.framework */; };
@@ -30,7 +29,6 @@
 		E53E20C11EC846C000130DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53E20C01EC846C000130DEB /* Assets.xcassets */; };
 		E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */; };
 		E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */; };
-		E53E20C91EC8568900130DEB /* DMDDetalleProducto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */; };
 		E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */; };
 		E53E20CF1EC85E6F00130DEB /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20CE1EC85E6F00130DEB /* Constantes.swift */; };
 		E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D11EC8641400130DEB /* CoreDataStack.swift */; };
@@ -58,7 +56,6 @@
 		E5DE8E081F19A7A100DE80F3 /* DMDCeldaTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DE8E071F19A7A100DE80F3 /* DMDCeldaTexto.swift */; };
 		E5E6D58C1F1C0ED500EF77A3 /* CeldaPerfil.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E6D58A1F1C0ED500EF77A3 /* CeldaPerfil.xib */; };
 		E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */; };
-		E5EAB5891EC8E7160016D86C /* DMDDetalleTienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */; };
 		E5EAB58B1EC8EAD20016D86C /* TiendaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */; };
 		E5EAB58E1EC8EE390016D86C /* DMDListadoTiendaCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EAB58C1EC8EE390016D86C /* DMDListadoTiendaCelda.swift */; };
 		E5EAB58F1EC8EE390016D86C /* DMDListadoTiendaCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5EAB58D1EC8EE390016D86C /* DMDListadoTiendaCelda.xib */; };
@@ -75,6 +72,12 @@
 		E5FCEDCB1F407F48000D1FFB /* DMDCeldaTextoLargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDCA1F407F48000D1FFB /* DMDCeldaTextoLargo.swift */; };
 		E5FCEDCE1F407F94000D1FFB /* CeldaTextoLargo.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FCEDCD1F407F94000D1FFB /* CeldaTextoLargo.xib */; };
 		E5FCEDD01F40808A000D1FFB /* DMDTextoLargo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDCF1F40808A000D1FFB /* DMDTextoLargo.swift */; };
+		E5FCEDD41F40B6A9000D1FFB /* OrganizacionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDD31F40B6A9000D1FFB /* OrganizacionService.swift */; };
+		E5FCEDD61F40B8CE000D1FFB /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDD51F40B8CE000D1FFB /* UsuarioService.swift */; };
+		E5FCEDD91F40C172000D1FFB /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDD81F40C172000D1FFB /* Usuario.swift */; };
+		E5FCEDDB1F40C252000D1FFB /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDDA1F40C252000D1FFB /* Producto.swift */; };
+		E5FCEDDD1F40C30A000D1FFB /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDDC1F40C30A000D1FFB /* Tienda.swift */; };
+		E5FCEDE01F40C453000D1FFB /* sell_it_easy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDDE1F40C453000D1FFB /* sell_it_easy.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,7 +89,6 @@
 		E51ABA581EC7C34C008C2E6C /* sell.it.easy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sell.it.easy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51ABA5B1EC7C34C008C2E6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E51ABA601EC7C34C008C2E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E51ABA631EC7C34C008C2E6C /* sell_it_easy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sell_it_easy.xcdatamodel; sourceTree = "<group>"; };
 		E51ABA681EC7C34C008C2E6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E51ABA6A1EC7C34C008C2E6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E51ABA701EC7C6C3008C2E6C /* sell.it.easy-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sell.it.easy-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -107,7 +109,6 @@
 		E53E20C01EC846C000130DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCajaRegistradoraTableViewController.swift; sourceTree = "<group>"; };
 		E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaProductos.swift; sourceTree = "<group>"; };
-		E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleProducto.swift; sourceTree = "<group>"; };
 		E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExts.swift; sourceTree = "<group>"; };
 		E53E20CE1EC85E6F00130DEB /* Constantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
 		E53E20D11EC8641400130DEB /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -135,7 +136,6 @@
 		E5DE8E071F19A7A100DE80F3 /* DMDCeldaTexto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCeldaTexto.swift; sourceTree = "<group>"; };
 		E5E6D58A1F1C0ED500EF77A3 /* CeldaPerfil.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaPerfil.xib; sourceTree = "<group>"; };
 		E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListadoTiendas.swift; sourceTree = "<group>"; };
-		E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDDetalleTienda.swift; sourceTree = "<group>"; };
 		E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiendaRepository.swift; sourceTree = "<group>"; };
 		E5EAB58C1EC8EE390016D86C /* DMDListadoTiendaCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListadoTiendaCelda.swift; sourceTree = "<group>"; };
 		E5EAB58D1EC8EE390016D86C /* DMDListadoTiendaCelda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DMDListadoTiendaCelda.xib; sourceTree = "<group>"; };
@@ -152,6 +152,12 @@
 		E5FCEDCA1F407F48000D1FFB /* DMDCeldaTextoLargo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCeldaTextoLargo.swift; sourceTree = "<group>"; };
 		E5FCEDCD1F407F94000D1FFB /* CeldaTextoLargo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaTextoLargo.xib; sourceTree = "<group>"; };
 		E5FCEDCF1F40808A000D1FFB /* DMDTextoLargo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDTextoLargo.swift; sourceTree = "<group>"; };
+		E5FCEDD31F40B6A9000D1FFB /* OrganizacionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizacionService.swift; sourceTree = "<group>"; };
+		E5FCEDD51F40B8CE000D1FFB /* UsuarioService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
+		E5FCEDD81F40C172000D1FFB /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		E5FCEDDA1F40C252000D1FFB /* Producto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		E5FCEDDC1F40C30A000D1FFB /* Tienda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
+		E5FCEDDF1F40C453000D1FFB /* sell_it_easy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sell_it_easy.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,10 +246,12 @@
 			isa = PBXGroup;
 			children = (
 				E51ABA5B1EC7C34C008C2E6C /* AppDelegate.swift */,
+				E5FCEDD71F40C15C000D1FFB /* ENTITIES */,
+				E51ABA751EC7C6D1008C2E6C /* OBJ-C */,
 				E53E20D01EC863ED00130DEB /* PERSISTENCE */,
+				E5FCEDD21F40B64E000D1FFB /* SERVICES */,
 				E53E20CA1EC85BF100130DEB /* UTILS */,
 				E51ABA791EC7D032008C2E6C /* VIEW_CONTROLLERS */,
-				E51ABA751EC7C6D1008C2E6C /* OBJ-C */,
 				E51ABA5F1EC7C34C008C2E6C /* Main.storyboard */,
 				E53E20C01EC846C000130DEB /* Assets.xcassets */,
 				E51ABA671EC7C34C008C2E6C /* LaunchScreen.storyboard */,
@@ -302,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				E53E20C61EC84C1B00130DEB /* DMDListaProductos.swift */,
-				E53E20C81EC8568900130DEB /* DMDDetalleProducto.swift */,
 				E53E20D91EC8768300130DEB /* CELDAS */,
 			);
 			name = PRODUCTO;
@@ -331,7 +338,7 @@
 		E53E20D01EC863ED00130DEB /* PERSISTENCE */ = {
 			isa = PBXGroup;
 			children = (
-				E51ABA621EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld */,
+				E5FCEDDE1F40C453000D1FFB /* sell_it_easy.xcdatamodeld */,
 				E53E20D11EC8641400130DEB /* CoreDataStack.swift */,
 				E5C8E8211ECA069600355E0D /* ListaProductosRepository.swift */,
 				E5EAB58A1EC8EAD20016D86C /* TiendaRepository.swift */,
@@ -461,7 +468,6 @@
 			isa = PBXGroup;
 			children = (
 				E5EAB5861EC8E3460016D86C /* DMDListadoTiendas.swift */,
-				E5EAB5881EC8E7160016D86C /* DMDDetalleTienda.swift */,
 				E5EAB5901EC8EE3D0016D86C /* CELDAS */,
 			);
 			name = TIENDA;
@@ -545,6 +551,25 @@
 				E5FCEDCF1F40808A000D1FFB /* DMDTextoLargo.swift */,
 			);
 			name = TEXTO_LARGO;
+			sourceTree = "<group>";
+		};
+		E5FCEDD21F40B64E000D1FFB /* SERVICES */ = {
+			isa = PBXGroup;
+			children = (
+				E5FCEDD31F40B6A9000D1FFB /* OrganizacionService.swift */,
+				E5FCEDD51F40B8CE000D1FFB /* UsuarioService.swift */,
+			);
+			name = SERVICES;
+			sourceTree = "<group>";
+		};
+		E5FCEDD71F40C15C000D1FFB /* ENTITIES */ = {
+			isa = PBXGroup;
+			children = (
+				E5FCEDD81F40C172000D1FFB /* Usuario.swift */,
+				E5FCEDDA1F40C252000D1FFB /* Producto.swift */,
+				E5FCEDDC1F40C30A000D1FFB /* Tienda.swift */,
+			);
+			name = ENTITIES;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -689,7 +714,6 @@
 				E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */,
 				E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */,
 				E5EAB59F1EC9160B0016D86C /* DMDEscanerTabla.swift in Sources */,
-				E5EAB5891EC8E7160016D86C /* DMDDetalleTienda.swift in Sources */,
 				E5FCEDC41F406E4E000D1FFB /* DMDSelector.swift in Sources */,
 				E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */,
 				E5FCEDCB1F407F48000D1FFB /* DMDCeldaTextoLargo.swift in Sources */,
@@ -698,6 +722,7 @@
 				E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */,
 				E5CB12FC1F3F1E1D005D15A8 /* DMDCeldaPerfil.swift in Sources */,
 				E5C8E8221ECA069600355E0D /* ListaProductosRepository.swift in Sources */,
+				E5FCEDE01F40C453000D1FFB /* sell_it_easy.xcdatamodeld in Sources */,
 				E5F091871F198BB20051FFBD /* DMDTablaDinamicaCG.swift in Sources */,
 				E5EAB5A31EC916180016D86C /* DMDInventarioCelda.swift in Sources */,
 				E52F23961F1B835500FF24D1 /* DMDSelectorFecha.swift in Sources */,
@@ -705,19 +730,22 @@
 				E5FCEDD01F40808A000D1FFB /* DMDTextoLargo.swift in Sources */,
 				E51ABA8F1EC83DB1008C2E6C /* Utils.swift in Sources */,
 				E5F091891F198D670051FFBD /* DMDTablaDataCG.swift in Sources */,
-				E51ABA641EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld in Sources */,
 				E5BF8CEA1F1A96E70018A519 /* CeldaTipos.swift in Sources */,
+				E5FCEDDD1F40C30A000D1FFB /* Tienda.swift in Sources */,
 				E51ABA5C1EC7C34C008C2E6C /* AppDelegate.swift in Sources */,
 				E51ABA741EC7C6C4008C2E6C /* SWRevealViewController.m in Sources */,
 				E5EAB5A11EC916110016D86C /* DMDEscanerQR.swift in Sources */,
 				E5EAB58E1EC8EE390016D86C /* DMDListadoTiendaCelda.swift in Sources */,
+				E5FCEDD41F40B6A9000D1FFB /* OrganizacionService.swift in Sources */,
 				E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */,
 				E5C8E8271ECA203900355E0D /* DMDHistoricoRecepciones.swift in Sources */,
+				E5FCEDD91F40C172000D1FFB /* Usuario.swift in Sources */,
+				E5FCEDD61F40B8CE000D1FFB /* UsuarioService.swift in Sources */,
+				E5FCEDDB1F40C252000D1FFB /* Producto.swift in Sources */,
 				E53E20CF1EC85E6F00130DEB /* Constantes.swift in Sources */,
 				E5EAB58B1EC8EAD20016D86C /* TiendaRepository.swift in Sources */,
 				E5F0918B1F19957B0051FFBD /* DummyTablaDataCG.swift in Sources */,
 				E5DE8E081F19A7A100DE80F3 /* DMDCeldaTexto.swift in Sources */,
-				E53E20C91EC8568900130DEB /* DMDDetalleProducto.swift in Sources */,
 				E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */,
 				E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */,
 				E50E8A031F1A08D900C81338 /* DMDCeldaFecha.swift in Sources */,
@@ -908,12 +936,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E51ABA621EC7C34C008C2E6C /* sell_it_easy.xcdatamodeld */ = {
+		E5FCEDDE1F40C453000D1FFB /* sell_it_easy.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E51ABA631EC7C34C008C2E6C /* sell_it_easy.xcdatamodel */,
+				E5FCEDDF1F40C453000D1FFB /* sell_it_easy.xcdatamodel */,
 			);
-			currentVersion = E51ABA631EC7C34C008C2E6C /* sell_it_easy.xcdatamodel */;
+			currentVersion = E5FCEDDF1F40C453000D1FFB /* sell_it_easy.xcdatamodel */;
 			path = sell_it_easy.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

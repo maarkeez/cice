@@ -53,5 +53,14 @@ public class UsuarioController {
 			usuarioRepository.save(usuario);
 			return usuario;
 	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public @ResponseBody Usuario login(HttpServletRequest request, @RequestBody Usuario usuario) {
+		Usuario usuarioBD = usuarioRepository.findByCorreo(usuario.getCorreo());
+		if(usuarioBD.getPassword().equals(usuario.getPassword())){
+			return usuarioBD;
+		}
+		return null;
+	}
 
 }

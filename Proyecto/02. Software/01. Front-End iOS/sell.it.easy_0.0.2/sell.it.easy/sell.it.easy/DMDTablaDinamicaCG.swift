@@ -10,6 +10,7 @@ import UIKit
 
 protocol DMDTablaDinamicaCGDelegate {
     func setData(_ data: DMDTablaDataCG)
+    func getData() -> DMDTablaDataCG
 }
 
 class DMDTablaDinamicaCG: UIViewController {
@@ -42,7 +43,7 @@ class DMDTablaDinamicaCG: UIViewController {
         mostrarMenu(myMenuBTN)
         
         //TODO: Borrar. Datos de prueba
-        data = DummyTablaDataCG().getDummyData()
+        data = delegate?.getData()
         
         // Modificar UI
         mySearch.barTintColor = CONSTANTES.COLOR_AZUL.TAB_NAV_BAR

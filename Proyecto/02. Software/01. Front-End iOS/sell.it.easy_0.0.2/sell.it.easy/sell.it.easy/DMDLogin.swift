@@ -18,27 +18,27 @@ class DMDLogin: UIViewController {
     
     //MARK: - IBoutlets
     @IBOutlet weak var myIniciarSesionBTN: UIButton!
+    @IBOutlet weak var myNombre: UITextField!
+    @IBOutlet weak var myPassword: UITextField!
     
     
     //MARK: - IBActions
     
     @IBAction func myIniciarSesionACTION(_ sender: Any) {
         
-        
-        
-        //Borrar las notificaciones
-        NotificationCenter.default.removeObserver(self)
-        //Parar el video, se añade la tolerancia para que no tarde en pararse en segundo plano
-         reproductor.seek(to: (reproductor.currentItem?.duration)!, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimePositiveInfinity)
-        //Recuperar Menu VC
-        let menuVC = storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
-        present(menuVC, animated: true, completion: nil)
-        
+        let user = Usuario(id: nil, correo: myNombre.text, nombre: nil, apellidos: nil, password: myPassword.text, imagen: nil)
+        UsuarioService.shared.login(user) { (usuario) in
+            if usuario?.id != nil {
+                self.login(user)
+            }
+        }
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         //Mostrar el video de fondo
         showVideoInVC()
@@ -49,7 +49,7 @@ class DMDLogin: UIViewController {
         hideKeyboardWhenTappedAround()
         
     }
-
+    
     
     //MARK: - Utils
     
@@ -75,7 +75,7 @@ class DMDLogin: UIViewController {
         //Hago zoom sin distorsionar
         capaDelReproductor.videoGravity = AVLayerVideoGravityResizeAspectFill
         
-
+        
         
         //zPosition para capas, lo añado a la primera posición del array de capas
         view.layer.insertSublayer(capaDelReproductor, at: 0)
@@ -90,12 +90,6 @@ class DMDLogin: UIViewController {
         //Arrancar en el inicio
         reproductor.seek(to: kCMTimeZero)
         reproductor.play()
-        
-        
-        
-        
-        
-        
     }
     
     ///Funcion a ejecutar sobre el reproductor cuando cambie su estado
@@ -104,10 +98,15 @@ class DMDLogin: UIViewController {
         reproductor.seek(to: kCMTimeZero)
     }
     
-    
-    
-    
-    
+    func login(_ usuario: Usuario){
+        //Borrar las notificaciones
+        NotificationCenter.default.removeObserver(self)
+        //Parar el video, se añade la tolerancia para que no tarde en pararse en segundo plano
+        reproductor.seek(to: (reproductor.currentItem?.duration)!, toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimePositiveInfinity)
+        //Recuperar Menu VC
+        let menuVC = storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+        present(menuVC, animated: true, completion: nil)
+    }
     
 
 }
