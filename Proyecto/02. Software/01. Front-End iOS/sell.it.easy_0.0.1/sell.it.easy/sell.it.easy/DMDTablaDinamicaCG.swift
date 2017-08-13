@@ -50,6 +50,7 @@ class DMDTablaDinamicaCG: UIViewController {
         myTable.register(UINib(nibName: "CeldaFecha", bundle: nil), forCellReuseIdentifier: "CeldaFecha")
         myTable.register(UINib(nibName: "CeldaPerfil", bundle: nil), forCellReuseIdentifier: "CeldaPerfil")
         myTable.register(UINib(nibName: "CeldaCodigoBarras", bundle: nil), forCellReuseIdentifier: "CeldaCodigoBarras")
+        myTable.register(UINib(nibName: "CeldaSelector", bundle: nil), forCellReuseIdentifier: "CeldaSelector")
     }
     
     deinit {
@@ -76,7 +77,6 @@ class DMDTablaDinamicaCG: UIViewController {
         UIView.animate(withDuration: 0.2, animations: {
             self.mySearch.isHidden = false
             self.myTable.frame = CGRect(x: 0, y: 44, width: self.myContainer.frame.width, height: self.myContainer.frame.height)
-            
         })
     }
     
@@ -164,6 +164,10 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
         
         if getSelectedItem() is DMDCeldaPerfil {
             showMenuCeldaPerfil()
+        }
+        
+        if getSelectedItem() is DMDCeldaSelector {
+            showDMDSelector(self)
         }
     }
 }
@@ -413,5 +417,25 @@ extension DMDTablaDinamicaCG : UIImagePickerControllerDelegate,UINavigationContr
         }
         
         dismiss(animated: true, completion: nil)
+    }
+}
+
+//MARK: - Extensión para tratar el selector
+extension DMDTablaDinamicaCG: DMDSelectorDelegate{
+    
+    func didSelect(_ indexSelected: Int?){
+        if let item = getSelectedItem() as? DMDCeldaSelector{
+            if let indice = indexSelected {
+                item.indiceSeleccionado = indice
+                updateSeledtedItem(item)
+            }
+        }
+    }
+    
+    func getOptions() -> [String]{
+        if let item = getSelectedItem() as? DMDCeldaSelector {
+            return item.opciones
+        }
+        return []
     }
 }

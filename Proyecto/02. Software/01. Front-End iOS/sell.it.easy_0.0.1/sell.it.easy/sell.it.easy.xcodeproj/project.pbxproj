@@ -69,6 +69,9 @@
 		E5F091871F198BB20051FFBD /* DMDTablaDinamicaCG.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F091861F198BB20051FFBD /* DMDTablaDinamicaCG.swift */; };
 		E5F091891F198D670051FFBD /* DMDTablaDataCG.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F091881F198D670051FFBD /* DMDTablaDataCG.swift */; };
 		E5F0918B1F19957B0051FFBD /* DummyTablaDataCG.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F0918A1F19957B0051FFBD /* DummyTablaDataCG.swift */; };
+		E5FCEDC41F406E4E000D1FFB /* DMDSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDC31F406E4E000D1FFB /* DMDSelector.swift */; };
+		E5FCEDC61F40738C000D1FFB /* DMDCeldaSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDC51F40738C000D1FFB /* DMDCeldaSelector.swift */; };
+		E5FCEDC81F4073AC000D1FFB /* CeldaSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5FCEDC71F4073AC000D1FFB /* CeldaSelector.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +143,9 @@
 		E5F091861F198BB20051FFBD /* DMDTablaDinamicaCG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDTablaDinamicaCG.swift; sourceTree = "<group>"; };
 		E5F091881F198D670051FFBD /* DMDTablaDataCG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDTablaDataCG.swift; sourceTree = "<group>"; };
 		E5F0918A1F19957B0051FFBD /* DummyTablaDataCG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTablaDataCG.swift; sourceTree = "<group>"; };
+		E5FCEDC31F406E4E000D1FFB /* DMDSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDSelector.swift; sourceTree = "<group>"; };
+		E5FCEDC51F40738C000D1FFB /* DMDCeldaSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCeldaSelector.swift; sourceTree = "<group>"; };
+		E5FCEDC71F4073AC000D1FFB /* CeldaSelector.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaSelector.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,10 +274,11 @@
 				E5C8E8231ECA108500355E0D /* HISTORICOS */,
 				E57B0C001ED1C0EF0007A96C /* LAUNCHER */,
 				E57B0C031ED1C4F80007A96C /* LOGIN */,
-				E5EAB5851EC8E30B0016D86C /* TIENDA */,
 				E5C8E81C1EC9BCBA00355E0D /* PEDIDO */,
 				E53E20C51EC84BC100130DEB /* PRODUCTO */,
+				E5FCEDC21F406DB6000D1FFB /* SELECTOR */,
 				E5F091831F1989090051FFBD /* TABLA_GENERICA */,
+				E5EAB5851EC8E30B0016D86C /* TIENDA */,
 			);
 			name = VIEW_CONTROLLERS;
 			sourceTree = "<group>";
@@ -419,6 +426,7 @@
 				E5CB13031F3F217D005D15A8 /* CELDA_CODIGO_BARRAS */,
 				E50E8A011F1A08C200C81338 /* CELDA_FECHA */,
 				E5E6D58D1F1C0ED900EF77A3 /* CELDA_PERFIL */,
+				E5FCEDC91F40743D000D1FFB /* CELDA_SELECTOR */,
 				E5DE8E091F19A7C500DE80F3 /* CELDA_TEXTO */,
 			);
 			name = CELDAS;
@@ -497,6 +505,23 @@
 			name = TABLA_GENERICA;
 			sourceTree = "<group>";
 		};
+		E5FCEDC21F406DB6000D1FFB /* SELECTOR */ = {
+			isa = PBXGroup;
+			children = (
+				E5FCEDC31F406E4E000D1FFB /* DMDSelector.swift */,
+			);
+			name = SELECTOR;
+			sourceTree = "<group>";
+		};
+		E5FCEDC91F40743D000D1FFB /* CELDA_SELECTOR */ = {
+			isa = PBXGroup;
+			children = (
+				E5FCEDC51F40738C000D1FFB /* DMDCeldaSelector.swift */,
+				E5FCEDC71F4073AC000D1FFB /* CeldaSelector.xib */,
+			);
+			name = CELDA_SELECTOR;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -561,6 +586,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FCEDC81F4073AC000D1FFB /* CeldaSelector.xib in Resources */,
 				E51ABA691EC7C34C008C2E6C /* LaunchScreen.storyboard in Resources */,
 				E53E20C11EC846C000130DEB /* Assets.xcassets in Resources */,
 				E5EAB5A71EC917550016D86C /* beep.mp3 in Resources */,
@@ -638,6 +664,7 @@
 				E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */,
 				E5EAB59F1EC9160B0016D86C /* DMDEscanerTabla.swift in Sources */,
 				E5EAB5891EC8E7160016D86C /* DMDDetalleTienda.swift in Sources */,
+				E5FCEDC41F406E4E000D1FFB /* DMDSelector.swift in Sources */,
 				E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */,
 				E57B0BFF1ED185F90007A96C /* DMDCalendario.swift in Sources */,
 				E5CB12FE1F3F215A005D15A8 /* DMDCeldaCodigoBarras.swift in Sources */,
@@ -667,6 +694,7 @@
 				E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */,
 				E50E8A031F1A08D900C81338 /* DMDCeldaFecha.swift in Sources */,
 				E5C8E8251ECA10C200355E0D /* DMDHistoricos.swift in Sources */,
+				E5FCEDC61F40738C000D1FFB /* DMDCeldaSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
