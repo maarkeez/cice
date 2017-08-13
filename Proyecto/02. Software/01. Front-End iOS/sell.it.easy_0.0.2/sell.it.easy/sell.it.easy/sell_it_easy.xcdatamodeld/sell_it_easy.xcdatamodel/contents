@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ListaProductos" representedClassName="ListaProductos" syncable="YES" codeGenerationType="class">
+        <attribute name="cantidad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="comentario" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechaConfirmado" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fechaGuardado" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tipo" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="listaproductos2producto" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Producto" syncable="YES"/>
+    </entity>
+    <entity name="Organizacion" representedClassName="Organizacion" syncable="YES" codeGenerationType="class">
+        <attribute name="cif" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="direccion_fiscal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Producto" representedClassName="Producto" syncable="YES" codeGenerationType="class">
+        <attribute name="codigoBarras" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="codigoEmpresa" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descuento" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="precioCoste" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pvp" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="talla" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Rol" representedClassName="Rol" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Stock" representedClassName="Stock" syncable="YES" codeGenerationType="class">
+        <attribute name="cantidad" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="stock2producto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Producto" syncable="YES"/>
+        <relationship name="stock2tienda" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tienda" syncable="YES"/>
+    </entity>
+    <entity name="Tienda" representedClassName="Tienda" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tiendaActual" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="tienda2organizacion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Organizacion" syncable="YES"/>
+    </entity>
+    <entity name="Usuario" representedClassName="Usuario" syncable="YES" codeGenerationType="class">
+        <attribute name="apellidos" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="correo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="usuario2rol" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rol" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Organizacion" positionX="-180" positionY="126" width="128" height="133"/>
+        <element name="Producto" positionX="9" positionY="228" width="128" height="195"/>
+        <element name="Rol" positionX="151" positionY="-27" width="128" height="75"/>
+        <element name="Stock" positionX="160" positionY="99" width="128" height="90"/>
+        <element name="Tienda" positionX="0" positionY="63" width="128" height="135"/>
+        <element name="Usuario" positionX="-74" positionY="-150" width="128" height="150"/>
+        <element name="ListaProductos" positionX="288" positionY="198" width="128" height="148"/>
+    </elements>
+</model>

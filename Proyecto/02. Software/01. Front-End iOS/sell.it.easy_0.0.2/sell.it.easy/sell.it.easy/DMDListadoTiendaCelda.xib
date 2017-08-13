@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="225" id="KGk-i7-Jjw" customClass="DMDListadoTiendaCelda" customModule="sell_it_easy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="224.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wNJ-zU-Hog">
+                        <rect key="frame" x="0.0" y="16" width="320" height="200.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Islazul" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-R6-joT">
+                        <rect key="frame" x="130" y="171.5" width="182" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="182" id="RnO-xk-J5v"/>
+                            <constraint firstAttribute="height" constant="21" id="rso-oL-BSv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="23"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="91 22 22 22" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J8-xp-Fbr">
+                        <rect key="frame" x="130" y="195.5" width="182" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="182" id="geY-or-hDR"/>
+                            <constraint firstAttribute="height" constant="21" id="qzY-0U-I1E"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="Iad-Wr-8Xl">
+                        <rect key="frame" x="279" y="24" width="33" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="ELe-h8-mQ7"/>
+                            <constraint firstAttribute="width" constant="33" id="Y59-fK-zcU"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="wNJ-zU-Hog" secondAttribute="bottom" constant="8" id="6En-Kc-53T"/>
+                    <constraint firstAttribute="trailing" secondItem="3KV-R6-joT" secondAttribute="trailing" constant="8" id="6qL-Yt-2mf"/>
+                    <constraint firstAttribute="bottom" secondItem="9J8-xp-Fbr" secondAttribute="bottom" constant="8" id="73v-iy-ufY"/>
+                    <constraint firstAttribute="trailing" secondItem="Iad-Wr-8Xl" secondAttribute="trailing" constant="8" id="OPW-Dx-5uZ"/>
+                    <constraint firstItem="Iad-Wr-8Xl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="OhX-e2-5Dg"/>
+                    <constraint firstAttribute="trailing" secondItem="wNJ-zU-Hog" secondAttribute="trailing" id="VH3-cx-yOf"/>
+                    <constraint firstItem="wNJ-zU-Hog" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="VRQ-Ak-sjM"/>
+                    <constraint firstItem="9J8-xp-Fbr" firstAttribute="top" secondItem="3KV-R6-joT" secondAttribute="bottom" constant="3" id="bs5-Dm-ADN"/>
+                    <constraint firstItem="wNJ-zU-Hog" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fpc-dM-9hx"/>
+                    <constraint firstAttribute="trailing" secondItem="9J8-xp-Fbr" secondAttribute="trailing" constant="8" id="ywo-Y3-Dzx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="myImagen" destination="wNJ-zU-Hog" id="ula-Vn-bs2"/>
+                <outlet property="myImagenCheck" destination="Iad-Wr-8Xl" id="5hC-HG-Y1I"/>
+                <outlet property="myNombre" destination="3KV-R6-joT" id="kxK-nd-oOY"/>
+                <outlet property="myTelefono" destination="9J8-xp-Fbr" id="qoI-3E-QNZ"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="144.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check" width="35" height="35"/>
+    </resources>
+</document>
