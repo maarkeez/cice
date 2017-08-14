@@ -42,12 +42,15 @@ class DMDTablaDinamicaCG: UIViewController {
         hideKeyboardWhenTappedAround()
         mostrarMenu(myMenuBTN)
         
-        //TODO: Borrar. Datos de prueba
+        //Obtenemos los datos del delegado
         data = delegate?.getData()
         
         // Modificar UI
         mySearch.barTintColor = CONSTANTES.COLOR_AZUL.TAB_NAV_BAR
         mySearch.alpha = 0.7
+        if !data.showSearchBar {
+            hideSearchBar()
+        }
         
         //Opciones para la tabla
         myTable.dataSource = self
@@ -158,13 +161,15 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
     /// Si se hace el scroll máximo por arriba se muestra la barra de búsqueda.
     /// en caso contrario se oculta dicha barra si está siendo mostrada.
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if(scrollView.contentOffset.y <= 0 ){
-            if(mySearch.isHidden){
-                showSearchBarAnimated()
-            }
-        }else{
-            if(!mySearch.isHidden){
-                hideSearchBarAnimated()
+        if data.showSearchBar{
+            if(scrollView.contentOffset.y <= 0 ){
+                if(mySearch.isHidden){
+                    showSearchBarAnimated()
+                }
+            }else{
+                if(!mySearch.isHidden){
+                    hideSearchBarAnimated()
+                }
             }
         }
     }

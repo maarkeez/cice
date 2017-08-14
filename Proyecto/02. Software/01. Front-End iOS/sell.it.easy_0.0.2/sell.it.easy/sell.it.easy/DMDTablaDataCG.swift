@@ -29,6 +29,9 @@ class DMDTablaDataCG {
 
     var listaItems : [DMDCeldaCGDelegate] = []
     
+    //Mostrar la barra de búsqueda por defecto
+    var showSearchBar : Bool = false
+    
     //MARK: - Utils
     
     func getItem(_ indice: Int) -> DMDCeldaCGDelegate {

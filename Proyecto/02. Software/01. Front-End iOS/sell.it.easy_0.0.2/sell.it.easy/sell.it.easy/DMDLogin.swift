@@ -23,18 +23,17 @@ class DMDLogin: UIViewController {
     
     
     //MARK: - IBActions
-    
     @IBAction func myIniciarSesionACTION(_ sender: Any) {
         
         let user = Usuario(id: nil, correo: myNombre.text, nombre: nil, apellidos: nil, password: myPassword.text, imagen: nil)
         UsuarioService.shared.login(user) { (usuario) in
-            if usuario?.id != nil {
-                self.login(user)
+            if usuario != nil && usuario?.id != nil {
+                self.login(usuario!)
+            }else{
+                showDMDConfirm(self)
             }
         }
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +46,10 @@ class DMDLogin: UIViewController {
         myIniciarSesionBTN.layer.cornerRadius = 5
         
         hideKeyboardWhenTappedAround()
+        
+        //Asignar delegados
+        myNombre.delegate = self
+        myPassword.delegate = self
         
     }
     
@@ -99,6 +102,9 @@ class DMDLogin: UIViewController {
     }
     
     func login(_ usuario: Usuario){
+        //Guardar el usuario en la sesión
+        Session.shared.usuario = usuario
+        
         //Borrar las notificaciones
         NotificationCenter.default.removeObserver(self)
         //Parar el video, se añade la tolerancia para que no tarde en pararse en segundo plano
@@ -107,6 +113,49 @@ class DMDLogin: UIViewController {
         let menuVC = storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
         present(menuVC, animated: true, completion: nil)
     }
-    
-
 }
+
+//MARK: - Extensión para ser delegado del mensaje de confirmación
+extension DMDLogin : DMDConfirmDelegate{
+    func confirmar(){
+        
+    }
+    func cancelar(){
+        
+    }
+    func getTitulo() -> String{
+        return "Error en el login"
+    }
+    
+    func getTexto() -> String {
+        return "No se ha podido recuperar correctamente el usuario.\n\nRevise las credenciales introducidas y su conexión a internet."
+    }
+}
+
+//MARK: - Extensión para subir y bajar la ventana cuando se toca un textfield
+extension DMDLogin : UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.animateViewMoving(true, moveValue: 200)
+        
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.animateViewMoving(false, moveValue: 200)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+        
+    }
+    func animateViewMoving (_ up: Bool, moveValue: CGFloat){
+        let movement : CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(0.22 )
+        self.view.frame = self.view.frame.offsetBy(dx: 0,  dy: movement)
+        UIView.commitAnimations()
+        
+    }
+}
+
