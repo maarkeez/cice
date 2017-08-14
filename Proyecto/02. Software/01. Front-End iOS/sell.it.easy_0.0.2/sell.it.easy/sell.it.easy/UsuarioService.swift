@@ -49,8 +49,10 @@ class UsuarioService  {
     func getUsuario(_ json: JSON) -> Usuario{
         var imagen : UIImage? = nil
         if let imagenStr = json["imagenString"].string{
-            let dataDecoded = Data(base64Encoded: imagenStr, options: NSData.Base64DecodingOptions(rawValue: 0))!
-            imagen = UIImage(data: dataDecoded)!
+            let dataDecoded = Data(base64Encoded: imagenStr)
+            if let datos = dataDecoded {
+                imagen = UIImage(data: datos)!
+            }
         }
         let usuario = Usuario(id: json["id"].int,
                               correo: json["correo"].string,
@@ -65,7 +67,7 @@ class UsuarioService  {
         var imagenString = ""
         if let imagen = usuario.imagen {
             let imagenData = UIImagePNGRepresentation(imagen)!
-            imagenString = imagenData.base64EncodedString(options: .lineLength64Characters)
+            imagenString = imagenData.base64EncodedString()
         }
         
         
