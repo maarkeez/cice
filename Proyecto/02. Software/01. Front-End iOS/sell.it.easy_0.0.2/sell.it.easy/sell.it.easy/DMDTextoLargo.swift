@@ -57,6 +57,9 @@ class DMDTextoLargo: UIViewController {
         //Dar valores al texto y titulo
         myTituloLBL.text = delegate?.getTitulo()
         myTexto.text = delegate?.getTexto()
+        
+        //Mostrar el teclado
+        myTexto.becomeFirstResponder()
     }
     ///Cancelamos la selección si se selecciona fuera de la vista.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -77,5 +80,6 @@ func showDMDTextoLargo(_ delegado: DMDTextoLargoDelegate){
         navController.viewControllers = [selectorVC]
         
         viewControler.show(navController , sender: selectorVC)
+        
     }
 }

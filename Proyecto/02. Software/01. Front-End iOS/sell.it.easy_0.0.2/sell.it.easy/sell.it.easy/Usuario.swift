@@ -9,14 +9,14 @@
 import Foundation
 
 class Usuario {
-    let id : Int?
-    let correo : String?
-    let nombre : String?
-    let apellidos : String?
-    let password : String?
-    let imagen : Data?
+    var id : Int?
+    var correo : String?
+    var nombre : String?
+    var apellidos : String?
+    var password : String?
+    var imagen : UIImage?
     
-   init(id: Int?, correo: String?, nombre: String?, apellidos: String?, password: String?, imagen: Data?) {
+   init(id: Int?, correo: String?, nombre: String?, apellidos: String?, password: String?, imagen: UIImage?) {
         self.id = id
         self.correo = correo
         self.nombre = nombre

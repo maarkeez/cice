@@ -9,7 +9,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
@@ -29,9 +28,6 @@ public class Usuario {
 	
 	@ManyToOne
 	private Imagen imagen;
-	
-	@Lob
-	private String imagenString;
 	
 	
 	public Usuario(){
@@ -92,16 +88,6 @@ public class Usuario {
 
 	public void setImagen(Imagen imagen) {
 		this.imagen = imagen;
-	}
-
-
-	public String getImagenString() {
-		return imagenString;
-	}
-
-
-	public void setImagenString(String imagenString) {
-		this.imagenString = imagenString;
 	}
 	
 	

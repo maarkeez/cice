@@ -872,15 +872,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="MMc-Mk-CjW">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="Pgd-mG-qRr"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Yvg-FJ-Px3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Yvg-FJ-Px3">
                             <connections>
-                                <action selector="addItem:" destination="UWS-gK-FNj" id="S8Y-VN-WSW"/>
+                                <action selector="mySaveACTION:" destination="UWS-gK-FNj" id="cwg-ai-FXY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="myContainer" destination="UGw-Ff-AWI" id="wXf-Co-cOV"/>
                         <outlet property="myMenuBTN" destination="Pgd-mG-qRr" id="rL0-dI-Ijc"/>
+                        <outlet property="mySaveBTN" destination="Yvg-FJ-Px3" id="wza-a6-R2x"/>
                         <outlet property="mySearch" destination="Oqj-y8-HRP" id="Keb-1g-1bb"/>
                         <outlet property="myTable" destination="Z0A-Kx-uRD" id="WHH-Jq-57D"/>
                     </connections>

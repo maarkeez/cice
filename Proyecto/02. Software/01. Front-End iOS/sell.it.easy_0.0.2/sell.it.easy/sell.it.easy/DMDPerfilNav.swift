@@ -26,11 +26,50 @@ class DMDPerfilNav: UINavigationController {
 
 }
 
+extension DMDPerfilNav :  DMDConfirmDelegate {
+    func confirmar(){}
+    func cancelar(){}
+    
+    func getTitulo() -> String{
+        return "Perfil modificado"
+    }
+    func getTexto() -> String{
+        return "Su perfil ha sido modificado con éxito"
+    }
+}
+
+
 extension DMDPerfilNav :  DMDTablaDinamicaCGDelegate {
     
     func setData(_ data: DMDTablaDataCG){
+        let usuario = Session.shared.usuario
         
+        if let celda = data.listaItems[0] as? DMDCeldaPerfil {
+            usuario?.nombre = celda.nombre
+            usuario?.imagen = celda.imagen
+            
+        }
+
+        if let celda = data.listaItems[1] as? DMDCeldaLabel {
+            usuario?.apellidos = celda.texto
+        }
+        
+        if let celda = data.listaItems[2] as? DMDCeldaLabel {
+            usuario?.correo = celda.texto
+        }
+        
+        if let celda = data.listaItems[3] as? DMDCeldaLabel {
+            usuario?.password = celda.texto
+        }
+        
+        UsuarioService.shared.editar(usuario!) { (usuario) in
+            if usuario != nil {
+                Session.shared.usuario = usuario
+                showDMDConfirm(self)
+            }
+        }
     }
+    
     
     
     func getData() -> DMDTablaDataCG {
@@ -39,19 +78,23 @@ extension DMDPerfilNav :  DMDTablaDinamicaCGDelegate {
         
         //Celda de perfil
         let blue_background = #imageLiteral(resourceName: "blue-background")
-        let perfil = #imageLiteral(resourceName: "no-profile")
+        var perfil = #imageLiteral(resourceName: "no-profile")
+        if let imagen = usuario?.imagen {
+            perfil = imagen
+        }
         data.listaItems.append(DMDCeldaPerfil(imagen: perfil, nombre: (usuario?.nombre!)!, fondo: blue_background))
         
         //Apellidos
-        data.listaItems.append(DMDCeldaTexto(nombre: "Apellidos", texto: (usuario?.apellidos!)!))
+        data.listaItems.append(DMDCeldaLabel(nombre: "Apellidos", texto: (usuario?.apellidos!)!))
         
         //Correo
-        data.listaItems.append(DMDCeldaTexto(nombre: "Correo electrónico", texto: (usuario?.correo!)!))
+        data.listaItems.append(DMDCeldaLabel(nombre: "Correo electrónico", texto: (usuario?.correo!)!))
         
         //Contraseña
-        data.listaItems.append(DMDCeldaTexto(nombre: "Contraseña", texto: (usuario?.password!)!))
+        data.listaItems.append(DMDCeldaLabel(nombre: "Contraseña", texto: (usuario?.password!)!))
 
-        
+        //Permitir guardado
+        data.guardar = true
         return data
     }
 }

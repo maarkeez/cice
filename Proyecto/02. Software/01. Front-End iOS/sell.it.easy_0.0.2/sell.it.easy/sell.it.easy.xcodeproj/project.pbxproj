@@ -46,6 +46,8 @@
 		E57B0C021ED1C1110007A96C /* DMDLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0C011ED1C1110007A96C /* DMDLauncher.swift */; };
 		E57B0C051ED1C5D20007A96C /* DMDLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0C041ED1C5D20007A96C /* DMDLogin.swift */; };
 		E57B0C091ED1C9100007A96C /* Money30s.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E57B0C081ED1C9100007A96C /* Money30s.mp4 */; };
+		E59007BE1F4200E4000E10FA /* DMDCeldaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59007BD1F4200E3000E10FA /* DMDCeldaLabel.swift */; };
+		E59007C01F4200F4000E10FA /* CeldaLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = E59007BF1F4200F4000E10FA /* CeldaLabel.xib */; };
 		E5BF8CEA1F1A96E70018A519 /* CeldaTipos.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */; };
 		E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */; };
 		E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */; };
@@ -129,6 +131,8 @@
 		E57B0C011ED1C1110007A96C /* DMDLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDLauncher.swift; sourceTree = "<group>"; };
 		E57B0C041ED1C5D20007A96C /* DMDLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDLogin.swift; sourceTree = "<group>"; };
 		E57B0C081ED1C9100007A96C /* Money30s.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Money30s.mp4; sourceTree = "<group>"; };
+		E59007BD1F4200E3000E10FA /* DMDCeldaLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCeldaLabel.swift; sourceTree = "<group>"; };
+		E59007BF1F4200F4000E10FA /* CeldaLabel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CeldaLabel.xib; sourceTree = "<group>"; };
 		E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaTipos.swift; sourceTree = "<group>"; };
 		E5C8E81D1EC9BD2700355E0D /* DMDListaRecibirPedido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedido.swift; sourceTree = "<group>"; };
 		E5C8E81F1EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListaRecibirPedidoCelda.swift; sourceTree = "<group>"; };
@@ -421,6 +425,15 @@
 			name = VIDEOS;
 			sourceTree = "<group>";
 		};
+		E59007C11F4200F9000E10FA /* CELDA_LABEL */ = {
+			isa = PBXGroup;
+			children = (
+				E59007BD1F4200E3000E10FA /* DMDCeldaLabel.swift */,
+				E59007BF1F4200F4000E10FA /* CeldaLabel.xib */,
+			);
+			name = CELDA_LABEL;
+			sourceTree = "<group>";
+		};
 		E5C8E81C1EC9BCBA00355E0D /* PEDIDO */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +476,7 @@
 				E5BF8CE91F1A96E70018A519 /* CeldaTipos.swift */,
 				E5CB13031F3F217D005D15A8 /* CELDA_CODIGO_BARRAS */,
 				E50E8A011F1A08C200C81338 /* CELDA_FECHA */,
+				E59007C11F4200F9000E10FA /* CELDA_LABEL */,
 				E5E6D58D1F1C0ED900EF77A3 /* CELDA_PERFIL */,
 				E5FCEDC91F40743D000D1FFB /* CELDA_SELECTOR */,
 				E5DE8E091F19A7C500DE80F3 /* CELDA_TEXTO */,
@@ -661,6 +675,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59007C01F4200F4000E10FA /* CeldaLabel.xib in Resources */,
 				E5FCEDC81F4073AC000D1FFB /* CeldaSelector.xib in Resources */,
 				E51ABA691EC7C34C008C2E6C /* LaunchScreen.storyboard in Resources */,
 				E5FCEDCE1F407F94000D1FFB /* CeldaTextoLargo.xib in Resources */,
@@ -776,6 +791,7 @@
 				E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */,
 				E53E20C71EC84C1B00130DEB /* DMDListaProductos.swift in Sources */,
 				E54DEF261F41E9A800EEDEB6 /* Session.swift in Sources */,
+				E59007BE1F4200E4000E10FA /* DMDCeldaLabel.swift in Sources */,
 				E50E8A031F1A08D900C81338 /* DMDCeldaFecha.swift in Sources */,
 				E5C8E8251ECA10C200355E0D /* DMDHistoricos.swift in Sources */,
 				E5FCEDC61F40738C000D1FFB /* DMDCeldaSelector.swift in Sources */,

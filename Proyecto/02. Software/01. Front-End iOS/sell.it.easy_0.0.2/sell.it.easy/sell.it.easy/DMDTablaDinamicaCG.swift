@@ -29,9 +29,12 @@ class DMDTablaDinamicaCG: UIViewController {
     @IBOutlet weak var mySearch: UISearchBar!
     @IBOutlet weak var myTable: UITableView!
     
-    @IBAction func addItem(_ sender: UIBarButtonItem) {
-        
+    @IBOutlet weak var mySaveBTN: UIBarButtonItem!
+    
+    @IBAction func mySaveACTION(_ sender: UIBarButtonItem) {
+        delegate?.setData(data)
     }
+   
     
     //MARK: - Life VC
     override func viewDidLoad() {
@@ -48,9 +51,7 @@ class DMDTablaDinamicaCG: UIViewController {
         // Modificar UI
         mySearch.barTintColor = CONSTANTES.COLOR_AZUL.TAB_NAV_BAR
         mySearch.alpha = 0.7
-        if !data.showSearchBar {
-            hideSearchBar()
-        }
+        
         
         //Opciones para la tabla
         myTable.dataSource = self
@@ -60,6 +61,7 @@ class DMDTablaDinamicaCG: UIViewController {
         myTable.rowHeight = UITableViewAutomaticDimension
         
         //Registrar las celdas para reutilizarlas
+        myTable.register(UINib(nibName: "CeldaLabel", bundle: nil), forCellReuseIdentifier: "CeldaLabel")
         myTable.register(UINib(nibName: "CeldaTexto", bundle: nil), forCellReuseIdentifier: "CeldaTexto")
         myTable.register(UINib(nibName: "CeldaTextoLargo", bundle: nil), forCellReuseIdentifier: "CeldaTextoLargo")
         myTable.register(UINib(nibName: "CeldaFecha", bundle: nil), forCellReuseIdentifier: "CeldaFecha")
@@ -68,8 +70,17 @@ class DMDTablaDinamicaCG: UIViewController {
         myTable.register(UINib(nibName: "CeldaSelector", bundle: nil), forCellReuseIdentifier: "CeldaSelector")
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        delegate?.setData(data)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //Ocultar barra de búsqueda
+        if !data.showSearchBar {
+            hideSearchBar()
+        }
+        
+        //Ocultar botón guardar
+        mySaveBTN.isEnabled = data.guardar
+        
     }
     
     deinit {
@@ -197,6 +208,10 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
         if getSelectedItem() is DMDCeldaTextoLargo {
             showDMDTextoLargo(self)
         }
+        
+        if getSelectedItem() is DMDCeldaLabel {
+            showDMDTextoLargo(self)
+        }
     }
 }
 
@@ -294,8 +309,9 @@ extension DMDTablaDinamicaCG: UITextFieldDelegate{
         self.activeField = textField
     }
     
-    ///Función del delegado, al dejar de edigar un campo de texto se vacía.
+    ///Función del delegado, al dejar de editar un campo de texto se vacía.
     func textFieldDidEndEditing(_ textField: UITextField) {
+        //TODO: Reasignar el valor al data.item correspondiente
         self.activeField = nil
     }
     
@@ -438,7 +454,9 @@ extension DMDTablaDinamicaCG : UIImagePickerControllerDelegate,UINavigationContr
             
             
             if let item = getSelectedItem() as? DMDCeldaPerfil {
-                item.imagen = imagenEscogida
+                let imageData = UIImageJPEGRepresentation(imagenEscogida, 0.2)
+                let imagen = UIImage(data: imageData!)
+                item.imagen = imagen
                 updateSeledtedItem(item)
             }
             
@@ -476,12 +494,22 @@ extension DMDTablaDinamicaCG: DMDTextoLargoDelegate{
             item.texto = texto
             updateSeledtedItem(item)
         }
+        
+        if let item = getSelectedItem() as? DMDCeldaLabel{
+            item.texto = texto
+            updateSeledtedItem(item)
+        }
     }
     
     func getTexto() -> String{
         if let item = getSelectedItem() as? DMDCeldaTextoLargo{
             return item.texto
         }
+        
+        if let item = getSelectedItem() as? DMDCeldaLabel{
+            return item.texto
+        }
+        
         return "Escriba su texto aqui..."
     }
     
@@ -489,6 +517,11 @@ extension DMDTablaDinamicaCG: DMDTextoLargoDelegate{
         if let item = getSelectedItem() as? DMDCeldaTextoLargo{
             return item.titulo
         }
+        
+        if let item = getSelectedItem() as? DMDCeldaLabel{
+            return item.nombre
+        }
+        
         return ""
     }
 }

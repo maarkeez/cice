@@ -45,7 +45,7 @@ class DMDLogin: UIViewController {
         //Redondear los botones
         myIniciarSesionBTN.layer.cornerRadius = 5
         
-        hideKeyboardWhenTappedAround()
+        hideKeyboardWhenTappedAroundWithoutCancel()
         
         //Asignar delegados
         myNombre.delegate = self

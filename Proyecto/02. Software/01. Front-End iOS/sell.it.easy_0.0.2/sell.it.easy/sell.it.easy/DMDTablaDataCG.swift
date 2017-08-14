@@ -31,6 +31,7 @@ class DMDTablaDataCG {
     
     //Mostrar la barra de búsqueda por defecto
     var showSearchBar : Bool = false
+    var guardar : Bool = false
     
     //MARK: - Utils
     
