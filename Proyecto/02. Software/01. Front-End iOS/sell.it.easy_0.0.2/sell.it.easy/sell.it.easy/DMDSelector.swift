@@ -90,7 +90,8 @@ func showDMDSelector(_ delegado: DMDSelectorDelegate){
         navController.modalPresentationStyle = .overCurrentContext
         navController.isNavigationBarHidden = true
         
-        let selectorVC = viewControler.storyboard?.instantiateViewController(withIdentifier :"DMDSelector") as! DMDSelector
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let selectorVC = mainStoryBoard.instantiateViewController(withIdentifier :"DMDSelector") as! DMDSelector
         selectorVC.delegate = viewControler as? DMDSelectorDelegate
         
         navController.viewControllers = [selectorVC]

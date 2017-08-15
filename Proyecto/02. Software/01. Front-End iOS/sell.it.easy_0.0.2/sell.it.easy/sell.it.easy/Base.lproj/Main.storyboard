@@ -617,54 +617,6 @@
             </objects>
             <point key="canvasLocation" x="2573.5999999999999" y="-663.41829085457277"/>
         </scene>
-        <!--Tiendas-->
-        <scene sceneID="YLn-Cd-Zbu">
-            <objects>
-                <viewController storyboardIdentifier="DMDListadoTiendas" automaticallyAdjustsScrollViewInsets="NO" id="Lqw-mC-cLu" customClass="DMDListadoTiendas" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xXV-up-OLx"/>
-                        <viewControllerLayoutGuide type="bottom" id="tBd-cs-q2t"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eYW-bD-1WD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="y8K-dd-mI4">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="RBk-ML-UGZ"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O4w-aO-Y7K">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="O4w-aO-Y7K" firstAttribute="top" secondItem="y8K-dd-mI4" secondAttribute="bottom" id="Bq8-jf-YmS"/>
-                            <constraint firstItem="O4w-aO-Y7K" firstAttribute="leading" secondItem="eYW-bD-1WD" secondAttribute="leading" id="GYe-uf-4wT"/>
-                            <constraint firstItem="y8K-dd-mI4" firstAttribute="leading" secondItem="eYW-bD-1WD" secondAttribute="leading" id="WcI-6G-WMd"/>
-                            <constraint firstItem="y8K-dd-mI4" firstAttribute="top" secondItem="xXV-up-OLx" secondAttribute="bottom" id="WmV-1Q-B3g"/>
-                            <constraint firstAttribute="trailing" secondItem="y8K-dd-mI4" secondAttribute="trailing" id="aQc-Ho-F0M"/>
-                            <constraint firstAttribute="trailing" secondItem="O4w-aO-Y7K" secondAttribute="trailing" id="bhD-OA-9IZ"/>
-                            <constraint firstItem="tBd-cs-q2t" firstAttribute="top" secondItem="O4w-aO-Y7K" secondAttribute="bottom" id="lsR-E8-Om2"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Tiendas" id="ati-z6-Chd">
-                        <barButtonItem key="leftBarButtonItem" title="Menú" id="obb-Hh-jcJ"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Kac-fv-54g"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="myMenuBTN" destination="obb-Hh-jcJ" id="zY1-57-iyN"/>
-                        <outlet property="myTable" destination="O4w-aO-Y7K" id="c8P-kC-Igc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lMU-Ye-wqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1116" y="829"/>
-        </scene>
         <!--Estadisticas-->
         <scene sceneID="lxP-4E-yEd">
             <objects>
@@ -929,7 +881,7 @@
         <!--Item 2-->
         <scene sceneID="sWS-ZK-d1E">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C05-TC-Hmd" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DMDListadoTiendaNav" automaticallyAdjustsScrollViewInsets="NO" id="C05-TC-Hmd" customClass="DMDListadoTiendaNav" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 2" id="y1t-Ei-zqp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aKj-5z-5S0">
@@ -937,9 +889,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Lqw-mC-cLu" kind="relationship" relationship="rootViewController" id="FgV-jI-ha7"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5gj-j5-LNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

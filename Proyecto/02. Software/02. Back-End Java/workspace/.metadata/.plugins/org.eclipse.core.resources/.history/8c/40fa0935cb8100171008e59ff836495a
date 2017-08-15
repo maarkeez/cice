@@ -21,8 +21,8 @@ public class Tienda {
 	private String imagenString;
 
 	private String telefono;
-	//@ManyToOne(optional=false)
-	//private Organizacion organizacion;
+	@ManyToOne(optional=false)
+	private Organizacion organizacion;
 	
 	public Tienda(){}
 
@@ -58,13 +58,13 @@ public class Tienda {
 		this.telefono = telefono;
 	}
 
-//	public Organizacion getOrganizacion() {
-//		return organizacion;
-//	}
-//
-//	public void setOrganizacion(Organizacion organizacion) {
-//		this.organizacion = organizacion;
-//	}
+	public Organizacion getOrganizacion() {
+		return organizacion;
+	}
+
+	public void setOrganizacion(Organizacion organizacion) {
+		this.organizacion = organizacion;
+	}
 	
 	
 }

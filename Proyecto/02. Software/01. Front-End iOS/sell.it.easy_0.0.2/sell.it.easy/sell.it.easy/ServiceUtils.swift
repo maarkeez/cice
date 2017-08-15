@@ -24,4 +24,12 @@ class ServiceUtils  {
             return JSON.null
         }
     }
+    
+    func get(_ url: String, completion:@escaping (JSON) -> Void){
+        
+        Alamofire.request(url).responseJSON().then { (dataJSON) -> JSON in
+            completion(JSON(dataJSON))
+            return JSON.null
+        }
+    }
 }

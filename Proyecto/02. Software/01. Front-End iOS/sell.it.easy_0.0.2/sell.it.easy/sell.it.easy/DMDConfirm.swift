@@ -76,7 +76,8 @@ func showDMDConfirm(_ delegado: DMDConfirmDelegate){
         navController.modalPresentationStyle = .overCurrentContext
         navController.isNavigationBarHidden = true
         
-        let selectorVC = viewControler.storyboard?.instantiateViewController(withIdentifier :"DMDConfirm") as! DMDConfirm
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let selectorVC = mainStoryBoard.instantiateViewController(withIdentifier :"DMDConfirm") as! DMDConfirm
         selectorVC.delegate = viewControler as? DMDConfirmDelegate
         
         navController.viewControllers = [selectorVC]
