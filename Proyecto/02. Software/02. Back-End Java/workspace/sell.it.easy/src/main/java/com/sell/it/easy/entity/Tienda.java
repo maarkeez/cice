@@ -15,8 +15,9 @@ public class Tienda {
 	private Integer id;
 	@Column(nullable=false)
 	private String nombre;
-	@ManyToOne
-	private Imagen imagen;
+	
+	private String imagenString;
+
 	private String telefono;
 	@ManyToOne(optional=false)
 	private Organizacion organizacion;
@@ -39,12 +40,12 @@ public class Tienda {
 		this.nombre = nombre;
 	}
 
-	public Imagen getImagen() {
-		return imagen;
+	public String getImagenString() {
+		return imagenString;
 	}
 
-	public void setImagen(Imagen imagen) {
-		this.imagen = imagen;
+	public void setImagenString(String imagenString) {
+		this.imagenString = imagenString;
 	}
 
 	public String getTelefono() {

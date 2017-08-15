@@ -83,6 +83,11 @@
 		E5FCEDDB1F40C252000D1FFB /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDDA1F40C252000D1FFB /* Producto.swift */; };
 		E5FCEDDD1F40C30A000D1FFB /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDDC1F40C30A000D1FFB /* Tienda.swift */; };
 		E5FCEDE01F40C453000D1FFB /* sell_it_easy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5FCEDDE1F40C453000D1FFB /* sell_it_easy.xcdatamodeld */; };
+		E5FD9C9E1F43064B00F3052E /* Organizacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9C9D1F43064B00F3052E /* Organizacion.swift */; };
+		E5FD9CA01F43073300F3052E /* ServiceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9C9F1F43073300F3052E /* ServiceUtils.swift */; };
+		E5FD9CA21F430C5900F3052E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5FD9CA11F430C5900F3052E /* ObjectMapper.framework */; };
+		E5FD9CA41F43160A00F3052E /* TiendaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9CA31F43160A00F3052E /* TiendaService.swift */; };
+		E5FD9CA61F4332E100F3052E /* Rol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9CA51F4332E100F3052E /* Rol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +173,11 @@
 		E5FCEDDA1F40C252000D1FFB /* Producto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		E5FCEDDC1F40C30A000D1FFB /* Tienda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
 		E5FCEDDF1F40C453000D1FFB /* sell_it_easy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sell_it_easy.xcdatamodel; sourceTree = "<group>"; };
+		E5FD9C9D1F43064B00F3052E /* Organizacion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organizacion.swift; sourceTree = "<group>"; };
+		E5FD9C9F1F43073300F3052E /* ServiceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceUtils.swift; sourceTree = "<group>"; };
+		E5FD9CA11F430C5900F3052E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "Pods/../build/Debug-iphoneos/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
+		E5FD9CA31F43160A00F3052E /* TiendaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiendaService.swift; sourceTree = "<group>"; };
+		E5FD9CA51F4332E100F3052E /* Rol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FD9CA21F430C5900F3052E /* ObjectMapper.framework in Frameworks */,
 				E57B0BFC1ED1856C0007A96C /* FSCalendar.framework in Frameworks */,
 				E57B0BE91ED059380007A96C /* CarbonKit.framework in Frameworks */,
 				E57B0BEA1ED059380007A96C /* Charts.framework in Frameworks */,
@@ -198,6 +209,7 @@
 		8548DEBE50ADAAD67751BC4C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5FD9CA11F430C5900F3052E /* ObjectMapper.framework */,
 				E57B0BFB1ED1856C0007A96C /* FSCalendar.framework */,
 				E57B0BE71ED059380007A96C /* CarbonKit.framework */,
 				E57B0BE81ED059380007A96C /* Charts.framework */,
@@ -595,7 +607,9 @@
 			isa = PBXGroup;
 			children = (
 				E5FCEDD31F40B6A9000D1FFB /* OrganizacionService.swift */,
+				E5FD9CA31F43160A00F3052E /* TiendaService.swift */,
 				E5FCEDD51F40B8CE000D1FFB /* UsuarioService.swift */,
+				E5FD9C9F1F43073300F3052E /* ServiceUtils.swift */,
 				E54DEF251F41E9A800EEDEB6 /* Session.swift */,
 			);
 			name = SERVICES;
@@ -605,6 +619,8 @@
 			isa = PBXGroup;
 			children = (
 				E5FCEDD81F40C172000D1FFB /* Usuario.swift */,
+				E5FD9CA51F4332E100F3052E /* Rol.swift */,
+				E5FD9C9D1F43064B00F3052E /* Organizacion.swift */,
 				E5FCEDDA1F40C252000D1FFB /* Producto.swift */,
 				E5FCEDDC1F40C30A000D1FFB /* Tienda.swift */,
 			);
@@ -751,6 +767,8 @@
 				E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */,
 				E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */,
 				E57B0C021ED1C1110007A96C /* DMDLauncher.swift in Sources */,
+				E5FD9C9E1F43064B00F3052E /* Organizacion.swift in Sources */,
+				E5FD9CA61F4332E100F3052E /* Rol.swift in Sources */,
 				E57B0C051ED1C5D20007A96C /* DMDLogin.swift in Sources */,
 				E54DEF231F41E85900EEDEB6 /* DMDPerfilNav.swift in Sources */,
 				E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */,
@@ -760,6 +778,7 @@
 				E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */,
 				E5FCEDCB1F407F48000D1FFB /* DMDCeldaTextoLargo.swift in Sources */,
 				E57B0BFF1ED185F90007A96C /* DMDCalendario.swift in Sources */,
+				E5FD9CA41F43160A00F3052E /* TiendaService.swift in Sources */,
 				E5CB12FE1F3F215A005D15A8 /* DMDCeldaCodigoBarras.swift in Sources */,
 				E5EAB5871EC8E3460016D86C /* DMDListadoTiendas.swift in Sources */,
 				E5CB12FC1F3F1E1D005D15A8 /* DMDCeldaPerfil.swift in Sources */,
@@ -769,6 +788,7 @@
 				E5EAB5A31EC916180016D86C /* DMDInventarioCelda.swift in Sources */,
 				E52F23961F1B835500FF24D1 /* DMDSelectorFecha.swift in Sources */,
 				E5C8E8201EC9BDF700355E0D /* DMDListaRecibirPedidoCelda.swift in Sources */,
+				E5FD9CA01F43073300F3052E /* ServiceUtils.swift in Sources */,
 				E5FCEDD01F40808A000D1FFB /* DMDTextoLargo.swift in Sources */,
 				E51ABA8F1EC83DB1008C2E6C /* Utils.swift in Sources */,
 				E5F091891F198D670051FFBD /* DMDTablaDataCG.swift in Sources */,
@@ -924,6 +944,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FSCalendar",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ObjectMapper",
 				);
 				INFOPLIST_FILE = sell.it.easy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -946,6 +967,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Charts",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/FSCalendar",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ObjectMapper",
 				);
 				INFOPLIST_FILE = sell.it.easy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

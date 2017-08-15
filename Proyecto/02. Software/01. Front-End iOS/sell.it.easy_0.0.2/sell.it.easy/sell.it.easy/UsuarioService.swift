@@ -18,7 +18,7 @@ class UsuarioService  {
     
     let URL_USUARIO = CONSTANTES.URL_BASE.URL_BASE + CONSTANTES.URL_BASE.PUERTO + "usuario"
     
-    func login(_ usuario : Usuario, completion:@escaping (Usuario?) -> Void){
+    /*func login(_ usuario : Usuario, completion:@escaping (Usuario?) -> Void){
         let URL_LOGIN = URL_USUARIO + "/login"
         
         var request = URLRequest(url: URL(string: URL_USUARIO)!)
@@ -31,7 +31,7 @@ class UsuarioService  {
         }
     }
     
-    func editar(_ usuario : Usuario, completion:@escaping (Usuario?) -> Void){
+    func editarantiguo(_ usuario : Usuario, completion:@escaping (Usuario?) -> Void){
         let URL_EDITAR = URL_USUARIO + "/" + "\(usuario.id!)" + "/editar"
         print("URL_EDITAR:"+URL_EDITAR)
         
@@ -40,6 +40,48 @@ class UsuarioService  {
         let parametros  = getUsuario(usuario)
         
         Alamofire.request(URL_EDITAR, method: HTTPMethod.post, parameters: parametros, encoding: JSONEncoding.default, headers: nil).responseJSON().then{ (dataJSON) -> JSON in
+            completion(self.getUsuario(JSON(dataJSON)))
+            return JSON.null
+        }
+    }*/
+    
+    func login(_ usuario : Usuario, callback:@escaping (Usuario?) -> Void){
+        let URL_LOGIN = URL_USUARIO + "/login"
+        
+        ServiceUtils.shared.post(URL_LOGIN, parametros: usuario) { (json) in
+            let obj = Usuario(JSONString: json.rawString()!)
+            callback(obj)
+        }
+    }
+
+    
+    func editar(_ usuario : Usuario, callback:@escaping (Usuario?) -> Void){
+        let URL_EDITAR = URL_USUARIO + "/" + "\(usuario.id!)" + "/editar"
+        
+        ServiceUtils.shared.post(URL_EDITAR, parametros: usuario) { (json) in
+            let obj = Usuario(JSONString: json.rawString()!)
+            callback(obj)
+        }
+    }
+
+    
+    func alta(_ usuario : Usuario, callback:@escaping (Usuario?) -> Void){
+        let URL_ALTA = URL_USUARIO + "/alta"
+        
+        ServiceUtils.shared.post(URL_ALTA, parametros: usuario) { (json) in
+            let obj = Usuario(JSONString: json.rawString()!)
+            callback(obj)
+        }
+    }
+
+    
+    
+    /*func alta(_ usuario : Usuario, completion:@escaping (Usuario?) -> Void){
+        let URL_ALTA = URL_USUARIO + "/alta"
+                
+        let parametros  = getUsuario(usuario)
+        
+        Alamofire.request(URL_ALTA, method: HTTPMethod.post, parameters: parametros, encoding: JSONEncoding.default, headers: nil).responseJSON().then{ (dataJSON) -> JSON in
             completion(self.getUsuario(JSON(dataJSON)))
             return JSON.null
         }
@@ -79,6 +121,6 @@ class UsuarioService  {
             "password":usuario.password,
             "imagenString":imagenString
         ]
-    }
+    }*/
     
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -19,24 +20,25 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
+	
+	@Column(nullable=false)
 	private String nombre;
+	
 	private String apellidos;
+	
+	@Column(nullable=false)
 	private String correo;
+	
+	@Column(nullable=false)
 	private String password;
 	
 	@ManyToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	private List<Rol> roles = new ArrayList<Rol>();
 	
-	@ManyToOne
-	private Imagen imagen;
-	
 	@Lob
 	private String imagenString;
 	
-	
-	public Usuario(){
-		
-	}
+	public Usuario(){}
 	
 	
 	public Integer getId() {
@@ -83,17 +85,6 @@ public class Usuario {
 	public void addRoles(Rol rol) {
 		this.roles.add(rol);
 	}
-
-
-	public Imagen getImagen() {
-		return imagen;
-	}
-
-
-	public void setImagen(Imagen imagen) {
-		this.imagen = imagen;
-	}
-
 
 	public String getImagenString() {
 		return imagenString;

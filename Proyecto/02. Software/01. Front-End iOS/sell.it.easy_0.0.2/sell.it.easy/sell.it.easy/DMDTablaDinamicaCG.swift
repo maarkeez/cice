@@ -43,10 +43,13 @@ class DMDTablaDinamicaCG: UIViewController {
         //Acciones por defecto para el View Controller
         registerForKeyboardNotifications()
         hideKeyboardWhenTappedAround()
-        mostrarMenu(myMenuBTN)
+        
         
         //Obtenemos los datos del delegado
         data = delegate?.getData()
+        
+        //Depende de data
+        mostrarMenuOrBack()
         
         // Modificar UI
         mySearch.barTintColor = CONSTANTES.COLOR_AZUL.TAB_NAV_BAR
@@ -88,6 +91,19 @@ class DMDTablaDinamicaCG: UIViewController {
     }
     
     //MARK: - Utils
+    func mostrarMenuOrBack(){
+        if data.isBackButton {
+            myMenuBTN.title = "Atrás"
+            myMenuBTN.target = self
+            myMenuBTN.action = #selector(ocultar)
+        }else{
+            mostrarMenu(myMenuBTN)
+        }
+    }
+    
+    func ocultar(){
+        self.dismiss(animated: true, completion: nil)
+    }
     
     ///Oculta la barra de búsqueda de manera animada.
     func hideSearchBarAnimated(){

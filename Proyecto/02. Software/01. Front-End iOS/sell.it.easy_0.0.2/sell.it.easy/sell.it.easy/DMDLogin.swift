@@ -21,11 +21,12 @@ class DMDLogin: UIViewController {
     @IBOutlet weak var myNombre: UITextField!
     @IBOutlet weak var myPassword: UITextField!
     
+    @IBOutlet weak var myRegistrarseBTN: UIButton!
     
     //MARK: - IBActions
     @IBAction func myIniciarSesionACTION(_ sender: Any) {
         
-        let user = Usuario(id: nil, correo: myNombre.text, nombre: nil, apellidos: nil, password: myPassword.text, imagen: nil)
+        let user = Usuario(id: nil, correo: myNombre.text, nombre: nil, apellidos: nil, password: myPassword.text, imagenString: nil)
         UsuarioService.shared.login(user) { (usuario) in
             if usuario != nil && usuario?.id != nil {
                 self.login(usuario!)
@@ -34,6 +35,14 @@ class DMDLogin: UIViewController {
             }
         }
     }
+    
+    @IBAction func myRegistrarseACTION(_ sender: UIButton) {
+        Session.shared.usuario = Usuario(id: nil, correo: "", nombre: "", apellidos: "", password: "", imagenString: nil)
+        let perfilNav = storyboard?.instantiateViewController(withIdentifier: "DMDPerfilNav") as! DMDPerfilNav
+        perfilNav.isBackButton = true
+        present(perfilNav, animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +53,7 @@ class DMDLogin: UIViewController {
         
         //Redondear los botones
         myIniciarSesionBTN.layer.cornerRadius = 5
-        
+        myRegistrarseBTN.layer.cornerRadius = 5
         hideKeyboardWhenTappedAroundWithoutCancel()
         
         //Asignar delegados

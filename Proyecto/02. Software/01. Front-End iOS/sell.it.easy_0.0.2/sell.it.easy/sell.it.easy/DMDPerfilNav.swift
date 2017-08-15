@@ -9,6 +9,8 @@
 import UIKit
 
 class DMDPerfilNav: UINavigationController {
+    
+    var isBackButton : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,24 @@ extension DMDPerfilNav :  DMDTablaDinamicaCGDelegate {
         
         if let celda = data.listaItems[0] as? DMDCeldaPerfil {
             usuario?.nombre = celda.nombre
-            usuario?.imagen = celda.imagen
+            
+            //Comprobamos si existe imagen para el perfil
+            if let imagen = celda.imagen{
+                
+                var imagenTexto = Utils.shared.getTexto(imagen)
+                
+                //Comprobamos si la imagen ha cambiado
+                if imagenTexto != usuario?.imagenString {
+                    //Comprimir la imagen
+                    let imagenComprimida = Utils.shared.comprimirImagen(imagen)
+                    
+                    //Convertir a texto
+                    imagenTexto = Utils.shared.getTexto(imagenComprimida)
+                    
+                    //Reasignar al usuario
+                    usuario?.imagenString = imagenTexto
+                }
+            }
             
         }
 
@@ -62,10 +81,19 @@ extension DMDPerfilNav :  DMDTablaDinamicaCGDelegate {
             usuario?.password = celda.texto
         }
         
-        UsuarioService.shared.editar(usuario!) { (usuario) in
-            if usuario != nil {
-                Session.shared.usuario = usuario
-                showDMDConfirm(self)
+        if usuario?.id != nil{
+            UsuarioService.shared.editar(usuario!) { (usuario) in
+                if usuario != nil {
+                    Session.shared.usuario = usuario
+                    showDMDConfirm(self)
+                }
+            }
+        }else{
+            UsuarioService.shared.alta(usuario!) { (usuario) in
+                if usuario != nil {
+                    Session.shared.usuario = usuario
+                    showDMDConfirm(self)
+                }
             }
         }
     }
@@ -79,8 +107,8 @@ extension DMDPerfilNav :  DMDTablaDinamicaCGDelegate {
         //Celda de perfil
         let blue_background = #imageLiteral(resourceName: "blue-background")
         var perfil = #imageLiteral(resourceName: "no-profile")
-        if let imagen = usuario?.imagen {
-            perfil = imagen
+        if let imagenString = usuario?.imagenString {
+            perfil = Utils.shared.getImagen(imagenString)!
         }
         data.listaItems.append(DMDCeldaPerfil(imagen: perfil, nombre: (usuario?.nombre!)!, fondo: blue_background))
         
@@ -95,6 +123,7 @@ extension DMDPerfilNav :  DMDTablaDinamicaCGDelegate {
 
         //Permitir guardado
         data.guardar = true
+        data.isBackButton = self.isBackButton
         return data
     }
 }

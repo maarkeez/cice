@@ -105,14 +105,30 @@
                                     <action selector="myIniciarSesionACTION:" destination="3EB-hT-USq" eventType="touchUpInside" id="Hfm-Ld-e9Z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glC-XM-UXr">
+                                <rect key="frame" x="101" y="602" width="173" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nTz-9S-jrS"/>
+                                    <constraint firstAttribute="width" constant="173" id="on2-gR-hDv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <state key="normal" title="Registrarse">
+                                    <color key="titleColor" red="0.19997885823249817" green="0.20001345872879028" blue="0.19997128844261169" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="myRegistrarseACTION:" destination="3EB-hT-USq" eventType="touchUpInside" id="1C8-cT-KDv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="G9u-gH-5Ad" firstAttribute="top" secondItem="gxj-Ek-uoX" secondAttribute="bottom" constant="73" id="1c0-ju-bsb"/>
                             <constraint firstItem="gxj-Ek-uoX" firstAttribute="top" secondItem="vyp-B2-MvU" secondAttribute="bottom" constant="8" id="Caj-IJ-Dcp"/>
                             <constraint firstItem="I1Y-kr-KjX" firstAttribute="centerX" secondItem="BUD-b0-dLm" secondAttribute="centerX" id="Fnf-1c-1Oq"/>
+                            <constraint firstItem="glC-XM-UXr" firstAttribute="centerX" secondItem="BUD-b0-dLm" secondAttribute="centerX" id="bqW-rM-RLq"/>
                             <constraint firstItem="vyp-B2-MvU" firstAttribute="centerX" secondItem="BUD-b0-dLm" secondAttribute="centerX" id="hAh-LB-uk7"/>
                             <constraint firstItem="vyp-B2-MvU" firstAttribute="top" secondItem="I1Y-kr-KjX" secondAttribute="bottom" constant="8" id="jsZ-ZA-Jdu"/>
+                            <constraint firstItem="G9u-gH-5Ad" firstAttribute="top" secondItem="glC-XM-UXr" secondAttribute="bottom" constant="35" id="m9h-jz-Ibd"/>
                             <constraint firstItem="gxj-Ek-uoX" firstAttribute="centerX" secondItem="BUD-b0-dLm" secondAttribute="centerX" id="mKg-Ua-AMx"/>
                         </constraints>
                     </view>
@@ -120,6 +136,7 @@
                         <outlet property="myIniciarSesionBTN" destination="gxj-Ek-uoX" id="ohA-Hm-wFl"/>
                         <outlet property="myNombre" destination="I1Y-kr-KjX" id="vTk-6h-bpN"/>
                         <outlet property="myPassword" destination="vyp-B2-MvU" id="Wmi-3b-4nh"/>
+                        <outlet property="myRegistrarseBTN" destination="glC-XM-UXr" id="tVP-ji-o5V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QID-NI-C0u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -448,7 +465,7 @@
         <!--Perfil Nav-->
         <scene sceneID="TxY-jZ-rlv">
             <objects>
-                <navigationController id="mBG-lf-LPa" customClass="DMDPerfilNav" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DMDPerfilNav" id="mBG-lf-LPa" customClass="DMDPerfilNav" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fiE-90-IYz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

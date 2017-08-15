@@ -7,18 +7,28 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Tienda {
-    let id : Int?
-    let nombre : String?
-    let imagen : Data?
-    let telefono : String?
+class Tienda : Mappable{
+    var id : Int?
+    var nombre : String!
+    var imagenString : String?
+    var telefono : String?
     
-    init(id: Int?, nombre: String?, imagen: Data?, telefono: String?) {
+    init(id: Int?, nombre: String, imagenString: String?, telefono: String?) {
         self.id = id
         self.nombre = nombre
-        self.imagen = imagen
+        self.imagenString = imagenString
         self.telefono = telefono
     }
-    // let organizacion
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        nombre <- map["nombre"]
+        imagenString <- map["imagenString"]
+        telefono <- map["telefono"]
+    }
+   
 }

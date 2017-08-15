@@ -1,15 +1,12 @@
 package com.sell.it.easy.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Organizacion {
@@ -18,22 +15,24 @@ public class Organizacion {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
 	
+	@Column(nullable=false)
 	private String CIF;
+	
 	@Column(nullable=false)
 	private String nombre;
+	
+	@Column(nullable=false)
 	private String direccionFiscal;
 	
+	@Lob
+	private String imagenString;
 	
-	@ManyToOne
-	private Imagen imagen;
 	@ManyToOne(optional=false)
 	private TipoProducto tipoProducto;
 	
 	private String telefono;
 	
-	public Organizacion(){
-		
-	}
+	public Organizacion(){}
 
 	public Integer getId() {
 		return id;
@@ -69,12 +68,12 @@ public class Organizacion {
 
 	
 
-	public Imagen getImagen() {
-		return imagen;
+	public String getImagenString() {
+		return imagenString;
 	}
 
-	public void setImagen(Imagen imagen) {
-		this.imagen = imagen;
+	public void setImagenString(String imagenString) {
+		this.imagenString = imagenString;
 	}
 
 	public TipoProducto getTipoProducto() {

@@ -25,7 +25,7 @@ public class OrganizacionController {
 
 	@RequestMapping(value = "/todos", method = RequestMethod.GET)
 	public @ResponseBody List<Organizacion> index(HttpSession session, HttpServletRequest request) {
-		return organizacionRepository.findAll();
+		return organizacionRepository.findAllByOrderByNombreAsc();
 	}
 
 	@RequestMapping(value = "/alta", method = RequestMethod.POST)
@@ -40,13 +40,14 @@ public class OrganizacionController {
 	public @ResponseBody boolean borrar(@PathVariable Integer id, HttpServletRequest request) {
 
 		organizacionRepository.delete(organizacionRepository.findById(id));
-			return true;
+		return true;
 	}
-	
+
 	@RequestMapping(value = "/{id}/editar", method = RequestMethod.POST)
-	public @ResponseBody Organizacion editar(@PathVariable Integer id, HttpServletRequest request, @RequestBody Organizacion organizacion) {
+	public @ResponseBody Organizacion editar(@PathVariable Integer id, HttpServletRequest request,
+			@RequestBody Organizacion organizacion) {
 
 		organizacionRepository.save(organizacion);
-			return organizacion;
+		return organizacion;
 	}
 }

@@ -7,21 +7,35 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class Usuario {
+class Usuario: Mappable {
     var id : Int?
     var correo : String?
     var nombre : String?
     var apellidos : String?
     var password : String?
-    var imagen : UIImage?
+    var imagenString : String?
+    var roles = [Rol]()
     
-   init(id: Int?, correo: String?, nombre: String?, apellidos: String?, password: String?, imagen: UIImage?) {
+   init(id: Int?, correo: String?, nombre: String?, apellidos: String?, password: String?, imagenString: String?) {
         self.id = id
         self.correo = correo
         self.nombre = nombre
         self.apellidos = apellidos
         self.password = password
-        self.imagen = imagen
+        self.imagenString = imagenString
+    }
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        correo <- map["correo"]
+        nombre <- map["nombre"]
+        apellidos <- map["apellidos"]
+        password <- map["password"]
+        imagenString <- map["imagenString"]
+        roles <- map["roles"]
     }
 }
