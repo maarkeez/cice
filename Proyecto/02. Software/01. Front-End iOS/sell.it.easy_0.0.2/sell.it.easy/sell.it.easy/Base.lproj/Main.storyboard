@@ -878,10 +878,10 @@
             </objects>
             <point key="canvasLocation" x="382" y="1562"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Listado Producto Nav-->
         <scene sceneID="2Y6-YB-Vzq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x73-m4-mXM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DMDListadoProductoNav" automaticallyAdjustsScrollViewInsets="NO" id="x73-m4-mXM" customClass="DMDListadoProductoNav" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wjh-Ge-Nqt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

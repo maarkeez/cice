@@ -43,6 +43,7 @@
 		E54DEF201F41DE2100EEDEB6 /* DMDConfirm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DEF1F1F41DE2100EEDEB6 /* DMDConfirm.swift */; };
 		E54DEF231F41E85900EEDEB6 /* DMDPerfilNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DEF221F41E85900EEDEB6 /* DMDPerfilNav.swift */; };
 		E54DEF261F41E9A800EEDEB6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54DEF251F41E9A800EEDEB6 /* Session.swift */; };
+		E554BF361F436F670025AD6A /* StringExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554BF351F436F670025AD6A /* StringExts.swift */; };
 		E57B0BE91ED059380007A96C /* CarbonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B0BE71ED059380007A96C /* CarbonKit.framework */; };
 		E57B0BEA1ED059380007A96C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57B0BE81ED059380007A96C /* Charts.framework */; };
 		E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */; };
@@ -138,6 +139,7 @@
 		E54DEF1F1F41DE2100EEDEB6 /* DMDConfirm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDConfirm.swift; sourceTree = "<group>"; };
 		E54DEF221F41E85900EEDEB6 /* DMDPerfilNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDPerfilNav.swift; sourceTree = "<group>"; };
 		E54DEF251F41E9A800EEDEB6 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		E554BF351F436F670025AD6A /* StringExts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExts.swift; sourceTree = "<group>"; };
 		E57B0BE71ED059380007A96C /* CarbonKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarbonKit.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphoneos/CarbonKit/CarbonKit.framework"; sourceTree = "<group>"; };
 		E57B0BE81ED059380007A96C /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = "Pods/../build/Debug-iphoneos/Charts/Charts.framework"; sourceTree = "<group>"; };
 		E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDEstadisticas.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */,
+				E554BF351F436F670025AD6A /* StringExts.swift */,
 			);
 			name = EXTENSIONS;
 			sourceTree = "<group>";
@@ -818,6 +821,7 @@
 				E51ABA741EC7C6C4008C2E6C /* SWRevealViewController.m in Sources */,
 				E5EAB5A11EC916110016D86C /* DMDEscanerQR.swift in Sources */,
 				E5EAB58E1EC8EE390016D86C /* DMDListadoTiendaCelda.swift in Sources */,
+				E554BF361F436F670025AD6A /* StringExts.swift in Sources */,
 				E5FCEDD41F40B6A9000D1FFB /* OrganizacionService.swift in Sources */,
 				E54B7DFB1F4361AD00DD42AB /* DMDProductoNav.swift in Sources */,
 				E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */,

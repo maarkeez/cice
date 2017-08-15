@@ -48,7 +48,15 @@ extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
     func setData(_ data: DMDTablaDataCG){
         
         if producto.propiedades != nil {
-            producto.propiedades = PropiedadProducto()
+            producto.propiedades = PropiedadProducto(id: nil,
+                                                     talla: nil, // OK
+                                                     codigoDeBarras: nil, //OK
+                                                     codigoDeEmpresa: nil, // OK
+                                                     precioCoste: nil,
+                                                     precioVentaPublico: nil,
+                                                     descuento: nil,
+                                                     imagenString: nil, // OK
+                                                     IVA: nil)
         }
         
         if let celda = data.listaItems[0] as? DMDCeldaPerfil {
@@ -68,25 +76,69 @@ extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
                     imagenTexto = Utils.shared.getTexto(imagenComprimida)
                     
                     //Reasignar al usuario
-                    producto.propiedades.imagenString = imagenTexto
+                    producto.propiedades?.imagenString = imagenTexto
                 }
             }
             
         }
         
+        // 1 - Descripción
         if let celda = data.listaItems[1] as? DMDCeldaLabel {
-            tienda.telefono = celda.texto
+            producto.descripcion = celda.texto
         }
         
-        if tienda.id != nil{
-            TiendaService.shared.editar(tienda) { (tienda) in
-                if tienda != nil {
+        // 2 - Tipo producto
+        if let celda = data.listaItems[2] as? DMDCeldaSelector {
+            producto.tipoProducto = TipoProducto(id: celda.indiceSeleccionado, nombre: CONSTANTES.PRODUCTO_TIPOS[celda.indiceSeleccionado])
+        }
+        
+        // 3 - barcode
+        if let celda = data.listaItems[3] as? DMDCeldaCodigoBarras {
+            producto.propiedades?.codigoDeBarras = celda.codigoBarras
+        }
+
+        // 4 - Talla
+        if let celda = data.listaItems[4] as? DMDCeldaSelector {
+            producto.propiedades?.talla = CONSTANTES.TALLA.LISTADO[celda.indiceSeleccionado]
+        }
+        
+        // 5- Código de empresa
+        if let celda = data.listaItems[5] as? DMDCeldaLabel {
+            producto.propiedades?.codigoDeEmpresa = celda.texto
+        }
+        
+        // 6 - Precio coste
+        if let celda = data.listaItems[6] as? DMDCeldaLabel {
+            producto.propiedades?.precioCoste = celda.texto.floatValue
+        }
+        
+        // 7 - PVP
+        if let celda = data.listaItems[7] as? DMDCeldaLabel {
+            producto.propiedades?.precioVentaPublico = celda.texto.floatValue
+        }
+        
+        // 8 - Descuento
+        if let celda = data.listaItems[8] as? DMDCeldaLabel {
+            producto.propiedades?.descuento = celda.texto.floatValue
+        }
+        
+        // 9 - IVA
+        if let celda = data.listaItems[9] as? DMDCeldaLabel {
+            producto.propiedades?.IVA = celda.texto.floatValue
+        }
+        
+
+        
+        
+        if producto.id != nil{
+            ProductoService.shared.editar(producto) { (producto) in
+                if producto != nil {
                     showDMDConfirm(self)
                 }
             }
         }else{
-            TiendaService.shared.alta(tienda) { (tienda) in
-                if tienda != nil {
+            ProductoService.shared.alta(producto) { (producto) in
+                if producto != nil {
                     showDMDConfirm(self)
                 }
             }
@@ -105,17 +157,48 @@ extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
         }
         data.listaItems.append(DMDCeldaPerfil(imagen: imagen, nombre: producto.nombre!, fondo: blue_background))
         
-        // 1 -
-        data.listaItems.append(DMDCeldaTexto(nombre: "Descripción", texto: producto.descripcion))
+        // 1 - Descripción
+        data.listaItems.append(DMDCeldaTextoLargo(nombre: "Descripción", texto: producto.descripcion))
         
-        // 2 -
-        data.listaItems.append(DMDCeldaSelector(titulo: "Tipo producto", indiceSeleccionado: 1, opciones: ["Textil","Alimentación","Transporte"]))
+        // 2 - Tipo producto
+        var indiceTipo = 0
+        if let tipo = producto.tipoProducto {
+            indiceTipo = tipo.id!
+        }
+        data.listaItems.append(DMDCeldaSelector(titulo: "Tipo producto", indiceSeleccionado: indiceTipo, opciones: CONSTANTES.PRODUCTO_TIPOS))
         
         // 3 - barcode
-        data.listaItems.append(DMDCeldaCodigoBarras(codigoBarras: ""))
+        data.listaItems.append(DMDCeldaCodigoBarras(codigoBarras: producto.propiedades?.codigoDeBarras ?? ""))
         
-        // 4 - 
-        data.listaItems.append(DMDCeldaSelector(titulo: "Talla", indiceSeleccionado: 1, opciones: ["S","M","L","XL","XXL"]))
+        
+        // 4 - Talla
+        var indiceTalla = 0
+        if let propiedades = producto.propiedades {
+            indiceTalla = CONSTANTES.TALLA.LISTADO.index(of: propiedades.talla!)!
+        }
+        data.listaItems.append(DMDCeldaSelector(titulo: "Talla", indiceSeleccionado: indiceTalla, opciones: CONSTANTES.TALLA.LISTADO))
+        
+        // 5 - Código de empresa
+        data.listaItems.append(DMDCeldaLabel(nombre: "Código de empresa", texto: producto.propiedades?.codigoDeEmpresa ?? ""))
+        
+        // 6 - Precio coste
+        let precioCoste = producto.propiedades?.precioCoste ?? 0.0
+        data.listaItems.append(DMDCeldaLabel(nombre: "Precio coste", texto: "\(precioCoste)" ))
+        
+        // 7 - PVP
+        let precioVentaPublico = producto.propiedades?.precioVentaPublico ?? 0.0
+        data.listaItems.append(DMDCeldaLabel(nombre: "PVP", texto: "\(precioVentaPublico)"))
+        
+        // 8 - Descuento
+        let descuento = producto.propiedades?.descuento ?? 0.0
+        data.listaItems.append(DMDCeldaLabel(nombre: "Descuento", texto: "\(descuento)"))
+        
+        // 9 - IVA
+        let IVA = producto.propiedades?.IVA ?? 0.0
+        data.listaItems.append(DMDCeldaLabel(nombre: "IVA", texto: "\(IVA)"))
+        
+       
+        
         
         //Permitir guardado
         data.guardar = true

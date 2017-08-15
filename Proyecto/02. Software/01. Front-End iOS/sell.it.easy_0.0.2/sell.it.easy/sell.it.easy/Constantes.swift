@@ -16,6 +16,7 @@ struct Constantes {
     let COLOR_VIOLETA = ColoresVioletas()
     let COLOR_AZUL = ColoresAzules()
     let URL_BASE = UrlBase()
+    let PRODUCTO_TIPOS = ["Textil","Alimentación","Transporte"]
 }
 
 struct Talla{
@@ -58,6 +59,8 @@ struct UrlBase{
     let URL_BASE = "http://192.168.1.105"
     let PUERTO = ":8081/"
 }
+
+
 
 
 

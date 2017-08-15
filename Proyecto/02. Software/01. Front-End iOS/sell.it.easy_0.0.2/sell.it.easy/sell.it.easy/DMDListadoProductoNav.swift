@@ -66,7 +66,11 @@ extension DMDListadoProductoNav :  DMDTablaDinamicaCGDelegate {
         let data = DMDTablaDataCG()
         
         for objeto in listado {
-            let celda = DMDCeldaLabel(nombre: objeto.nombre , texto: "\(objeto.propiedades?.precioVentaPublico)")
+            
+            let precioVentaPublico = objeto.propiedades?.precioVentaPublico ?? 0.0
+            
+            let celda = DMDCeldaLabel(nombre: objeto.nombre , texto: "\(precioVentaPublico)")
+
             celda.seleccionable = false
             data.listaItems.append(celda)
         }
