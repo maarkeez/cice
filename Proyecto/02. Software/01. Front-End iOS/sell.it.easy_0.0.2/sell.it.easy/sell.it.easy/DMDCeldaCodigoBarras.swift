@@ -13,6 +13,10 @@ class DMDCeldaCodigoBarras: DMDCeldaCGDelegate{
     
     var codigoBarras : String?
     
+    var seleccionable : Bool = true
+    func isSeleccionable() -> Bool {
+        return seleccionable
+    }
     
     init(codigoBarras: String) {
         self.codigoBarras = codigoBarras
@@ -40,4 +44,7 @@ class DMDCeldaCodigoBarras: DMDCeldaCGDelegate{
     func getTipo() -> Int{
         return CELDA_TIPOS.CODIGO_BARRAS
     }
+    
+    
+
 }

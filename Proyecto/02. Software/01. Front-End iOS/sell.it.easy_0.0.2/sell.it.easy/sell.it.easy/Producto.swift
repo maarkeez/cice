@@ -7,24 +7,34 @@
 //
 
 import Foundation
+import ObjectMapper
 
 
-class Producto {
+class Producto : Mappable{
+    var id : Int?
+    var nombre : String!
+    var descripcion : String!
+    var tipoProducto : TipoProducto?
+    var propiedades : PropiedadProducto?
     
-    let id : Int?
-    let nombre : String?
-    let descripcion : String?
-    let pvp : Float?
-    let imagen : Data?
-    
-    
-    init(id: Int?, nombre: String?, descripcion: String?, pvp: Float?, imagen: Data?) {
+    init(id: Int?, nombre: String!, descripcion: String!, tipoProducto: TipoProducto?, propiedades: PropiedadProducto?) {
         self.id = id
         self.nombre = nombre
         self.descripcion = descripcion
-        self.pvp = pvp
-        self.imagen = imagen
+        self.tipoProducto = tipoProducto
+        self.propiedades = propiedades
     }
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        id <- map["id"]
+        nombre <- map["nombre"]
+        descripcion <- map["descripcion"]
+        tipoProducto <- map["tipoProducto"]
+        propiedades <- map["propiedades"]
+    }
+    
    
     
 }

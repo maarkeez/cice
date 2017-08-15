@@ -13,7 +13,11 @@ class DMDCeldaSelector: DMDCeldaCGDelegate {
     var titulo : String
     var indiceSeleccionado : Int
     var opciones : [String]
-    
+    var seleccionable : Bool = true
+    func isSeleccionable() -> Bool {
+        return seleccionable
+    }
+
     init(titulo : String, indiceSeleccionado : Int, opciones: [String]) {
         self.titulo = titulo
         self.indiceSeleccionado = indiceSeleccionado

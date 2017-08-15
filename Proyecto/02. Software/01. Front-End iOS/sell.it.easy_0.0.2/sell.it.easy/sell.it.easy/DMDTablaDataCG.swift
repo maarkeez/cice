@@ -14,6 +14,7 @@ protocol DMDTablaDataCGDelegate{
 }
 
 protocol DMDCeldaCGDelegate {
+    func isSeleccionable() -> Bool
     func getAltura() -> CGFloat
     func getCelda(_ tabla: UITableView) -> UITableViewCell
     func getAcciones() -> [UITableViewRowAction]?

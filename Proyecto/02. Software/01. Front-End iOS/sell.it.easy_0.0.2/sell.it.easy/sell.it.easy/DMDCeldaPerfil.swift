@@ -13,7 +13,11 @@ class DMDCeldaPerfil: DMDCeldaCGDelegate{
     var imagen : UIImage?
     var nombre : String?
     var fondo : UIImage?
-    
+    var seleccionable : Bool = true
+    func isSeleccionable() -> Bool {
+        return seleccionable
+    }
+
     
     init(imagen: UIImage, nombre: String, fondo: UIImage) {
         self.imagen = imagen

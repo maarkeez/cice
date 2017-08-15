@@ -12,7 +12,11 @@ class DMDCeldaTexto: DMDCeldaCGDelegate{
     
     var nombre : String
     var texto : String
-    
+    var seleccionable : Bool = true
+    func isSeleccionable() -> Bool {
+        return seleccionable
+    }
+
     init(nombre: String, texto: String) {
         self.nombre = nombre
         self.texto = texto

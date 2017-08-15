@@ -12,6 +12,11 @@ class DMDCeldaFecha: DMDCeldaCGDelegate{
     
     var texto : String
     var fecha : Date
+    var seleccionable : Bool = true
+    func isSeleccionable() -> Bool {
+        return seleccionable
+    }
+
     
     init(texto: String, fecha : Date) {
         self.fecha = fecha

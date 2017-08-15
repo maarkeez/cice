@@ -34,7 +34,7 @@ class DMDTablaDinamicaCG: UIViewController {
     @IBAction func mySaveACTION(_ sender: UIBarButtonItem) {
         delegate?.setData(data)
     }
-   
+    
     
     //MARK: - Life VC
     override func viewDidLoad() {
@@ -205,28 +205,34 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didSelectItem(indexPath.row)
         
-        if getSelectedItem() is DMDCeldaFecha {
-            showCalendar()
-        }
-        
-        if getSelectedItem() is DMDCeldaCodigoBarras {
-            showLectorCodigoBarras()
-        }
-        
-        if getSelectedItem() is DMDCeldaPerfil {
-            showMenuCeldaPerfil()
-        }
-        
-        if getSelectedItem() is DMDCeldaSelector {
-            showDMDSelector(self)
-        }
-        
-        if getSelectedItem() is DMDCeldaTextoLargo {
-            showDMDTextoLargo(self)
-        }
-        
-        if getSelectedItem() is DMDCeldaLabel {
-            showDMDTextoLargo(self)
+        if let celda = getSelectedItem() {
+            
+            if celda.isSeleccionable() {
+                
+                if celda is DMDCeldaFecha {
+                    showCalendar()
+                }
+                
+                if celda is DMDCeldaCodigoBarras {
+                    showLectorCodigoBarras()
+                }
+                
+                if celda is DMDCeldaPerfil {
+                    showMenuCeldaPerfil()
+                }
+                
+                if celda is DMDCeldaSelector {
+                    showDMDSelector(self)
+                }
+                
+                if celda is DMDCeldaTextoLargo {
+                    showDMDTextoLargo(self)
+                }
+                
+                if celda is DMDCeldaLabel {
+                    showDMDTextoLargo(self)
+                }
+            }
         }
     }
 }

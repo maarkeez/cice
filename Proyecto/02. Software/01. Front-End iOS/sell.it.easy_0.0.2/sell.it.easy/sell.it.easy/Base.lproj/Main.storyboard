@@ -739,58 +739,6 @@
             </objects>
             <point key="canvasLocation" x="2860" y="1560.2698650674663"/>
         </scene>
-        <!--Productos-->
-        <scene sceneID="fDH-XP-0as">
-            <objects>
-                <viewController storyboardIdentifier="DMDListaProductos" automaticallyAdjustsScrollViewInsets="NO" id="sgv-y6-N8I" customClass="DMDListaProductos" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZQ0-Zx-yEa"/>
-                        <viewControllerLayoutGuide type="bottom" id="QWk-2l-QEf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DIh-Ru-bun">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PH7-t3-36N">
-                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VJU-KA-MqR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="eVh-RB-Plt"/>
-                                </constraints>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="PH7-t3-36N" secondAttribute="trailing" id="Jw3-X8-Hcj"/>
-                            <constraint firstItem="PH7-t3-36N" firstAttribute="leading" secondItem="DIh-Ru-bun" secondAttribute="leading" id="aaB-Kn-flS"/>
-                            <constraint firstItem="VJU-KA-MqR" firstAttribute="top" secondItem="ZQ0-Zx-yEa" secondAttribute="bottom" id="gQs-Lt-Ip0"/>
-                            <constraint firstItem="QWk-2l-QEf" firstAttribute="top" secondItem="PH7-t3-36N" secondAttribute="bottom" id="gkd-ZC-DbN"/>
-                            <constraint firstItem="PH7-t3-36N" firstAttribute="top" secondItem="VJU-KA-MqR" secondAttribute="bottom" id="kLk-mc-feM"/>
-                            <constraint firstItem="VJU-KA-MqR" firstAttribute="leading" secondItem="DIh-Ru-bun" secondAttribute="leading" id="mIy-ea-doY"/>
-                            <constraint firstAttribute="trailing" secondItem="VJU-KA-MqR" secondAttribute="trailing" id="oXR-jq-wdx"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Productos" id="fh0-cQ-ON1">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="hVT-Tx-cx4"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iaZ-Pl-8Nq">
-                            <connections>
-                                <action selector="addProductoACTION:" destination="sgv-y6-N8I" id="Xcu-Ge-EtS"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="myMenuBTN" destination="hVT-Tx-cx4" id="i1X-Z1-gDQ"/>
-                        <outlet property="myTable" destination="PH7-t3-36N" id="IsA-gg-Nt3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aem-iz-Erj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1116" y="2256.521739130435"/>
-        </scene>
         <!--Tabla DinamicaCG-->
         <scene sceneID="dU0-yW-mks">
             <objects>
@@ -940,9 +888,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="sgv-y6-N8I" kind="relationship" relationship="rootViewController" id="HMZ-tl-vOS"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5Q-vV-WEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

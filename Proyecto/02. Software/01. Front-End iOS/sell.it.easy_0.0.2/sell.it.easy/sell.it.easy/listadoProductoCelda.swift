@@ -10,39 +10,39 @@ import UIKit
 
 class listadoProductoCelda: UITableViewCell {
     
-    //MARK: - IBOutlets
-    
-    @IBOutlet weak var myImagen: UIImageView!
-    @IBOutlet weak var myNombre: UILabel!
-    @IBOutlet weak var myPrecio: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
-    func setIBOutlets(_ producto: Producto){
-        
-        if let imagenData = producto.imagen {
-            myImagen.image =  UIImage(data: imagenData as Data)
-        }
-        
-        if let nombre = producto.nombre {
-            myNombre.text = nombre
-
-        }
-        
-        
-        
-        myPrecio.text = "\(producto.pvp)"
-        
-        
-    }
+//    //MARK: - IBOutlets
+//    
+//    @IBOutlet weak var myImagen: UIImageView!
+//    @IBOutlet weak var myNombre: UILabel!
+//    @IBOutlet weak var myPrecio: UILabel!
+//    
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        // Initialization code
+//    }
+//    
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//        
+//        // Configure the view for the selected state
+//    }
+//    
+//    func setIBOutlets(_ producto: Producto){
+//        
+//        if let imagenData = producto.imagen {
+//            myImagen.image =  UIImage(data: imagenData as Data)
+//        }
+//        
+//        if let nombre = producto.nombre {
+//            myNombre.text = nombre
+//
+//        }
+//        
+//        
+//        
+//        myPrecio.text = "\(producto.pvp)"
+//        
+//        
+//    }
     
 }
