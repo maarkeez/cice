@@ -1,0 +1,75 @@
+---------------------------
+-- iOS - Front End
+---------------------------
+Ventanas a implementar:
+
+- Compra online
+
+- Inventario 
+
+- Organización (Fuera de scope)
+
+- Pedido
+
+
+- Pedido Productos
+
+- Producto
+* Crear . OK
+* Editar . OK
+* Listar . OK
+* Buscar . PDTE
+* Borrar . PDTE
+
+- Propiedad producto
+
+- Rol
+
+- Stock
+
+- Tiendas
+* Crear . OK
+* Editar . OK
+* Listar . OK
+* Buscar . PDTE
+* Borrar . PDTE
+
+- Tipo Compra. 
+
+- Tipo Pago. 
+
+- Tipo Producto. 
+
+- Usuario
+* Registro. OK
+* Inicio de sesión. OK
+
+- Venta física
+* Ventana de venta, con resumen de la compra.
+* Visualizar productos.
+* Añadir productos. 
+* Descartar.
+* Confirmar.
+* Guardar para luego. (fuera de scope)
+
+- Venta física (Resumen compra)
+* Vendedor. OK
+* Fecha. OK 
+* Total a pagar.
+* Cantidad total productos.
+
+--- Otros
+
+- Caja
+* Validar se ha seleccionado tienda. OK.
+* Nueva venta física. 
+* Listar ventas.
+* Hacer inventario.
+* Mostrar estadísticas.
+
+
+- Ticket
+* Crear . PDTE
+* Visualizar. PDTE
+* Listar . PDTE
+

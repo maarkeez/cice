@@ -34,6 +34,9 @@
 		E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D31EC865F600130DEB /* ProductoRepository.swift */; };
 		E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */; };
 		E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */; };
+		E5494C2E1F44B6A10078B38F /* DMDTiendaSeleccionar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494C2D1F44B6A10078B38F /* DMDTiendaSeleccionar.swift */; };
+		E5494C301F44BD040078B38F /* DMDVentaFisica.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494C2F1F44BD040078B38F /* DMDVentaFisica.swift */; };
+		E5494C331F44C5310078B38F /* DateExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494C321F44C5310078B38F /* DateExts.swift */; };
 		E54B7DF71F433E2D00DD42AB /* DMDTiendaNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B7DF61F433E2D00DD42AB /* DMDTiendaNav.swift */; };
 		E54B7DF91F43619D00DD42AB /* DMDListadoProductoNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B7DF81F43619D00DD42AB /* DMDListadoProductoNav.swift */; };
 		E54B7DFB1F4361AD00DD42AB /* DMDProductoNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B7DFA1F4361AD00DD42AB /* DMDProductoNav.swift */; };
@@ -130,6 +133,9 @@
 		E53E20D31EC865F600130DEB /* ProductoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductoRepository.swift; sourceTree = "<group>"; };
 		E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listadoProductoCelda.swift; sourceTree = "<group>"; };
 		E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = listadoProductoCelda.xib; sourceTree = "<group>"; };
+		E5494C2D1F44B6A10078B38F /* DMDTiendaSeleccionar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDTiendaSeleccionar.swift; sourceTree = "<group>"; };
+		E5494C2F1F44BD040078B38F /* DMDVentaFisica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDVentaFisica.swift; sourceTree = "<group>"; };
+		E5494C321F44C5310078B38F /* DateExts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExts.swift; sourceTree = "<group>"; };
 		E54B7DF61F433E2D00DD42AB /* DMDTiendaNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDTiendaNav.swift; sourceTree = "<group>"; };
 		E54B7DF81F43619D00DD42AB /* DMDListadoProductoNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDListadoProductoNav.swift; sourceTree = "<group>"; };
 		E54B7DFA1F4361AD00DD42AB /* DMDProductoNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDProductoNav.swift; sourceTree = "<group>"; };
@@ -330,6 +336,7 @@
 				E5F091831F1989090051FFBD /* TABLA_GENERICA */,
 				E5FCEDD11F40808F000D1FFB /* TEXTO_LARGO */,
 				E5EAB5851EC8E30B0016D86C /* TIENDA */,
+				E5494C311F44BD090078B38F /* VENTA_FISICA */,
 			);
 			name = VIEW_CONTROLLERS;
 			sourceTree = "<group>";
@@ -369,6 +376,7 @@
 			children = (
 				E53E20CC1EC85C1400130DEB /* UIViewControllerExts.swift */,
 				E554BF351F436F670025AD6A /* StringExts.swift */,
+				E5494C321F44C5310078B38F /* DateExts.swift */,
 			);
 			name = EXTENSIONS;
 			sourceTree = "<group>";
@@ -392,6 +400,14 @@
 				E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */,
 			);
 			name = CELDAS;
+			sourceTree = "<group>";
+		};
+		E5494C311F44BD090078B38F /* VENTA_FISICA */ = {
+			isa = PBXGroup;
+			children = (
+				E5494C2F1F44BD040078B38F /* DMDVentaFisica.swift */,
+			);
+			name = VENTA_FISICA;
 			sourceTree = "<group>";
 		};
 		E54DEF211F41E28200EEDEB6 /* CONFIRM */ = {
@@ -533,6 +549,7 @@
 			children = (
 				E5FD9CA71F43390E00F3052E /* DMDListadoTiendaNav.swift */,
 				E54B7DF61F433E2D00DD42AB /* DMDTiendaNav.swift */,
+				E5494C2D1F44B6A10078B38F /* DMDTiendaSeleccionar.swift */,
 				E5EAB5901EC8EE3D0016D86C /* CELDAS */,
 			);
 			name = TIENDA;
@@ -826,6 +843,7 @@
 				E54B7DFB1F4361AD00DD42AB /* DMDProductoNav.swift in Sources */,
 				E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */,
 				E5C8E8271ECA203900355E0D /* DMDHistoricoRecepciones.swift in Sources */,
+				E5494C2E1F44B6A10078B38F /* DMDTiendaSeleccionar.swift in Sources */,
 				E5FCEDD91F40C172000D1FFB /* Usuario.swift in Sources */,
 				E5FCEDD61F40B8CE000D1FFB /* UsuarioService.swift in Sources */,
 				E5FCEDDB1F40C252000D1FFB /* Producto.swift in Sources */,
@@ -833,12 +851,14 @@
 				E5EAB58B1EC8EAD20016D86C /* TiendaRepository.swift in Sources */,
 				E5F0918B1F19957B0051FFBD /* DummyTablaDataCG.swift in Sources */,
 				E5DE8E081F19A7A100DE80F3 /* DMDCeldaTexto.swift in Sources */,
+				E5494C301F44BD040078B38F /* DMDVentaFisica.swift in Sources */,
 				E53E20CD1EC85C1400130DEB /* UIViewControllerExts.swift in Sources */,
 				E54DEF261F41E9A800EEDEB6 /* Session.swift in Sources */,
 				E59007BE1F4200E4000E10FA /* DMDCeldaLabel.swift in Sources */,
 				E50E8A031F1A08D900C81338 /* DMDCeldaFecha.swift in Sources */,
 				E5C8E8251ECA10C200355E0D /* DMDHistoricos.swift in Sources */,
 				E5FCEDC61F40738C000D1FFB /* DMDCeldaSelector.swift in Sources */,
+				E5494C331F44C5310078B38F /* DateExts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

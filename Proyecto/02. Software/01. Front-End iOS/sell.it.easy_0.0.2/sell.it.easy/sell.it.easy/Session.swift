@@ -11,6 +11,7 @@ import Foundation
 class Session {
 
     var usuario : Usuario!
+    var tiendaSeleccionada : Tienda?
     
     //Singleton
     static let shared = Session()
