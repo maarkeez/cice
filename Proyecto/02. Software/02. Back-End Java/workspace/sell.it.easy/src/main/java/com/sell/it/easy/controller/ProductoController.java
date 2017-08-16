@@ -58,6 +58,15 @@ public class ProductoController {
 		producto = repository.save(producto);
 		return producto;
 	}
+	
+	@RequestMapping(value = "/findBy/codigoDeBarras={codigo}", method = RequestMethod.GET)
+	public @ResponseBody Producto findByCodigoDeBarras(@PathVariable String codigo, HttpServletRequest request) {
+		List<Producto> productos =  repository.findByPropiedades_codigoDeBarras(codigo);
+		if (productos != null && productos.size() > 0 ){
+			return productos.get(0);
+		}
+		return null;
+	}
 
 
 }

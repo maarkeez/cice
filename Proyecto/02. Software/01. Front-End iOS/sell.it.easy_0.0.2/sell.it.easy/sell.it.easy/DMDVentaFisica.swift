@@ -11,8 +11,8 @@ import UIKit
 class DMDVentaFisica: UIViewController {
     
     //MARK: - Variables locales
-    var vendedor : Usuario?
-    var fecha : Date?
+    var ventaFisica : VentaFisica?
+    var productos = [Producto]()
     
     //MARK: - IBOutlets
     @IBOutlet weak var myNombreVendedor: UILabel!
@@ -29,7 +29,9 @@ class DMDVentaFisica: UIViewController {
     }
     
     @IBAction func myProductosACTION(_ sender: UIButton) {
+        let listadoProductoVC = storyboard?.instantiateViewController(withIdentifier: "DMDListaRecibirPedido") as? DMDListaRecibirPedido
         
+        self.navigationController?.pushViewController(listadoProductoVC!, animated: true)
     }
     
     @IBAction func myConfirmarACTION(_ sender: UIButton) {
@@ -51,20 +53,30 @@ class DMDVentaFisica: UIViewController {
         
         
         //Set Initial IBOutlets
-        setVendedor(Session.shared.usuario)
-        setFechaActual(Date())
-        setTotal(0)
-        setCantidadProductos(0)
+        setVentaFisica(VentaFisica(id: nil,
+                                   fecha: Date(),
+                                   vendedor: Session.shared.usuario,
+                                   pedido: nil))
         
+        
+    }
+    
+    func setVentaFisica(_ ventaFisica : VentaFisica){
+        self.ventaFisica = ventaFisica
+        setVendedor(ventaFisica.vendedor!)
+        setFechaActual(ventaFisica.fecha)
+        setTotal(getTotal())
+        setCantidadProductos(Float(productos.count))
     }
     
     func setVendedor(_ usuario: Usuario) {
         myNombreVendedor.text = usuario.nombre
-        vendedor = usuario
+        ventaFisica?.vendedor = usuario
     }
     
     func setFechaActual(_ fecha: Date){
         myFecha.text = fecha.stringValue
+        ventaFisica?.fecha = fecha
     }
     
     func setTotal(_ total: Float){
@@ -73,5 +85,16 @@ class DMDVentaFisica: UIViewController {
     
     func setCantidadProductos(_ total: Float){
         myCantidadProductos.text = "\(total)"
+    }
+    
+    func getTotal() -> Float{
+        var total : Float  = 0.0
+        
+        for producto in productos {
+            if let pvp = producto.propiedades?.precioVentaPublico {
+                total = total + pvp
+            }
+        }
+        return total
     }
 }

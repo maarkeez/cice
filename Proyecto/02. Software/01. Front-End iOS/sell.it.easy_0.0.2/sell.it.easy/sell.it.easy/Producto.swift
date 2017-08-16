@@ -34,7 +34,4 @@ class Producto : Mappable{
         tipoProducto <- map["tipoProducto"]
         propiedades <- map["propiedades"]
     }
-    
-   
-    
 }

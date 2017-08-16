@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sell.it.easy.entity.Producto;
+import com.sell.it.easy.entity.PropiedadProducto;
 import com.sell.it.easy.repository.ProductoRepository;
+import com.sell.it.easy.repository.PropiedadProductoRepository;
 
 @RestController
 @RequestMapping(value="/producto")
@@ -24,6 +26,9 @@ public class ProductoController {
 
 	@Autowired
 	private ProductoRepository repository;
+	
+	@Autowired
+	private PropiedadProductoRepository propiedadRepository;
 
 	@RequestMapping(value = "/todos", method = RequestMethod.GET)
 	public @ResponseBody List<Producto> index(HttpSession session, HttpServletRequest request) {
@@ -32,7 +37,8 @@ public class ProductoController {
 
 	@RequestMapping(value = "/alta", method = RequestMethod.POST)
 	public @ResponseBody Producto alta(HttpServletRequest request, @RequestBody Producto producto) {
-
+		PropiedadProducto propiedad = propiedadRepository.save(producto.getPropiedades());
+		producto.setPropiedades(propiedad);
 		producto  = repository.save(producto);
 
 		return producto;
@@ -47,9 +53,19 @@ public class ProductoController {
 	
 	@RequestMapping(value = "/{id}/editar", method = RequestMethod.POST)
 	public @ResponseBody Producto editar(@PathVariable Integer id, HttpServletRequest request, @RequestBody Producto producto) {
-
-		repository.save(producto);
-			return producto;
+		PropiedadProducto propiedad = propiedadRepository.save(producto.getPropiedades());
+		producto.setPropiedades(propiedad);
+		producto = repository.save(producto);
+		return producto;
+	}
+	
+	@RequestMapping(value = "/find/codigoDeBarras={codigo}", method = RequestMethod.GET)
+	public @ResponseBody List<Producto> findByCodigoDeBarras(@PathVariable String codigo HttpServletRequest request) {
+		List<Producto> productos =  repository.findByPropiedades_codigoDeBarras(codigo);
+		if (productos != null && productos.size() > 0 ){
+			return productos.get(0);
+		}
+		return null;
 	}
 
 

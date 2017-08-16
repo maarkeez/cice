@@ -9,13 +9,13 @@
 import UIKit
 
 protocol DMDListaRecibirPedidoCeldaDelegate {
-    func setCantidad(_ id: Int32, cantidad: Int)
+    func setCantidad(_ id: Int, cantidad: Int)
 }
 
 class DMDListaRecibirPedidoCelda: UITableViewCell {
     
     //MARK: - Variables locales
-    var idProducto : Int32?
+    var idProducto : Int?
     var delegate : DMDListaRecibirPedidoCeldaDelegate?
     
     //MARK: - IBOutlets

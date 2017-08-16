@@ -14,10 +14,10 @@ class ProductoService  {
     
     static let shared = ProductoService()
     
-    let URL_ORGANIZACION = CONSTANTES.URL_BASE.URL_BASE + CONSTANTES.URL_BASE.PUERTO + "producto/"
+    let URL_PRODUCTO = CONSTANTES.URL_BASE.URL_BASE + CONSTANTES.URL_BASE.PUERTO + "producto/"
     
     func alta(_ objeto : Producto, callback:@escaping (Producto?) -> Void){
-        let URL_ALTA = URL_ORGANIZACION + "alta"
+        let URL_ALTA = URL_PRODUCTO + "alta"
         
         ServiceUtils.shared.post(URL_ALTA, parametros: objeto) { (json) in
             let obj = Producto(JSONString: json.rawString()!)
@@ -26,7 +26,7 @@ class ProductoService  {
     }
     
     func editar(_ objeto : Producto, callback:@escaping (Producto?) -> Void){
-        let URL_ALTA = URL_ORGANIZACION + "\(objeto.id!)" + "/editar"
+        let URL_ALTA = URL_PRODUCTO + "\(objeto.id!)" + "/editar"
         
         ServiceUtils.shared.post(URL_ALTA, parametros: objeto) { (json) in
             let obj = Producto(JSONString: json.rawString()!)
@@ -35,7 +35,7 @@ class ProductoService  {
     }
     
     func todos(callback:@escaping ([Producto]) -> Void){
-        let URL_ALTA = URL_ORGANIZACION + "todos"
+        let URL_ALTA = URL_PRODUCTO + "todos"
         
         ServiceUtils.shared.get(URL_ALTA) { (json) in
             
@@ -48,5 +48,15 @@ class ProductoService  {
             
             callback(tiendas)
         }
+    }
+    
+    func findByCodigoDeBarras(_ codigo: String, callback:@escaping (Producto?) -> Void){
+        let URL_BUSQUEDA = URL_PRODUCTO + "/findBy/codigoDeBarras=" + codigo
+        
+        ServiceUtils.shared.get(URL_BUSQUEDA) { (json) in
+            let obj = Producto(JSONString: json.rawString()!)
+            callback(obj)
+        }
+        
     }
 }

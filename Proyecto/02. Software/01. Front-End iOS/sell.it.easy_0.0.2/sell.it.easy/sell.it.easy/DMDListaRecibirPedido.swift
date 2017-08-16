@@ -9,180 +9,203 @@
 import UIKit
 
 class DMDListaRecibirPedido: UIViewController {
-//
-//    //MARK: - Variables locales
-//    var listadoProductos = [Producto]()
-//    var cantidades = [String:Int]()
-//    var isToolbarHidden : Bool?
-//    
-//    
-//    
-//    //MARK: - IBOutlets
-//    
-//    @IBOutlet weak var myTable: UITableView!
-//    
-//    //MARK: - IBActions
-//    @IBAction func escanearACTION(_ sender: Any) {
-//        let escanerVC =  storyboard?.instantiateViewController(withIdentifier: "EscanerQR") as! DMDEscanerQR
-//        escanerVC.delegate = self
-//        navigationController?.pushViewController(escanerVC, animated: true)
+
+    //MARK: - Variables locales
+    var listadoProductos = [Producto]()
+    var cantidades = [String:Int]()
+    var isToolbarHidden : Bool?
+    
+    
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var myTable: UITableView!
+    
+    //MARK: - IBActions
+    @IBAction func escanearACTION(_ sender: Any) {
+        let escanerVC =  storyboard?.instantiateViewController(withIdentifier: "EscanerQR") as! DMDEscanerQR
+        escanerVC.delegate = self
+        navigationController?.pushViewController(escanerVC, animated: true)
+        
+    }
+    
+    
+    ///Guardar la lista de productos como inventario a fecha actual
+    @IBAction func confirmarACTION(_ sender: Any) {
+        //TODO:Reimplementar
+//        let listaProductos = ListaProductosRepository.shared.new()
+//        listaProductos.tipo = ListaProductosRepository.shared.TIPO_RECEPCION_PEDIDO
+//        listaProductos.listaproductos2producto = NSSet(array: listadoProductos)
 //        
-//    }
-//    
-//    
-//    ///Guardar la lista de productos como inventario a fecha actual
-//    @IBAction func confirmarACTION(_ sender: Any) {
-//        //TODO:Reimplementar
-////        let listaProductos = ListaProductosRepository.shared.new()
-////        listaProductos.tipo = ListaProductosRepository.shared.TIPO_RECEPCION_PEDIDO
-////        listaProductos.listaproductos2producto = NSSet(array: listadoProductos)
-////        
-//        
-//        
-//    }
-//    
-//    @IBAction func paraMasTardeACTION(_ sender: Any) {
-//        
-//        
-//    }
-//    
-//    @IBAction func cancelarACTION(_ sender: Any) {
-//    
-//    
-//    }
-//    
-//    
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//        //Guardamos el estado actual de la barra de navegación
-//        isToolbarHidden = (navigationController?.isToolbarHidden)!
-//        //Mostramos la barra inferior para poder acceder a los botones de las acciones
-//        navigationController?.isToolbarHidden = false
-//        
-//        //Delegadosd
-//        myTable.dataSource = self
-//        myTable.delegate = self
-//    }
-//    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        //Se deja el estado de la barra inferior como estuviera antes de mostrar la vista
-//        navigationController?.isToolbarHidden = isToolbarHidden!
-//    }
-//
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//    }
-//
-//    
-//    func addProducto(_ producto: Producto, cantidad: Int){
-//        var existe = false
-//        
-//        for productoLista in listadoProductos {
-//            if productoLista.id == producto.id {
-//                existe = true
-//                if cantidades["\(productoLista.id)"] != nil {
-//                    cantidades["\(productoLista.id)"] = cantidades["\(productoLista.id)"]! + cantidad
-//                }else{
-//                    cantidades["\(productoLista.id)"] = cantidad
-//                }
-//            }
-//        }
-//        
-//        if(!existe){
-//            listadoProductos.append(producto)
-//            cantidades["\(producto.id)"] = cantidad
-//        }
-//    }
-//}
-//
-////MARK: - Extensión para mostrar el listado de productos
-//extension DMDListaRecibirPedido: UITableViewDelegate, UITableViewDataSource{
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let celda = tableView.dequeueReusableCell(withIdentifier: "DMDListaRecibirPedidoCelda") as! DMDListaRecibirPedidoCelda
-//        
-//        let producto = listadoProductos[indexPath.row]
-//        
-//        if let imagenData = producto.imagen {
-//            celda.myImagen.image =  UIImage(data: imagenData as Data)
-//        }
-//        
-//        if let nombre = producto.nombre {
-//            celda.myNombre.text = nombre
-//        }
-//        
-//        let cantidad = cantidades["\(producto.id)"]
-//        
-//        if let cantidadDes = cantidad {
-//            celda.myCantidad.text = "\(cantidadDes)"
-//            celda.myStepper.value = Double(cantidadDes)
-//        }else{
-//            celda.myCantidad.text = "0"
-//            celda.myStepper.value = 0.0
-//        }
-//        celda.idProducto = producto.id
-//        celda.delegate = self
-//        
-//        return celda
-//    }
-//    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-//    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return listadoProductos.count
-//    }
-//    
-//   
-//    
-//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-//        
-//        let borrarCelda = UITableViewRowAction(style: .destructive, title: "Borrar") { (action, indexPath) in
-//            let productoID = self.listadoProductos[indexPath.row].id
-//            self.listadoProductos.remove(at: indexPath.row)
-//            self.cantidades["\(productoID)"] = 0
-//            tableView.reloadData()
-//            
-//        }
-//        borrarCelda.backgroundColor = CONSTANTES.COLOR.ROJO_GENERAL
-//        
-//        return [borrarCelda]
-//        
-//        
-//    }
-//    
-//}
-//
-////MARK: - Escaner QR
-//extension DMDListaRecibirPedido : DMDEscanerQRDelegate {
-//    
-//    func soloUno() -> Bool {
-//        
-//        return false
-//    }
-//    
-//    
-//    func getCodigosEscaneados(_ escanerQR: DMDEscanerQR, codigos : [String]){
-//        
-//        for codigo in codigos {
-//            let producto = ProductoRepository.shared.findByCodigoBarras(codigo)
-//            if producto != nil {
-//                addProducto(producto!, cantidad: 1)
-//            }
-//        }
-//        myTable.reloadData()
-//        
-//    }
-//    
-//    
-//}
-//
-////MARK: - Extension aumentar desde la lista
-//extension DMDListaRecibirPedido : DMDListaRecibirPedidoCeldaDelegate {
-//    func setCantidad(_ id: Int32, cantidad: Int){
-//        cantidades["\(id)"] = cantidad
-//    }
+        
+        
+    }
+    
+    @IBAction func paraMasTardeACTION(_ sender: Any) {
+        //TODO: Implementar
+        
+    }
+    
+    @IBAction func cancelarACTION(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Guardamos el estado actual de la barra de navegación
+        isToolbarHidden = (navigationController?.isToolbarHidden)!
+        //Mostramos la barra inferior para poder acceder a los botones de las acciones
+        navigationController?.isToolbarHidden = false
+        
+        //Delegados
+        myTable.dataSource = self
+        myTable.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //Se deja el estado de la barra inferior como estuviera antes de mostrar la vista
+        navigationController?.isToolbarHidden = isToolbarHidden!
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    ///Permite aumentar x cantidad para un producto en el listado interno
+    func addProducto(_ producto: Producto, cantidad: Int){
+        var existe = false
+        
+        //Recorrer la lista de productos
+        for productoLista in listadoProductos {
+            
+            //Si se trata del producto a añadir
+            if productoLista.id == producto.id {
+                
+                //Marcamos el producto como existente
+                existe = true
+                
+                //Comprobar si tiene cantidad asociada
+                if cantidades["\(productoLista.id)"] != nil {
+                    //Si tiene alguna cantidad asociada, sumamos la nueva cantidaad
+                    cantidades["\(productoLista.id)"] = cantidades["\(productoLista.id)"]! + cantidad
+                }else{
+                    //Si no tiene cantidad, se la asignamos
+                    cantidades["\(productoLista.id)"] = cantidad
+                }
+            }
+        }
+        
+        if(!existe){
+            //Si no existe, lo añadimos y le asignamos la cantidad.
+            listadoProductos.append(producto)
+            cantidades["\(producto.id)"] = cantidad
+        }
+    }
+}
+
+//MARK: - Extensión para mostrar el listado de productos
+extension DMDListaRecibirPedido: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        //Recuperar el producto para generar la celda
+        let producto = listadoProductos[indexPath.row]
+        
+        //Crear la celda
+        let celda = tableView.dequeueReusableCell(withIdentifier: "DMDListaRecibirPedidoCelda") as! DMDListaRecibirPedidoCelda
+        
+        //Celda - Imagen
+        if let imagenString = producto.propiedades?.imagenString {
+            celda.myImagen.image =  Utils.shared.getImagen(imagenString)
+        }
+        
+        //Celda - nombre
+        if let nombre = producto.nombre {
+            celda.myNombre.text = nombre
+        }
+        
+        //Celda - cantidad
+        let cantidad = cantidades["\(producto.id)"]
+        
+        if let cantidadDes = cantidad {
+            celda.myCantidad.text = "\(cantidadDes)"
+            celda.myStepper.value = Double(cantidadDes)
+        }else{
+            celda.myCantidad.text = "0"
+            celda.myStepper.value = 0.0
+        }
+        
+        //Celda - id
+        celda.idProducto = producto.id
+        
+        //Celda - delegado
+        celda.delegate = self
+        
+        return celda
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listadoProductos.count
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        //Celda - Borrar
+        let borrarCelda = UITableViewRowAction(style: .destructive, title: "Borrar") { (action, indexPath) in
+            //Dejar las cantidades a 0 y borrarlo del listado
+            let productoID = self.listadoProductos[indexPath.row].id
+            self.listadoProductos.remove(at: indexPath.row)
+            self.cantidades["\(productoID)"] = 0
+            
+            //Recargar la tabla
+            tableView.reloadData()
+            
+        }
+        
+        borrarCelda.backgroundColor = CONSTANTES.COLOR.ROJO_GENERAL
+        
+        return [borrarCelda]
+        
+        
+    }
+    
+}
+
+//MARK: - Escaner QR
+extension DMDListaRecibirPedido : DMDEscanerQRDelegate {
+    
+    ///Se permiten escanear varios productos
+    func soloUno() -> Bool {
+        return false
+    }
+    
+    ///Funcion ejecutada tras recuperar todos los productos
+    func getCodigosEscaneados(_ escanerQR: DMDEscanerQR, codigos : [String]){
+        for codigo in codigos {
+            ProductoService.shared.findByCodigoDeBarras(codigo, callback: { (producto) in
+                if let obj = producto {
+                    if obj.id != nil {
+                        self.addProducto(obj, cantidad: 1)
+                        self.myTable.reloadData()
+                    }
+                }
+            })
+        }
+    }
+}
+
+//MARK: - Extension aumentar desde la lista
+extension DMDListaRecibirPedido : DMDListaRecibirPedidoCeldaDelegate {
+    
+    ///Función ejecutada al pulsar sobre el stepper de cantidades
+    func setCantidad(_ id: Int, cantidad: Int){
+        cantidades["\(id)"] = cantidad
+    }
 }

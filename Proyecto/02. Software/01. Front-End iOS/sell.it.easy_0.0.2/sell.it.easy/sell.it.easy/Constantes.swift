@@ -56,7 +56,8 @@ struct ColoresAzules {
 }
 
 struct UrlBase{
-    let URL_BASE = "http://192.168.1.105"
+    //let URL_BASE = "http://192.168.1.105"
+    let URL_BASE = "http://192.168.1.113"
     let PUERTO = ":8081/"
 }
 

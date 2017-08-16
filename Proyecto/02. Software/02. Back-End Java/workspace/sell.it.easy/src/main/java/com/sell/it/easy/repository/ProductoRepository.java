@@ -8,6 +8,7 @@ import com.sell.it.easy.entity.Producto;
 
 public interface ProductoRepository extends CrudRepository<Producto, Long>{
 	public List<Producto> findAll();
+	public List<Producto> findByPropiedades_codigoDeBarras(String codigoDeBarras);
 	public Producto findById(Integer id);
 
 }
