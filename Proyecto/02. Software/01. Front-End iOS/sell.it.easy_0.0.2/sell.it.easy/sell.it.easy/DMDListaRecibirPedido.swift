@@ -8,14 +8,18 @@
 
 import UIKit
 
-class DMDListaRecibirPedido: UIViewController {
+protocol DMDListaRecibirPedidoDelegate {
+    func setPedidoProductos(_ lista: [PedidoProductos])
+}
 
+class DMDListaRecibirPedido: UIViewController {
+    
     //MARK: - Variables locales
     var listadoProductos = [Producto]()
     var cantidades = [String:Int]()
     var isToolbarHidden : Bool?
     
-    
+    var delegate : DMDListaRecibirPedidoDelegate?
     
     //MARK: - IBOutlets
     @IBOutlet weak var myTable: UITableView!
@@ -31,13 +35,8 @@ class DMDListaRecibirPedido: UIViewController {
     
     ///Guardar la lista de productos como inventario a fecha actual
     @IBAction func confirmarACTION(_ sender: Any) {
-        //TODO:Reimplementar
-//        let listaProductos = ListaProductosRepository.shared.new()
-//        listaProductos.tipo = ListaProductosRepository.shared.TIPO_RECEPCION_PEDIDO
-//        listaProductos.listaproductos2producto = NSSet(array: listadoProductos)
-//        
-        
-        
+        delegate?.setPedidoProductos(getPedidoProductos())
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func paraMasTardeACTION(_ sender: Any) {
@@ -53,11 +52,6 @@ class DMDListaRecibirPedido: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Guardamos el estado actual de la barra de navegación
-        isToolbarHidden = (navigationController?.isToolbarHidden)!
-        //Mostramos la barra inferior para poder acceder a los botones de las acciones
-        navigationController?.isToolbarHidden = false
-        
         //Delegados
         myTable.dataSource = self
         myTable.delegate = self
@@ -65,14 +59,26 @@ class DMDListaRecibirPedido: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        //Se deja el estado de la barra inferior como estuviera antes de mostrar la vista
         navigationController?.isToolbarHidden = isToolbarHidden!
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Guardamos el estado actual de la barra de navegación
+        isToolbarHidden = (navigationController?.isToolbarHidden)!
+        //Mostramos la barra inferior para poder acceder a los botones de las acciones
+        navigationController?.isToolbarHidden = false
+    }
 
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     ///Permite aumentar x cantidad para un producto en el listado interno
     func addProducto(_ producto: Producto, cantidad: Int){
         var existe = false
@@ -102,6 +108,29 @@ class DMDListaRecibirPedido: UIViewController {
             listadoProductos.append(producto)
             cantidades["\(producto.id)"] = cantidad
         }
+    }
+    
+    func getPedidoProductos() -> [PedidoProductos]{
+        var pedidoProductos = [PedidoProductos]()
+        
+        for producto in listadoProductos {
+            
+            if let cantidadFloat = cantidades["\(producto.id)"] {
+                let cantidad = Float(cantidadFloat)
+                
+                let pedidoProducto = PedidoProductos(id: nil,
+                                                     producto: producto,
+                                                     precioCoste: producto.propiedades?.precioCoste,
+                                                     precioVentaPublico: producto.propiedades?.precioVentaPublico,
+                                                     cantidad: cantidad,
+                                                     inventario: nil,
+                                                     pedido: nil)
+                
+                pedidoProductos.append(pedidoProducto)
+            }
+        }
+        
+        return pedidoProductos
     }
 }
 

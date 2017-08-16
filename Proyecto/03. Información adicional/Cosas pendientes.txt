@@ -45,11 +45,11 @@ Ventanas a implementar:
 * Inicio de sesión. OK
 
 - Venta física
-* Ventana de venta, con resumen de la compra.
-* Visualizar productos.
-* Añadir productos. 
-* Descartar.
-* Confirmar.
+* Ventana de venta, con resumen de la compra. 
+* Visualizar productos. 
+* Añadir productos. OK
+* Descartar. OK
+* Confirmar. OK
 * Guardar para luego. (fuera de scope)
 
 - Venta física (Resumen compra)
