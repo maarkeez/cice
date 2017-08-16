@@ -45,17 +45,19 @@ extension DMDProductoNav :  DMDConfirmDelegate {
 
 extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
     
+    
+    
     func setData(_ data: DMDTablaDataCG){
         
-        if producto.propiedades != nil {
+        if producto.propiedades == nil {
             producto.propiedades = PropiedadProducto(id: nil,
-                                                     talla: nil, // OK
-                                                     codigoDeBarras: nil, //OK
-                                                     codigoDeEmpresa: nil, // OK
+                                                     talla: nil,
+                                                     codigoDeBarras: nil,
+                                                     codigoDeEmpresa: nil,
                                                      precioCoste: nil,
                                                      precioVentaPublico: nil,
                                                      descuento: nil,
-                                                     imagenString: nil, // OK
+                                                     imagenString: nil, 
                                                      IVA: nil)
         }
         
@@ -83,7 +85,7 @@ extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
         }
         
         // 1 - Descripción
-        if let celda = data.listaItems[1] as? DMDCeldaLabel {
+        if let celda = data.listaItems[1] as? DMDCeldaTextoLargo {
             producto.descripcion = celda.texto
         }
         
@@ -92,7 +94,7 @@ extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
             producto.tipoProducto = TipoProducto(id: celda.indiceSeleccionado, nombre: CONSTANTES.PRODUCTO_TIPOS[celda.indiceSeleccionado])
         }
         
-        // 3 - barcode
+        // 3 - Código de Barras
         if let celda = data.listaItems[3] as? DMDCeldaCodigoBarras {
             producto.propiedades?.codigoDeBarras = celda.codigoBarras
         }
@@ -103,8 +105,8 @@ extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
         }
         
         // 5- Código de empresa
-        if let celda = data.listaItems[5] as? DMDCeldaLabel {
-            producto.propiedades?.codigoDeEmpresa = celda.texto
+        if let celda = data.listaItems[5] as? DMDCeldaCodigoBarras {
+            producto.propiedades?.codigoDeEmpresa = celda.codigoBarras
         }
         
         // 6 - Precio coste
@@ -167,7 +169,7 @@ extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
         }
         data.listaItems.append(DMDCeldaSelector(titulo: "Tipo producto", indiceSeleccionado: indiceTipo, opciones: CONSTANTES.PRODUCTO_TIPOS))
         
-        // 3 - barcode
+        // 3 - Código de barras
         data.listaItems.append(DMDCeldaCodigoBarras(codigoBarras: producto.propiedades?.codigoDeBarras ?? ""))
         
         
@@ -179,7 +181,7 @@ extension DMDProductoNav :  DMDTablaDinamicaCGDelegate {
         data.listaItems.append(DMDCeldaSelector(titulo: "Talla", indiceSeleccionado: indiceTalla, opciones: CONSTANTES.TALLA.LISTADO))
         
         // 5 - Código de empresa
-        data.listaItems.append(DMDCeldaLabel(nombre: "Código de empresa", texto: producto.propiedades?.codigoDeEmpresa ?? ""))
+        data.listaItems.append(DMDCeldaCodigoBarras("Código de empresa", codigoBarras: producto.propiedades?.codigoDeEmpresa ?? ""))
         
         // 6 - Precio coste
         let precioCoste = producto.propiedades?.precioCoste ?? 0.0

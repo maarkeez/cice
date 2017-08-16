@@ -80,11 +80,11 @@ public class PropiedadProducto {
 		this.descuento = descuento;
 	}
 
-	public String getImagen() {
+	public String getImagenString() {
 		return imagenString;
 	}
 
-	public void setImagen(String imagenString) {
+	public void setImagenString(String imagenString) {
 		this.imagenString = imagenString;
 	}
 

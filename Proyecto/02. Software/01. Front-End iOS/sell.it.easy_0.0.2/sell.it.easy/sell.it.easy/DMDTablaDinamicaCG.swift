@@ -11,6 +11,13 @@ import UIKit
 protocol DMDTablaDinamicaCGDelegate {
     func setData(_ data: DMDTablaDataCG)
     func getData() -> DMDTablaDataCG
+    func didSelectRow(_ row: Int)
+}
+extension DMDTablaDinamicaCGDelegate {
+    func didSelectRow(_ row: Int){
+        //By default do nothing
+    }
+
 }
 
 class DMDTablaDinamicaCG: UIViewController {
@@ -127,9 +134,10 @@ class DMDTablaDinamicaCG: UIViewController {
     }
     
     ///Guarda el índice del elemento que hemos seleccionado para futuras operaciones
-    /// en los delegados
+    /// en los delegados. Se llama a la función fila seleccionada en el delegado.
     func didSelectItem(_ index: Int){
         indexItemSelected = index
+        delegate?.didSelectRow(index)
     }
     
     /// Obtiene el delegado para la celda en función del indice previamente guardado.
@@ -205,6 +213,8 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didSelectItem(indexPath.row)
         
+        
+        
         if let celda = getSelectedItem() {
             
             if celda.isSeleccionable() {
@@ -214,7 +224,7 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
                 }
                 
                 if celda is DMDCeldaCodigoBarras {
-                    showLectorCodigoBarras()
+                    showMenuCeldaCodigoBarras()
                 }
                 
                 if celda is DMDCeldaPerfil {
@@ -333,7 +343,7 @@ extension DMDTablaDinamicaCG: UITextFieldDelegate{
     
     ///Función del delegado, al dejar de editar un campo de texto se vacía.
     func textFieldDidEndEditing(_ textField: UITextField) {
-        //TODO: Reasignar el valor al data.item correspondiente
+        //TODO: Reasignar el valor al data.item correspondiente, data.source?, data.delegate?
         self.activeField = nil
     }
     
@@ -384,11 +394,63 @@ extension DMDTablaDinamicaCG: UITextFieldDelegate{
 //MARK: - Delegado para escaner
 extension DMDTablaDinamicaCG : DMDEscanerQRDelegate{
     
+    func showMenuCeldaCodigoBarras(){
+        //Controlador
+        let actionVC = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        //Cancelar
+        actionVC.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        
+        //Editar imagen de perfil
+        actionVC.addAction(UIAlertAction(title: "Escanear", style: .default, handler: {Void in
+            self.showLectorCodigoBarras()
+        }))
+        
+        // Editar nombre
+        actionVC.addAction(UIAlertAction(title: "Introducir", style: .default, handler: {
+            Void in
+            self.editCodigoBarras()
+        }))
+        
+        //Mostrar controlador
+        present(actionVC, animated: true, completion: nil)
+        
+    }
+    
     func showLectorCodigoBarras(){
         let escanerQR = self.storyboard?.instantiateViewController(withIdentifier: "EscanerQR") as! DMDEscanerQR
         escanerQR.delegate = self
         escanerQR.modalTransitionStyle = .crossDissolve
         self.navigationController?.pushViewController(escanerQR, animated: true)
+    }
+    
+    func editCodigoBarras(){
+        //Campo de texto para el nombre
+        var inputTextField: UITextField?
+        
+        // Controlador
+        let alert = UIAlertController(title: "Código", message: "Introduzca un nuevo código", preferredStyle: UIAlertControllerStyle.alert)
+        
+        //Acciones
+        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel,handler: nil))
+        alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+            //Si he seleccionado celda de perfil, cambio el nombre.
+            if let item = self.getSelectedItem() as? DMDCeldaCodigoBarras {
+                item.codigoBarras = inputTextField?.text
+                self.updateSeledtedItem(item)
+            }
+        }))
+        
+        //Configuracion del controlador
+        alert.addTextField(configurationHandler: {(textField: UITextField!) in
+            if let item = self.getSelectedItem() as? DMDCeldaCodigoBarras {
+                textField.text = item.codigoBarras
+            }
+            inputTextField = textField
+        })
+        
+        //Presentar controlador
+        self.present(alert, animated: true, completion: nil)
     }
     
     func soloUno() -> Bool {

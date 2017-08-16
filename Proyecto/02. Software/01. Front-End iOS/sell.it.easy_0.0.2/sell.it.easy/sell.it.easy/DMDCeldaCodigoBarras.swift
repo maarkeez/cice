@@ -12,6 +12,7 @@ import UIKit
 class DMDCeldaCodigoBarras: DMDCeldaCGDelegate{
     
     var codigoBarras : String?
+    var label : String = "Código de barras"
     
     var seleccionable : Bool = true
     func isSeleccionable() -> Bool {
@@ -22,10 +23,17 @@ class DMDCeldaCodigoBarras: DMDCeldaCGDelegate{
         self.codigoBarras = codigoBarras
     }
     
+    init(_ label: String, codigoBarras: String) {
+        self.codigoBarras = codigoBarras
+        self.label = label
+    }
+    
     func setIBOutlets(_ celda: UITableViewCell){
         
-        let codigo = celda.viewWithTag(1) as! UITextField
+        let codigo = celda.viewWithTag(1) as! UILabel
+        let myLabel = celda.viewWithTag(2) as! UILabel
         codigo.text = codigoBarras
+        myLabel.text = label
         
     }
     

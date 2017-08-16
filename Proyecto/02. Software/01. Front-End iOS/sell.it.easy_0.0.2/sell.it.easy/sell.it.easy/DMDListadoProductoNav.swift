@@ -20,10 +20,7 @@ class DMDListadoProductoNav: UINavigationController {
         //Recuperar componente genérico
         viewController = storyboard?.instantiateViewController(withIdentifier: "DMDTablaDinamicaCG") as! DMDTablaDinamicaCG
         
-        ProductoService.shared.todos { (objetos) in
-            self.listado = objetos
-            self.showData()
-        }
+       
         
         //Asignar como delegado
         viewController?.delegate = self
@@ -31,6 +28,14 @@ class DMDListadoProductoNav: UINavigationController {
         //Mostrar el componente genérico con las opciones configuradas.
         self.setViewControllers([viewController!], animated: true)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        ProductoService.shared.todos { (objetos) in
+            self.listado = objetos
+            self.showData()
+        }
     }
     
     func showData(){
@@ -55,9 +60,17 @@ extension DMDListadoProductoNav :  DMDConfirmDelegate {
 
 extension DMDListadoProductoNav :  DMDTablaDinamicaCGDelegate {
     
+    ///Mostrar el detalle para el producto seleccionado
+    func didSelectRow(_ row: Int){
+        let detalleNav = DMDProductoNav()
+        detalleNav.producto = listado[row]
+        present(detalleNav, animated: true, completion: nil)
+    }
+    
+    ///Mostrar ventana de alta de producto
     func setData(_ data: DMDTablaDataCG){
-        let tiendaNav = DMDProductoNav()
-        present(tiendaNav, animated: true, completion: nil)
+        let detalleNav = DMDProductoNav()
+        present(detalleNav, animated: true, completion: nil)
     }
     
     

@@ -45,6 +45,6 @@ class PropiedadProducto : Mappable{
         precioVentaPublico <- map["precioVentaPublico"]
         descuento <- map["descuento"]
         imagenString <- map["imagenString"]
-        IVA <- map["IVA"]
+        IVA <- map["iva"]
     }
 }
