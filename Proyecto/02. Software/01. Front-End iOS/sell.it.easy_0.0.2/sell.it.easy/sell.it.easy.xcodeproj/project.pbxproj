@@ -25,6 +25,10 @@
 		E51ABA8C1EC8359E008C2E6C /* ReachabilitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51ABA821EC8359E008C2E6C /* ReachabilitySwift.framework */; };
 		E51ABA8D1EC8359E008C2E6C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51ABA831EC8359E008C2E6C /* SwiftyJSON.framework */; };
 		E51ABA8F1EC83DB1008C2E6C /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51ABA8E1EC83DB1008C2E6C /* Utils.swift */; };
+		E5224D0A1F460968002FB262 /* VentaFisicaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224D091F460968002FB262 /* VentaFisicaService.swift */; };
+		E5224D0C1F4613F9002FB262 /* PedidoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224D0B1F4613F9002FB262 /* PedidoService.swift */; };
+		E5224D0E1F461458002FB262 /* PedidoProductosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224D0D1F461458002FB262 /* PedidoProductosService.swift */; };
+		E5224D101F464470002FB262 /* DateTransformCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224D0F1F464470002FB262 /* DateTransformCustom.swift */; };
 		E52F23961F1B835500FF24D1 /* DMDSelectorFecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */; };
 		E53E20C11EC846C000130DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53E20C01EC846C000130DEB /* Assets.xcassets */; };
 		E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */; };
@@ -130,6 +134,10 @@
 		E51ABA821EC8359E008C2E6C /* ReachabilitySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReachabilitySwift.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphonesimulator/ReachabilitySwift/ReachabilitySwift.framework"; sourceTree = "<group>"; };
 		E51ABA831EC8359E008C2E6C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../../../../../../Library/Developer/Xcode/DerivedData/sell.it.easy-heygsslojucpwafszsyurjuonahk/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		E51ABA8E1EC83DB1008C2E6C /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E5224D091F460968002FB262 /* VentaFisicaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VentaFisicaService.swift; sourceTree = "<group>"; };
+		E5224D0B1F4613F9002FB262 /* PedidoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoService.swift; sourceTree = "<group>"; };
+		E5224D0D1F461458002FB262 /* PedidoProductosService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoProductosService.swift; sourceTree = "<group>"; };
+		E5224D0F1F464470002FB262 /* DateTransformCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTransformCustom.swift; sourceTree = "<group>"; };
 		E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDSelectorFecha.swift; sourceTree = "<group>"; };
 		E53E20C01EC846C000130DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCajaRegistradoraTableViewController.swift; sourceTree = "<group>"; };
@@ -353,6 +361,14 @@
 			name = VIEW_CONTROLLERS;
 			sourceTree = "<group>";
 		};
+		E5224D111F464474002FB262 /* PARSER */ = {
+			isa = PBXGroup;
+			children = (
+				E5224D0F1F464470002FB262 /* DateTransformCustom.swift */,
+			);
+			name = PARSER;
+			sourceTree = "<group>";
+		};
 		E53E20C41EC84BBB00130DEB /* CAJA */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,9 +390,10 @@
 		E53E20CA1EC85BF100130DEB /* UTILS */ = {
 			isa = PBXGroup;
 			children = (
-				E57B0C061ED1C8570007A96C /* VIDEOS */,
-				E5EAB5A51EC917460016D86C /* SONIDOS */,
 				E53E20CB1EC85BFE00130DEB /* EXTENSIONS */,
+				E5224D111F464474002FB262 /* PARSER */,
+				E5EAB5A51EC917460016D86C /* SONIDOS */,
+				E57B0C061ED1C8570007A96C /* VIDEOS */,
 				E51ABA8E1EC83DB1008C2E6C /* Utils.swift */,
 				E53E20CE1EC85E6F00130DEB /* Constantes.swift */,
 			);
@@ -653,6 +670,9 @@
 				E5FCEDD31F40B6A9000D1FFB /* OrganizacionService.swift */,
 				E5FD9CA31F43160A00F3052E /* TiendaService.swift */,
 				E54B7E001F43645300DD42AB /* ProductoService.swift */,
+				E5224D091F460968002FB262 /* VentaFisicaService.swift */,
+				E5224D0D1F461458002FB262 /* PedidoProductosService.swift */,
+				E5224D0B1F4613F9002FB262 /* PedidoService.swift */,
 				E5FCEDD51F40B8CE000D1FFB /* UsuarioService.swift */,
 				E5FD9C9F1F43073300F3052E /* ServiceUtils.swift */,
 				E54DEF251F41E9A800EEDEB6 /* Session.swift */,
@@ -823,12 +843,15 @@
 				E57B0BED1ED059C70007A96C /* DMDEstadisticas.swift in Sources */,
 				E57B0C021ED1C1110007A96C /* DMDLauncher.swift in Sources */,
 				E54B7DF91F43619D00DD42AB /* DMDListadoProductoNav.swift in Sources */,
+				E5224D0C1F4613F9002FB262 /* PedidoService.swift in Sources */,
 				E5FD9C9E1F43064B00F3052E /* Organizacion.swift in Sources */,
+				E5224D101F464470002FB262 /* DateTransformCustom.swift in Sources */,
 				E5FD9CA61F4332E100F3052E /* Rol.swift in Sources */,
 				E57B0C051ED1C5D20007A96C /* DMDLogin.swift in Sources */,
 				E54DEF231F41E85900EEDEB6 /* DMDPerfilNav.swift in Sources */,
 				E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */,
 				E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */,
+				E5224D0A1F460968002FB262 /* VentaFisicaService.swift in Sources */,
 				E5EAB59F1EC9160B0016D86C /* DMDEscanerTabla.swift in Sources */,
 				E5FCEDC41F406E4E000D1FFB /* DMDSelector.swift in Sources */,
 				E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */,
@@ -838,6 +861,7 @@
 				E54B7DF71F433E2D00DD42AB /* DMDTiendaNav.swift in Sources */,
 				E5FD9CA41F43160A00F3052E /* TiendaService.swift in Sources */,
 				E59A41BF1F44FC0D00BC2CA2 /* Pedido.swift in Sources */,
+				E5224D0E1F461458002FB262 /* PedidoProductosService.swift in Sources */,
 				E54B7E011F43645300DD42AB /* ProductoService.swift in Sources */,
 				E5CB12FE1F3F215A005D15A8 /* DMDCeldaCodigoBarras.swift in Sources */,
 				E5CB12FC1F3F1E1D005D15A8 /* DMDCeldaPerfil.swift in Sources */,

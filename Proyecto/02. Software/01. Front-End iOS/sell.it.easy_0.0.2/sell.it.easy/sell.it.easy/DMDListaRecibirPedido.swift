@@ -10,6 +10,7 @@ import UIKit
 
 protocol DMDListaRecibirPedidoDelegate {
     func setPedidoProductos(_ lista: [PedidoProductos])
+    func getPedidoProductos() -> [PedidoProductos]
 }
 
 class DMDListaRecibirPedido: UIViewController {
@@ -29,7 +30,6 @@ class DMDListaRecibirPedido: UIViewController {
         let escanerVC =  storyboard?.instantiateViewController(withIdentifier: "EscanerQR") as! DMDEscanerQR
         escanerVC.delegate = self
         navigationController?.pushViewController(escanerVC, animated: true)
-        
     }
     
     
@@ -55,6 +55,8 @@ class DMDListaRecibirPedido: UIViewController {
         //Delegados
         myTable.dataSource = self
         myTable.delegate = self
+        
+        addProductos((delegate?.getPedidoProductos())!)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -70,19 +72,23 @@ class DMDListaRecibirPedido: UIViewController {
         //Mostramos la barra inferior para poder acceder a los botones de las acciones
         navigationController?.isToolbarHidden = false
     }
-
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func addProductos(_ lista: [PedidoProductos] ) {
+        for pedidoProducto in lista {
+            addProducto(pedidoProducto.producto, cantidad: Int(pedidoProducto.cantidad))
+        }
+        myTable.reloadData()
+    }
+    
     ///Permite aumentar x cantidad para un producto en el listado interno
     func addProducto(_ producto: Producto, cantidad: Int){
         var existe = false
-        
+        let idString = getString(producto.id)
+
         //Recorrer la lista de productos
         for productoLista in listadoProductos {
             
@@ -91,22 +97,24 @@ class DMDListaRecibirPedido: UIViewController {
                 
                 //Marcamos el producto como existente
                 existe = true
+
                 
                 //Comprobar si tiene cantidad asociada
-                if cantidades["\(productoLista.id)"] != nil {
+                if cantidades[idString] != nil {
                     //Si tiene alguna cantidad asociada, sumamos la nueva cantidaad
-                    cantidades["\(productoLista.id)"] = cantidades["\(productoLista.id)"]! + cantidad
+                    cantidades[idString] = cantidades[idString]! + cantidad
                 }else{
                     //Si no tiene cantidad, se la asignamos
-                    cantidades["\(productoLista.id)"] = cantidad
+                    cantidades[idString] = cantidad
                 }
             }
         }
         
         if(!existe){
+
             //Si no existe, lo añadimos y le asignamos la cantidad.
             listadoProductos.append(producto)
-            cantidades["\(producto.id)"] = cantidad
+            cantidades[idString] = cantidad
         }
     }
     
@@ -114,8 +122,9 @@ class DMDListaRecibirPedido: UIViewController {
         var pedidoProductos = [PedidoProductos]()
         
         for producto in listadoProductos {
-            
-            if let cantidadFloat = cantidades["\(producto.id)"] {
+            let idString = getString(producto.id)
+
+            if let cantidadFloat = cantidades[idString] {
                 let cantidad = Float(cantidadFloat)
                 
                 let pedidoProducto = PedidoProductos(id: nil,
@@ -132,6 +141,14 @@ class DMDListaRecibirPedido: UIViewController {
         
         return pedidoProductos
     }
+    
+    func getString(_ idOrNill: Int?) -> String {
+        var idString = ""
+        if let id = idOrNill {
+            idString = "\(id)"
+        }
+        return idString
+    }
 }
 
 //MARK: - Extensión para mostrar el listado de productos
@@ -142,6 +159,7 @@ extension DMDListaRecibirPedido: UITableViewDelegate, UITableViewDataSource{
         
         //Recuperar el producto para generar la celda
         let producto = listadoProductos[indexPath.row]
+        let idString = getString(producto.id)
         
         //Crear la celda
         let celda = tableView.dequeueReusableCell(withIdentifier: "DMDListaRecibirPedidoCelda") as! DMDListaRecibirPedidoCelda
@@ -157,7 +175,7 @@ extension DMDListaRecibirPedido: UITableViewDelegate, UITableViewDataSource{
         }
         
         //Celda - cantidad
-        let cantidad = cantidades["\(producto.id)"]
+        let cantidad = cantidades[idString]
         
         if let cantidadDes = cantidad {
             celda.myCantidad.text = "\(cantidadDes)"
@@ -189,9 +207,11 @@ extension DMDListaRecibirPedido: UITableViewDelegate, UITableViewDataSource{
         //Celda - Borrar
         let borrarCelda = UITableViewRowAction(style: .destructive, title: "Borrar") { (action, indexPath) in
             //Dejar las cantidades a 0 y borrarlo del listado
-            let productoID = self.listadoProductos[indexPath.row].id
+            let idString = self.getString(self.listadoProductos[indexPath.row].id)
+
+            
             self.listadoProductos.remove(at: indexPath.row)
-            self.cantidades["\(productoID)"] = 0
+            self.cantidades[idString] = 0
             
             //Recargar la tabla
             tableView.reloadData()

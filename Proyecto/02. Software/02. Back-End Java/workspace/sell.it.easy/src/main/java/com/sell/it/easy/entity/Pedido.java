@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 public class Pedido {
 
@@ -19,7 +21,9 @@ public class Pedido {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
 	@Column(nullable=false)
+	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
 	private Date fechaApertura;
+	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
 	private Date fechaCierre;
 	@ManyToOne
 	private TipoPago tipoPago;

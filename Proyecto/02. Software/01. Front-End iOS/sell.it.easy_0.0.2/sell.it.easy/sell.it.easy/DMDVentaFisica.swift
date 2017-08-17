@@ -36,6 +36,48 @@ class DMDVentaFisica: UIViewController {
     
     @IBAction func myConfirmarACTION(_ sender: UIButton) {
         
+        // Crear pedido y asignar a la venta
+        let nuevoPedido = Pedido(id: nil,
+                                     fechaApertura: ventaFisica?.fecha,
+                                     fechaCierre: Date(),
+                                     tipoPago: TipoPago(id: 0, nombre: CONSTANTES.PAGO_TIPOS[0]),
+                                     tipoCompra: TipoCompra(id: 0, nombre: CONSTANTES.COMPRA_TIPOS[0]),
+                                     tienda: Session.shared.tiendaSeleccionada)
+        
+        // Enviar la información al servidor
+        
+        // 0 - Pedido
+        PedidoService.shared.alta(nuevoPedido) { (pedidoAlta) in
+            if let pedidoDes = pedidoAlta {
+                if let id = pedidoDes.id {
+                    print("Nuevo PEDIDO dado de alta: \(id)")
+                }
+                
+                // 1- Venta
+                self.ventaFisica?.pedido = pedidoDes
+                VentaFisicaService.shared.alta(self.ventaFisica!, callback: { (ventaAlta) in
+                    if let id = ventaAlta?.id {
+                        print("Nueva VENTA_FISICA dada de alta: \(id)")
+                    }
+                })
+                
+                // 2 - Productos
+                for pedidoProducto in self.productos {
+                    pedidoProducto.pedido = pedidoDes
+                    PedidoProductosService.shared.alta(pedidoProducto, callback: { (pedidoProductoAlta) in
+                        if let id = pedidoProductoAlta?.id {
+                            print("Nueva PEDIDO_PRODUCTO dada de alta: \(id)")
+                        }
+                    })
+                }
+            }
+        }
+        
+        
+        
+        // Dismiss
+        
+        
     }
     
     
@@ -98,7 +140,7 @@ class DMDVentaFisica: UIViewController {
         
         for producto in productos {
             if let pvp = producto.precioVentaPublico {
-                total = total + pvp
+                total = total + pvp * producto.cantidad
             }
         }
         return total
@@ -117,6 +159,12 @@ class DMDVentaFisica: UIViewController {
 }
 
 extension DMDVentaFisica : DMDListaRecibirPedidoDelegate{
+    
+    func getPedidoProductos() -> [PedidoProductos] {
+        return productos
+    }
+
+    
     func setPedidoProductos(_ lista: [PedidoProductos]){
         productos = lista
     }

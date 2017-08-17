@@ -17,6 +17,8 @@ struct Constantes {
     let COLOR_AZUL = ColoresAzules()
     let URL_BASE = UrlBase()
     let PRODUCTO_TIPOS = ["Textil","Alimentación","Transporte"]
+    let PAGO_TIPOS = ["Efectivo","Tarjeta"]
+    let COMPRA_TIPOS = ["Física","Online"]
 }
 
 struct Talla{

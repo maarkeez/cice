@@ -18,8 +18,8 @@ class ServiceUtils  {
     static let shared = ServiceUtils()
     
     func post(_ url: String, parametros : Mappable, completion:@escaping (JSON) -> Void){
-        
-        Alamofire.request(url, method: HTTPMethod.post, parameters: parametros.toJSON(), encoding: JSONEncoding.default, headers: nil).responseJSON().then { (dataJSON) -> JSON in
+        let param = parametros.toJSON()
+        Alamofire.request(url, method: HTTPMethod.post, parameters: param, encoding: JSONEncoding.default, headers: nil).responseJSON().then { (dataJSON) -> JSON in
             completion(JSON(dataJSON))
             return JSON.null
         }

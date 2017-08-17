@@ -1,5 +1,6 @@
 package com.sell.it.easy.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -37,6 +38,18 @@ public class PedidoProductosController {
 		pedidoProducto = repository.save(pedidoProducto);
 
 		return pedidoProducto;
+	}
+	
+	@RequestMapping(value = "/altas", method = RequestMethod.POST)
+	public @ResponseBody List<PedidoProductos> altas(HttpServletRequest request, @RequestBody List<PedidoProductos> listado) {
+		List<PedidoProductos> toReturn = new ArrayList<PedidoProductos>();
+		for (PedidoProductos pedidoProducto: listado){
+			pedidoProducto = repository.save(pedidoProducto);
+			if(pedidoProducto != null){
+				toReturn.add(pedidoProducto);
+			}
+		}
+		return toReturn;
 	}
 
 	@RequestMapping(value = "/{id}/borrar", method = RequestMethod.DELETE)

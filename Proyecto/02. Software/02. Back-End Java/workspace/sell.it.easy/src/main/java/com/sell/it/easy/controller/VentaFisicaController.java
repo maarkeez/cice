@@ -13,7 +13,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sell.it.easy.entity.Pedido;
 import com.sell.it.easy.entity.VentaFisica;
+import com.sell.it.easy.repository.PedidoProductosRepository;
+import com.sell.it.easy.repository.PedidoRepository;
 import com.sell.it.easy.repository.VentaFisicaRepository;
 
 @RestController
@@ -25,6 +28,10 @@ public class VentaFisicaController {
 
 	@Autowired
 	private VentaFisicaRepository repository;
+	@Autowired
+	private PedidoRepository pedidoRepository;
+	@Autowired
+	private PedidoProductosRepository pedidoProductosRepository;
 
 	@RequestMapping(value = "/todos", method = RequestMethod.GET)
 	public @ResponseBody List<VentaFisica> index(HttpSession session, HttpServletRequest request) {
@@ -33,7 +40,7 @@ public class VentaFisicaController {
 
 	@RequestMapping(value = "/alta", method = RequestMethod.POST)
 	public @ResponseBody VentaFisica alta(HttpServletRequest request, @RequestBody VentaFisica ventaFisica) {
-
+		
 		ventaFisica  = repository.save(ventaFisica);
 
 		return ventaFisica;
