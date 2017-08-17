@@ -18,4 +18,7 @@
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.Lob"/>
 <fullyQualifiedTypeName name="com.sell.it.easy.repository.PropiedadProductoRepository"/>
+<fullyQualifiedTypeName name="com.sell.it.easy.repository.PedidoRepository"/>
+<fullyQualifiedTypeName name="com.sell.it.easy.repository.PedidoProductosRepository"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonFormat"/>
 </qualifiedTypeNameHistroy>
