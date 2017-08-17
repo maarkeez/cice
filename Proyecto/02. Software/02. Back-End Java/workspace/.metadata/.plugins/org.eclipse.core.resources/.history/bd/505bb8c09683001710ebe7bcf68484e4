@@ -9,28 +9,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 @Entity
-public class CompraOnline {
+public class VentaFisica {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-	
 	@Column(nullable=false)
-	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
 	private Date fecha;
-	
-	@ManyToOne(optional=false)
-	private Usuario comprador;
-	
-	@ManyToOne(optional=false)
+	@ManyToOne
+	private Usuario vendedor;
+	@ManyToOne
 	private Pedido pedido;
 	
-	public CompraOnline(){
-		
-	}
+	public VentaFisica(){}
 
 	public Integer getId() {
 		return id;
@@ -48,12 +40,12 @@ public class CompraOnline {
 		this.fecha = fecha;
 	}
 
-	public Usuario getComprador() {
-		return comprador;
+	public Usuario getVendedor() {
+		return vendedor;
 	}
 
-	public void setComprador(Usuario comprador) {
-		this.comprador = comprador;
+	public void setVendedor(Usuario vendedor) {
+		this.vendedor = vendedor;
 	}
 
 	public Pedido getPedido() {
@@ -63,4 +55,6 @@ public class CompraOnline {
 	public void setPedido(Pedido pedido) {
 		this.pedido = pedido;
 	}
+	
+	
 }

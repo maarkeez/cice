@@ -1,5 +1,5 @@
 //
-//  VentaFisica.swift
+//  CompraOnline.swift
 //  sell.it.easy
 //
 //  Created by David Márquez Delgado on 17/8/17.
@@ -9,16 +9,16 @@
 import Foundation
 import ObjectMapper
 
-class VentaFisica : Mappable {
+class CompraOnline : Mappable {
     var id : Int?
     var fecha: Date!
-    var vendedor : Usuario?
+    var comprador : Usuario?
     var pedido : Pedido?
     
-    init(id: Int?, fecha: Date!, vendedor: Usuario?, pedido: Pedido?) {
+    init(id: Int?, fecha: Date!, comprador: Usuario?, pedido: Pedido?) {
         self.id = id
         self.fecha = fecha
-        self.vendedor = vendedor
+        self.comprador = comprador
         self.pedido = pedido
     }
     
@@ -27,7 +27,7 @@ class VentaFisica : Mappable {
     func mapping(map: Map) {
         id <- map["id"]
         fecha <- (map["fecha"],DateTransformCustom())
-        vendedor <- map["vendedor"]
+        comprador <- map["comprador"]
         pedido <- map["pedido"]
     }
 }

@@ -3555,3 +3555,18 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: Unrecognise
 2017-08-17 23:45:04,016 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
 2017-08-17 23:45:04,018 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-08-17 23:45:04,019 [Worker-95] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/maarkeez/Documents/GitHub/cice/Proyecto/02. Software/02. Back-End Java/workspace/sell.it.easy/src/test/resources
+2017-08-17 23:54:40,812 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-17 23:54:40,813 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-08-17 23:54:40,825 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-08-17 23:54:40,828 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-17 23:54:40,828 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/maarkeez/Documents/GitHub/cice/Proyecto/02. Software/02. Back-End Java/workspace/sell.it.easy/src/test/resources
+2017-08-17 23:54:57,628 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-17 23:54:57,629 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-08-17 23:54:57,630 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-08-17 23:54:57,633 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-17 23:54:57,633 [Worker-100] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/maarkeez/Documents/GitHub/cice/Proyecto/02. Software/02. Back-End Java/workspace/sell.it.easy/src/test/resources
+2017-08-17 23:55:16,214 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-17 23:55:16,214 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2017-08-17 23:55:16,215 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2017-08-17 23:55:16,217 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-08-17 23:55:16,218 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/maarkeez/Documents/GitHub/cice/Proyecto/02. Software/02. Back-End Java/workspace/sell.it.easy/src/test/resources

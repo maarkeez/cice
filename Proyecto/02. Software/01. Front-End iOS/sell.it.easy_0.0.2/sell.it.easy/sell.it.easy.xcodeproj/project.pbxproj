@@ -29,6 +29,7 @@
 		E5224D0C1F4613F9002FB262 /* PedidoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224D0B1F4613F9002FB262 /* PedidoService.swift */; };
 		E5224D0E1F461458002FB262 /* PedidoProductosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224D0D1F461458002FB262 /* PedidoProductosService.swift */; };
 		E5224D101F464470002FB262 /* DateTransformCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224D0F1F464470002FB262 /* DateTransformCustom.swift */; };
+		E5224D131F464884002FB262 /* CompraOnline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5224D121F464884002FB262 /* CompraOnline.swift */; };
 		E52F23961F1B835500FF24D1 /* DMDSelectorFecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */; };
 		E53E20C11EC846C000130DEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E53E20C01EC846C000130DEB /* Assets.xcassets */; };
 		E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */; };
@@ -138,6 +139,7 @@
 		E5224D0B1F4613F9002FB262 /* PedidoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoService.swift; sourceTree = "<group>"; };
 		E5224D0D1F461458002FB262 /* PedidoProductosService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoProductosService.swift; sourceTree = "<group>"; };
 		E5224D0F1F464470002FB262 /* DateTransformCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTransformCustom.swift; sourceTree = "<group>"; };
+		E5224D121F464884002FB262 /* CompraOnline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompraOnline.swift; sourceTree = "<group>"; };
 		E52F23951F1B835500FF24D1 /* DMDSelectorFecha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDSelectorFecha.swift; sourceTree = "<group>"; };
 		E53E20C01EC846C000130DEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		E53E20C21EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDCajaRegistradoraTableViewController.swift; sourceTree = "<group>"; };
@@ -683,7 +685,7 @@
 		E5FCEDD71F40C15C000D1FFB /* ENTITIES */ = {
 			isa = PBXGroup;
 			children = (
-				E5FCEDD81F40C172000D1FFB /* Usuario.swift */,
+				E5224D121F464884002FB262 /* CompraOnline.swift */,
 				E59A41C61F44FE9A00BC2CA2 /* Inventario.swift */,
 				E5FD9C9D1F43064B00F3052E /* Organizacion.swift */,
 				E59A41BE1F44FC0D00BC2CA2 /* Pedido.swift */,
@@ -695,6 +697,7 @@
 				E59A41C21F44FD6200BC2CA2 /* TipoCompra.swift */,
 				E59A41C01F44FD1800BC2CA2 /* TipoPago.swift */,
 				E54B7DFC1F43632900DD42AB /* TipoProducto.swift */,
+				E5FCEDD81F40C172000D1FFB /* Usuario.swift */,
 				E59A41C81F44FF1F00BC2CA2 /* VentaFisica.swift */,
 			);
 			name = ENTITIES;
@@ -888,6 +891,7 @@
 				E554BF361F436F670025AD6A /* StringExts.swift in Sources */,
 				E5FCEDD41F40B6A9000D1FFB /* OrganizacionService.swift in Sources */,
 				E54B7DFB1F4361AD00DD42AB /* DMDProductoNav.swift in Sources */,
+				E5224D131F464884002FB262 /* CompraOnline.swift in Sources */,
 				E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */,
 				E5C8E8271ECA203900355E0D /* DMDHistoricoRecepciones.swift in Sources */,
 				E5494C2E1F44B6A10078B38F /* DMDTiendaSeleccionar.swift in Sources */,

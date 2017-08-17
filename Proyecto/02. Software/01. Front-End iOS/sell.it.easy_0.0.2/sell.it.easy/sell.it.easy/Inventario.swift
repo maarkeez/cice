@@ -30,8 +30,8 @@ class Inventario : Mappable{
     
     func mapping(map: Map) {
         id <- map["id"]
-        fechaInicio <- map["fechaInicio"]
-        fechaFin <- map["fechaFin"]
+        fechaInicio <- (map["fechaInicio"],DateTransformCustom())
+        fechaFin <- (map["fechaFin"],DateTransformCustom())
         completo <- map["completo"]
         tiendaInventariada <- map["tiendaInventariada"]
     }

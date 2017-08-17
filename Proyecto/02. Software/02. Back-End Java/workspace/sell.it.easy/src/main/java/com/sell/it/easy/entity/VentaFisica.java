@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity
 public class VentaFisica {
 
@@ -16,6 +18,7 @@ public class VentaFisica {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
 	@Column(nullable=false)
+	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
 	private Date fecha;
 	@ManyToOne
 	private Usuario vendedor;

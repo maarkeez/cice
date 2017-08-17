@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 @Entity
 public class Inventario {
 
@@ -22,9 +20,7 @@ public class Inventario {
 	private Integer id;
 	
 	@Column(nullable=false)
-	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
 	private Date fechaInicio;
-	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
 	private Date fechaFin;
 	
 	@Column(nullable=false)
