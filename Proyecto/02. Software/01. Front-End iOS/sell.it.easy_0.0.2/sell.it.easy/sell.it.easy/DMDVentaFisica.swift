@@ -13,6 +13,8 @@ class DMDVentaFisica: UIViewController {
     //MARK: - Variables locales
     var ventaFisica : VentaFisica?
     var productos = [PedidoProductos]()
+    var contadorConfirmar = 0
+    var totalConfirmar = 0
     
     //MARK: - IBOutlets
     @IBOutlet weak var myNombreVendedor: UILabel!
@@ -36,6 +38,9 @@ class DMDVentaFisica: UIViewController {
     
     @IBAction func myConfirmarACTION(_ sender: UIButton) {
         
+        let totalCallBacks = 1 + 1 + productos.count
+        inicioConfirmar(totalCallBacks)
+        
         // Crear pedido y asignar a la venta
         let nuevoPedido = Pedido(id: nil,
                                      fechaApertura: ventaFisica?.fecha,
@@ -51,6 +56,7 @@ class DMDVentaFisica: UIViewController {
             if let pedidoDes = pedidoAlta {
                 if let id = pedidoDes.id {
                     print("Nuevo PEDIDO dado de alta: \(id)")
+                    self.confirmarCallback()
                 }
                 
                 // 1- Venta
@@ -58,6 +64,7 @@ class DMDVentaFisica: UIViewController {
                 VentaFisicaService.shared.alta(self.ventaFisica!, callback: { (ventaAlta) in
                     if let id = ventaAlta?.id {
                         print("Nueva VENTA_FISICA dada de alta: \(id)")
+                        self.confirmarCallback()
                     }
                 })
                 
@@ -67,6 +74,7 @@ class DMDVentaFisica: UIViewController {
                     PedidoProductosService.shared.alta(pedidoProducto, callback: { (pedidoProductoAlta) in
                         if let id = pedidoProductoAlta?.id {
                             print("Nueva PEDIDO_PRODUCTO dada de alta: \(id)")
+                            self.confirmarCallback()
                         }
                     })
                 }
@@ -78,6 +86,18 @@ class DMDVentaFisica: UIViewController {
         // Dismiss
         
         
+    }
+    
+    func inicioConfirmar(_ total : Int){
+        contadorConfirmar = 0
+        totalConfirmar = total
+    }
+    func confirmarCallback(){
+        contadorConfirmar += 1
+        if(contadorConfirmar == totalConfirmar){
+            print("Se ha enviado todo correctamente al servidor")
+            showDMDConfirm(self)
+        }
     }
     
     
@@ -158,6 +178,7 @@ class DMDVentaFisica: UIViewController {
     }
 }
 
+
 extension DMDVentaFisica : DMDListaRecibirPedidoDelegate{
     
     func getPedidoProductos() -> [PedidoProductos] {
@@ -167,5 +188,19 @@ extension DMDVentaFisica : DMDListaRecibirPedidoDelegate{
     
     func setPedidoProductos(_ lista: [PedidoProductos]){
         productos = lista
+    }
+}
+
+extension DMDVentaFisica : DMDConfirmDelegate{
+    func confirmar(){
+        
+    }
+    func cancelar(){}
+        
+    func getTitulo() -> String{
+        return "Pedido gestionado"
+    }
+    func getTexto() -> String{
+        return "Su pedido ha sido confirmado correctamente"
     }
 }
