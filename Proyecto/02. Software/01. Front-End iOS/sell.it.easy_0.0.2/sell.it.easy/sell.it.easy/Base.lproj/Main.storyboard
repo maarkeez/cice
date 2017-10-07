@@ -452,22 +452,25 @@
                                             <segue destination="l19-WB-mig" kind="push" id="gmb-YN-uMB"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="I5H-b1-GNK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="I5H-b1-GNK">
                                         <rect key="frame" x="0.0" y="388" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I5H-b1-GNK" id="In3-Ry-j6l">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tickets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wh-Ph-kf1">
                                                     <rect key="frame" x="8" y="12" width="56" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Jch-at-27N" kind="show" id="FLZ-dI-cV0"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AUH-NB-Dx2">
                                         <rect key="frame" x="0.0" y="432" width="375" height="44"/>
@@ -499,12 +502,15 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Estadísticas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-l8-fk8">
                                                     <rect key="frame" x="8" y="12" width="92" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ZV7-wu-IuX" kind="show" id="nTT-9j-u59"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -849,6 +855,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Crm-cI-h1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2573.5999999999999" y="-0.44977511244377816"/>
+        </scene>
+        <!--Historico Ticket-->
+        <scene sceneID="HMu-4z-Dbr">
+            <objects>
+                <navigationController storyboardIdentifier="DMDHistoricoTicket" id="Jch-at-27N" customClass="DMDHistoricoTicket" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="erf-hZ-eku"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lMz-0Y-kkA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Odt-QA-Na7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="666"/>
         </scene>
         <!--Estadisticas-->
         <scene sceneID="lxP-4E-yEd">
@@ -1689,6 +1709,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GVc-1K-aad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4536.8000000000002" y="3000.4497751124441"/>
+        </scene>
+        <!--Estadisticas Ventas-->
+        <scene sceneID="RtW-By-S23">
+            <objects>
+                <viewController storyboardIdentifier="DMDEstadisticasVentas" id="ZV7-wu-IuX" customClass="DMDEstadisticasVentas" customModule="sell_it_easy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pgc-GC-tJF"/>
+                        <viewControllerLayoutGuide type="bottom" id="724-4W-3cn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YNJ-0S-uRf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="BarChartView" translatesAutoresizingMaskIntoConstraints="NO" id="d3z-cP-4rp" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="iDN-PA-tVc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bAy-VQ-ikJ" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="364" width="375" height="303"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d3z-cP-4rp" firstAttribute="top" secondItem="pgc-GC-tJF" secondAttribute="bottom" id="EWA-Ed-jRd"/>
+                            <constraint firstItem="bAy-VQ-ikJ" firstAttribute="leading" secondItem="YNJ-0S-uRf" secondAttribute="leading" id="IG2-9X-VqW"/>
+                            <constraint firstItem="bAy-VQ-ikJ" firstAttribute="top" secondItem="d3z-cP-4rp" secondAttribute="bottom" id="cFo-gL-sOe"/>
+                            <constraint firstAttribute="trailing" secondItem="bAy-VQ-ikJ" secondAttribute="trailing" id="gDQ-E8-WAO"/>
+                            <constraint firstAttribute="trailing" secondItem="d3z-cP-4rp" secondAttribute="trailing" id="sKT-YG-qLC"/>
+                            <constraint firstItem="724-4W-3cn" firstAttribute="top" secondItem="bAy-VQ-ikJ" secondAttribute="bottom" id="yMF-aq-hN6"/>
+                            <constraint firstItem="d3z-cP-4rp" firstAttribute="leading" secondItem="YNJ-0S-uRf" secondAttribute="leading" id="yll-xJ-r7y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d7q-lg-63j">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="OfW-Yu-gx8">
+                            <connections>
+                                <action selector="myGuardarACTION:" destination="ZV7-wu-IuX" id="3QH-db-zqS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myBarChartView" destination="d3z-cP-4rp" id="VKi-l3-q48"/>
+                        <outlet property="myPieChartView" destination="bAy-VQ-ikJ" id="fn6-BO-Fmp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Isg-oa-xHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1374" y="541"/>
         </scene>
     </scenes>
     <resources>

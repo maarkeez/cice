@@ -1,0 +1,46 @@
+package com.sell.it.easy.controller;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sell.it.easy.entity.EstadisticasVenta;
+import com.sell.it.easy.repository.VentaFisicaRepository;
+
+@RestController
+@RequestMapping("/estadisticas/venta")
+public class EstadisticasVentaController {
+
+	@Autowired
+	private VentaFisicaRepository ventaFisicaRepository;
+	
+	
+	@RequestMapping(value = "/tienda/{idTienda}/desde/{fechaInicio}/hasta/{fechaFin}", method = RequestMethod.GET)
+	public @ResponseBody EstadisticasVenta findByTiendaBetweenFechas(
+			@PathVariable Integer idTienda,
+			@PathVariable @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm") Date fechaInicio,
+			@PathVariable @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm") Date fechaFin,
+			HttpServletRequest request){
+		EstadisticasVenta estadisticas = new EstadisticasVenta();
+		
+		ventaFisicaRepository.findByPedido_Tienda_idAndFechaGreaterThanEqualAndFechaLessThanEqual(idTienda, fechaInicio, fechaFin);
+				
+		
+		
+		List<Integer> horas = new ArrayList<Integer>();
+		List<Float> dineroHoras = new ArrayList<Float>();
+		List<String> nombreVendedores = new ArrayList<String>();
+		List<Float> porcentajeVendedores = new ArrayList<Float>();
+		
+		return estadisticas;
+	}
+}

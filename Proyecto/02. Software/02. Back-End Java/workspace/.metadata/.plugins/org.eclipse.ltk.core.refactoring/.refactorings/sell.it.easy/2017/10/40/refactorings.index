@@ -1,0 +1,5 @@
+1507378641209	Rename local variable 'horasDinero'
+1507378662171	Rename local variable 'vendidoHora'
+1507378675788	Rename local variable 'pvpVenta'
+1507388894469	Extract local variable 'map'
+1507388900518	Extract local variable 'map2'

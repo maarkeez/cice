@@ -90,6 +90,9 @@ class DMDTablaDinamicaCG: UIViewController {
         
         //Ocultar botón guardar
         mySaveBTN.isEnabled = data.guardar
+        if(!mySaveBTN.isEnabled){
+            mySaveBTN.title = ""
+        }
         
     }
     

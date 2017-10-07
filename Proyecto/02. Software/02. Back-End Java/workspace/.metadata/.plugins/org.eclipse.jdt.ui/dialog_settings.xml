@@ -37,13 +37,15 @@
 	<section name="FatJarPackageWizard">
 		<item value="/Users/maarkeez/Desktop/Mega/CICE/Curso iOS - 2016_2017/Trabajo Fin Master/02. Software/02. Back-End Java/workspace" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
 		<item value="Sell it easy - sell.it.easy" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
-		<item value="/Users/maarkeez/Desktop/sell.it.easy.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="/Users/maarkeez/Documents/programacion/java/sell.it.easy/sell.it.easy.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
 		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
 		<item value="3" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
 		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="/Users/maarkeez/Documents/programacion/java/sell.it.easy/sell.it.easy.jar"/>
 			<item value="/Users/maarkeez/Desktop/sell.it.easy.jar"/>
 		</list>
 		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
+			<item value="/Users/maarkeez/Desktop/Mega/CICE/Curso iOS - 2016_2017/Trabajo Fin Master/02. Software/02. Back-End Java/workspace"/>
 			<item value=".xml"/>
 		</list>
 	</section>

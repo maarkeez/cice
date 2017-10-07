@@ -39,6 +39,11 @@
 		E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D31EC865F600130DEB /* ProductoRepository.swift */; };
 		E53E20D71EC8767F00130DEB /* listadoProductoCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */; };
 		E53E20D81EC8767F00130DEB /* listadoProductoCelda.xib in Resources */ = {isa = PBXBuildFile; fileRef = E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */; };
+		E543EF311F884913001632B7 /* DMDHistoricoTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543EF301F884913001632B7 /* DMDHistoricoTicket.swift */; };
+		E543EF331F88CF44001632B7 /* DMDVentaFisicaDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543EF321F88CF44001632B7 /* DMDVentaFisicaDetalle.swift */; };
+		E543EF351F88E7E6001632B7 /* DMDEstadisticasVentas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543EF341F88E7E6001632B7 /* DMDEstadisticasVentas.swift */; };
+		E543EF371F88E89F001632B7 /* EstadisticasVentas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543EF361F88E89F001632B7 /* EstadisticasVentas.swift */; };
+		E543EF391F892AB5001632B7 /* EstadisticasService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E543EF381F892AB5001632B7 /* EstadisticasService.swift */; };
 		E5494C2E1F44B6A10078B38F /* DMDTiendaSeleccionar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494C2D1F44B6A10078B38F /* DMDTiendaSeleccionar.swift */; };
 		E5494C301F44BD040078B38F /* DMDVentaFisica.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494C2F1F44BD040078B38F /* DMDVentaFisica.swift */; };
 		E5494C331F44C5310078B38F /* DateExts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5494C321F44C5310078B38F /* DateExts.swift */; };
@@ -149,6 +154,11 @@
 		E53E20D31EC865F600130DEB /* ProductoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductoRepository.swift; sourceTree = "<group>"; };
 		E53E20D51EC8767F00130DEB /* listadoProductoCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listadoProductoCelda.swift; sourceTree = "<group>"; };
 		E53E20D61EC8767F00130DEB /* listadoProductoCelda.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = listadoProductoCelda.xib; sourceTree = "<group>"; };
+		E543EF301F884913001632B7 /* DMDHistoricoTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDHistoricoTicket.swift; sourceTree = "<group>"; };
+		E543EF321F88CF44001632B7 /* DMDVentaFisicaDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDVentaFisicaDetalle.swift; sourceTree = "<group>"; };
+		E543EF341F88E7E6001632B7 /* DMDEstadisticasVentas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDEstadisticasVentas.swift; sourceTree = "<group>"; };
+		E543EF361F88E89F001632B7 /* EstadisticasVentas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadisticasVentas.swift; sourceTree = "<group>"; };
+		E543EF381F892AB5001632B7 /* EstadisticasService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadisticasService.swift; sourceTree = "<group>"; };
 		E5494C2D1F44B6A10078B38F /* DMDTiendaSeleccionar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDTiendaSeleccionar.swift; sourceTree = "<group>"; };
 		E5494C2F1F44BD040078B38F /* DMDVentaFisica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDVentaFisica.swift; sourceTree = "<group>"; };
 		E5494C321F44C5310078B38F /* DateExts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExts.swift; sourceTree = "<group>"; };
@@ -437,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				E5494C2F1F44BD040078B38F /* DMDVentaFisica.swift */,
+				E543EF321F88CF44001632B7 /* DMDVentaFisicaDetalle.swift */,
 			);
 			name = VENTA_FISICA;
 			sourceTree = "<group>";
@@ -461,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				E57B0BEC1ED059C70007A96C /* DMDEstadisticas.swift */,
+				E543EF341F88E7E6001632B7 /* DMDEstadisticasVentas.swift */,
 			);
 			name = ESTADISTICAS;
 			sourceTree = "<group>";
@@ -521,6 +533,7 @@
 			children = (
 				E5C8E8241ECA10C200355E0D /* DMDHistoricos.swift */,
 				E5C8E8261ECA203800355E0D /* DMDHistoricoRecepciones.swift */,
+				E543EF301F884913001632B7 /* DMDHistoricoTicket.swift */,
 			);
 			name = HISTORICOS;
 			sourceTree = "<group>";
@@ -671,6 +684,7 @@
 			children = (
 				E5FCEDD31F40B6A9000D1FFB /* OrganizacionService.swift */,
 				E5FD9CA31F43160A00F3052E /* TiendaService.swift */,
+				E543EF381F892AB5001632B7 /* EstadisticasService.swift */,
 				E54B7E001F43645300DD42AB /* ProductoService.swift */,
 				E5224D091F460968002FB262 /* VentaFisicaService.swift */,
 				E5224D0D1F461458002FB262 /* PedidoProductosService.swift */,
@@ -699,6 +713,7 @@
 				E54B7DFC1F43632900DD42AB /* TipoProducto.swift */,
 				E5FCEDD81F40C172000D1FFB /* Usuario.swift */,
 				E59A41C81F44FF1F00BC2CA2 /* VentaFisica.swift */,
+				E543EF361F88E89F001632B7 /* EstadisticasVentas.swift */,
 			);
 			name = ENTITIES;
 			sourceTree = "<group>";
@@ -839,6 +854,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E543EF311F884913001632B7 /* DMDHistoricoTicket.swift in Sources */,
 				E54DEF201F41DE2100EEDEB6 /* DMDConfirm.swift in Sources */,
 				E59A41C11F44FD1800BC2CA2 /* TipoPago.swift in Sources */,
 				E53E20C31EC8497600130DEB /* DMDCajaRegistradoraTableViewController.swift in Sources */,
@@ -851,8 +867,10 @@
 				E5224D101F464470002FB262 /* DateTransformCustom.swift in Sources */,
 				E5FD9CA61F4332E100F3052E /* Rol.swift in Sources */,
 				E57B0C051ED1C5D20007A96C /* DMDLogin.swift in Sources */,
+				E543EF371F88E89F001632B7 /* EstadisticasVentas.swift in Sources */,
 				E54DEF231F41E85900EEDEB6 /* DMDPerfilNav.swift in Sources */,
 				E5C8E81E1EC9BD2700355E0D /* DMDListaRecibirPedido.swift in Sources */,
+				E543EF351F88E7E6001632B7 /* DMDEstadisticasVentas.swift in Sources */,
 				E53E20D41EC865F600130DEB /* ProductoRepository.swift in Sources */,
 				E5224D0A1F460968002FB262 /* VentaFisicaService.swift in Sources */,
 				E5EAB59F1EC9160B0016D86C /* DMDEscanerTabla.swift in Sources */,
@@ -893,6 +911,7 @@
 				E54B7DFB1F4361AD00DD42AB /* DMDProductoNav.swift in Sources */,
 				E5224D131F464884002FB262 /* CompraOnline.swift in Sources */,
 				E53E20D21EC8641400130DEB /* CoreDataStack.swift in Sources */,
+				E543EF391F892AB5001632B7 /* EstadisticasService.swift in Sources */,
 				E5C8E8271ECA203900355E0D /* DMDHistoricoRecepciones.swift in Sources */,
 				E5494C2E1F44B6A10078B38F /* DMDTiendaSeleccionar.swift in Sources */,
 				E5FCEDD91F40C172000D1FFB /* Usuario.swift in Sources */,
@@ -901,6 +920,7 @@
 				E53E20CF1EC85E6F00130DEB /* Constantes.swift in Sources */,
 				E5EAB58B1EC8EAD20016D86C /* TiendaRepository.swift in Sources */,
 				E5F0918B1F19957B0051FFBD /* DummyTablaDataCG.swift in Sources */,
+				E543EF331F88CF44001632B7 /* DMDVentaFisicaDetalle.swift in Sources */,
 				E5DE8E081F19A7A100DE80F3 /* DMDCeldaTexto.swift in Sources */,
 				E59A41C51F44FD8C00BC2CA2 /* PedidoProductos.swift in Sources */,
 				E5494C301F44BD040078B38F /* DMDVentaFisica.swift in Sources */,

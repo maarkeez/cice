@@ -51,4 +51,21 @@ class PedidoProductosService  {
             callback(tiendas)
         }
     }
+    
+    func findByPedido_id(_ id: Int, callback:@escaping ([PedidoProductos]) -> Void){
+        let URL_TODOS = URL_PEDIDO + "pedido/\(id)"
+        print(URL_TODOS)
+        
+        ServiceUtils.shared.get(URL_TODOS) { (json) in
+            
+            var tiendas = [PedidoProductos]()
+            
+            for (_, object) in json {
+                let obj = PedidoProductos(JSONString: object.rawString()!)
+                tiendas.append(obj!)
+            }
+            
+            callback(tiendas)
+        }
+    }
 }

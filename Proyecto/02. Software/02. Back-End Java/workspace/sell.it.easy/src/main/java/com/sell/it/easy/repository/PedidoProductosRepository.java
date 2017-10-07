@@ -9,5 +9,6 @@ import com.sell.it.easy.entity.PedidoProductos;
 public interface PedidoProductosRepository extends CrudRepository<PedidoProductos, Long>{
 	public List<PedidoProductos> findAll();
 	public PedidoProductos findById(Integer id);
+	public List<PedidoProductos> findByPedido_id(Integer idPedidos);
 
 }

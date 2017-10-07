@@ -66,6 +66,16 @@ public class PedidoProductosController {
 		repository.save(pedidoProducto);
 			return pedidoProducto;
 	}
+	
+	@RequestMapping(value = "/pedido/{id}", method = RequestMethod.GET)
+	public @ResponseBody List<PedidoProductos> findByPedido_id(@PathVariable Integer id, HttpServletRequest request) {
+
+		List<PedidoProductos> listado = repository.findByPedido_id(id);
+		for(int i = 0; i < listado.size(); i++){
+			listado.get(i).setPedido(null);
+		}
+		return listado;
+	}
 
 
 }

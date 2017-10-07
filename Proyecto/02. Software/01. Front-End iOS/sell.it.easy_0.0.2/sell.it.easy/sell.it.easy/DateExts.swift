@@ -15,6 +15,12 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    var stringValueHTTP: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy%20HH:mm"
+        return dateFormatter.string(from: self)
+    }
+    
     var stringHora: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"

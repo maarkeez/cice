@@ -1,0 +1,81 @@
+package com.sell.it.easy.controller;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sell.it.easy.entity.EstadisticasVenta;
+import com.sell.it.easy.entity.VentaFisica;
+import com.sell.it.easy.repository.VentaFisicaRepository;
+
+@RestController
+@RequestMapping("/estadisticas/venta")
+public class EstadisticasVentaController {
+
+	@Autowired
+	private VentaFisicaRepository ventaFisicaRepository;
+	
+	
+	@RequestMapping(value = "/tienda/{idTienda}/desde/{fechaInicio}/hasta/{fechaFin}", method = RequestMethod.GET)
+	public @ResponseBody EstadisticasVenta findByTiendaBetweenFechas(
+			@PathVariable Integer idTienda,
+			@PathVariable @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm") Date fechaInicio,
+			@PathVariable @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm") Date fechaFin,
+			HttpServletRequest request){
+		EstadisticasVenta estadisticas = new EstadisticasVenta();
+		
+		List<VentaFisica> ventas = ventaFisicaRepository.findByPedido_Tienda_idAndFechaGreaterThanEqualAndFechaLessThanEqual(idTienda, fechaInicio, fechaFin);
+				
+		Calendar calendario = new GregorianCalendar();
+		
+		Map<Integer,Double> horasDinero = new HashMap<Integer,Double>();
+		for(VentaFisica venta: ventas){
+			
+			//Recuperar la hora de la venta
+			calendario.setTime(venta.getFecha());
+			int hora = calendario.get(Calendar.HOUR_OF_DAY);
+			
+			//Recuperar euros vendidos durante esta hora, registrados hasta el momento.
+			Double vendidoHora = 0.0;
+			if (horasDinero.containsKey(hora) ){
+				vendidoHora = horasDinero.get(hora);
+			}
+			
+			vendidoHora += getPVPVendido(venta);
+			
+			horasDinero.put(hora, vendidoHora);
+			
+		}
+		
+		
+			
+		List<String> nombreVendedores = new ArrayList<String>();
+		
+		List<Float> porcentajeVendedores = new ArrayList<Float>();
+		
+		return estadisticas;
+	}
+	
+	public Double getPVPVendido(VentaFisica venta){
+		Double toReturn = 0.0;
+		
+		if(venta != null){
+			
+		}
+		return toReturn;
+	}
+}

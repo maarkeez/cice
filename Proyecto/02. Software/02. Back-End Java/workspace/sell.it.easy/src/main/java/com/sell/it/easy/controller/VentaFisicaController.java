@@ -1,5 +1,6 @@
 package com.sell.it.easy.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.sell.it.easy.entity.Pedido;
+import com.sell.it.easy.entity.PedidoProductos;
 import com.sell.it.easy.entity.VentaFisica;
 import com.sell.it.easy.repository.PedidoProductosRepository;
 import com.sell.it.easy.repository.PedidoRepository;
@@ -35,7 +36,9 @@ public class VentaFisicaController {
 
 	@RequestMapping(value = "/todos", method = RequestMethod.GET)
 	public @ResponseBody List<VentaFisica> index(HttpSession session, HttpServletRequest request) {
-		return repository.findAll();
+		
+		List<VentaFisica> listado = serialize(repository.findAllByOrderByFechaDesc());
+		return listado;
 	}
 
 	@RequestMapping(value = "/alta", method = RequestMethod.POST)
@@ -58,6 +61,19 @@ public class VentaFisicaController {
 
 		repository.save(ventaFisica);
 			return ventaFisica;
+	}
+	
+	public List<VentaFisica> serialize(List<VentaFisica> ventas){
+		List<VentaFisica> listadoSerialized = new ArrayList<VentaFisica>();
+		
+		for(VentaFisica venta : ventas){
+			listadoSerialized.add(serialize(venta));
+		}
+		return listadoSerialized;
+	}
+	public VentaFisica serialize(VentaFisica venta){
+		venta.getPedido().setProductos(new ArrayList<PedidoProductos>());
+		return venta;
 	}
 
 }

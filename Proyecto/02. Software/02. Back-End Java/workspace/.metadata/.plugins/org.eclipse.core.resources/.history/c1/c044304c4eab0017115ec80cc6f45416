@@ -1,0 +1,26 @@
+package com.sell.it.easy.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EstadisticasVenta {
+	/*
+	 * var horas = [Int]()
+    var dineroHoras = [Float]()
+    var nombreVendedores = [String]()
+    var porcentajeVendedores = [Float]()
+
+	 */
+	public List<Integer> horas = new ArrayList<Integer>();
+	public List<Float> dineroHoras = new ArrayList<Float>();
+	public List<String> nombreVendedores = new ArrayList<String>();
+	public List<Float> porcentajeVendedores = new ArrayList<Float>();
+	
+	public EstadisticasVenta(){
+
+		
+		
+	}
+	
+	
+}
