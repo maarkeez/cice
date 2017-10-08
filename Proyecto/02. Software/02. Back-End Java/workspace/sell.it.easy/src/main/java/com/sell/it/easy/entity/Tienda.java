@@ -21,6 +21,8 @@ public class Tienda {
 	private String imagenString;
 
 	private String telefono;
+	
+	private String direccion;
 	//@ManyToOne(optional=false)
 	//private Organizacion organizacion;
 	
@@ -56,6 +58,14 @@ public class Tienda {
 
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
 	}
 
 //	public Organizacion getOrganizacion() {

@@ -248,7 +248,7 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
                 }
                 
                 if celda is DMDCeldaMapa {
-                    
+                    showMapa()
                 }
             }
         }
@@ -313,6 +313,24 @@ extension DMDTablaDinamicaCG {
     }
 }
 
+//MARK: - Extensión para mostrar el mapa
+extension DMDTablaDinamicaCG : DMDMapaDelegate {
+    
+    func showMapa(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DMDMapa") as! DMDMapa
+        vc.delegate = self
+        vc.modalTransitionStyle = .crossDissolve
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func setDireccion(_ direccion: String) {
+        if let item = getSelectedItem() as? DMDCeldaMapa {
+            item.texto = direccion
+            updateSeledtedItem(item)
+        }
+    }
+    
+}
 
 //MARK: - Extensión para mostrar el calendario
 extension  DMDTablaDinamicaCG: DMDCalendarioDelegate {

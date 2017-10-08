@@ -14,12 +14,14 @@ class Tienda : Mappable{
     var nombre : String!
     var imagenString : String?
     var telefono : String?
+    var direccion : String?
     
-    init(id: Int?, nombre: String, imagenString: String?, telefono: String?) {
+    init(id: Int?, nombre: String, imagenString: String?, telefono: String?, direccion: String?) {
         self.id = id
         self.nombre = nombre
         self.imagenString = imagenString
         self.telefono = telefono
+        self.direccion = direccion
     }
     
     required init?(map: Map) {}
@@ -29,6 +31,7 @@ class Tienda : Mappable{
         nombre <- map["nombre"]
         imagenString <- map["imagenString"]
         telefono <- map["telefono"]
+        direccion <- map["direccion"]
     }
    
 }

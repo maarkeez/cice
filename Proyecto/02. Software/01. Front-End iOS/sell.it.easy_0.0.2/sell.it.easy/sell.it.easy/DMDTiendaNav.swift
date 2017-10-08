@@ -10,7 +10,7 @@ import UIKit
 
 class DMDTiendaNav: UINavigationController {
 
-    var tienda = Tienda(id: nil, nombre: "", imagenString: nil, telefono: "")
+    var tienda = Tienda(id: nil, nombre: "", imagenString: nil, telefono: "",direccion:"")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +73,10 @@ extension DMDTiendaNav :  DMDTablaDinamicaCGDelegate {
             tienda.telefono = celda.texto
         }
         
+        if let celda = data.listaItems[2] as? DMDCeldaMapa {
+            tienda.direccion = celda.texto
+        }
+        
         if tienda.id != nil{
             TiendaService.shared.editar(tienda) { (tienda) in
                 if tienda != nil {
@@ -102,6 +106,13 @@ extension DMDTiendaNav :  DMDTablaDinamicaCGDelegate {
         
         //Apellidos
         data.listaItems.append(DMDCeldaLabel(nombre: "Telefono", texto: tienda.telefono!))
+        
+        //Mapa
+        var direccion = ""
+        if let dir = tienda.direccion{
+            direccion = dir
+        }
+        data.listaItems.append(DMDCeldaMapa(texto: direccion))
         
         //Permitir guardado
         data.guardar = true
