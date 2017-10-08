@@ -1,0 +1,33 @@
+package com.sell.it.easy.controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sell.it.easy.entity.PropiedadProducto;
+import com.sell.it.easy.entity.Stock;
+import com.sell.it.easy.repository.StockRepository;
+
+@RestController
+@RequestMapping(value="/stock")
+public class StockController {
+	
+	@Autowired
+	private StockRepository stockRepository;
+	
+	@RequestMapping(value = "/tienda/{idTienda}/add", method = RequestMethod.POST)
+	public @ResponseBody Stock add(@PathVariable Integer idTienda,HttpServletRequest request, @RequestBody Stock stock) {
+		PropiedadProducto propiedad = propiedadRepository.save(producto.getPropiedades());
+		producto.setPropiedades(propiedad);
+		producto  = repository.save(producto);
+
+		return producto;
+	}
+	
+}

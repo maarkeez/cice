@@ -11,6 +11,7 @@ import UIKit
 protocol DMDListaRecibirPedidoDelegate {
     func setPedidoProductos(_ lista: [PedidoProductos])
     func getPedidoProductos() -> [PedidoProductos]
+    func dismissNav()
 }
 
 class DMDListaRecibirPedido: UIViewController {
@@ -46,6 +47,8 @@ class DMDListaRecibirPedido: UIViewController {
     
     @IBAction func cancelarACTION(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+        self.delegate?.dismissNav()
+        
     }
     
     

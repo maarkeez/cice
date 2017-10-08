@@ -189,6 +189,10 @@ extension DMDVentaFisica : DMDListaRecibirPedidoDelegate{
     func setPedidoProductos(_ lista: [PedidoProductos]){
         productos = lista
     }
+    
+    func dismissNav() {
+        
+    }
 }
 
 extension DMDVentaFisica : DMDConfirmDelegate{

@@ -1,0 +1,44 @@
+package com.sell.it.easy.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.sell.it.easy.entity.Stock;
+import com.sell.it.easy.repository.StockRepository;
+
+@RestController
+@RequestMapping(value="/stock")
+public class StockController {
+	
+	@Autowired
+	private StockRepository stockRepository;
+	
+	@RequestMapping(value = "/tienda/{idTienda}/add", method = RequestMethod.POST)
+	public @ResponseBody Stock add(@PathVariable Integer idTienda,HttpServletRequest request, @RequestBody Stock stock) {
+		return null;
+	}
+	
+	
+	
+	@RequestMapping(value = "/tienda/{idTienda}/edit", method = RequestMethod.POST)
+	public @ResponseBody Stock edit(@PathVariable Integer idTienda,HttpServletRequest request, @RequestBody Stock stock) {
+		return null;
+	}
+	
+	@RequestMapping(value = "/tienda/{idTienda}", method = RequestMethod.GET)
+	public @ResponseBody List<Stock> index(@PathVariable Integer idTienda,HttpServletRequest request) {
+		List<Stock> listado = new ArrayList<Stock>();
+		return listado;
+	}
+	
+}
