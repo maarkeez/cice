@@ -1,7 +1,6 @@
 package com.sell.it.easy.entity;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -14,8 +13,6 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Usuario {
@@ -40,9 +37,6 @@ public class Usuario {
 	
 	@Lob
 	private String imagenString;
-	
-	@JsonFormat(pattern="dd/MM/yyyy HH:mm")
-	private Date fechaNacimiento;
 	
 	public Usuario(){}
 	
@@ -99,16 +93,6 @@ public class Usuario {
 
 	public void setImagenString(String imagenString) {
 		this.imagenString = imagenString;
-	}
-
-
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
-	}
-
-
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
 	}
 	
 	

@@ -18,4 +18,5 @@ struct CeldaTipos {
     let CODIGO_BARRAS = 4
     let CANTIDAD = 5
     let SELECT = 6
+    let MAPA = 7
 }

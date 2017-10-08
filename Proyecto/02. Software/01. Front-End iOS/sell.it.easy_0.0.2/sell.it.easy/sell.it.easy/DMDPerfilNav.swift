@@ -81,6 +81,10 @@ extension DMDPerfilNav :  DMDTablaDinamicaCGDelegate {
             usuario?.password = celda.texto
         }
         
+        if let celda = data.listaItems[4] as? DMDCeldaFecha {
+            usuario?.fechaNacimiento = celda.fecha
+        }
+        
         if usuario?.id != nil{
             UsuarioService.shared.editar(usuario!) { (usuario) in
                 if usuario != nil {
@@ -118,8 +122,15 @@ extension DMDPerfilNav :  DMDTablaDinamicaCGDelegate {
         //Correo
         data.listaItems.append(DMDCeldaLabel(nombre: "Correo electrónico", texto: (usuario?.correo!)!))
         
-        //Contraseña
+        //Contaseña
         data.listaItems.append(DMDCeldaLabel(nombre: "Contraseña", texto: (usuario?.password!)!))
+        
+        //Fecha nacimiento
+        if let fechaNacimiento = usuario?.fechaNacimiento {
+            data.listaItems.append(DMDCeldaFecha(texto: "Fecha nacimiento", fecha: fechaNacimiento))
+        }else{
+            data.listaItems.append(DMDCeldaFecha(texto: "Fecha nacimiento", fecha: Date()))
+        }
 
         //Permitir guardado
         data.guardar = true

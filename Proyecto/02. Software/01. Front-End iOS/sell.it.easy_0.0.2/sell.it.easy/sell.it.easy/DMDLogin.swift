@@ -26,7 +26,7 @@ class DMDLogin: UIViewController {
     //MARK: - IBActions
     @IBAction func myIniciarSesionACTION(_ sender: Any) {
         
-        let user = Usuario(id: nil, correo: myNombre.text, nombre: nil, apellidos: nil, password: myPassword.text, imagenString: nil)
+        let user = Usuario(id: nil, correo: myNombre.text, nombre: nil, apellidos: nil, password: myPassword.text, imagenString: nil, fechaNacimiento: nil)
         UsuarioService.shared.login(user) { (usuario) in
             if usuario != nil && usuario?.id != nil {
                 self.login(usuario!)
@@ -37,7 +37,7 @@ class DMDLogin: UIViewController {
     }
     
     @IBAction func myRegistrarseACTION(_ sender: UIButton) {
-        Session.shared.usuario = Usuario(id: nil, correo: "", nombre: "", apellidos: "", password: "", imagenString: nil)
+        Session.shared.usuario = Usuario(id: nil, correo: "", nombre: "", apellidos: "", password: "", imagenString: nil, fechaNacimiento: nil)
         let perfilNav = storyboard?.instantiateViewController(withIdentifier: "DMDPerfilNav") as! DMDPerfilNav
         perfilNav.isBackButton = true
         present(perfilNav, animated: true, completion: nil)

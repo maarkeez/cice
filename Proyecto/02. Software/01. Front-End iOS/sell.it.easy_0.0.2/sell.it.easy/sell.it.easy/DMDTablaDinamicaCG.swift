@@ -78,6 +78,7 @@ class DMDTablaDinamicaCG: UIViewController {
         myTable.register(UINib(nibName: "CeldaPerfil", bundle: nil), forCellReuseIdentifier: "CeldaPerfil")
         myTable.register(UINib(nibName: "CeldaCodigoBarras", bundle: nil), forCellReuseIdentifier: "CeldaCodigoBarras")
         myTable.register(UINib(nibName: "CeldaSelector", bundle: nil), forCellReuseIdentifier: "CeldaSelector")
+        myTable.register(UINib(nibName: "CeldaMapa", bundle: nil), forCellReuseIdentifier: "CeldaMapa")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -244,6 +245,10 @@ extension DMDTablaDinamicaCG: UITableViewDelegate, UITableViewDataSource{
                 
                 if celda is DMDCeldaLabel {
                     showDMDTextoLargo(self)
+                }
+                
+                if celda is DMDCeldaMapa {
+                    
                 }
             }
         }

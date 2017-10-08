@@ -100,16 +100,6 @@ public class Usuario {
 	public void setImagenString(String imagenString) {
 		this.imagenString = imagenString;
 	}
-
-
-	public Date getFechaNacimiento() {
-		return fechaNacimiento;
-	}
-
-
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
-	}
 	
 	
 }

@@ -17,14 +17,16 @@ class Usuario: Mappable {
     var password : String?
     var imagenString : String?
     var roles = [Rol]()
+    var fechaNacimiento : Date?
     
-   init(id: Int?, correo: String?, nombre: String?, apellidos: String?, password: String?, imagenString: String?) {
+    init(id: Int?, correo: String?, nombre: String?, apellidos: String?, password: String?, imagenString: String?, fechaNacimiento : Date?) {
         self.id = id
         self.correo = correo
         self.nombre = nombre
         self.apellidos = apellidos
         self.password = password
         self.imagenString = imagenString
+        self.fechaNacimiento = fechaNacimiento
     }
     
     required init?(map: Map) {}
@@ -37,5 +39,7 @@ class Usuario: Mappable {
         password <- map["password"]
         imagenString <- map["imagenString"]
         roles <- map["roles"]
+        fechaNacimiento <- (map["fechaNacimiento"],DateTransformCustom())
+
     }
 }
