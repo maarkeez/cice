@@ -49,6 +49,7 @@ class DMDEstadisticasVentas: UIViewController {
         components.second = 59
         let night = gregorian.date(from: components)!
         
+        
         components.hour = 0
         components.minute = 0
         components.second = 0
